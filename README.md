@@ -13,43 +13,37 @@ JSONModelKit is an an extremely lightweight mapping framework that follows an AP
 
 - [X] Model Auto-Generation .json/.plists configuration files
 - [X] String, Int, Double, Float, Bool, Array, Dictionary
-- [X] Support for Optional & Non-Optional Properties
+- [X] Optional & Non-Optional Property Support:
 	* Native Types: String, Int, Double, Float, Bool, Array, Dictionary
 	* Collections Types: Array\<AnyObject\>, Dictionary\<String, AnyObject\>
 	* Structs, Enums, Closures, Tuples via Transformations
 - [X] Mapping Nested Values
 - [X] Predefined Default Values
 
+##Installation
+
+* **Requirements** : XCode 7.3+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
+* [Installation Instructions](/documentation/installation.md)
+* [Release Notes](/documentation/changelog.md)
+
+##Communication
+
+- If you **found a bug**, or **have a feature request**, open an issue.
+- If you **need help** or a **general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/json-mapperkit). (tag 'json-mapperkit')
+- If you **want to contribute**, review the [Contribution Guidelines](/Documentation/CONTRIBUTING.md), and submit a pull request. 
+
 
 ##Core Concept
 
 ![alt tag](/documentation/readme_assets/basic_concept_image.png?raw=true)
 
-Past frameworks generally follow a pattern of manually creating the object model, then retrofitting a mapping framework to ingest the API. Keeping these two task contained and synchronized can become a task in it's own, and this is where JSONModelKit differs
+Past frameworks generally follow a pattern of manually creating the object model, then retrofitting a mapping framework to ingest the API. Keeping these two task contained and synchronized can become a task in it's own, and this is where JSONModelKit differs.
 
 The simple example above demonstrates the inner workings of the JSONModelKit. In this example we will attemp to map a Person object returned in the form a dictionary. The first step is to manually generate a plist representing the data that is being returned. This plist defines properties, data types, the mapping keys associated with the response dictionary, and any transformation that needs to be applied. Once defined, a build-time script will generate two model object files representing the model mapping.
 
 The first class generated in the diagram represents the internal `_Person.swift` class, which contains script-generated property definitions, along two initializers, one required, and one fail-able. The generated fail-able initializer takes in a `Dictionary<String, AnyObject>` input value which is parsed to the model. The internal files purpose is to support the framework by mapping the response data and should not be modified by the developer since the script will regenerate it every time the project is built.
 
 The second class generated is the `Person.swift` which inherits from the internal `_Person.swift` class. This provides a means for developer to append any custom logic, properties, or implementations of protocols as needed during the development process. This class is only generated once, and will never be overwritten during the build task. Thus updating the model mapping will not affect any logic defined in the external class.
-
-##Features
-
-* Auto generation of model objects via .plists files
-* Optional & Non-Optional support for:
-	* String
-	* Int
-	* Double
-	* Float
-	* Bool
-* Collections Support for:
-	* Array\<AnyObject\>
-	* Dictionary\<String, AnyObject\>
-* Complex Type Support (stand alone, and in collections)
-* Default Value Definitions
-* Mapping Nested Values
-* Complex Transformations
-* Structs, Enums, Closures, Tuples via Transformations
 
 ##Basic Use
 
