@@ -5,51 +5,23 @@ import getopt
 import dircache
 import glob
 import commands
+import mappingKeys
 
-NativeTypes 		= ["String", "Double", "Float", "Int", "Bool"]
-ArrayType			= "Array"
-DictionaryType		= "Dictionary"
-CollectionTypes 	= [ArrayType, DictionaryType]
-
-Templates			= {"optionals" : "var propertyname : datatype ?", "non-optionals" : "var propertyname : datatype "}
-
-DataTypeKey 		= "type"
-DefaultValueKey 	= "default"
-MappingKey 			= "key"
-NonOptionalKey 		= "nonoptional"
-TransformerKey		= "transformer"
-SubTypeKey			= "collection_subtype"
+from modelgenerator import ClassGenerator
 
 def generate_model(plistPaths, output_directory, version, testEnabled):
 	
-	templatePath = os.getcwd() + "/../../Source/ModelScript/internal_class_template.txt"
-	
-	templates = {}
-	templates["optionals"] = "var propertyname : datatype ?"
-	templates["non-optionals"] = "var propertyname : datatype"
-	
-	newstring = open(templatePath, 'r').read()
-	newstring = str.replace(newstring, '\n', '\r\n')	
-	
-	for mappingPath in plistPaths:
-		classname = mappingPath[mappingPath.rindex('/',0,-1)+1:-1] if mappingPath.endswith('/') else mappingPath[mappingPath.rindex('/')+1:].split('.', 1 )[0]
-		
-		propertyMappings = plistlib.readPlist(mappingPath)
-		
-		validate_class_mapping_configuration(classname, propertyMappings)
-		
-		fileString = str.replace(newstring,  "{ CLASSNAME }", 						classname)	
-		fileString = str.replace(fileString, "{ OPTIONALS }", 						optional_property_definitions(propertyMappings))	
-		fileString = str.replace(fileString, "{ NONOPTIONALS }", 					non_optional_property_definitions(propertyMappings))
-		fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }", 			required_init_properties_string(propertyMappings))
-		fileString = str.replace(fileString, "{ REQUIRED_INIT_SETTERS }", 			required_init_properties_setters_string(propertyMappings))
-		fileString = str.replace(fileString, "{ FAILABLE_INIT_TEMP_NONOPTIONALS }", init_temp_non_optionals(propertyMappings))
-		fileString = str.replace(fileString, "{ SELF_NONOPTIONALS_INIT }", 			non_optional_self_init_parameters(propertyMappings))
-		fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",				unwrap_optional_parameters(propertyMappings))
-		fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }", 			unwrap_non_optional_parameters(propertyMappings))
+	classGenerator = ClassGenerator(plistPaths, output_directory, version, testEnabled)
 
+	for mappingPath in plistPaths:
+		
+		classname = mappingPath[mappingPath.rindex('/',0,-1)+1:-1] if mappingPath.endswith('/') else mappingPath[mappingPath.rindex('/')+1:].split('.', 1 )[0]
+		classPropertyMappings = plistlib.readPlist(mappingPath)
+
+		validate_class_mapping_configuration(classname, classPropertyMappings)
+		
 		generate_external_file_if_needed(classname, output_directory, testEnabled)
-		generate_internal_file(fileString, classname, output_directory)
+		generate_internal_file(classGenerator.generatedClass(), classname, output_directory)
 	
 	#generate_internal_instantiator_file(mapping, output_directory, testEnabled)
 
@@ -140,182 +112,22 @@ def generate_internal_instantiator_file(mappingPlist, output_directory, testEnab
 	outputfile.write('\tfunc transformerFromString(classString: String) -> US2TransformerProtocol? {\n\t\treturn US2TransformerEnum(rawValue: classString)!.transformer()\n\t}\n}')
 	outputfile.close();
 
-
-
-def optional_property_definitions(propertyMappings):
-	valueTemplate 			= "var propertyname : datatype?"
-	arrayTemplate 			= "var propertyname : [datatype]?"
-	dictionatyTemplate 		= "var propertyname : [String : datatype]?"
-	
-	templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, True)
-	return generate_template_string(filteredMappings, templateArray, True, "\t", "\r\n    " )	
-
-def non_optional_property_definitions(propertyMappings):
-	valueTemplate 			= "var propertyname : datatype"
-	arrayTemplate 			= "var propertyname : [datatype]"
-	dictionatyTemplate 		= "var propertyname : [String : datatype]"
-	
-	templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-
-	if len(filteredMappings) == 0 :
-		return ""
-
-	return "\r\n" +  generate_template_string(filteredMappings, templateArray, False, "\t", "\r\n    " )	
-
-def required_init_properties_string(propertyMappings):
-	valueTemplate 		= "propertyname  _propertyname : datatype"
-	arrayTemplate 		= "propertyname  _propertyname : [datatype]"
-	dictionatyTemplate 	= "propertyname  _propertyname : [String : datatype]"
-	
-	templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-	return generate_template_string(filteredMappings, templateArray, True, "\t\t\t    ", ",\r\n    " )	
-
-def required_init_properties_setters_string(propertyMappings):
-	nonOptionalValueTemplate 		= "propertyname = _propertyname"
-	
-	templateArray = [nonOptionalValueTemplate, nonOptionalValueTemplate, nonOptionalValueTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-	
-	if len(filteredMappings) == 0 :
-		return ""
-	
-	return "\r\n" + generate_template_string(filteredMappings, templateArray, False,  "\t\t\t\t\t", "\r\n    " )
-
-def init_temp_non_optionals(propertyMappings):
-	valueTemplate 		= "let temp_propertyname : datatype = typeCast(valuesDict[\"propertyname\"])!"
-	arrayTemplate 		= "let temp_propertyname : [datatype] = typeCast(valuesDict[\"propertyname\"])!"
-	dictionatyTemplate 	= "let temp_propertyname : [String : datatype] = typeCast(valuesDict[\"propertyname\"])!"
-	
-	templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-	
-	if len(filteredMappings) == 0 :
-		return ""
-
-	return "\r\n\t\t\t" + generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )	
-
-def non_optional_self_init_parameters(propertyMappings):
-	valueTemplate 		= "propertyname : temp_propertyname"
-
-	templateArray = [valueTemplate, valueTemplate, valueTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-	return generate_template_string(filteredMappings, templateArray, True, "\t\t\t\t     ", "\r\n    " )	
-
-def non_optional_self_init_parameters(propertyMappings):
-	valueTemplate 		= "propertyname : temp_propertyname"
-
-	templateArray = [valueTemplate, valueTemplate, valueTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-	return generate_template_string(filteredMappings, templateArray, True, "\t\t\t      ", ",\r\n    " )	
-
-def unwrap_optional_parameters(propertyMappings):
-	valueTemplate 		= "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
-	arrayTemplate 		= "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
-	dictionatyTemplate 	= "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
-
-	templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, True)
-	return generate_template_string(filteredMappings, templateArray, True, "\t\t\t", "\r\n    " )	
-
-def unwrap_non_optional_parameters(propertyMappings):
-	valueTemplate 	= "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
-
-	templateArray = [valueTemplate, valueTemplate, valueTemplate]
-	filteredMappings = filtered_mappings(propertyMappings, False)
-
-	return generate_template_string(filteredMappings, templateArray, True, "\t\t\t", "\r\n    " )	
-
-def generate_template_string(propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
-
-	if len(propertyMappings) == 0 :
-		return ""
-
-	propertyString = ""
-
-	for propertyKey in propertyMappings.keys():
-		
-		propertyMapping = propertyMappings[propertyKey]
-		propertyType = propertyMapping[DataTypeKey]
-		isMappingOptional = is_property_mapping_optional(propertyMapping)
-		
-		templateValues = {}
-		templateValues["propertyname"] = propertyKey
-		templateValues["datatype"] = propertyType
-		
-		if skipInitialIndentation == False or propertyString != "":
-			propertyString += indentation
-
-		if propertyType in NativeTypes: 
-			propertyString += dictionaryValueString(templateArray[0], templateValues)
-
-		elif propertyType in CollectionTypes:
-			templateValues["datatype"] = propertyMapping[SubTypeKey]
-				
-			if propertyType == ArrayType:
-				propertyString += dictionaryValueString(templateArray[1], templateValues)
-
-			elif propertyType == DictionaryType:
-				propertyString += dictionaryValueString(templateArray[2], templateValues)
-		
-		else:
-			propertyString += dictionaryValueString(templateArray[0], templateValues)
-
-		if propertyMappings.keys().index(propertyKey) <= len(propertyMappings.keys()) - 2:
-			propertyString += carriageString
-		else:
-			propertyString += ""
-			
-	return propertyString
-
-
-def filtered_mappings(propertyMappings, optional):
-	filteredMappings = {}
-
-	for propertyKey in propertyMappings.keys():
-		
-		propertyMapping = propertyMappings[propertyKey]
-		
-		if is_property_mapping_optional(propertyMapping) == optional:
-			filteredMappings[propertyKey] = propertyMapping
-
-	return filteredMappings
-
-def is_property_mapping_optional(mapping):
-	if NonOptionalKey not in mapping.keys():
-		return True
-	elif mapping[NonOptionalKey] == 'true':
-		return False
-
-	return True
-
-def dictionaryValueString(templateString, dictionaryValues):
-	renderedString = templateString	
-
-	for key in dictionaryValues.keys():
-		renderedString = str.replace(renderedString, key, dictionaryValues[key])
-
-	return renderedString
-
-
 def validate_class_mapping_configuration(classname, mapping):
 	for propertyKey in mapping.keys():
-		if MappingKey not in mapping[propertyKey].keys():
+		if mappingKeys.MappingKey not in mapping[propertyKey].keys():
 			if TransformerKey not in mapping[propertyKey].keys():
 				#throw_missing_type_error(classname, MAPPING_KEY_TYPE, mappingPlist[propertyKey])
 				print "Missing Type"
 
-		if MappingKey not in mapping[propertyKey].keys():
+		if mappingKeys.MappingKey not in mapping[propertyKey].keys():
 			if TransformerKey not in mapping[propertyKey].keys():
 				#throw_missing_json_key_error(classname, MAPPING_KEY_KEY, mappingPlist[propertyName])
 				print "Missing Key"
 			else:
-				propertyType = mapping[propertyKey][MappingKey]
-				if xcode_version() == 6.0 and propertyType not in NativeTypes:
-					if NonOptionalKey in mapping[propertyKey].keys():
-						if mapping[propertyKey][NonOptionalKey] == 'true':
+				propertyType = mapping[propertyKey][mappingKeys.MappingKey]
+				if xcode_version() == 6.0 and propertyType not in mappingKeys.NativeTypes:
+					if mappingKeys.NonOptionalKey in mapping[propertyKey].keys():
+						if mapping[propertyKey][mappingKeys.NonOptionalKey] == 'true':
 							print "Missing Non Optional"
 							#throw_missing_nonoptional_error(classname, MAPPING_KEY_KEY, mappingPlist[propertyName])
 
