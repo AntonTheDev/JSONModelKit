@@ -14,11 +14,9 @@ JSONModelKit is an an extremely lightweight mapping framework that follows an AP
 - [X] Model Auto-Generation .json/.plists configuration files
 - [X] String, Int, Double, Float, Bool, Array, Dictionary
 - [X] Support for Optional & Non-Optional Properties
-
 	* Native Types: String, Int, Double, Float, Bool, Array, Dictionary
 	* Collections Types: Array\<AnyObject\>, Dictionary\<String, AnyObject\>
 	* Structs, Enums, Closures, Tuples via Transformations
-	
 - [X] Mapping Nested Values
 - [X] Predefined Default Values
 
