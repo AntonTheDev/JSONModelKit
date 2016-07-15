@@ -21,7 +21,7 @@ class InstantiatorGenerator:
       self.jsonFormatEnabled = jsonFormatEnabled
    
    def internalGeneratedClass(self):
-      templatePath = os.getcwd() + "/../../Source/ModelScript/Templates/instantiator_template.txt"
+      templatePath = os.getcwd() + "/../../Source/ModelScript/instantiator_template.txt"
 
       internalTemplate = open(templatePath, 'r').read()
       internalTemplate = str.replace(internalTemplate, '\n', '\r\n')
