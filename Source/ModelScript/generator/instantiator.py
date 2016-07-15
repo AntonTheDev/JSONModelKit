@@ -6,17 +6,19 @@ import getopt
 import dircache
 import glob
 import commands
+import json
 
 from constants import Type
 from constants import MappingKey
 
 class InstantiatorGenerator:
 
-   def __init__(self, plistPaths, output_directory, version, testEnabled):
+   def __init__(self, plistPaths, output_directory, version, testEnabled, jsonFormatEnabled):
       self.plistPaths = plistPaths
       self.output_directory = output_directory
       self.version = version
       self.testEnabled = testEnabled
+      self.jsonFormatEnabled = jsonFormatEnabled
    
    def internalGeneratedClass(self):
       templatePath = os.getcwd() + "/../../Source/ModelScript/Templates/instantiator_template.txt"
@@ -71,7 +73,13 @@ class InstantiatorGenerator:
       caseString = ""
       
       for mappingPath in self.plistPaths:
-         propertyMapping = plistlib.readPlist(mappingPath)
+         propertyMapping = {}
+         
+         if self.jsonFormatEnabled == True:
+            propertyMappings = json.load(open(mappingPath))
+         else:
+            propertyMapping = plistlib.readPlist(mappingPath)
+        
 
          for propertyKey in propertyMapping.keys():
             
@@ -94,7 +102,13 @@ class InstantiatorGenerator:
       caseString = ""
       
       for mappingPath in self.plistPaths:
-         propertyMapping = plistlib.readPlist(mappingPath)
+         propertyMapping = {}
+         
+         if self.jsonFormatEnabled == True:
+            propertyMappings = json.load(open(mappingPath))
+         else:
+            propertyMapping = plistlib.readPlist(mappingPath)
+
 
          for propertyKey in propertyMapping.keys():
             

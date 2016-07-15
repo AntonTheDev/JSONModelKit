@@ -6,17 +6,19 @@ import getopt
 import dircache
 import glob
 import commands
+import json
 
 from constants import Type
 from constants import MappingKey
 
 class ClassGenerator:
 
-   def __init__(self, mappingPath, output_directory, version, testEnabled):
+   def __init__(self, mappingPath, output_directory, version, testEnabled, jsonFormatEnabled):
       self.mappingPath = mappingPath
       self.output_directory = output_directory
       self.version = version
       self.testEnabled = testEnabled
+      self.jsonFormatEnabled = jsonFormatEnabled
       
    def internalGeneratedClass(self):
       templatePath = os.getcwd() + "/../../Source/ModelScript/Templates/internal_class_template.txt"
@@ -27,7 +29,12 @@ class ClassGenerator:
 
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
       
-      propertyMappings = plistlib.readPlist(self.mappingPath)
+      propertyMappings = []
+      
+      if self.jsonFormatEnabled:
+         propertyMappings = json.load(open(self.mappingPath))
+      else: 
+         propertyMappings = plistlib.readPlist(self.mappingPath)
 
       if self.testEnabled == 0:
          fileString = str.replace(internalTemplate,  "{ TEST_IMPORT }", "import US2MapperKit") 
@@ -55,8 +62,13 @@ class ClassGenerator:
       fileString = ""
 
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
+
+      propertyMappings = []
       
-      propertyMappings = plistlib.readPlist(self.mappingPath)
+      if self.jsonFormatEnabled:
+         propertyMappings = json.load(open(self.mappingPath))
+      else: 
+         propertyMappings = plistlib.readPlist(self.mappingPath)
 
       if self.testEnabled == 0:
          fileString = str.replace(externalTemplate,  "{ TEST_IMPORT }", "import US2MapperKit") 
@@ -244,15 +256,16 @@ class ClassGenerator:
       return filteredMappings
 
    def is_property_mapping_optional(self, mapping):
-      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional] == 'true':
+      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional]:
          return False
       else:
          return True
 
    def dictionaryValueString(self, templateString, dictionaryValues):
+      print dictionaryValues
       renderedString = templateString  
 
       for key in dictionaryValues.keys():
-         renderedString = str.replace(renderedString, key, dictionaryValues[key])
+         renderedString = str.replace(renderedString, key, str(dictionaryValues[key]))
 
       return renderedString

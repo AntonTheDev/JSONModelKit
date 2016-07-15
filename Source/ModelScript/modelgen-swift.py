@@ -5,23 +5,31 @@ import getopt
 import dircache
 import glob
 import commands
+import json
 
 from generator.generator 	import ClassGenerator
 from generator.instantiator import InstantiatorGenerator
 from generator.validator 	import Validator
 
-def generate_model(plistPaths, output_directory, version, testEnabled):
+def generate_model(plistPaths, output_directory, version, testEnabled, jsonFormatEnabled):
 	
 	instantiatorPath = output_directory + 'Internal/US2Instantiator.swift'
-	instantiatorGenerator = InstantiatorGenerator(plistPaths, output_directory, version, testEnabled)
+	instantiatorGenerator = InstantiatorGenerator(plistPaths, output_directory, version, testEnabled, jsonFormatEnabled)
 	
 	generate_file(instantiatorGenerator.internalGeneratedClass(), instantiatorPath, True)
 
 	for mappingPath in plistPaths:
 		classname = mappingPath[mappingPath.rindex('/',0,-1)+1:-1] if mappingPath.endswith('/') else mappingPath[mappingPath.rindex('/')+1:].split('.', 1 )[0]
-		propertyMappings = plistlib.readPlist(mappingPath)
 		
-		classGenerator = ClassGenerator(mappingPath, output_directory, version, testEnabled)
+		propertyMappings = []
+         
+
+		if jsonFormatEnabled == True:
+			propertyMappings = json.load(open(mappingPath))
+		else: 
+			propertyMappings = plistlib.readPlist(mappingPath)
+
+		classGenerator = ClassGenerator(mappingPath, output_directory, version, testEnabled, jsonFormatEnabled)
 		
 		internalClassPath = output_directory + 'Internal/_'+ classname + '.swift'
 		externalClassPath = output_directory + classname + '.swift'
@@ -62,9 +70,10 @@ def main(argv):
    inputfile = ''
    outputfile = ''
    testEnabled = 0
+   fileformat = "json"
 
    try:
-      opts, args = getopt.getopt(argv,"hv:i:o:t:",["version=","mapdir=","classname=","testing="])
+      opts, args = getopt.getopt(argv,"hv:i:o:t:f:",["version=","mapdir=","classname=","testing=","format="])
    except getopt.GetoptError:
       print 'test.py -i <inputfile> -o <outputfile>'
       sys.exit(2)
@@ -80,9 +89,17 @@ def main(argv):
          classdir = arg
       elif opt in ("-t", "--ofile"):
          testEnabled = arg
-   mappinglist = glob.glob(mapdir + "*.plist") 
+      elif opt in ("-f", "--ofile"):
+         fileformat = arg
 
-   generate_model(mappinglist, classdir, currentVersion, testEnabled)
+   if fileformat == "json":
+   	   	mappinglist = glob.glob(mapdir + "*.json") 
+   		generate_model(mappinglist, classdir, currentVersion, testEnabled, True)
+   else:
+   		mappinglist = glob.glob(mapdir + "*.plist") 
+   		generate_model(mappinglist, classdir, currentVersion, testEnabled, False)
+  
+
    
    #print 'Input file is "', inputfile
    #print 'Output file is "', outputfile
