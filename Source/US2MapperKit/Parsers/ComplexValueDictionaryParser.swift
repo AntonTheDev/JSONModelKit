@@ -33,7 +33,7 @@ final class ComplexValueDictionaryParser {
         for subDictValue in data {
             if let complexTypeValue: AnyObject = instantiator.newInstance(ofType: collectionSubType!, withValue: subDictValue) {
                 valueDictionary["\(intKey)"] = complexTypeValue
-                intKey++
+                intKey += 1
             }
         }
         return valueDictionary

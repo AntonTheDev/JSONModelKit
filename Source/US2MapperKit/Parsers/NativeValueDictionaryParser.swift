@@ -19,7 +19,7 @@ final class NativeValueDictionaryParser {
         
         for (key, subDictValue) in data {
             valueDictionary[String(key)] = subDictValue
-            intKey++
+            intKey += 1
         }
         
         return valueDictionary
@@ -34,7 +34,7 @@ final class NativeValueDictionaryParser {
         
         for subDictValue in data {
             valueDictionary[String(intKey)] = subDictValue
-            intKey++
+            intKey += 1
         }
         
         return valueDictionary
