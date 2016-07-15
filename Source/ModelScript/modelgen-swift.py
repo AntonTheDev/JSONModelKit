@@ -6,9 +6,9 @@ import dircache
 import glob
 import commands
 
-from generators import ClassGenerator
-from generators import InstantiatorGenerator
-from validator  import Validator
+from generator.generator 	import ClassGenerator
+from generator.instantiator import InstantiatorGenerator
+from generator.validator 	import Validator
 
 def generate_model(plistPaths, output_directory, version, testEnabled):
 

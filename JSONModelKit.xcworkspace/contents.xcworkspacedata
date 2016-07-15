@@ -2,8 +2,121 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "group:Source"
+      name = "Source">
+      <Group
+         location = "group:ModelScript"
+         name = "ModelScript">
+         <FileRef
+            location = "group:__init__.py">
+         </FileRef>
+         <Group
+            location = "group:generator"
+            name = "generator">
+            <FileRef
+               location = "group:__init__.py">
+            </FileRef>
+            <FileRef
+               location = "group:__init__.pyc">
+            </FileRef>
+            <FileRef
+               location = "group:generator.py">
+            </FileRef>
+            <FileRef
+               location = "group:generator.pyc">
+            </FileRef>
+            <FileRef
+               location = "group:instantiator.py">
+            </FileRef>
+            <FileRef
+               location = "group:instantiator.pyc">
+            </FileRef>
+            <FileRef
+               location = "group:validator.py">
+            </FileRef>
+            <FileRef
+               location = "group:validator.pyc">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:mappingKeys.py">
+         </FileRef>
+         <FileRef
+            location = "group:mappingKeys.pyc">
+         </FileRef>
+         <FileRef
+            location = "group:modelgen-swift.py">
+         </FileRef>
+         <Group
+            location = "group:Templates"
+            name = "Templates">
+            <FileRef
+               location = "group:external_class_template.txt">
+            </FileRef>
+            <FileRef
+               location = "group:instantiator_template.txt">
+            </FileRef>
+            <FileRef
+               location = "group:internal_class_template.txt">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:US2MapperKit"
+         name = "US2MapperKit">
+         <Group
+            location = "group:Parsers"
+            name = "Parsers">
+            <FileRef
+               location = "group:CollectionParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ComplexTypeParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ComplexValueArrayParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ComplexValueDictionaryParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NativeTypeParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NativeValueArrayParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NativeValueDictionaryParser.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Parser.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Transformer"
+            name = "Transformer">
+            <FileRef
+               location = "group:Transformer.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:US2CompoundValueTransformer.swift">
+         </FileRef>
+         <FileRef
+            location = "group:US2Mapper.swift">
+         </FileRef>
+         <Group
+            location = "group:Validator"
+            name = "Validator">
+            <FileRef
+               location = "group:Validator.swift">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
       location = "group:SharedTests"
-      name = "SharedTests">
+      name = "Tests">
       <FileRef
          location = "group:JSONModelKitTests.swift">
       </FileRef>
@@ -154,103 +267,6 @@
          <FileRef
             location = "group:ValueTypeDefinitions.swift">
          </FileRef>
-      </Group>
-   </Group>
-   <Group
-      location = "group:Source"
-      name = "Source">
-      <Group
-         location = "group:ModelScript"
-         name = "ModelScript">
-         <Group
-            location = "group:Templates"
-            name = "Templates">
-            <FileRef
-               location = "group:external_class_template.txt">
-            </FileRef>
-            <FileRef
-               location = "group:instantiator_template.txt">
-            </FileRef>
-            <FileRef
-               location = "group:internal_class_template.txt">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:__init__.py">
-         </FileRef>
-         <FileRef
-            location = "group:generators.py">
-         </FileRef>
-         <FileRef
-            location = "group:generators.pyc">
-         </FileRef>
-         <FileRef
-            location = "group:mappingKeys.py">
-         </FileRef>
-         <FileRef
-            location = "group:mappingKeys.pyc">
-         </FileRef>
-         <FileRef
-            location = "group:modelgen-swift.py">
-         </FileRef>
-         <FileRef
-            location = "group:validator.py">
-         </FileRef>
-         <FileRef
-            location = "group:validator.pyc">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:US2MapperKit"
-         name = "US2MapperKit">
-         <Group
-            location = "group:Parsers"
-            name = "Parsers">
-            <FileRef
-               location = "group:CollectionParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:ComplexTypeParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:ComplexValueArrayParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:ComplexValueDictionaryParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:NativeTypeParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:NativeValueArrayParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:NativeValueDictionaryParser.swift">
-            </FileRef>
-            <FileRef
-               location = "group:Parser.swift">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:Transformer"
-            name = "Transformer">
-            <FileRef
-               location = "group:Transformer.swift">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:US2CompoundValueTransformer.swift">
-         </FileRef>
-         <FileRef
-            location = "group:US2Mapper.swift">
-         </FileRef>
-         <Group
-            location = "group:Validator"
-            name = "Validator">
-            <FileRef
-               location = "group:Validator.swift">
-            </FileRef>
-         </Group>
       </Group>
    </Group>
    <FileRef

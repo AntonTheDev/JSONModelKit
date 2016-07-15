@@ -8,7 +8,6 @@ import glob
 import commands
 import mappingKeys
 
-
 class ClassGenerator:
 
    def __init__(self, mappingPath, output_directory, version, testEnabled):
