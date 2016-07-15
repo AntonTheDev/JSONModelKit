@@ -6,7 +6,9 @@ import getopt
 import dircache
 import glob
 import commands
-import mappingKeys
+
+from constants import Type
+from constants import MappingKey
 
 class ClassGenerator:
 
@@ -77,7 +79,7 @@ class ClassGenerator:
       
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, True)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t", "\r\n    " ) 
+      return self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " ) 
 
 
    '''
@@ -94,7 +96,7 @@ class ClassGenerator:
       if len(filteredMappings) == 0 :
          return ""
 
-      return "\r\n" +  self.generate_template_string(filteredMappings, templateArray, False, "\t", "\r\n    " )  
+      return "\r\n\t" +  self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " )  
 
 
    '''
@@ -107,7 +109,7 @@ class ClassGenerator:
       
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t    ", ",\r\n    " ) 
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t  ", ",\r\n    " ) 
 
 
    '''
@@ -122,7 +124,7 @@ class ClassGenerator:
       if len(filteredMappings) == 0 :
          return ""
       
-      return "\r\n" + self.generate_template_string(filteredMappings, templateArray, False,  "\t\t\t\t\t", "\r\n    " )
+      return "\r\n\t" + self.generate_template_string(filteredMappings, templateArray, False,  "\t\t\t\t\t", "\r\n    " )
 
 
    '''
@@ -173,7 +175,7 @@ class ClassGenerator:
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, True)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t", "\r\n    " )   
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
 
 
    '''
@@ -185,7 +187,7 @@ class ClassGenerator:
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
 
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t", "\r\n    " )   
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
 
@@ -197,7 +199,7 @@ class ClassGenerator:
       for propertyKey in propertyMappings.keys():
          
          propertyMapping = propertyMappings[propertyKey]
-         propertyType = propertyMapping[mappingKeys.DataTypeKey]
+         propertyType = propertyMapping[MappingKey.Type]
          isMappingOptional = self.is_property_mapping_optional(propertyMapping)
          
          templateValues = {}
@@ -209,12 +211,12 @@ class ClassGenerator:
          if skipInitialIndentation == False or propertyString != "":
             propertyString += indentation
 
-         if propertyType in mappingKeys.CollectionTypes:
-            templateValues["datatype"] = propertyMapping[mappingKeys.SubTypeKey]
+         if propertyType in Type.CollectionTypes:
+            templateValues["datatype"] = propertyMapping[MappingKey.SubType]
                
-            if propertyType == mappingKeys.ArrayType:
+            if propertyType == Type.ArrayType:
                templateIndex = 1
-            elif propertyType == mappingKeys.DictionaryType:
+            elif propertyType == Type.DictionaryType:
                templateIndex = 2
             
          propertyString += self.dictionaryValueString(templateArray[templateIndex], templateValues)
@@ -240,7 +242,7 @@ class ClassGenerator:
       return filteredMappings
 
    def is_property_mapping_optional(self, mapping):
-      if mappingKeys.NonOptionalKey in mapping.keys() and mapping[mappingKeys.NonOptionalKey] == 'true':
+      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional] == 'true':
          return False
       else:
          return True
@@ -363,49 +365,3 @@ class InstantiatorGenerator:
             caseString = caseString + '\n\t\t'
       
       return caseString
-
-
-class Validator:
-   
-   def __init__(self, classname, mapping):
-      self.classname = classname
-      self.mapping = mapping
-
-   def validateMapping(self):
-      for propertyKey in self.mapping.keys():
-         if mappingKeys.DataTypeKey not in self.mapping[propertyKey].keys():
-            if mappingKeys.TransformerKey not in self.mapping[propertyKey].keys():
-               self.throw_missing_type_error(mappingKeys.TransformerKey, self.mapping[propertyKey])
-         
-         if mappingKeys.MappingKey not in self.mapping[propertyKey].keys():
-            if mappingKeys.TransformerKey not in self.mapping[propertyKey].keys():
-               self.throw_missing_json_key_error(mappingKeys.MappingKey, self.mapping[propertyKey])
-            
-            else:
-               propertyType = self.mapping[propertyKey][mappingKeys.MappingKey]
-               if xcode_version() == 6.0 and propertyType not in mappingKeys.NativeTypes:
-                  if mappingKeys.NonOptionalKey in self.mapping[propertyKey].keys():
-                     if self.mapping[propertyKey][mappingKeys.NonOptionalKey] == 'true':
-                        self.throw_missing_nonoptional_error(mappingKeys.MappingKey, self.mapping[propertyKey])
-
-   def throw_missing_type_error(self, propertykey, mapping):
-      self.print_default_error_header(mapping)
-      print "The mapping configuration for the " + propertykey + " property is missing the type configuration.\r\nAll properties must specify a 'type' value.\r\n\r\n\r\n\r\n"
-      raise Exception('Invalid Configuration')
-
-   def throw_missing_nonoptional_error(self, propertykey, mapping):
-      self.print_default_error_header(mapping)
-      print "The mapping configuration for the " + propertykey + " cannot be performed. Transformed properties have to be optional when not defined as a native datatype (String, Int, Float, Double, Bool, Array, Dictionary).\r\n\r\n\r\n\r\n"
-      raise Exception('Invalid Configuration')
-
-   def throw_missing_json_key_error(self, propertykey, mapping):
-      self.print_default_error_header(mapping)
-      print "The mapping configuration for the " + propertykey + " property is missing the \"key\" configuration.\r\nAll properties must specify a 'key' value to map against value in a dictionary.\r\n\r\n\r\n\r\n"
-      raise Exception('Invalid Configuration')
-
-   def print_default_error_header(self, mapping):
-      print "\r\nUS2Mapper Error: Invalid Configuration (" + self.classname + ".plist)\r\n"
-      print "Mapping : \t\t"
-      print mapping
-      print "\r\n"
-

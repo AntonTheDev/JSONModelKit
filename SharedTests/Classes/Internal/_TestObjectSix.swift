@@ -8,7 +8,7 @@ class _TestObjectSix  {
 
 	required init(non_optionalCompoundString  _non_optionalCompoundString : String)  {
  		
-					non_optionalCompoundString = _non_optionalCompoundString
+						non_optionalCompoundString = _non_optionalCompoundString
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -49,4 +49,3 @@ class _TestObjectSix  {
  		} 
 	}
 } 
- 

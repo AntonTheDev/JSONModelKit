@@ -39,9 +39,6 @@
             </FileRef>
          </Group>
          <FileRef
-            location = "group:mappingKeys.py">
-         </FileRef>
-         <FileRef
             location = "group:mappingKeys.pyc">
          </FileRef>
          <FileRef
@@ -273,12 +270,12 @@
       location = "group:JSONModelKit/JSONModelKit/JSONModelKit.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:JSONModelKit/JSONModelKit-iOS/JSONModelKit-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:JSONModelKit/JSONModelKit-OSX/JSONModelKit-OSX.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:JSONModelKit/JSONModelKit-iOS/JSONModelKit-iOS.xcodeproj">
    </FileRef>
 </Workspace>

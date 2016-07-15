@@ -6,7 +6,9 @@ import getopt
 import dircache
 import glob
 import commands
-import mappingKeys
+
+from constants import Type
+from constants import MappingKey
 
 class Validator:
    
@@ -16,20 +18,20 @@ class Validator:
 
    def validateMapping(self):
       for propertyKey in self.mapping.keys():
-         if mappingKeys.DataTypeKey not in self.mapping[propertyKey].keys():
-            if mappingKeys.TransformerKey not in self.mapping[propertyKey].keys():
-               self.throw_missing_type_error(mappingKeys.TransformerKey, self.mapping[propertyKey])
+         if MappingKey.Type not in self.mapping[propertyKey].keys():
+            if MappingKey.Transformer not in self.mapping[propertyKey].keys():
+               self.throw_missing_type_error(MappingKey.Transformer, self.mapping[propertyKey])
          
-         if mappingKeys.MappingKey not in self.mapping[propertyKey].keys():
-            if mappingKeys.TransformerKey not in self.mapping[propertyKey].keys():
-               self.throw_missing_json_key_error(mappingKeys.MappingKey, self.mapping[propertyKey])
+         if MappingKey.Key not in self.mapping[propertyKey].keys():
+            if MappingKey.Transformer not in self.mapping[propertyKey].keys():
+               self.throw_missing_json_key_error(MappingKey.MappingKey, self.mapping[propertyKey])
             
             else:
-               propertyType = self.mapping[propertyKey][mappingKeys.MappingKey]
-               if xcode_version() == 6.0 and propertyType not in mappingKeys.NativeTypes:
-                  if mappingKeys.NonOptionalKey in self.mapping[propertyKey].keys():
-                     if self.mapping[propertyKey][mappingKeys.NonOptionalKey] == 'true':
-                        self.throw_missing_nonoptional_error(mappingKeys.MappingKey, self.mapping[propertyKey])
+               propertyType = self.mapping[propertyKey][MappingKey.Key]
+               if xcode_version() == 6.0 and propertyType not in Type.NativeTypes:
+                  if MappingKey.NonOptional in self.mapping[propertyKey].keys():
+                     if self.mapping[propertyKey][MappingKey.NonOptional] == 'true':
+                        self.throw_missing_nonoptional_error(MappingKey.Key, self.mapping[propertyKey])
 
    def throw_missing_type_error(self, propertykey, mapping):
       self.print_default_error_header(mapping)

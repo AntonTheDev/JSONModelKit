@@ -3,21 +3,21 @@ import Foundation
 class _TestObjectNine  {
 	
 	var optionalArrayDoubleType : [Double]?
-    	var optionalArrayIntType : [Int]?
-    	var optionalArrayStringType : [String]?
-    	var optionalArrayFloatType : [Float]?
+    var optionalArrayIntType : [Int]?
+    var optionalArrayStringType : [String]?
+    var optionalArrayFloatType : [Float]?
 	
 	var non_optionalArrayIntType : [Int]
-    	var non_optionalArrayDoubleType : [Double]
-    	var non_optionalArrayFloatType : [Float]
-    	var non_optionalArrayStringType : [String]
+    var non_optionalArrayDoubleType : [Double]
+    var non_optionalArrayFloatType : [Float]
+    var non_optionalArrayStringType : [String]
 
 	required init(non_optionalArrayIntType  _non_optionalArrayIntType : [Int],
-    			    non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],
-    			    non_optionalArrayFloatType  _non_optionalArrayFloatType : [Float],
-    			    non_optionalArrayStringType  _non_optionalArrayStringType : [String])  {
+    			  non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],
+    			  non_optionalArrayFloatType  _non_optionalArrayFloatType : [Float],
+    			  non_optionalArrayStringType  _non_optionalArrayStringType : [String])  {
  		
-					non_optionalArrayIntType = _non_optionalArrayIntType
+						non_optionalArrayIntType = _non_optionalArrayIntType
     					non_optionalArrayDoubleType = _non_optionalArrayDoubleType
     					non_optionalArrayFloatType = _non_optionalArrayFloatType
     					non_optionalArrayStringType = _non_optionalArrayStringType
@@ -44,15 +44,15 @@ class _TestObjectNine  {
 				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
 
-    			if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
+    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
 				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
 			}
 
-    			if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
+    		if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
 				optionalArrayStringType = typeCast(unwrapped_optionalArrayStringType)! 
 			}
 
-    			if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
+    		if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
 				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
 			}
 
@@ -72,15 +72,15 @@ class _TestObjectNine  {
 				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
 
-    			if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
+    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
 				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
 			}
 
-    			if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
+    		if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
 				optionalArrayStringType = typeCast(unwrapped_optionalArrayStringType)! 
 			}
 
-    			if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
+    		if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
 				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
 			}
 
@@ -88,19 +88,18 @@ class _TestObjectNine  {
 				non_optionalArrayIntType = typeCast(unwrapped_non_optionalArrayIntType)! 
 			}
 
-    			if let unwrapped_non_optionalArrayDoubleType : Any = valuesDict["non_optionalArrayDoubleType"]  { 
+    		if let unwrapped_non_optionalArrayDoubleType : Any = valuesDict["non_optionalArrayDoubleType"]  { 
 				non_optionalArrayDoubleType = typeCast(unwrapped_non_optionalArrayDoubleType)! 
 			}
 
-    			if let unwrapped_non_optionalArrayFloatType : Any = valuesDict["non_optionalArrayFloatType"]  { 
+    		if let unwrapped_non_optionalArrayFloatType : Any = valuesDict["non_optionalArrayFloatType"]  { 
 				non_optionalArrayFloatType = typeCast(unwrapped_non_optionalArrayFloatType)! 
 			}
 
-    			if let unwrapped_non_optionalArrayStringType : Any = valuesDict["non_optionalArrayStringType"]  { 
+    		if let unwrapped_non_optionalArrayStringType : Any = valuesDict["non_optionalArrayStringType"]  { 
 				non_optionalArrayStringType = typeCast(unwrapped_non_optionalArrayStringType)! 
 			}
 
  		} 
 	}
 } 
- 

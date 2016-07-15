@@ -6,7 +6,10 @@ import getopt
 import dircache
 import glob
 import commands
-import mappingKeys
+
+from constants import Type
+from constants import MappingKey
+
 
 class InstantiatorGenerator:
 
@@ -75,8 +78,8 @@ class InstantiatorGenerator:
 
          for propertyKey in propertyMapping.keys():
             
-            if mappingKeys.TransformerKey in propertyMapping[propertyKey].keys():
-               mapperClass = propertyMapping[propertyKey][mappingKeys.TransformerKey]
+            if MappingKey.Transformer in propertyMapping[propertyKey].keys():
+               mapperClass = propertyMapping[propertyKey][MappingKey.Transformer]
                if mapperClass not in distinctMapperClassDefinitions:
                   distinctMapperClassDefinitions.append(mapperClass)
 
@@ -98,8 +101,8 @@ class InstantiatorGenerator:
 
          for propertyKey in propertyMapping.keys():
             
-            if mappingKeys.TransformerKey in propertyMapping[propertyKey].keys():
-               mapperClass = propertyMapping[propertyKey][mappingKeys.TransformerKey]
+            if MappingKey.Transformer in propertyMapping[propertyKey].keys():
+               mapperClass = propertyMapping[propertyKey][MappingKey.Transformer]
                if mapperClass not in distinctMapperClassDefinitions:
                   distinctMapperClassDefinitions.append(mapperClass)
 

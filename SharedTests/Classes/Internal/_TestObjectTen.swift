@@ -3,21 +3,21 @@ import Foundation
 class _TestObjectTen  {
 	
 	var optionalDictionaryIntType : [String : Int]?
-    	var optionalDictionaryDoubleType : [String : Double]?
-    	var optionalDictionaryFloatType : [String : Float]?
-    	var optionalDictionaryStringType : [String : String]?
+    var optionalDictionaryDoubleType : [String : Double]?
+    var optionalDictionaryFloatType : [String : Float]?
+    var optionalDictionaryStringType : [String : String]?
 	
 	var non_optionalDictionaryIntType : [String : Int]
-    	var non_optionalDictionaryDoubleType : [String : Double]
-    	var non_optionalDictionaryFloatType : [String : Float]
-    	var non_optionalDictionaryStringType : [String : String]
+    var non_optionalDictionaryDoubleType : [String : Double]
+    var non_optionalDictionaryFloatType : [String : Float]
+    var non_optionalDictionaryStringType : [String : String]
 
 	required init(non_optionalDictionaryIntType  _non_optionalDictionaryIntType : [String : Int],
-    			    non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],
-    			    non_optionalDictionaryFloatType  _non_optionalDictionaryFloatType : [String : Float],
-    			    non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String])  {
+    			  non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],
+    			  non_optionalDictionaryFloatType  _non_optionalDictionaryFloatType : [String : Float],
+    			  non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String])  {
  		
-					non_optionalDictionaryIntType = _non_optionalDictionaryIntType
+						non_optionalDictionaryIntType = _non_optionalDictionaryIntType
     					non_optionalDictionaryDoubleType = _non_optionalDictionaryDoubleType
     					non_optionalDictionaryFloatType = _non_optionalDictionaryFloatType
     					non_optionalDictionaryStringType = _non_optionalDictionaryStringType
@@ -44,15 +44,15 @@ class _TestObjectTen  {
 				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
+    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
 				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
+    		if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
 				optionalDictionaryFloatType = typeCast(unwrapped_optionalDictionaryFloatType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
+    		if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
 				optionalDictionaryStringType = typeCast(unwrapped_optionalDictionaryStringType)! 
 			}
 
@@ -72,15 +72,15 @@ class _TestObjectTen  {
 				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
+    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
 				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
+    		if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
 				optionalDictionaryFloatType = typeCast(unwrapped_optionalDictionaryFloatType)! 
 			}
 
-    			if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
+    		if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
 				optionalDictionaryStringType = typeCast(unwrapped_optionalDictionaryStringType)! 
 			}
 
@@ -88,19 +88,18 @@ class _TestObjectTen  {
 				non_optionalDictionaryIntType = typeCast(unwrapped_non_optionalDictionaryIntType)! 
 			}
 
-    			if let unwrapped_non_optionalDictionaryDoubleType : Any = valuesDict["non_optionalDictionaryDoubleType"]  { 
+    		if let unwrapped_non_optionalDictionaryDoubleType : Any = valuesDict["non_optionalDictionaryDoubleType"]  { 
 				non_optionalDictionaryDoubleType = typeCast(unwrapped_non_optionalDictionaryDoubleType)! 
 			}
 
-    			if let unwrapped_non_optionalDictionaryFloatType : Any = valuesDict["non_optionalDictionaryFloatType"]  { 
+    		if let unwrapped_non_optionalDictionaryFloatType : Any = valuesDict["non_optionalDictionaryFloatType"]  { 
 				non_optionalDictionaryFloatType = typeCast(unwrapped_non_optionalDictionaryFloatType)! 
 			}
 
-    			if let unwrapped_non_optionalDictionaryStringType : Any = valuesDict["non_optionalDictionaryStringType"]  { 
+    		if let unwrapped_non_optionalDictionaryStringType : Any = valuesDict["non_optionalDictionaryStringType"]  { 
 				non_optionalDictionaryStringType = typeCast(unwrapped_non_optionalDictionaryStringType)! 
 			}
 
  		} 
 	}
 } 
- 

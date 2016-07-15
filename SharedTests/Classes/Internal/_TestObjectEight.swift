@@ -8,7 +8,7 @@ class _TestObjectEight  {
 
 	required init(non_optionalDictionaryType  _non_optionalDictionaryType : [String : TestObjectFour])  {
  		
-					non_optionalDictionaryType = _non_optionalDictionaryType
+						non_optionalDictionaryType = _non_optionalDictionaryType
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -49,4 +49,3 @@ class _TestObjectEight  {
  		} 
 	}
 } 
- 

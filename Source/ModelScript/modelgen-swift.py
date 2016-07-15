@@ -11,71 +11,44 @@ from generator.instantiator import InstantiatorGenerator
 from generator.validator 	import Validator
 
 def generate_model(plistPaths, output_directory, version, testEnabled):
+	
+	instantiatorPath = output_directory + 'Internal/US2Instantiator.swift'
+	instantiatorGenerator = InstantiatorGenerator(plistPaths, output_directory, version, testEnabled)
+	
+	generate_file(instantiatorGenerator.internalGeneratedClass(), instantiatorPath, True)
 
 	for mappingPath in plistPaths:
 		classname = mappingPath[mappingPath.rindex('/',0,-1)+1:-1] if mappingPath.endswith('/') else mappingPath[mappingPath.rindex('/')+1:].split('.', 1 )[0]
+		propertyMappings = plistlib.readPlist(mappingPath)
 		
 		classGenerator = ClassGenerator(mappingPath, output_directory, version, testEnabled)
-	
-		classPropertyMappings = plistlib.readPlist(mappingPath)
-		validator = Validator(classname, classPropertyMappings)
+		
+		internalClassPath = output_directory + 'Internal/_'+ classname + '.swift'
+		externalClassPath = output_directory + classname + '.swift'
+		
+		validator = Validator(classname, propertyMappings)
 		validator.validateMapping()
 
-		classFileContent = classGenerator.internalGeneratedClass()
-		externalFileContent = classGenerator.externalGeneratedClass()
+		internalClass = classGenerator.internalGeneratedClass()
+		externalClass= classGenerator.externalGeneratedClass()
 		
-		generate_external_file(classGenerator.externalGeneratedClass(), classname, output_directory)
-		generate_internal_file(classGenerator.internalGeneratedClass(), classname, output_directory)
-
-	instantiatorGenerator = InstantiatorGenerator(plistPaths, output_directory, version, testEnabled)
-	
-	generate_instantiator_file(instantiatorGenerator.internalGeneratedClass(), output_directory)
+		generate_file(internalClass, internalClassPath, True)
+		generate_file(externalClass, externalClassPath, False)
 
 
-def generate_external_file(content, classname, class_directory):
-	
-	filename = class_directory + classname + '.swift'
-	
-	if os.path.exists(filename):   
+def generate_file(content, filePath, overwrite):
+	if os.path.exists(filePath) and overwrite == False:   
    		return None
-	
-	if not os.path.exists(os.path.dirname(filename)):
-		os.makedirs(os.path.dirname(filename))
-	
-	outputfile = open(filename, "wba")
-	outputfile.write(content)
 
-	outputfile.close();
+	if not os.path.exists(os.path.dirname(filePath)):
+		os.makedirs(os.path.dirname(filePath))
+	
+	outputfile = open(filePath, "wba")
 
-def generate_internal_file(content, classname, class_directory):
-	
-	filename = class_directory + 'Internal/_'+ classname + '.swift'
-	
-	if not os.path.exists(os.path.dirname(filename)):
-		os.makedirs(os.path.dirname(filename))
-	
-	outputfile = open(filename, "wba")
-
-	fileContent = "" +  content
+	fileContent = content
 	outputfile.write(fileContent)
-	
-	outputfile.write('\n ')
 	outputfile.close();
 
-def generate_instantiator_file(content, class_directory):
-	
-	filename = class_directory + 'Internal/US2Instantiator.swift'
-	
-	if not os.path.exists(os.path.dirname(filename)):
-		os.makedirs(os.path.dirname(filename))
-	
-	outputfile = open(filename, "wba")
-
-	fileContent = "" +  content
-	outputfile.write(fileContent)
-	
-	outputfile.write('\n ')
-	outputfile.close();
 
 def xcode_version():
 	status, xcodeVersionString = commands.getstatusoutput("xcodebuild -version")
@@ -83,6 +56,7 @@ def xcode_version():
 		return 7.0
 	else:
 		return 6.0
+
 
 def main(argv):
    inputfile = ''

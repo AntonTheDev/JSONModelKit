@@ -8,7 +8,7 @@ class _TestObjectSeven  {
 
 	required init(non_optionalArrayType  _non_optionalArrayType : [TestObjectFour])  {
  		
-					non_optionalArrayType = _non_optionalArrayType
+						non_optionalArrayType = _non_optionalArrayType
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -49,4 +49,3 @@ class _TestObjectSeven  {
  		} 
 	}
 } 
- 

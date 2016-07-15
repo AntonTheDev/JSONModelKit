@@ -3,24 +3,24 @@ import Foundation
 class _TestObjectTwelve  {
 	
 	var optionalBool : Bool?
-    	var optionalString : String?
-    	var optionalInt : Int?
-    	var optionalDouble : Double?
-    	var optionalFloat : Float?
+    var optionalString : String?
+    var optionalInt : Int?
+    var optionalDouble : Double?
+    var optionalFloat : Float?
 	
 	var non_optionalBool : Bool
-    	var non_optionalString : String
-    	var non_optionalInt : Int
-    	var non_optionalDouble : Double
-    	var non_optionalFloat : Float
+    var non_optionalString : String
+    var non_optionalInt : Int
+    var non_optionalDouble : Double
+    var non_optionalFloat : Float
 
 	required init(non_optionalBool  _non_optionalBool : Bool,
-    			    non_optionalString  _non_optionalString : String,
-    			    non_optionalInt  _non_optionalInt : Int,
-    			    non_optionalDouble  _non_optionalDouble : Double,
-    			    non_optionalFloat  _non_optionalFloat : Float)  {
+    			  non_optionalString  _non_optionalString : String,
+    			  non_optionalInt  _non_optionalInt : Int,
+    			  non_optionalDouble  _non_optionalDouble : Double,
+    			  non_optionalFloat  _non_optionalFloat : Float)  {
  		
-					non_optionalBool = _non_optionalBool
+						non_optionalBool = _non_optionalBool
     					non_optionalString = _non_optionalString
     					non_optionalInt = _non_optionalInt
     					non_optionalDouble = _non_optionalDouble
@@ -50,19 +50,19 @@ class _TestObjectTwelve  {
 				optionalBool = typeCast(unwrapped_optionalBool)! 
 			}
 
-    			if let unwrapped_optionalString : Any = valuesDict["optionalString"]  { 
+    		if let unwrapped_optionalString : Any = valuesDict["optionalString"]  { 
 				optionalString = typeCast(unwrapped_optionalString)! 
 			}
 
-    			if let unwrapped_optionalInt : Any = valuesDict["optionalInt"]  { 
+    		if let unwrapped_optionalInt : Any = valuesDict["optionalInt"]  { 
 				optionalInt = typeCast(unwrapped_optionalInt)! 
 			}
 
-    			if let unwrapped_optionalDouble : Any = valuesDict["optionalDouble"]  { 
+    		if let unwrapped_optionalDouble : Any = valuesDict["optionalDouble"]  { 
 				optionalDouble = typeCast(unwrapped_optionalDouble)! 
 			}
 
-    			if let unwrapped_optionalFloat : Any = valuesDict["optionalFloat"]  { 
+    		if let unwrapped_optionalFloat : Any = valuesDict["optionalFloat"]  { 
 				optionalFloat = typeCast(unwrapped_optionalFloat)! 
 			}
 
@@ -82,19 +82,19 @@ class _TestObjectTwelve  {
 				optionalBool = typeCast(unwrapped_optionalBool)! 
 			}
 
-    			if let unwrapped_optionalString : Any = valuesDict["optionalString"]  { 
+    		if let unwrapped_optionalString : Any = valuesDict["optionalString"]  { 
 				optionalString = typeCast(unwrapped_optionalString)! 
 			}
 
-    			if let unwrapped_optionalInt : Any = valuesDict["optionalInt"]  { 
+    		if let unwrapped_optionalInt : Any = valuesDict["optionalInt"]  { 
 				optionalInt = typeCast(unwrapped_optionalInt)! 
 			}
 
-    			if let unwrapped_optionalDouble : Any = valuesDict["optionalDouble"]  { 
+    		if let unwrapped_optionalDouble : Any = valuesDict["optionalDouble"]  { 
 				optionalDouble = typeCast(unwrapped_optionalDouble)! 
 			}
 
-    			if let unwrapped_optionalFloat : Any = valuesDict["optionalFloat"]  { 
+    		if let unwrapped_optionalFloat : Any = valuesDict["optionalFloat"]  { 
 				optionalFloat = typeCast(unwrapped_optionalFloat)! 
 			}
 
@@ -102,23 +102,22 @@ class _TestObjectTwelve  {
 				non_optionalBool = typeCast(unwrapped_non_optionalBool)! 
 			}
 
-    			if let unwrapped_non_optionalString : Any = valuesDict["non_optionalString"]  { 
+    		if let unwrapped_non_optionalString : Any = valuesDict["non_optionalString"]  { 
 				non_optionalString = typeCast(unwrapped_non_optionalString)! 
 			}
 
-    			if let unwrapped_non_optionalInt : Any = valuesDict["non_optionalInt"]  { 
+    		if let unwrapped_non_optionalInt : Any = valuesDict["non_optionalInt"]  { 
 				non_optionalInt = typeCast(unwrapped_non_optionalInt)! 
 			}
 
-    			if let unwrapped_non_optionalDouble : Any = valuesDict["non_optionalDouble"]  { 
+    		if let unwrapped_non_optionalDouble : Any = valuesDict["non_optionalDouble"]  { 
 				non_optionalDouble = typeCast(unwrapped_non_optionalDouble)! 
 			}
 
-    			if let unwrapped_non_optionalFloat : Any = valuesDict["non_optionalFloat"]  { 
+    		if let unwrapped_non_optionalFloat : Any = valuesDict["non_optionalFloat"]  { 
 				non_optionalFloat = typeCast(unwrapped_non_optionalFloat)! 
 			}
 
  		} 
 	}
 } 
- 

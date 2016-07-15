@@ -3,10 +3,10 @@ import Foundation
 class _TestObjectThirteen  {
 	
 	var optionalStruct : StructExample?
-    	var optionalTuple : (val1 : Double, val2 : Double)?
-    	var optionalUppercaseCompletionHandler : ((value : String) -> String)?
-    	var optionalEnum : EnumExample?
-    	var optionalLowercaseCompletionHandler : ((value : String) -> String)?
+    var optionalTuple : (val1 : Double, val2 : Double)?
+    var optionalUppercaseCompletionHandler : ((value : String) -> String)?
+    var optionalEnum : EnumExample?
+    var optionalLowercaseCompletionHandler : ((value : String) -> String)?
 	
 
 	required init()  {
@@ -27,19 +27,19 @@ class _TestObjectThirteen  {
 				optionalStruct = typeCast(unwrapped_optionalStruct)! 
 			}
 
-    			if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
+    		if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
 				optionalTuple = typeCast(unwrapped_optionalTuple)! 
 			}
 
-    			if let unwrapped_optionalUppercaseCompletionHandler : Any = valuesDict["optionalUppercaseCompletionHandler"]  { 
+    		if let unwrapped_optionalUppercaseCompletionHandler : Any = valuesDict["optionalUppercaseCompletionHandler"]  { 
 				optionalUppercaseCompletionHandler = typeCast(unwrapped_optionalUppercaseCompletionHandler)! 
 			}
 
-    			if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
+    		if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
 				optionalEnum = typeCast(unwrapped_optionalEnum)! 
 			}
 
-    			if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
+    		if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
 				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
 			}
 
@@ -59,19 +59,19 @@ class _TestObjectThirteen  {
 				optionalStruct = typeCast(unwrapped_optionalStruct)! 
 			}
 
-    			if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
+    		if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
 				optionalTuple = typeCast(unwrapped_optionalTuple)! 
 			}
 
-    			if let unwrapped_optionalUppercaseCompletionHandler : Any = valuesDict["optionalUppercaseCompletionHandler"]  { 
+    		if let unwrapped_optionalUppercaseCompletionHandler : Any = valuesDict["optionalUppercaseCompletionHandler"]  { 
 				optionalUppercaseCompletionHandler = typeCast(unwrapped_optionalUppercaseCompletionHandler)! 
 			}
 
-    			if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
+    		if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
 				optionalEnum = typeCast(unwrapped_optionalEnum)! 
 			}
 
-    			if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
+    		if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
 				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
 			}
 
@@ -79,4 +79,3 @@ class _TestObjectThirteen  {
  		} 
 	}
 } 
- 

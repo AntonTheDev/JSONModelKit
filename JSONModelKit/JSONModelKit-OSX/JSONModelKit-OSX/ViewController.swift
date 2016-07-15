@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  JSONModelKit-OSX
 //
-//  Created by Anton Doudarev on 7/14/16.
+//  Created by Anton on 7/15/16.
 //  Copyright © 2016 Anton Doudarev. All rights reserved.
 //
 

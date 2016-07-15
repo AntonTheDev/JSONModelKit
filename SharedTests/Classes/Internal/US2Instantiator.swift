@@ -87,4 +87,3 @@ class US2Instantiator : US2InstantiatorProtocol {
 		return US2TransformerEnum(rawValue: classString)!.transformer()
 	}
 }
- 
