@@ -11,7 +11,6 @@
 		3A5AAB911D38DADD0001D715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AAB901D38DADD0001D715 /* ViewController.swift */; };
 		3A5AAB931D38DADD0001D715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5AAB921D38DADD0001D715 /* Assets.xcassets */; };
 		3A5AAB961D38DADD0001D715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5AAB941D38DADD0001D715 /* Main.storyboard */; };
-		3AC60F621D38DF2B002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F411D38DF2B002F4B25 /* __init__.py */; };
 		3AC60F631D38DF2B002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F431D38DF2B002F4B25 /* __init__.py */; };
 		3AC60F641D38DF2B002F4B25 /* __init__.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F441D38DF2B002F4B25 /* __init__.pyc */; };
 		3AC60F651D38DF2B002F4B25 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F451D38DF2B002F4B25 /* constants.py */; };
@@ -96,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C6E8171D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSONModelKit-OSX-JSON-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13C6E81B1D396BB4000A0B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5AAB8B1D38DADD0001D715 /* JSONModelKit-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSONModelKit-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5AAB8E1D38DADD0001D715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A5AAB901D38DADD0001D715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		3A5AAB951D38DADD0001D715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A5AAB971D38DADD0001D715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5AABA11D38DB3A0001D715 /* JSONModelKit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSONModelKit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AC60F411D38DF2B002F4B25 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		3AC60F431D38DF2B002F4B25 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		3AC60F441D38DF2B002F4B25 /* __init__.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = __init__.pyc; sourceTree = "<group>"; };
 		3AC60F451D38DF2B002F4B25 /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
@@ -178,6 +178,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		13C6E8141D396BB4000A0B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A5AAB881D38DADD0001D715 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,12 +202,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C6E8181D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				13C6E81B1D396BB4000A0B4B /* Info.plist */,
+			);
+			path = "JSONModelKit-OSX-JSON-Tests";
+			sourceTree = "<group>";
+		};
 		3A5AAB821D38DADD0001D715 = {
 			isa = PBXGroup;
 			children = (
 				3AC60F3F1D38DF2B002F4B25 /* Source */,
 				3AC60FDC1D38E630002F4B25 /* Tests */,
 				3A5AAB8D1D38DADD0001D715 /* JSONModelKit-OSX */,
+				13C6E8181D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */,
 				3A5AAB8C1D38DADD0001D715 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 			children = (
 				3A5AAB8B1D38DADD0001D715 /* JSONModelKit-OSX.app */,
 				3A5AABA11D38DB3A0001D715 /* JSONModelKit-OSXTests.xctest */,
+				13C6E8171D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,7 +256,6 @@
 		3AC60F401D38DF2B002F4B25 /* ModelScript */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60F411D38DF2B002F4B25 /* __init__.py */,
 				3AC60F421D38DF2B002F4B25 /* generator */,
 				3AC60F4C1D38DF2B002F4B25 /* mappingKeys.pyc */,
 				3AC60F4D1D38DF2B002F4B25 /* modelgen-swift.py */,
@@ -405,6 +421,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		13C6E8161D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13C6E81E1D396BB4000A0B4B /* Build configuration list for PBXNativeTarget "JSONModelKit-OSX-JSON-Tests" */;
+			buildPhases = (
+				13C6E81F1D396BB7000A0B4B /* Rebuild Model JSON */,
+				13C6E8131D396BB4000A0B4B /* Sources */,
+				13C6E8141D396BB4000A0B4B /* Frameworks */,
+				13C6E8151D396BB4000A0B4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JSONModelKit-OSX-JSON-Tests";
+			productName = "JSONModelKit-OSX-JSON-Tests";
+			productReference = 13C6E8171D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3A5AAB8A1D38DADD0001D715 /* JSONModelKit-OSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A5AAB9A1D38DADD0001D715 /* Build configuration list for PBXNativeTarget "JSONModelKit-OSX" */;
@@ -426,7 +460,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A5AABAA1D38DB3A0001D715 /* Build configuration list for PBXNativeTarget "JSONModelKit-OSXTests" */;
 			buildPhases = (
-				3A5AAC4A1D38DBAD0001D715 /* Rebuild Model */,
+				3A5AAC4A1D38DBAD0001D715 /* Rebuild Model PLIST */,
 				3A5AAB9D1D38DB3A0001D715 /* Sources */,
 				3A5AAB9E1D38DB3A0001D715 /* Frameworks */,
 				3A5AAB9F1D38DB3A0001D715 /* Resources */,
@@ -451,6 +485,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Anton Doudarev";
 				TargetAttributes = {
+					13C6E8161D396BB4000A0B4B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					3A5AAB8A1D38DADD0001D715 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -475,11 +512,19 @@
 			targets = (
 				3A5AAB8A1D38DADD0001D715 /* JSONModelKit-OSX */,
 				3A5AABA01D38DB3A0001D715 /* JSONModelKit-OSXTests */,
+				13C6E8161D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		13C6E8151D396BB4000A0B4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A5AAB891D38DADD0001D715 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,7 +542,6 @@
 				3AC6102D1D38E630002F4B25 /* TestObjectFour.plist in Resources */,
 				3AC610351D38E630002F4B25 /* TestObjectTwo.plist in Resources */,
 				3AC60F6B1D38DF2B002F4B25 /* validator.pyc in Resources */,
-				3AC60F621D38DF2B002F4B25 /* __init__.py in Resources */,
 				3AC610301D38E630002F4B25 /* TestObjectSix.plist in Resources */,
 				3AC610311D38E630002F4B25 /* TestObjectTen.plist in Resources */,
 				3AC610341D38E630002F4B25 /* TestObjectTwelve.plist in Resources */,
@@ -526,14 +570,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A5AAC4A1D38DBAD0001D715 /* Rebuild Model */ = {
+		13C6E81F1D396BB7000A0B4B /* Rebuild Model JSON */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Rebuild Model";
+			name = "Rebuild Model JSON";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python $PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py -v 0.1 -i $PROJECT_DIR/../../Tests/Mapping-JSON/ -o $PROJECT_DIR/../../Tests/Classes/ -t 1";
+		};
+		3A5AAC4A1D38DBAD0001D715 /* Rebuild Model PLIST */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Rebuild Model PLIST";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +601,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		13C6E8131D396BB4000A0B4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A5AAB871D38DADD0001D715 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -626,6 +691,33 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		13C6E81C1D396BB4000A0B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "JSONModelKit-OSX-JSON-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-OSX-JSON-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		13C6E81D1D396BB4000A0B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "JSONModelKit-OSX-JSON-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-OSX-JSON-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		3A5AAB981D38DADD0001D715 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -761,6 +853,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13C6E81E1D396BB4000A0B4B /* Build configuration list for PBXNativeTarget "JSONModelKit-OSX-JSON-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C6E81C1D396BB4000A0B4B /* Debug */,
+				13C6E81D1D396BB4000A0B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3A5AAB861D38DADD0001D715 /* Build configuration list for PBXProject "JSONModelKit-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

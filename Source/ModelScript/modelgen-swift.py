@@ -7,9 +7,9 @@ import glob
 import commands
 import json
 
-from generator.generator 	import ClassGenerator
-from generator.instantiator import InstantiatorGenerator
-from generator.validator 	import Validator
+from generator 	import ClassGenerator
+from instantiator import InstantiatorGenerator
+from validator 	import Validator
 
 def generate_model(plistPaths, output_directory, version, testEnabled, jsonFormatEnabled):
 	

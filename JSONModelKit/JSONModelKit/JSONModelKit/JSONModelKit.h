@@ -6,7 +6,8 @@
 //  Copyright © 2016 Anton Doudarev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+
+#import <Foundation/Foundation.h>
 
 //! Project version number for JSONModelKit.
 FOUNDATION_EXPORT double JSONModelKitVersionNumber;

@@ -1,0 +1,39 @@
+{
+	"optionalUppercaseCompletionHandler" : {
+		"key" : [
+			"handler_type"
+		],
+		"transformer" : "US2ExampleClosureTransformer",
+		"type" : "((value : String) -> String)"
+	},
+	"optionalLowercaseCompletionHandler" : {
+		"key" : [
+			"handler_type"
+		],
+		"transformer" : "US2ExampleClosureTransformer",
+		"type" : "((value : String) -> String)"
+	},
+	"optionalStruct" : {
+		"key" : [
+			"string1",
+			"string2"
+		],
+		"transformer" : "US2ExampleStructTransformer",
+		"type" : "StructExample"
+	},
+	"optionalTuple" : {
+		"key" : [
+			"value_one",
+			"value_two"
+		],
+		"transformer" : "US2ExampleTupleTransformer",
+		"type" : "(val1 : Double, val2 : Double)"
+	},
+	"optionalEnum" : {
+		"key" : [
+			"enumValue"
+		],
+		"transformer" : "US2ExampleEnumTransformer",
+		"type" : "EnumExample"
+	}
+}

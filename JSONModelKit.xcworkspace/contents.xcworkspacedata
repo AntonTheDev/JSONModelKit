@@ -283,9 +283,9 @@
       location = "group:JSONModelKit/JSONModelKit-iOS/JSONModelKit-iOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
+      location = "group:JSONModelKit/JSONModelKit-OSX/JSONModelKit-OSX.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JSONModelKit/JSONModelKit-OSX/JSONModelKit-OSX.xcodeproj">
+      location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
    </FileRef>
 </Workspace>

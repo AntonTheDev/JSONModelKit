@@ -1,13 +1,11 @@
 {
 	"optionalString" : {
 		"key" : "optional_string",
-		"type" : "String",
-		"default" : "Hello"
+		"type" : "String"
 	},
 	"optionalBool" : {
 		"key" : "optional_bool",
-		"type" : "Bool",
-		"default" : "true"
+		"type" : "Bool"
 	},
 	"non_optionalFloat" : {
 		"nonoptional" : "true",
@@ -17,8 +15,7 @@
 	},
 	"optionalDouble" : {
 		"key" : "optional_double",
-		"type" : "Double",
-		"default" : "20.0"
+		"type" : "Double"
 	},
 	"non_optionalString" : {
 		"nonoptional" : "true",
@@ -35,23 +32,21 @@
 	"non_optionalBool" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_bool",
-		"default" : "false",
+		"default" : "true",
 		"type" : "Bool"
 	},
 	"optionalFloat" : {
 		"key" : "optional_float",
-		"type" : "Float",
-		"default" : "30.0"
+		"type" : "Float"
 	},
 	"non_optionalInt" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_int",
-		"default" : "40",
+		"default" : "500",
 		"type" : "Int"
 	},
 	"optionalInt" : {
 		"key" : "optional_int",
-		"type" : "Int",
-		"default" : "10"
+		"type" : "Int"
 	}
 }

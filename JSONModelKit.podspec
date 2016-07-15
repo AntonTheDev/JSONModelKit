@@ -11,12 +11,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target  = '10.9'
   s.tvos.deployment_target = '9.0'
 
-  s.platform     = :ios, "8.0"
-  s.platform     = :tvos, "9.0"
-  s.platform     = :osx, "10.9"
-
   s.requires_arc = true
 
-  s.source_files = "Source/US2MapperKit/*.*", "Source/US2MapperKit/Parsers/*.*", "Source/US2MapperKit/Transformer/*.*", "Source/US2MapperKit/Validator/*.*", "Source/
-  ModelScript/*.*"
+  s.source_files =  "Source/ModelScript/*.*", "Source/ModelScript/generator/*.*", "Source/ModelScript/Templates/*.*", "Source/US2MapperKit/*.*", "Source/US2MapperKit/Parsers/*.*", "Source/US2MapperKit/Transformer/*.*", "Source/US2MapperKit/Validator/*.*"
 end

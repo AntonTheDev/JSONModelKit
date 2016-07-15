@@ -1,0 +1,46 @@
+{
+	"non_optionalDictionaryStringType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_dictionary_string_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "String"
+	},
+	"non_optionalDictionaryDoubleType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_dictionary_double_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Double"
+	},
+	"optionalDictionaryFloatType" : {
+		"key" : "optional_dictionary_float_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Float"
+	},
+	"optionalDictionaryIntType" : {
+		"key" : "optional_dictionary_int_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Int"
+	},
+	"optionalDictionaryStringType" : {
+		"key" : "optional_dictionary_string_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "String"
+	},
+	"optionalDictionaryDoubleType" : {
+		"key" : "optional_dictionary_double_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Double"
+	},
+	"non_optionalDictionaryFloatType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_dictionary_float_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Float"
+	},
+	"non_optionalDictionaryIntType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_dictionary_int_type",
+		"type" : "Dictionary",
+		"collection_subtype" : "Int"
+	}
+}

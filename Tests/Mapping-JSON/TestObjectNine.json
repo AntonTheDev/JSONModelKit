@@ -1,0 +1,46 @@
+{
+	"optionalArrayFloatType" : {
+		"key" : "optional_array_float_type",
+		"type" : "Array",
+		"collection_subtype" : "Float"
+	},
+	"non_optionalArrayDoubleType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_array_double_type",
+		"type" : "Array",
+		"collection_subtype" : "Double"
+	},
+	"optionalArrayDoubleType" : {
+		"key" : "optional_array_double_type",
+		"type" : "Array",
+		"collection_subtype" : "Double"
+	},
+	"optionalArrayStringType" : {
+		"key" : "optional_array_string_type",
+		"type" : "Array",
+		"collection_subtype" : "String"
+	},
+	"optionalArrayIntType" : {
+		"key" : "optional_array_int_type",
+		"type" : "Array",
+		"collection_subtype" : "Int"
+	},
+	"non_optionalArrayStringType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_array_string_type",
+		"type" : "Array",
+		"collection_subtype" : "String"
+	},
+	"non_optionalArrayFloatType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_array_float_type",
+		"type" : "Array",
+		"collection_subtype" : "Float"
+	},
+	"non_optionalArrayIntType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_array_int_type",
+		"type" : "Array",
+		"collection_subtype" : "Int"
+	}
+}

@@ -1,24 +1,21 @@
 {
 	"optionalString" : {
-		"key" : "optional_string",
-		"type" : "String",
-		"default" : "Hello"
+		"key" : "top_level_key.optional_string",
+		"type" : "String"
 	},
 	"optionalBool" : {
-		"key" : "optional_bool",
-		"type" : "Bool",
-		"default" : "true"
+		"key" : "top_level_key.optional_bool",
+		"type" : "Bool"
 	},
 	"non_optionalFloat" : {
 		"nonoptional" : "true",
-		"key" : "non_optional_float",
+		"key" : "top_level_key.non_optional_float",
 		"default" : "60.0",
 		"type" : "Float"
 	},
 	"optionalDouble" : {
-		"key" : "optional_double",
-		"type" : "Double",
-		"default" : "20.0"
+		"key" : "top_level_key,optional_double",
+		"type" : "Double"
 	},
 	"non_optionalString" : {
 		"nonoptional" : "true",
@@ -28,30 +25,28 @@
 	},
 	"non_optionalDouble" : {
 		"nonoptional" : "true",
-		"key" : "non_optional_double",
+		"key" : "top_level_key.non_optional_double",
 		"default" : "50.0",
 		"type" : "Double"
 	},
 	"non_optionalBool" : {
 		"nonoptional" : "true",
-		"key" : "non_optional_bool",
-		"default" : "false",
+		"key" : "top_level_key.non_optional_bool",
+		"default" : "true",
 		"type" : "Bool"
 	},
 	"optionalFloat" : {
-		"key" : "optional_float",
-		"type" : "Float",
-		"default" : "30.0"
+		"key" : "top_level_key.optional_float",
+		"type" : "Float"
 	},
 	"non_optionalInt" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_int",
-		"default" : "40",
+		"default" : "500",
 		"type" : "Int"
 	},
 	"optionalInt" : {
-		"key" : "optional_int",
-		"type" : "Int",
-		"default" : "10"
+		"key" : "top_level_key.optional_int",
+		"type" : "Int"
 	}
 }
