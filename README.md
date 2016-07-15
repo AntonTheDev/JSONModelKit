@@ -89,11 +89,6 @@ Below is a list of examples for the supported features by JSONModelKit. Each pro
 * [Tuples Mapping](/documentation/custom_transforms_tuples.md)
 * [Enabling Debug Mode](/documentation/enable_debug_mode.md)
 
-
-##Updates
-
-- [Change Log](/documentation/changelog.md)
-
 ## License
 
 *JSONModelKit is released under the MIT license. See [License](/LICENSE.md) for details.*
