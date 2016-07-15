@@ -10,7 +10,6 @@ import commands
 from constants import Type
 from constants import MappingKey
 
-
 class InstantiatorGenerator:
 
    def __init__(self, plistPaths, output_directory, version, testEnabled):
@@ -37,18 +36,16 @@ class InstantiatorGenerator:
          classname = filename.split('.', 1 )[0]
          classnames.append(classname)
 
-      fileString = str.replace(internalTemplate, "{ CASE_ENUM_DEFINITION }",           self.class_case_statements(classnames))
-      fileString = str.replace(fileString, "{ SWITCH_CASE_ENUM_INSTANTIATE }",      self.class_switch_statements(classnames))
-      fileString = str.replace(fileString, "{ CASE_TRANSAFORMER_ENUM_DEFINITION }",   self.transformer_case_statements())
-      fileString = str.replace(fileString, "{ CASE_TRANSAFORMER_ENUM_RETURN }",     self.transformer_switch_statements())
-      print fileString
+      fileString = str.replace(internalTemplate, "{ CASE_ENUM_DEFINITION }",                 self.class_case_statements(classnames))
+      fileString = str.replace(fileString,       "{ SWITCH_CASE_ENUM_INSTANTIATE }",         self.class_switch_statements(classnames))
+      fileString = str.replace(fileString,       "{ CASE_TRANSAFORMER_ENUM_DEFINITION }",    self.transformer_case_statements())
+      fileString = str.replace(fileString,       "{ CASE_TRANSAFORMER_ENUM_RETURN }",        self.transformer_switch_statements())
       return fileString
 
 
    '''
    Replaces { CASE_ENUM_DEFINITION } in the template
    '''
-
    def class_case_statements(self, classnames):
       caseString = ""
       for classname in classnames:

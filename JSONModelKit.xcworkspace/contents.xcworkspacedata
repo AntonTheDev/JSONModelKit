@@ -111,12 +111,21 @@
          </Group>
       </Group>
    </Group>
+   <FileRef
+      location = "group:JSONModelKit/JSONModelKit/JSONModelKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JSONModelKit/JSONModelKit-iOS/JSONModelKit-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JSONModelKit/JSONModelKit-OSX/JSONModelKit-OSX.xcodeproj">
+   </FileRef>
    <Group
-      location = "group:SharedTests"
+      location = "group:Tests"
       name = "Tests">
-      <FileRef
-         location = "group:JSONModelKitTests.swift">
-      </FileRef>
       <Group
          location = "group:Classes"
          name = "Classes">
@@ -206,6 +215,9 @@
             location = "group:TestObjectTwo.swift">
          </FileRef>
       </Group>
+      <FileRef
+         location = "group:JSONModelKitTests.swift">
+      </FileRef>
       <Group
          location = "group:Mapping"
          name = "Mapping">
@@ -266,16 +278,4 @@
          </FileRef>
       </Group>
    </Group>
-   <FileRef
-      location = "group:JSONModelKit/JSONModelKit/JSONModelKit.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:JSONModelKit/JSONModelKit-iOS/JSONModelKit-iOS.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:JSONModelKit/JSONModelKit-OSX/JSONModelKit-OSX.xcodeproj">
-   </FileRef>
 </Workspace>
