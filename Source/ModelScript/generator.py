@@ -55,7 +55,7 @@ class ClassGenerator:
       return fileString
 
    def externalGeneratedClass(self):
-      templatePath = os.getcwd() + "/../../Source/ModelScript/Templates/external_class_template.txt"
+      templatePath = os.getcwd() + "/../../Source/ModelScript/external_class_template.txt"
    
       externalTemplate = open(templatePath, 'r').read()
       externalTemplate = str.replace(externalTemplate, '\n', '\r\n')   

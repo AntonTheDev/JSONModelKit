@@ -16,7 +16,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13C6E6FC1D396B36000A0B4B"
+               BlueprintIdentifier = "131FB1A41D397569008EE4FF"
                BuildableName = "JSONModelKit-tvOS-JSON-Tests.xctest"
                BlueprintName = "JSONModelKit-tvOS-JSON-Tests"
                ReferencedContainer = "container:JSONModelKit-tvOS.xcodeproj">

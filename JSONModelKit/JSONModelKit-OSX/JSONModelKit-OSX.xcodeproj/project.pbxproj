@@ -7,36 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131FB2E01D3989FF008EE4FF /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C31D3989FF008EE4FF /* __init__.py */; };
+		131FB2E11D3989FF008EE4FF /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C31D3989FF008EE4FF /* __init__.py */; };
+		131FB2E21D3989FF008EE4FF /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C41D3989FF008EE4FF /* constants.py */; };
+		131FB2E31D3989FF008EE4FF /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C41D3989FF008EE4FF /* constants.py */; };
+		131FB2E41D3989FF008EE4FF /* constants.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C51D3989FF008EE4FF /* constants.pyc */; };
+		131FB2E51D3989FF008EE4FF /* constants.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C51D3989FF008EE4FF /* constants.pyc */; };
+		131FB2E61D3989FF008EE4FF /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C61D3989FF008EE4FF /* external_class_template.txt */; };
+		131FB2E71D3989FF008EE4FF /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C61D3989FF008EE4FF /* external_class_template.txt */; };
+		131FB2E81D3989FF008EE4FF /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C71D3989FF008EE4FF /* generator.py */; };
+		131FB2E91D3989FF008EE4FF /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C71D3989FF008EE4FF /* generator.py */; };
+		131FB2EA1D3989FF008EE4FF /* generator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C81D3989FF008EE4FF /* generator.pyc */; };
+		131FB2EB1D3989FF008EE4FF /* generator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C81D3989FF008EE4FF /* generator.pyc */; };
+		131FB2EC1D3989FF008EE4FF /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C91D3989FF008EE4FF /* instantiator.py */; };
+		131FB2ED1D3989FF008EE4FF /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2C91D3989FF008EE4FF /* instantiator.py */; };
+		131FB2EE1D3989FF008EE4FF /* instantiator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CA1D3989FF008EE4FF /* instantiator.pyc */; };
+		131FB2EF1D3989FF008EE4FF /* instantiator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CA1D3989FF008EE4FF /* instantiator.pyc */; };
+		131FB2F01D3989FF008EE4FF /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CB1D3989FF008EE4FF /* instantiator_template.txt */; };
+		131FB2F11D3989FF008EE4FF /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CB1D3989FF008EE4FF /* instantiator_template.txt */; };
+		131FB2F21D3989FF008EE4FF /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CC1D3989FF008EE4FF /* internal_class_template.txt */; };
+		131FB2F31D3989FF008EE4FF /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CC1D3989FF008EE4FF /* internal_class_template.txt */; };
+		131FB2F41D3989FF008EE4FF /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CD1D3989FF008EE4FF /* modelgen-swift.py */; };
+		131FB2F51D3989FF008EE4FF /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CD1D3989FF008EE4FF /* modelgen-swift.py */; };
+		131FB2F61D3989FF008EE4FF /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CE1D3989FF008EE4FF /* validator.py */; };
+		131FB2F71D3989FF008EE4FF /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CE1D3989FF008EE4FF /* validator.py */; };
+		131FB2F81D3989FF008EE4FF /* validator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CF1D3989FF008EE4FF /* validator.pyc */; };
+		131FB2F91D3989FF008EE4FF /* validator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB2CF1D3989FF008EE4FF /* validator.pyc */; };
+		131FB2FA1D3989FF008EE4FF /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D21D3989FF008EE4FF /* CollectionParser.swift */; };
+		131FB2FB1D3989FF008EE4FF /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D21D3989FF008EE4FF /* CollectionParser.swift */; };
+		131FB2FC1D3989FF008EE4FF /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D31D3989FF008EE4FF /* ComplexTypeParser.swift */; };
+		131FB2FD1D3989FF008EE4FF /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D31D3989FF008EE4FF /* ComplexTypeParser.swift */; };
+		131FB2FE1D3989FF008EE4FF /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D41D3989FF008EE4FF /* ComplexValueArrayParser.swift */; };
+		131FB2FF1D3989FF008EE4FF /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D41D3989FF008EE4FF /* ComplexValueArrayParser.swift */; };
+		131FB3001D3989FF008EE4FF /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D51D3989FF008EE4FF /* ComplexValueDictionaryParser.swift */; };
+		131FB3011D3989FF008EE4FF /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D51D3989FF008EE4FF /* ComplexValueDictionaryParser.swift */; };
+		131FB3021D3989FF008EE4FF /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D61D3989FF008EE4FF /* NativeTypeParser.swift */; };
+		131FB3031D3989FF008EE4FF /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D61D3989FF008EE4FF /* NativeTypeParser.swift */; };
+		131FB3041D3989FF008EE4FF /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D71D3989FF008EE4FF /* NativeValueArrayParser.swift */; };
+		131FB3051D3989FF008EE4FF /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D71D3989FF008EE4FF /* NativeValueArrayParser.swift */; };
+		131FB3061D3989FF008EE4FF /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D81D3989FF008EE4FF /* NativeValueDictionaryParser.swift */; };
+		131FB3071D3989FF008EE4FF /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D81D3989FF008EE4FF /* NativeValueDictionaryParser.swift */; };
+		131FB3081D3989FF008EE4FF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D91D3989FF008EE4FF /* Parser.swift */; };
+		131FB3091D3989FF008EE4FF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2D91D3989FF008EE4FF /* Parser.swift */; };
+		131FB30A1D3989FF008EE4FF /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DB1D3989FF008EE4FF /* Transformer.swift */; };
+		131FB30B1D3989FF008EE4FF /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DB1D3989FF008EE4FF /* Transformer.swift */; };
+		131FB30C1D3989FF008EE4FF /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DC1D3989FF008EE4FF /* US2CompoundValueTransformer.swift */; };
+		131FB30D1D3989FF008EE4FF /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DC1D3989FF008EE4FF /* US2CompoundValueTransformer.swift */; };
+		131FB30E1D3989FF008EE4FF /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DD1D3989FF008EE4FF /* US2Mapper.swift */; };
+		131FB30F1D3989FF008EE4FF /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DD1D3989FF008EE4FF /* US2Mapper.swift */; };
+		131FB3101D3989FF008EE4FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DF1D3989FF008EE4FF /* Validator.swift */; };
+		131FB3111D3989FF008EE4FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB2DF1D3989FF008EE4FF /* Validator.swift */; };
 		3A5AAB8F1D38DADD0001D715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AAB8E1D38DADD0001D715 /* AppDelegate.swift */; };
 		3A5AAB911D38DADD0001D715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AAB901D38DADD0001D715 /* ViewController.swift */; };
 		3A5AAB931D38DADD0001D715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5AAB921D38DADD0001D715 /* Assets.xcassets */; };
 		3A5AAB961D38DADD0001D715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5AAB941D38DADD0001D715 /* Main.storyboard */; };
-		3AC60F631D38DF2B002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F431D38DF2B002F4B25 /* __init__.py */; };
-		3AC60F641D38DF2B002F4B25 /* __init__.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F441D38DF2B002F4B25 /* __init__.pyc */; };
-		3AC60F651D38DF2B002F4B25 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F451D38DF2B002F4B25 /* constants.py */; };
-		3AC60F661D38DF2B002F4B25 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F461D38DF2B002F4B25 /* generator.py */; };
-		3AC60F671D38DF2B002F4B25 /* generator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F471D38DF2B002F4B25 /* generator.pyc */; };
-		3AC60F681D38DF2B002F4B25 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F481D38DF2B002F4B25 /* instantiator.py */; };
-		3AC60F691D38DF2B002F4B25 /* instantiator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F491D38DF2B002F4B25 /* instantiator.pyc */; };
-		3AC60F6A1D38DF2B002F4B25 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F4A1D38DF2B002F4B25 /* validator.py */; };
-		3AC60F6B1D38DF2B002F4B25 /* validator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F4B1D38DF2B002F4B25 /* validator.pyc */; };
-		3AC60F6C1D38DF2B002F4B25 /* mappingKeys.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F4C1D38DF2B002F4B25 /* mappingKeys.pyc */; };
-		3AC60F6D1D38DF2B002F4B25 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F4D1D38DF2B002F4B25 /* modelgen-swift.py */; };
-		3AC60F6E1D38DF2B002F4B25 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F4F1D38DF2B002F4B25 /* external_class_template.txt */; };
-		3AC60F6F1D38DF2B002F4B25 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F501D38DF2B002F4B25 /* instantiator_template.txt */; };
-		3AC60F701D38DF2B002F4B25 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60F511D38DF2B002F4B25 /* internal_class_template.txt */; };
-		3AC60F711D38DF2B002F4B25 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F541D38DF2B002F4B25 /* CollectionParser.swift */; };
-		3AC60F721D38DF2B002F4B25 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F551D38DF2B002F4B25 /* ComplexTypeParser.swift */; };
-		3AC60F731D38DF2B002F4B25 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F561D38DF2B002F4B25 /* ComplexValueArrayParser.swift */; };
-		3AC60F741D38DF2B002F4B25 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F571D38DF2B002F4B25 /* ComplexValueDictionaryParser.swift */; };
-		3AC60F751D38DF2B002F4B25 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F581D38DF2B002F4B25 /* NativeTypeParser.swift */; };
-		3AC60F761D38DF2B002F4B25 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F591D38DF2B002F4B25 /* NativeValueArrayParser.swift */; };
-		3AC60F771D38DF2B002F4B25 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F5A1D38DF2B002F4B25 /* NativeValueDictionaryParser.swift */; };
-		3AC60F781D38DF2B002F4B25 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F5B1D38DF2B002F4B25 /* Parser.swift */; };
-		3AC60F791D38DF2B002F4B25 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F5D1D38DF2B002F4B25 /* Transformer.swift */; };
-		3AC60F7A1D38DF2B002F4B25 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F5E1D38DF2B002F4B25 /* US2CompoundValueTransformer.swift */; };
-		3AC60F7B1D38DF2B002F4B25 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F5F1D38DF2B002F4B25 /* US2Mapper.swift */; };
-		3AC60F7C1D38DF2B002F4B25 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60F611D38DF2B002F4B25 /* Validator.swift */; };
 		3AC6100E1D38E630002F4B25 /* _TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60FDF1D38E630002F4B25 /* _TestObjectEight.swift */; };
 		3AC6100F1D38E630002F4B25 /* _TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60FE01D38E630002F4B25 /* _TestObjectEleven.swift */; };
 		3AC610101D38E630002F4B25 /* _TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60FE11D38E630002F4B25 /* _TestObjectFive.swift */; };
@@ -95,6 +119,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131FB2C31D3989FF008EE4FF /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		131FB2C41D3989FF008EE4FF /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
+		131FB2C51D3989FF008EE4FF /* constants.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = constants.pyc; sourceTree = "<group>"; };
+		131FB2C61D3989FF008EE4FF /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
+		131FB2C71D3989FF008EE4FF /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
+		131FB2C81D3989FF008EE4FF /* generator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.pyc; sourceTree = "<group>"; };
+		131FB2C91D3989FF008EE4FF /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
+		131FB2CA1D3989FF008EE4FF /* instantiator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = instantiator.pyc; sourceTree = "<group>"; };
+		131FB2CB1D3989FF008EE4FF /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
+		131FB2CC1D3989FF008EE4FF /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
+		131FB2CD1D3989FF008EE4FF /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
+		131FB2CE1D3989FF008EE4FF /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
+		131FB2CF1D3989FF008EE4FF /* validator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = validator.pyc; sourceTree = "<group>"; };
+		131FB2D21D3989FF008EE4FF /* CollectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionParser.swift; sourceTree = "<group>"; };
+		131FB2D31D3989FF008EE4FF /* ComplexTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTypeParser.swift; sourceTree = "<group>"; };
+		131FB2D41D3989FF008EE4FF /* ComplexValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueArrayParser.swift; sourceTree = "<group>"; };
+		131FB2D51D3989FF008EE4FF /* ComplexValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueDictionaryParser.swift; sourceTree = "<group>"; };
+		131FB2D61D3989FF008EE4FF /* NativeTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeTypeParser.swift; sourceTree = "<group>"; };
+		131FB2D71D3989FF008EE4FF /* NativeValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueArrayParser.swift; sourceTree = "<group>"; };
+		131FB2D81D3989FF008EE4FF /* NativeValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueDictionaryParser.swift; sourceTree = "<group>"; };
+		131FB2D91D3989FF008EE4FF /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		131FB2DB1D3989FF008EE4FF /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		131FB2DC1D3989FF008EE4FF /* US2CompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2CompoundValueTransformer.swift; sourceTree = "<group>"; };
+		131FB2DD1D3989FF008EE4FF /* US2Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2Mapper.swift; sourceTree = "<group>"; };
+		131FB2DF1D3989FF008EE4FF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		13C6E8171D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSONModelKit-OSX-JSON-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E81B1D396BB4000A0B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5AAB8B1D38DADD0001D715 /* JSONModelKit-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSONModelKit-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,32 +153,6 @@
 		3A5AAB951D38DADD0001D715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A5AAB971D38DADD0001D715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5AABA11D38DB3A0001D715 /* JSONModelKit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSONModelKit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AC60F431D38DF2B002F4B25 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3AC60F441D38DF2B002F4B25 /* __init__.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = __init__.pyc; sourceTree = "<group>"; };
-		3AC60F451D38DF2B002F4B25 /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
-		3AC60F461D38DF2B002F4B25 /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
-		3AC60F471D38DF2B002F4B25 /* generator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.pyc; sourceTree = "<group>"; };
-		3AC60F481D38DF2B002F4B25 /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
-		3AC60F491D38DF2B002F4B25 /* instantiator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = instantiator.pyc; sourceTree = "<group>"; };
-		3AC60F4A1D38DF2B002F4B25 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
-		3AC60F4B1D38DF2B002F4B25 /* validator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = validator.pyc; sourceTree = "<group>"; };
-		3AC60F4C1D38DF2B002F4B25 /* mappingKeys.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = mappingKeys.pyc; sourceTree = "<group>"; };
-		3AC60F4D1D38DF2B002F4B25 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
-		3AC60F4F1D38DF2B002F4B25 /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
-		3AC60F501D38DF2B002F4B25 /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
-		3AC60F511D38DF2B002F4B25 /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
-		3AC60F541D38DF2B002F4B25 /* CollectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionParser.swift; sourceTree = "<group>"; };
-		3AC60F551D38DF2B002F4B25 /* ComplexTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTypeParser.swift; sourceTree = "<group>"; };
-		3AC60F561D38DF2B002F4B25 /* ComplexValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueArrayParser.swift; sourceTree = "<group>"; };
-		3AC60F571D38DF2B002F4B25 /* ComplexValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueDictionaryParser.swift; sourceTree = "<group>"; };
-		3AC60F581D38DF2B002F4B25 /* NativeTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeTypeParser.swift; sourceTree = "<group>"; };
-		3AC60F591D38DF2B002F4B25 /* NativeValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueArrayParser.swift; sourceTree = "<group>"; };
-		3AC60F5A1D38DF2B002F4B25 /* NativeValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueDictionaryParser.swift; sourceTree = "<group>"; };
-		3AC60F5B1D38DF2B002F4B25 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		3AC60F5D1D38DF2B002F4B25 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
-		3AC60F5E1D38DF2B002F4B25 /* US2CompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2CompoundValueTransformer.swift; sourceTree = "<group>"; };
-		3AC60F5F1D38DF2B002F4B25 /* US2Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2Mapper.swift; sourceTree = "<group>"; };
-		3AC60F611D38DF2B002F4B25 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3AC60FDF1D38E630002F4B25 /* _TestObjectEight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectEight.swift; sourceTree = "<group>"; };
 		3AC60FE01D38E630002F4B25 /* _TestObjectEleven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectEleven.swift; sourceTree = "<group>"; };
 		3AC60FE11D38E630002F4B25 /* _TestObjectFive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectFive.swift; sourceTree = "<group>"; };
@@ -202,6 +225,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131FB2C11D3989FF008EE4FF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2C21D3989FF008EE4FF /* ModelScript */,
+				131FB2D01D3989FF008EE4FF /* US2MapperKit */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		131FB2C21D3989FF008EE4FF /* ModelScript */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2C31D3989FF008EE4FF /* __init__.py */,
+				131FB2C41D3989FF008EE4FF /* constants.py */,
+				131FB2C51D3989FF008EE4FF /* constants.pyc */,
+				131FB2C61D3989FF008EE4FF /* external_class_template.txt */,
+				131FB2C71D3989FF008EE4FF /* generator.py */,
+				131FB2C81D3989FF008EE4FF /* generator.pyc */,
+				131FB2C91D3989FF008EE4FF /* instantiator.py */,
+				131FB2CA1D3989FF008EE4FF /* instantiator.pyc */,
+				131FB2CB1D3989FF008EE4FF /* instantiator_template.txt */,
+				131FB2CC1D3989FF008EE4FF /* internal_class_template.txt */,
+				131FB2CD1D3989FF008EE4FF /* modelgen-swift.py */,
+				131FB2CE1D3989FF008EE4FF /* validator.py */,
+				131FB2CF1D3989FF008EE4FF /* validator.pyc */,
+			);
+			path = ModelScript;
+			sourceTree = "<group>";
+		};
+		131FB2D01D3989FF008EE4FF /* US2MapperKit */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2D11D3989FF008EE4FF /* Parsers */,
+				131FB2DA1D3989FF008EE4FF /* Transformer */,
+				131FB2DC1D3989FF008EE4FF /* US2CompoundValueTransformer.swift */,
+				131FB2DD1D3989FF008EE4FF /* US2Mapper.swift */,
+				131FB2DE1D3989FF008EE4FF /* Validator */,
+			);
+			path = US2MapperKit;
+			sourceTree = "<group>";
+		};
+		131FB2D11D3989FF008EE4FF /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2D21D3989FF008EE4FF /* CollectionParser.swift */,
+				131FB2D31D3989FF008EE4FF /* ComplexTypeParser.swift */,
+				131FB2D41D3989FF008EE4FF /* ComplexValueArrayParser.swift */,
+				131FB2D51D3989FF008EE4FF /* ComplexValueDictionaryParser.swift */,
+				131FB2D61D3989FF008EE4FF /* NativeTypeParser.swift */,
+				131FB2D71D3989FF008EE4FF /* NativeValueArrayParser.swift */,
+				131FB2D81D3989FF008EE4FF /* NativeValueDictionaryParser.swift */,
+				131FB2D91D3989FF008EE4FF /* Parser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		131FB2DA1D3989FF008EE4FF /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2DB1D3989FF008EE4FF /* Transformer.swift */,
+			);
+			path = Transformer;
+			sourceTree = "<group>";
+		};
+		131FB2DE1D3989FF008EE4FF /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				131FB2DF1D3989FF008EE4FF /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 		13C6E8181D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +309,7 @@
 		3A5AAB821D38DADD0001D715 = {
 			isa = PBXGroup;
 			children = (
-				3AC60F3F1D38DF2B002F4B25 /* Source */,
+				131FB2C11D3989FF008EE4FF /* Source */,
 				3AC60FDC1D38E630002F4B25 /* Tests */,
 				3A5AAB8D1D38DADD0001D715 /* JSONModelKit-OSX */,
 				13C6E8181D396BB4000A0B4B /* JSONModelKit-OSX-JSON-Tests */,
@@ -241,96 +337,6 @@
 				3A5AAB971D38DADD0001D715 /* Info.plist */,
 			);
 			path = "JSONModelKit-OSX";
-			sourceTree = "<group>";
-		};
-		3AC60F3F1D38DF2B002F4B25 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F401D38DF2B002F4B25 /* ModelScript */,
-				3AC60F521D38DF2B002F4B25 /* US2MapperKit */,
-			);
-			name = Source;
-			path = ../../Source;
-			sourceTree = "<group>";
-		};
-		3AC60F401D38DF2B002F4B25 /* ModelScript */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F421D38DF2B002F4B25 /* generator */,
-				3AC60F4C1D38DF2B002F4B25 /* mappingKeys.pyc */,
-				3AC60F4D1D38DF2B002F4B25 /* modelgen-swift.py */,
-				3AC60F4E1D38DF2B002F4B25 /* Templates */,
-			);
-			path = ModelScript;
-			sourceTree = "<group>";
-		};
-		3AC60F421D38DF2B002F4B25 /* generator */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F431D38DF2B002F4B25 /* __init__.py */,
-				3AC60F441D38DF2B002F4B25 /* __init__.pyc */,
-				3AC60F451D38DF2B002F4B25 /* constants.py */,
-				3AC60F461D38DF2B002F4B25 /* generator.py */,
-				3AC60F471D38DF2B002F4B25 /* generator.pyc */,
-				3AC60F481D38DF2B002F4B25 /* instantiator.py */,
-				3AC60F491D38DF2B002F4B25 /* instantiator.pyc */,
-				3AC60F4A1D38DF2B002F4B25 /* validator.py */,
-				3AC60F4B1D38DF2B002F4B25 /* validator.pyc */,
-			);
-			path = generator;
-			sourceTree = "<group>";
-		};
-		3AC60F4E1D38DF2B002F4B25 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F4F1D38DF2B002F4B25 /* external_class_template.txt */,
-				3AC60F501D38DF2B002F4B25 /* instantiator_template.txt */,
-				3AC60F511D38DF2B002F4B25 /* internal_class_template.txt */,
-			);
-			path = Templates;
-			sourceTree = "<group>";
-		};
-		3AC60F521D38DF2B002F4B25 /* US2MapperKit */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F531D38DF2B002F4B25 /* Parsers */,
-				3AC60F5C1D38DF2B002F4B25 /* Transformer */,
-				3AC60F5E1D38DF2B002F4B25 /* US2CompoundValueTransformer.swift */,
-				3AC60F5F1D38DF2B002F4B25 /* US2Mapper.swift */,
-				3AC60F601D38DF2B002F4B25 /* Validator */,
-			);
-			path = US2MapperKit;
-			sourceTree = "<group>";
-		};
-		3AC60F531D38DF2B002F4B25 /* Parsers */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F541D38DF2B002F4B25 /* CollectionParser.swift */,
-				3AC60F551D38DF2B002F4B25 /* ComplexTypeParser.swift */,
-				3AC60F561D38DF2B002F4B25 /* ComplexValueArrayParser.swift */,
-				3AC60F571D38DF2B002F4B25 /* ComplexValueDictionaryParser.swift */,
-				3AC60F581D38DF2B002F4B25 /* NativeTypeParser.swift */,
-				3AC60F591D38DF2B002F4B25 /* NativeValueArrayParser.swift */,
-				3AC60F5A1D38DF2B002F4B25 /* NativeValueDictionaryParser.swift */,
-				3AC60F5B1D38DF2B002F4B25 /* Parser.swift */,
-			);
-			path = Parsers;
-			sourceTree = "<group>";
-		};
-		3AC60F5C1D38DF2B002F4B25 /* Transformer */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F5D1D38DF2B002F4B25 /* Transformer.swift */,
-			);
-			path = Transformer;
-			sourceTree = "<group>";
-		};
-		3AC60F601D38DF2B002F4B25 /* Validator */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60F611D38DF2B002F4B25 /* Validator.swift */,
-			);
-			path = Validator;
 			sourceTree = "<group>";
 		};
 		3AC60FDC1D38E630002F4B25 /* Tests */ = {
@@ -522,6 +528,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131FB2F51D3989FF008EE4FF /* modelgen-swift.py in Resources */,
+				131FB2E91D3989FF008EE4FF /* generator.py in Resources */,
+				131FB2ED1D3989FF008EE4FF /* instantiator.py in Resources */,
+				131FB2EF1D3989FF008EE4FF /* instantiator.pyc in Resources */,
+				131FB2E71D3989FF008EE4FF /* external_class_template.txt in Resources */,
+				131FB2F71D3989FF008EE4FF /* validator.py in Resources */,
+				131FB2EB1D3989FF008EE4FF /* generator.pyc in Resources */,
+				131FB2E31D3989FF008EE4FF /* constants.py in Resources */,
+				131FB2F91D3989FF008EE4FF /* validator.pyc in Resources */,
+				131FB2F31D3989FF008EE4FF /* internal_class_template.txt in Resources */,
+				131FB2F11D3989FF008EE4FF /* instantiator_template.txt in Resources */,
+				131FB2E11D3989FF008EE4FF /* __init__.py in Resources */,
+				131FB2E51D3989FF008EE4FF /* constants.pyc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,32 +557,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60F651D38DF2B002F4B25 /* constants.py in Resources */,
+				131FB2F01D3989FF008EE4FF /* instantiator_template.txt in Resources */,
+				131FB2F41D3989FF008EE4FF /* modelgen-swift.py in Resources */,
 				3AC6102D1D38E630002F4B25 /* TestObjectFour.plist in Resources */,
+				131FB2E01D3989FF008EE4FF /* __init__.py in Resources */,
 				3AC610351D38E630002F4B25 /* TestObjectTwo.plist in Resources */,
-				3AC60F6B1D38DF2B002F4B25 /* validator.pyc in Resources */,
 				3AC610301D38E630002F4B25 /* TestObjectSix.plist in Resources */,
 				3AC610311D38E630002F4B25 /* TestObjectTen.plist in Resources */,
 				3AC610341D38E630002F4B25 /* TestObjectTwelve.plist in Resources */,
-				3AC60F631D38DF2B002F4B25 /* __init__.py in Resources */,
-				3AC60F6D1D38DF2B002F4B25 /* modelgen-swift.py in Resources */,
-				3AC60F641D38DF2B002F4B25 /* __init__.pyc in Resources */,
+				131FB2E21D3989FF008EE4FF /* constants.py in Resources */,
 				3AC6102E1D38E630002F4B25 /* TestObjectNine.plist in Resources */,
+				131FB2EA1D3989FF008EE4FF /* generator.pyc in Resources */,
 				3AC6102B1D38E630002F4B25 /* TestObjectEleven.plist in Resources */,
-				3AC60F6A1D38DF2B002F4B25 /* validator.py in Resources */,
+				131FB2E81D3989FF008EE4FF /* generator.py in Resources */,
 				3AC6102A1D38E630002F4B25 /* TestObjectEight.plist in Resources */,
-				3AC60F6F1D38DF2B002F4B25 /* instantiator_template.txt in Resources */,
-				3AC60F671D38DF2B002F4B25 /* generator.pyc in Resources */,
-				3AC60F661D38DF2B002F4B25 /* generator.py in Resources */,
-				3AC60F6E1D38DF2B002F4B25 /* external_class_template.txt in Resources */,
 				3AC6102C1D38E630002F4B25 /* TestObjectFive.plist in Resources */,
-				3AC60F701D38DF2B002F4B25 /* internal_class_template.txt in Resources */,
 				3AC610331D38E630002F4B25 /* TestObjectThree.plist in Resources */,
-				3AC60F681D38DF2B002F4B25 /* instantiator.py in Resources */,
+				131FB2E61D3989FF008EE4FF /* external_class_template.txt in Resources */,
+				131FB2F61D3989FF008EE4FF /* validator.py in Resources */,
 				3AC610321D38E630002F4B25 /* TestObjectThirteen.plist in Resources */,
-				3AC60F691D38DF2B002F4B25 /* instantiator.pyc in Resources */,
 				3AC6102F1D38E630002F4B25 /* TestObjectSeven.plist in Resources */,
-				3AC60F6C1D38DF2B002F4B25 /* mappingKeys.pyc in Resources */,
+				131FB2F21D3989FF008EE4FF /* internal_class_template.txt in Resources */,
+				131FB2F81D3989FF008EE4FF /* validator.pyc in Resources */,
+				131FB2EC1D3989FF008EE4FF /* instantiator.py in Resources */,
+				131FB2EE1D3989FF008EE4FF /* instantiator.pyc in Resources */,
+				131FB2E41D3989FF008EE4FF /* constants.pyc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +623,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131FB3031D3989FF008EE4FF /* NativeTypeParser.swift in Sources */,
+				131FB30B1D3989FF008EE4FF /* Transformer.swift in Sources */,
+				131FB3051D3989FF008EE4FF /* NativeValueArrayParser.swift in Sources */,
+				131FB2FB1D3989FF008EE4FF /* CollectionParser.swift in Sources */,
+				131FB3111D3989FF008EE4FF /* Validator.swift in Sources */,
+				131FB3011D3989FF008EE4FF /* ComplexValueDictionaryParser.swift in Sources */,
+				131FB30F1D3989FF008EE4FF /* US2Mapper.swift in Sources */,
+				131FB30D1D3989FF008EE4FF /* US2CompoundValueTransformer.swift in Sources */,
+				131FB3091D3989FF008EE4FF /* Parser.swift in Sources */,
+				131FB3071D3989FF008EE4FF /* NativeValueDictionaryParser.swift in Sources */,
+				131FB2FF1D3989FF008EE4FF /* ComplexValueArrayParser.swift in Sources */,
+				131FB2FD1D3989FF008EE4FF /* ComplexTypeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,44 +651,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131FB2FA1D3989FF008EE4FF /* CollectionParser.swift in Sources */,
+				131FB2FE1D3989FF008EE4FF /* ComplexValueArrayParser.swift in Sources */,
 				3AC610291D38E630002F4B25 /* JSONModelKitTests.swift in Sources */,
-				3AC60F711D38DF2B002F4B25 /* CollectionParser.swift in Sources */,
-				3AC60F731D38DF2B002F4B25 /* ComplexValueArrayParser.swift in Sources */,
 				3AC6101A1D38E630002F4B25 /* _TestObjectTwo.swift in Sources */,
+				131FB2FC1D3989FF008EE4FF /* ComplexTypeParser.swift in Sources */,
+				131FB30E1D3989FF008EE4FF /* US2Mapper.swift in Sources */,
+				131FB3001D3989FF008EE4FF /* ComplexValueDictionaryParser.swift in Sources */,
 				3AC610111D38E630002F4B25 /* _TestObjectFour.swift in Sources */,
 				3AC610261D38E630002F4B25 /* TestObjectThree.swift in Sources */,
 				3AC610271D38E630002F4B25 /* TestObjectTwelve.swift in Sources */,
 				3AC610101D38E630002F4B25 /* _TestObjectFive.swift in Sources */,
+				131FB3081D3989FF008EE4FF /* Parser.swift in Sources */,
 				3AC610361D38E630002F4B25 /* US2ExampleClosureTransformer.swift in Sources */,
-				3AC60F721D38DF2B002F4B25 /* ComplexTypeParser.swift in Sources */,
 				3AC610151D38E630002F4B25 /* _TestObjectSix.swift in Sources */,
 				3AC610211D38E630002F4B25 /* TestObjectOne.swift in Sources */,
-				3AC60F7B1D38DF2B002F4B25 /* US2Mapper.swift in Sources */,
+				131FB3021D3989FF008EE4FF /* NativeTypeParser.swift in Sources */,
 				3AC610191D38E630002F4B25 /* _TestObjectTwelve.swift in Sources */,
-				3AC60F741D38DF2B002F4B25 /* ComplexValueDictionaryParser.swift in Sources */,
 				3AC610201D38E630002F4B25 /* TestObjectNine.swift in Sources */,
 				3AC6100E1D38E630002F4B25 /* _TestObjectEight.swift in Sources */,
 				3AC6101C1D38E630002F4B25 /* TestObjectEight.swift in Sources */,
-				3AC60F781D38DF2B002F4B25 /* Parser.swift in Sources */,
-				3AC60F751D38DF2B002F4B25 /* NativeTypeParser.swift in Sources */,
 				3AC610221D38E630002F4B25 /* TestObjectSeven.swift in Sources */,
-				3AC60F7A1D38DF2B002F4B25 /* US2CompoundValueTransformer.swift in Sources */,
 				3AC6101B1D38E630002F4B25 /* US2Instantiator.swift in Sources */,
 				3AC610181D38E630002F4B25 /* _TestObjectThree.swift in Sources */,
+				131FB30C1D3989FF008EE4FF /* US2CompoundValueTransformer.swift in Sources */,
 				3AC610391D38E630002F4B25 /* US2ExampleTupleTransformer.swift in Sources */,
-				3AC60F771D38DF2B002F4B25 /* NativeValueDictionaryParser.swift in Sources */,
 				3AC610231D38E630002F4B25 /* TestObjectSix.swift in Sources */,
-				3AC60F761D38DF2B002F4B25 /* NativeValueArrayParser.swift in Sources */,
-				3AC60F791D38DF2B002F4B25 /* Transformer.swift in Sources */,
 				3AC610381D38E630002F4B25 /* US2ExampleStructTransformer.swift in Sources */,
 				3AC610371D38E630002F4B25 /* US2ExampleEnumTransformer.swift in Sources */,
+				131FB3061D3989FF008EE4FF /* NativeValueDictionaryParser.swift in Sources */,
 				3AC610171D38E630002F4B25 /* _TestObjectThirteen.swift in Sources */,
 				3AC610141D38E630002F4B25 /* _TestObjectSeven.swift in Sources */,
 				3AC6101F1D38E630002F4B25 /* TestObjectFour.swift in Sources */,
-				3AC60F7C1D38DF2B002F4B25 /* Validator.swift in Sources */,
+				131FB3041D3989FF008EE4FF /* NativeValueArrayParser.swift in Sources */,
+				131FB30A1D3989FF008EE4FF /* Transformer.swift in Sources */,
 				3AC610161D38E630002F4B25 /* _TestObjectTen.swift in Sources */,
 				3AC6101E1D38E630002F4B25 /* TestObjectFive.swift in Sources */,
 				3AC6103A1D38E630002F4B25 /* ValueTypeDefinitions.swift in Sources */,
+				131FB3101D3989FF008EE4FF /* Validator.swift in Sources */,
 				3AC610131D38E630002F4B25 /* _TestObjectOne.swift in Sources */,
 				3AC6100F1D38E630002F4B25 /* _TestObjectEleven.swift in Sources */,
 				3AC610121D38E630002F4B25 /* _TestObjectNine.swift in Sources */,

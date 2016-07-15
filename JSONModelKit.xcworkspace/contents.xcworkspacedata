@@ -10,53 +10,42 @@
          <FileRef
             location = "group:__init__.py">
          </FileRef>
-         <Group
-            location = "group:generator"
-            name = "generator">
-            <FileRef
-               location = "group:__init__.py">
-            </FileRef>
-            <FileRef
-               location = "group:__init__.pyc">
-            </FileRef>
-            <FileRef
-               location = "group:generator.py">
-            </FileRef>
-            <FileRef
-               location = "group:generator.pyc">
-            </FileRef>
-            <FileRef
-               location = "group:instantiator.py">
-            </FileRef>
-            <FileRef
-               location = "group:instantiator.pyc">
-            </FileRef>
-            <FileRef
-               location = "group:validator.py">
-            </FileRef>
-            <FileRef
-               location = "group:validator.pyc">
-            </FileRef>
-         </Group>
          <FileRef
-            location = "group:mappingKeys.pyc">
+            location = "group:constants.py">
+         </FileRef>
+         <FileRef
+            location = "group:constants.pyc">
+         </FileRef>
+         <FileRef
+            location = "group:external_class_template.txt">
+         </FileRef>
+         <FileRef
+            location = "group:generator.py">
+         </FileRef>
+         <FileRef
+            location = "group:generator.pyc">
+         </FileRef>
+         <FileRef
+            location = "group:instantiator.py">
+         </FileRef>
+         <FileRef
+            location = "group:instantiator.pyc">
+         </FileRef>
+         <FileRef
+            location = "group:instantiator_template.txt">
+         </FileRef>
+         <FileRef
+            location = "group:internal_class_template.txt">
          </FileRef>
          <FileRef
             location = "group:modelgen-swift.py">
          </FileRef>
-         <Group
-            location = "group:Templates"
-            name = "Templates">
-            <FileRef
-               location = "group:external_class_template.txt">
-            </FileRef>
-            <FileRef
-               location = "group:instantiator_template.txt">
-            </FileRef>
-            <FileRef
-               location = "group:internal_class_template.txt">
-            </FileRef>
-         </Group>
+         <FileRef
+            location = "group:validator.py">
+         </FileRef>
+         <FileRef
+            location = "group:validator.pyc">
+         </FileRef>
       </Group>
       <Group
          location = "group:US2MapperKit"
