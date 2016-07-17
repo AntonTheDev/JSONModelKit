@@ -11,69 +11,86 @@
 		13C6E87D1D39708E000A0B4B /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C6E87B1D39708E000A0B4B /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13C6E87E1D39708E000A0B4B /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C6E87B1D39708E000A0B4B /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13C6E87F1D39708E000A0B4B /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C6E87B1D39708E000A0B4B /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AC60E651D38DEDC002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E431D38DEDC002F4B25 /* __init__.py */; };
-		3AC60E661D38DEDC002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E431D38DEDC002F4B25 /* __init__.py */; };
-		3AC60E671D38DEDC002F4B25 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E431D38DEDC002F4B25 /* __init__.py */; };
-		3AC60E6B1D38DEDC002F4B25 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E451D38DEDC002F4B25 /* constants.py */; };
-		3AC60E6C1D38DEDC002F4B25 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E451D38DEDC002F4B25 /* constants.py */; };
-		3AC60E6D1D38DEDC002F4B25 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E451D38DEDC002F4B25 /* constants.py */; };
-		3AC60E6E1D38DEDC002F4B25 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E461D38DEDC002F4B25 /* generator.py */; };
-		3AC60E6F1D38DEDC002F4B25 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E461D38DEDC002F4B25 /* generator.py */; };
-		3AC60E701D38DEDC002F4B25 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E461D38DEDC002F4B25 /* generator.py */; };
-		3AC60E741D38DEDC002F4B25 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E481D38DEDC002F4B25 /* instantiator.py */; };
-		3AC60E751D38DEDC002F4B25 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E481D38DEDC002F4B25 /* instantiator.py */; };
-		3AC60E761D38DEDC002F4B25 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E481D38DEDC002F4B25 /* instantiator.py */; };
-		3AC60E7A1D38DEDC002F4B25 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4A1D38DEDC002F4B25 /* validator.py */; };
-		3AC60E7B1D38DEDC002F4B25 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4A1D38DEDC002F4B25 /* validator.py */; };
-		3AC60E7C1D38DEDC002F4B25 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4A1D38DEDC002F4B25 /* validator.py */; };
-		3AC60E831D38DEDC002F4B25 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */; };
-		3AC60E841D38DEDC002F4B25 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */; };
-		3AC60E851D38DEDC002F4B25 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */; };
-		3AC60E861D38DEDC002F4B25 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */; };
-		3AC60E871D38DEDC002F4B25 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */; };
-		3AC60E881D38DEDC002F4B25 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */; };
-		3AC60E891D38DEDC002F4B25 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */; };
-		3AC60E8A1D38DEDC002F4B25 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */; };
-		3AC60E8B1D38DEDC002F4B25 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */; };
-		3AC60E8C1D38DEDC002F4B25 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E511D38DEDC002F4B25 /* internal_class_template.txt */; };
-		3AC60E8D1D38DEDC002F4B25 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E511D38DEDC002F4B25 /* internal_class_template.txt */; };
-		3AC60E8E1D38DEDC002F4B25 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AC60E511D38DEDC002F4B25 /* internal_class_template.txt */; };
-		3AC60E8F1D38DEDC002F4B25 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E541D38DEDC002F4B25 /* CollectionParser.swift */; };
-		3AC60E901D38DEDC002F4B25 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E541D38DEDC002F4B25 /* CollectionParser.swift */; };
-		3AC60E911D38DEDC002F4B25 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E541D38DEDC002F4B25 /* CollectionParser.swift */; };
-		3AC60E921D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E551D38DEDC002F4B25 /* ComplexTypeParser.swift */; };
-		3AC60E931D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E551D38DEDC002F4B25 /* ComplexTypeParser.swift */; };
-		3AC60E941D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E551D38DEDC002F4B25 /* ComplexTypeParser.swift */; };
-		3AC60E951D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E561D38DEDC002F4B25 /* ComplexValueArrayParser.swift */; };
-		3AC60E961D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E561D38DEDC002F4B25 /* ComplexValueArrayParser.swift */; };
-		3AC60E971D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E561D38DEDC002F4B25 /* ComplexValueArrayParser.swift */; };
-		3AC60E981D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E571D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift */; };
-		3AC60E991D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E571D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift */; };
-		3AC60E9A1D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E571D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift */; };
-		3AC60E9B1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E581D38DEDC002F4B25 /* NativeTypeParser.swift */; };
-		3AC60E9C1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E581D38DEDC002F4B25 /* NativeTypeParser.swift */; };
-		3AC60E9D1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E581D38DEDC002F4B25 /* NativeTypeParser.swift */; };
-		3AC60E9E1D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E591D38DEDC002F4B25 /* NativeValueArrayParser.swift */; };
-		3AC60E9F1D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E591D38DEDC002F4B25 /* NativeValueArrayParser.swift */; };
-		3AC60EA01D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E591D38DEDC002F4B25 /* NativeValueArrayParser.swift */; };
-		3AC60EA11D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5A1D38DEDC002F4B25 /* NativeValueDictionaryParser.swift */; };
-		3AC60EA21D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5A1D38DEDC002F4B25 /* NativeValueDictionaryParser.swift */; };
-		3AC60EA31D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5A1D38DEDC002F4B25 /* NativeValueDictionaryParser.swift */; };
-		3AC60EA41D38DEDC002F4B25 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5B1D38DEDC002F4B25 /* Parser.swift */; };
-		3AC60EA51D38DEDC002F4B25 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5B1D38DEDC002F4B25 /* Parser.swift */; };
-		3AC60EA61D38DEDC002F4B25 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5B1D38DEDC002F4B25 /* Parser.swift */; };
-		3AC60EA71D38DEDC002F4B25 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5D1D38DEDC002F4B25 /* Transformer.swift */; };
-		3AC60EA81D38DEDC002F4B25 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5D1D38DEDC002F4B25 /* Transformer.swift */; };
-		3AC60EA91D38DEDC002F4B25 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5D1D38DEDC002F4B25 /* Transformer.swift */; };
-		3AC60EAA1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5E1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift */; };
-		3AC60EAB1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5E1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift */; };
-		3AC60EAC1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5E1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift */; };
-		3AC60EAD1D38DEDC002F4B25 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5F1D38DEDC002F4B25 /* US2Mapper.swift */; };
-		3AC60EAE1D38DEDC002F4B25 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5F1D38DEDC002F4B25 /* US2Mapper.swift */; };
-		3AC60EAF1D38DEDC002F4B25 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E5F1D38DEDC002F4B25 /* US2Mapper.swift */; };
-		3AC60EB01D38DEDC002F4B25 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E611D38DEDC002F4B25 /* Validator.swift */; };
-		3AC60EB11D38DEDC002F4B25 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E611D38DEDC002F4B25 /* Validator.swift */; };
-		3AC60EB21D38DEDC002F4B25 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC60E611D38DEDC002F4B25 /* Validator.swift */; };
+		3A0F05CE1D3B174D005D5776 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B61D3B174D005D5776 /* constants.py */; };
+		3A0F05CF1D3B174D005D5776 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B61D3B174D005D5776 /* constants.py */; };
+		3A0F05D01D3B174D005D5776 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B61D3B174D005D5776 /* constants.py */; };
+		3A0F05D11D3B174D005D5776 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B61D3B174D005D5776 /* constants.py */; };
+		3A0F05D21D3B174D005D5776 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B71D3B174D005D5776 /* external_class_template.txt */; };
+		3A0F05D31D3B174D005D5776 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B71D3B174D005D5776 /* external_class_template.txt */; };
+		3A0F05D41D3B174D005D5776 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B71D3B174D005D5776 /* external_class_template.txt */; };
+		3A0F05D51D3B174D005D5776 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B71D3B174D005D5776 /* external_class_template.txt */; };
+		3A0F05D61D3B174D005D5776 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B81D3B174D005D5776 /* generator.py */; };
+		3A0F05D71D3B174D005D5776 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B81D3B174D005D5776 /* generator.py */; };
+		3A0F05D81D3B174D005D5776 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B81D3B174D005D5776 /* generator.py */; };
+		3A0F05D91D3B174D005D5776 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B81D3B174D005D5776 /* generator.py */; };
+		3A0F05DA1D3B174D005D5776 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B91D3B174D005D5776 /* instantiator.py */; };
+		3A0F05DB1D3B174D005D5776 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B91D3B174D005D5776 /* instantiator.py */; };
+		3A0F05DC1D3B174D005D5776 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B91D3B174D005D5776 /* instantiator.py */; };
+		3A0F05DD1D3B174D005D5776 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05B91D3B174D005D5776 /* instantiator.py */; };
+		3A0F05DE1D3B174D005D5776 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */; };
+		3A0F05DF1D3B174D005D5776 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */; };
+		3A0F05E01D3B174D005D5776 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */; };
+		3A0F05E11D3B174D005D5776 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */; };
+		3A0F05E21D3B174D005D5776 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */; };
+		3A0F05E31D3B174D005D5776 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */; };
+		3A0F05E41D3B174D005D5776 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */; };
+		3A0F05E51D3B174D005D5776 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */; };
+		3A0F05E61D3B174D005D5776 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */; };
+		3A0F05E71D3B174D005D5776 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */; };
+		3A0F05E81D3B174D005D5776 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */; };
+		3A0F05E91D3B174D005D5776 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */; };
+		3A0F05EA1D3B174D005D5776 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BD1D3B174D005D5776 /* validator.py */; };
+		3A0F05EB1D3B174D005D5776 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BD1D3B174D005D5776 /* validator.py */; };
+		3A0F05EC1D3B174D005D5776 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BD1D3B174D005D5776 /* validator.py */; };
+		3A0F05ED1D3B174D005D5776 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F05BD1D3B174D005D5776 /* validator.py */; };
+		3A0F05EE1D3B174D005D5776 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C01D3B174D005D5776 /* CollectionParser.swift */; };
+		3A0F05EF1D3B174D005D5776 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C01D3B174D005D5776 /* CollectionParser.swift */; };
+		3A0F05F01D3B174D005D5776 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C01D3B174D005D5776 /* CollectionParser.swift */; };
+		3A0F05F11D3B174D005D5776 /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C01D3B174D005D5776 /* CollectionParser.swift */; };
+		3A0F05F21D3B174D005D5776 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */; };
+		3A0F05F31D3B174D005D5776 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */; };
+		3A0F05F41D3B174D005D5776 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */; };
+		3A0F05F51D3B174D005D5776 /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */; };
+		3A0F05F61D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */; };
+		3A0F05F71D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */; };
+		3A0F05F81D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */; };
+		3A0F05F91D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */; };
+		3A0F05FA1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */; };
+		3A0F05FB1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */; };
+		3A0F05FC1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */; };
+		3A0F05FD1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */; };
+		3A0F05FE1D3B174D005D5776 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */; };
+		3A0F05FF1D3B174D005D5776 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */; };
+		3A0F06001D3B174D005D5776 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */; };
+		3A0F06011D3B174D005D5776 /* NativeTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */; };
+		3A0F06021D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */; };
+		3A0F06031D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */; };
+		3A0F06041D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */; };
+		3A0F06051D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */; };
+		3A0F06061D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */; };
+		3A0F06071D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */; };
+		3A0F06081D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */; };
+		3A0F06091D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */; };
+		3A0F060A1D3B174D005D5776 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C71D3B174D005D5776 /* Parser.swift */; };
+		3A0F060B1D3B174D005D5776 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C71D3B174D005D5776 /* Parser.swift */; };
+		3A0F060C1D3B174D005D5776 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C71D3B174D005D5776 /* Parser.swift */; };
+		3A0F060D1D3B174D005D5776 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C71D3B174D005D5776 /* Parser.swift */; };
+		3A0F060E1D3B174D005D5776 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C91D3B174D005D5776 /* Transformer.swift */; };
+		3A0F060F1D3B174D005D5776 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C91D3B174D005D5776 /* Transformer.swift */; };
+		3A0F06101D3B174D005D5776 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C91D3B174D005D5776 /* Transformer.swift */; };
+		3A0F06111D3B174D005D5776 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05C91D3B174D005D5776 /* Transformer.swift */; };
+		3A0F06121D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */; };
+		3A0F06131D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */; };
+		3A0F06141D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */; };
+		3A0F06151D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */; };
+		3A0F06161D3B174D005D5776 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */; };
+		3A0F06171D3B174D005D5776 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */; };
+		3A0F06181D3B174D005D5776 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */; };
+		3A0F06191D3B174D005D5776 /* US2Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */; };
+		3A0F061A1D3B174D005D5776 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CD1D3B174D005D5776 /* Validator.swift */; };
+		3A0F061B1D3B174D005D5776 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CD1D3B174D005D5776 /* Validator.swift */; };
+		3A0F061C1D3B174D005D5776 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CD1D3B174D005D5776 /* Validator.swift */; };
+		3A0F061D1D3B174D005D5776 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F05CD1D3B174D005D5776 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,31 +99,26 @@
 		13C6E3431D386112000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E8251D396CEB000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E87B1D39708E000A0B4B /* JSONModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelKit.h; sourceTree = "<group>"; };
-		3AC60E431D38DEDC002F4B25 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3AC60E441D38DEDC002F4B25 /* __init__.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = __init__.pyc; sourceTree = "<group>"; };
-		3AC60E451D38DEDC002F4B25 /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
-		3AC60E461D38DEDC002F4B25 /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
-		3AC60E471D38DEDC002F4B25 /* generator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.pyc; sourceTree = "<group>"; };
-		3AC60E481D38DEDC002F4B25 /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
-		3AC60E491D38DEDC002F4B25 /* instantiator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = instantiator.pyc; sourceTree = "<group>"; };
-		3AC60E4A1D38DEDC002F4B25 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
-		3AC60E4B1D38DEDC002F4B25 /* validator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = validator.pyc; sourceTree = "<group>"; };
-		3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
-		3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
-		3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
-		3AC60E511D38DEDC002F4B25 /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
-		3AC60E541D38DEDC002F4B25 /* CollectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionParser.swift; sourceTree = "<group>"; };
-		3AC60E551D38DEDC002F4B25 /* ComplexTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTypeParser.swift; sourceTree = "<group>"; };
-		3AC60E561D38DEDC002F4B25 /* ComplexValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueArrayParser.swift; sourceTree = "<group>"; };
-		3AC60E571D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueDictionaryParser.swift; sourceTree = "<group>"; };
-		3AC60E581D38DEDC002F4B25 /* NativeTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeTypeParser.swift; sourceTree = "<group>"; };
-		3AC60E591D38DEDC002F4B25 /* NativeValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueArrayParser.swift; sourceTree = "<group>"; };
-		3AC60E5A1D38DEDC002F4B25 /* NativeValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueDictionaryParser.swift; sourceTree = "<group>"; };
-		3AC60E5B1D38DEDC002F4B25 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		3AC60E5D1D38DEDC002F4B25 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
-		3AC60E5E1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2CompoundValueTransformer.swift; sourceTree = "<group>"; };
-		3AC60E5F1D38DEDC002F4B25 /* US2Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2Mapper.swift; sourceTree = "<group>"; };
-		3AC60E611D38DEDC002F4B25 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		3A0F05B61D3B174D005D5776 /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
+		3A0F05B71D3B174D005D5776 /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
+		3A0F05B81D3B174D005D5776 /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
+		3A0F05B91D3B174D005D5776 /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
+		3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
+		3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
+		3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
+		3A0F05BD1D3B174D005D5776 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
+		3A0F05C01D3B174D005D5776 /* CollectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionParser.swift; sourceTree = "<group>"; };
+		3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTypeParser.swift; sourceTree = "<group>"; };
+		3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueArrayParser.swift; sourceTree = "<group>"; };
+		3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueDictionaryParser.swift; sourceTree = "<group>"; };
+		3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeTypeParser.swift; sourceTree = "<group>"; };
+		3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueArrayParser.swift; sourceTree = "<group>"; };
+		3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeValueDictionaryParser.swift; sourceTree = "<group>"; };
+		3A0F05C71D3B174D005D5776 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		3A0F05C91D3B174D005D5776 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2CompoundValueTransformer.swift; sourceTree = "<group>"; };
+		3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2Mapper.swift; sourceTree = "<group>"; };
+		3A0F05CD1D3B174D005D5776 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3AC60EB31D38DEEE002F4B25 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-iOS.plist"; path = "Shared/Info-iOS.plist"; sourceTree = SOURCE_ROOT; };
 		3AC60EB41D38DEEE002F4B25 /* Info-OSX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-OSX.plist"; path = "Shared/Info-OSX.plist"; sourceTree = SOURCE_ROOT; };
 		3AC60EB51D38DEEE002F4B25 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "Shared/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
@@ -166,100 +178,79 @@
 		13C6E2D41D38604D000A0B4B /* JSONModelKit */ = {
 			isa = PBXGroup;
 			children = (
+				3A0F05B41D3B174D005D5776 /* Source */,
 				13C6E87B1D39708E000A0B4B /* JSONModelKit.h */,
 				3AC60EB31D38DEEE002F4B25 /* Info-iOS.plist */,
 				3AC60EB41D38DEEE002F4B25 /* Info-OSX.plist */,
 				3AC60EB51D38DEEE002F4B25 /* Info-tvOS.plist */,
-				3AC60E3F1D38DEDC002F4B25 /* Source */,
 			);
 			path = JSONModelKit;
 			sourceTree = "<group>";
 		};
-		3AC60E3F1D38DEDC002F4B25 /* Source */ = {
+		3A0F05B41D3B174D005D5776 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E401D38DEDC002F4B25 /* ModelScript */,
-				3AC60E521D38DEDC002F4B25 /* US2MapperKit */,
+				3A0F05B51D3B174D005D5776 /* ModelScript */,
+				3A0F05BE1D3B174D005D5776 /* US2MapperKit */,
 			);
 			name = Source;
 			path = ../../../Source;
 			sourceTree = "<group>";
 		};
-		3AC60E401D38DEDC002F4B25 /* ModelScript */ = {
+		3A0F05B51D3B174D005D5776 /* ModelScript */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E421D38DEDC002F4B25 /* generator */,
-				3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */,
-				3AC60E4E1D38DEDC002F4B25 /* Templates */,
+				3A0F05B61D3B174D005D5776 /* constants.py */,
+				3A0F05B71D3B174D005D5776 /* external_class_template.txt */,
+				3A0F05B81D3B174D005D5776 /* generator.py */,
+				3A0F05B91D3B174D005D5776 /* instantiator.py */,
+				3A0F05BA1D3B174D005D5776 /* instantiator_template.txt */,
+				3A0F05BB1D3B174D005D5776 /* internal_class_template.txt */,
+				3A0F05BC1D3B174D005D5776 /* modelgen-swift.py */,
+				3A0F05BD1D3B174D005D5776 /* validator.py */,
 			);
 			path = ModelScript;
 			sourceTree = "<group>";
 		};
-		3AC60E421D38DEDC002F4B25 /* generator */ = {
+		3A0F05BE1D3B174D005D5776 /* US2MapperKit */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E431D38DEDC002F4B25 /* __init__.py */,
-				3AC60E441D38DEDC002F4B25 /* __init__.pyc */,
-				3AC60E451D38DEDC002F4B25 /* constants.py */,
-				3AC60E461D38DEDC002F4B25 /* generator.py */,
-				3AC60E471D38DEDC002F4B25 /* generator.pyc */,
-				3AC60E481D38DEDC002F4B25 /* instantiator.py */,
-				3AC60E491D38DEDC002F4B25 /* instantiator.pyc */,
-				3AC60E4A1D38DEDC002F4B25 /* validator.py */,
-				3AC60E4B1D38DEDC002F4B25 /* validator.pyc */,
-			);
-			path = generator;
-			sourceTree = "<group>";
-		};
-		3AC60E4E1D38DEDC002F4B25 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */,
-				3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */,
-				3AC60E511D38DEDC002F4B25 /* internal_class_template.txt */,
-			);
-			path = Templates;
-			sourceTree = "<group>";
-		};
-		3AC60E521D38DEDC002F4B25 /* US2MapperKit */ = {
-			isa = PBXGroup;
-			children = (
-				3AC60E531D38DEDC002F4B25 /* Parsers */,
-				3AC60E5C1D38DEDC002F4B25 /* Transformer */,
-				3AC60E5E1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift */,
-				3AC60E5F1D38DEDC002F4B25 /* US2Mapper.swift */,
-				3AC60E601D38DEDC002F4B25 /* Validator */,
+				3A0F05BF1D3B174D005D5776 /* Parsers */,
+				3A0F05C81D3B174D005D5776 /* Transformer */,
+				3A0F05CA1D3B174D005D5776 /* US2CompoundValueTransformer.swift */,
+				3A0F05CB1D3B174D005D5776 /* US2Mapper.swift */,
+				3A0F05CC1D3B174D005D5776 /* Validator */,
 			);
 			path = US2MapperKit;
 			sourceTree = "<group>";
 		};
-		3AC60E531D38DEDC002F4B25 /* Parsers */ = {
+		3A0F05BF1D3B174D005D5776 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E541D38DEDC002F4B25 /* CollectionParser.swift */,
-				3AC60E551D38DEDC002F4B25 /* ComplexTypeParser.swift */,
-				3AC60E561D38DEDC002F4B25 /* ComplexValueArrayParser.swift */,
-				3AC60E571D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift */,
-				3AC60E581D38DEDC002F4B25 /* NativeTypeParser.swift */,
-				3AC60E591D38DEDC002F4B25 /* NativeValueArrayParser.swift */,
-				3AC60E5A1D38DEDC002F4B25 /* NativeValueDictionaryParser.swift */,
-				3AC60E5B1D38DEDC002F4B25 /* Parser.swift */,
+				3A0F05C01D3B174D005D5776 /* CollectionParser.swift */,
+				3A0F05C11D3B174D005D5776 /* ComplexTypeParser.swift */,
+				3A0F05C21D3B174D005D5776 /* ComplexValueArrayParser.swift */,
+				3A0F05C31D3B174D005D5776 /* ComplexValueDictionaryParser.swift */,
+				3A0F05C41D3B174D005D5776 /* NativeTypeParser.swift */,
+				3A0F05C51D3B174D005D5776 /* NativeValueArrayParser.swift */,
+				3A0F05C61D3B174D005D5776 /* NativeValueDictionaryParser.swift */,
+				3A0F05C71D3B174D005D5776 /* Parser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
 		};
-		3AC60E5C1D38DEDC002F4B25 /* Transformer */ = {
+		3A0F05C81D3B174D005D5776 /* Transformer */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E5D1D38DEDC002F4B25 /* Transformer.swift */,
+				3A0F05C91D3B174D005D5776 /* Transformer.swift */,
 			);
 			path = Transformer;
 			sourceTree = "<group>";
 		};
-		3AC60E601D38DEDC002F4B25 /* Validator */ = {
+		3A0F05CC1D3B174D005D5776 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
-				3AC60E611D38DEDC002F4B25 /* Validator.swift */,
+				3A0F05CD1D3B174D005D5776 /* Validator.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -423,15 +414,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E891D38DEDC002F4B25 /* instantiator_template.txt in Resources */,
-				3AC60E6E1D38DEDC002F4B25 /* generator.py in Resources */,
-				3AC60E741D38DEDC002F4B25 /* instantiator.py in Resources */,
-				3AC60E7A1D38DEDC002F4B25 /* validator.py in Resources */,
-				3AC60E8C1D38DEDC002F4B25 /* internal_class_template.txt in Resources */,
-				3AC60E831D38DEDC002F4B25 /* modelgen-swift.py in Resources */,
-				3AC60E861D38DEDC002F4B25 /* external_class_template.txt in Resources */,
-				3AC60E6B1D38DEDC002F4B25 /* constants.py in Resources */,
-				3AC60E651D38DEDC002F4B25 /* __init__.py in Resources */,
+				3A0F05E21D3B174D005D5776 /* internal_class_template.txt in Resources */,
+				3A0F05EA1D3B174D005D5776 /* validator.py in Resources */,
+				3A0F05D21D3B174D005D5776 /* external_class_template.txt in Resources */,
+				3A0F05D61D3B174D005D5776 /* generator.py in Resources */,
+				3A0F05E61D3B174D005D5776 /* modelgen-swift.py in Resources */,
+				3A0F05DA1D3B174D005D5776 /* instantiator.py in Resources */,
+				3A0F05CE1D3B174D005D5776 /* constants.py in Resources */,
+				3A0F05DE1D3B174D005D5776 /* instantiator_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,15 +429,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E8A1D38DEDC002F4B25 /* instantiator_template.txt in Resources */,
-				3AC60E6F1D38DEDC002F4B25 /* generator.py in Resources */,
-				3AC60E751D38DEDC002F4B25 /* instantiator.py in Resources */,
-				3AC60E7B1D38DEDC002F4B25 /* validator.py in Resources */,
-				3AC60E8D1D38DEDC002F4B25 /* internal_class_template.txt in Resources */,
-				3AC60E841D38DEDC002F4B25 /* modelgen-swift.py in Resources */,
-				3AC60E871D38DEDC002F4B25 /* external_class_template.txt in Resources */,
-				3AC60E6C1D38DEDC002F4B25 /* constants.py in Resources */,
-				3AC60E661D38DEDC002F4B25 /* __init__.py in Resources */,
+				3A0F05E41D3B174D005D5776 /* internal_class_template.txt in Resources */,
+				3A0F05EC1D3B174D005D5776 /* validator.py in Resources */,
+				3A0F05D41D3B174D005D5776 /* external_class_template.txt in Resources */,
+				3A0F05D81D3B174D005D5776 /* generator.py in Resources */,
+				3A0F05E81D3B174D005D5776 /* modelgen-swift.py in Resources */,
+				3A0F05DC1D3B174D005D5776 /* instantiator.py in Resources */,
+				3A0F05D01D3B174D005D5776 /* constants.py in Resources */,
+				3A0F05E01D3B174D005D5776 /* instantiator_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,15 +444,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E8B1D38DEDC002F4B25 /* instantiator_template.txt in Resources */,
-				3AC60E701D38DEDC002F4B25 /* generator.py in Resources */,
-				3AC60E761D38DEDC002F4B25 /* instantiator.py in Resources */,
-				3AC60E7C1D38DEDC002F4B25 /* validator.py in Resources */,
-				3AC60E8E1D38DEDC002F4B25 /* internal_class_template.txt in Resources */,
-				3AC60E851D38DEDC002F4B25 /* modelgen-swift.py in Resources */,
-				3AC60E881D38DEDC002F4B25 /* external_class_template.txt in Resources */,
-				3AC60E6D1D38DEDC002F4B25 /* constants.py in Resources */,
-				3AC60E671D38DEDC002F4B25 /* __init__.py in Resources */,
+				3A0F05E31D3B174D005D5776 /* internal_class_template.txt in Resources */,
+				3A0F05EB1D3B174D005D5776 /* validator.py in Resources */,
+				3A0F05D31D3B174D005D5776 /* external_class_template.txt in Resources */,
+				3A0F05D71D3B174D005D5776 /* generator.py in Resources */,
+				3A0F05E71D3B174D005D5776 /* modelgen-swift.py in Resources */,
+				3A0F05DB1D3B174D005D5776 /* instantiator.py in Resources */,
+				3A0F05CF1D3B174D005D5776 /* constants.py in Resources */,
+				3A0F05DF1D3B174D005D5776 /* instantiator_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +459,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0F05E51D3B174D005D5776 /* internal_class_template.txt in Resources */,
+				3A0F05ED1D3B174D005D5776 /* validator.py in Resources */,
+				3A0F05D51D3B174D005D5776 /* external_class_template.txt in Resources */,
+				3A0F05D91D3B174D005D5776 /* generator.py in Resources */,
+				3A0F05E91D3B174D005D5776 /* modelgen-swift.py in Resources */,
+				3A0F05DD1D3B174D005D5776 /* instantiator.py in Resources */,
+				3A0F05D11D3B174D005D5776 /* constants.py in Resources */,
+				3A0F05E11D3B174D005D5776 /* instantiator_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,18 +477,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E9B1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */,
-				3AC60EA71D38DEDC002F4B25 /* Transformer.swift in Sources */,
-				3AC60E9E1D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */,
-				3AC60E8F1D38DEDC002F4B25 /* CollectionParser.swift in Sources */,
-				3AC60EB01D38DEDC002F4B25 /* Validator.swift in Sources */,
-				3AC60E981D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */,
-				3AC60EAD1D38DEDC002F4B25 /* US2Mapper.swift in Sources */,
-				3AC60EAA1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */,
-				3AC60EA41D38DEDC002F4B25 /* Parser.swift in Sources */,
-				3AC60EA11D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */,
-				3AC60E951D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */,
-				3AC60E921D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */,
+				3A0F05FE1D3B174D005D5776 /* NativeTypeParser.swift in Sources */,
+				3A0F060E1D3B174D005D5776 /* Transformer.swift in Sources */,
+				3A0F06021D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */,
+				3A0F05EE1D3B174D005D5776 /* CollectionParser.swift in Sources */,
+				3A0F061A1D3B174D005D5776 /* Validator.swift in Sources */,
+				3A0F05FA1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */,
+				3A0F06161D3B174D005D5776 /* US2Mapper.swift in Sources */,
+				3A0F06121D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */,
+				3A0F060A1D3B174D005D5776 /* Parser.swift in Sources */,
+				3A0F06061D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */,
+				3A0F05F61D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */,
+				3A0F05F21D3B174D005D5776 /* ComplexTypeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,18 +496,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E9C1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */,
-				3AC60EA81D38DEDC002F4B25 /* Transformer.swift in Sources */,
-				3AC60E9F1D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */,
-				3AC60E901D38DEDC002F4B25 /* CollectionParser.swift in Sources */,
-				3AC60EB11D38DEDC002F4B25 /* Validator.swift in Sources */,
-				3AC60E991D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */,
-				3AC60EAE1D38DEDC002F4B25 /* US2Mapper.swift in Sources */,
-				3AC60EAB1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */,
-				3AC60EA51D38DEDC002F4B25 /* Parser.swift in Sources */,
-				3AC60EA21D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */,
-				3AC60E961D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */,
-				3AC60E931D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */,
+				3A0F06001D3B174D005D5776 /* NativeTypeParser.swift in Sources */,
+				3A0F06101D3B174D005D5776 /* Transformer.swift in Sources */,
+				3A0F06041D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */,
+				3A0F05F01D3B174D005D5776 /* CollectionParser.swift in Sources */,
+				3A0F061C1D3B174D005D5776 /* Validator.swift in Sources */,
+				3A0F05FC1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */,
+				3A0F06181D3B174D005D5776 /* US2Mapper.swift in Sources */,
+				3A0F06141D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */,
+				3A0F060C1D3B174D005D5776 /* Parser.swift in Sources */,
+				3A0F06081D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */,
+				3A0F05F81D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */,
+				3A0F05F41D3B174D005D5776 /* ComplexTypeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,18 +515,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC60E9D1D38DEDC002F4B25 /* NativeTypeParser.swift in Sources */,
-				3AC60EA91D38DEDC002F4B25 /* Transformer.swift in Sources */,
-				3AC60EA01D38DEDC002F4B25 /* NativeValueArrayParser.swift in Sources */,
-				3AC60E911D38DEDC002F4B25 /* CollectionParser.swift in Sources */,
-				3AC60EB21D38DEDC002F4B25 /* Validator.swift in Sources */,
-				3AC60E9A1D38DEDC002F4B25 /* ComplexValueDictionaryParser.swift in Sources */,
-				3AC60EAF1D38DEDC002F4B25 /* US2Mapper.swift in Sources */,
-				3AC60EAC1D38DEDC002F4B25 /* US2CompoundValueTransformer.swift in Sources */,
-				3AC60EA61D38DEDC002F4B25 /* Parser.swift in Sources */,
-				3AC60EA31D38DEDC002F4B25 /* NativeValueDictionaryParser.swift in Sources */,
-				3AC60E971D38DEDC002F4B25 /* ComplexValueArrayParser.swift in Sources */,
-				3AC60E941D38DEDC002F4B25 /* ComplexTypeParser.swift in Sources */,
+				3A0F05FF1D3B174D005D5776 /* NativeTypeParser.swift in Sources */,
+				3A0F060F1D3B174D005D5776 /* Transformer.swift in Sources */,
+				3A0F06031D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */,
+				3A0F05EF1D3B174D005D5776 /* CollectionParser.swift in Sources */,
+				3A0F061B1D3B174D005D5776 /* Validator.swift in Sources */,
+				3A0F05FB1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */,
+				3A0F06171D3B174D005D5776 /* US2Mapper.swift in Sources */,
+				3A0F06131D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */,
+				3A0F060B1D3B174D005D5776 /* Parser.swift in Sources */,
+				3A0F06071D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */,
+				3A0F05F71D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */,
+				3A0F05F31D3B174D005D5776 /* ComplexTypeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +534,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0F06011D3B174D005D5776 /* NativeTypeParser.swift in Sources */,
+				3A0F06111D3B174D005D5776 /* Transformer.swift in Sources */,
+				3A0F06051D3B174D005D5776 /* NativeValueArrayParser.swift in Sources */,
+				3A0F05F11D3B174D005D5776 /* CollectionParser.swift in Sources */,
+				3A0F061D1D3B174D005D5776 /* Validator.swift in Sources */,
+				3A0F05FD1D3B174D005D5776 /* ComplexValueDictionaryParser.swift in Sources */,
+				3A0F06191D3B174D005D5776 /* US2Mapper.swift in Sources */,
+				3A0F06151D3B174D005D5776 /* US2CompoundValueTransformer.swift in Sources */,
+				3A0F060D1D3B174D005D5776 /* Parser.swift in Sources */,
+				3A0F06091D3B174D005D5776 /* NativeValueDictionaryParser.swift in Sources */,
+				3A0F05F91D3B174D005D5776 /* ComplexValueArrayParser.swift in Sources */,
+				3A0F05F51D3B174D005D5776 /* ComplexTypeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

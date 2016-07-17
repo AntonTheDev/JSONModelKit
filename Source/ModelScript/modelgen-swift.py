@@ -9,7 +9,6 @@ import json
 
 sys.dont_write_bytecode = True
 
-
 from generator 	import ClassGenerator
 from instantiator import InstantiatorGenerator
 from validator 	import Validator

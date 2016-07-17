@@ -8,13 +8,7 @@
          location = "group:ModelScript"
          name = "ModelScript">
          <FileRef
-            location = "group:__init__.py">
-         </FileRef>
-         <FileRef
             location = "group:constants.py">
-         </FileRef>
-         <FileRef
-            location = "group:constants.pyc">
          </FileRef>
          <FileRef
             location = "group:external_class_template.txt">
@@ -23,13 +17,7 @@
             location = "group:generator.py">
          </FileRef>
          <FileRef
-            location = "group:generator.pyc">
-         </FileRef>
-         <FileRef
             location = "group:instantiator.py">
-         </FileRef>
-         <FileRef
-            location = "group:instantiator.pyc">
          </FileRef>
          <FileRef
             location = "group:instantiator_template.txt">
@@ -42,9 +30,6 @@
          </FileRef>
          <FileRef
             location = "group:validator.py">
-         </FileRef>
-         <FileRef
-            location = "group:validator.pyc">
          </FileRef>
       </Group>
       <Group
