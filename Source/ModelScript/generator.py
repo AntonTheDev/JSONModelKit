@@ -21,28 +21,10 @@ class ClassGenerator:
       self.jsonFormatEnabled = jsonFormatEnabled
       
    def internalGeneratedClass(self):
-      templatePath = os.getcwd() + "/../../Source/ModelScript/internal_class_template.txt"
-   
-      internalTemplate = open(templatePath, 'r').read()
-      internalTemplate = str.replace(internalTemplate, '\n', '\r\n')   
-      fileString = ""
+      propertyMappings = self.propertyMappingsArray()
 
-      classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
-      
-      propertyMappings = []
-      
-      if self.jsonFormatEnabled:
-         propertyMappings = json.load(open(self.mappingPath))
-      else: 
-         propertyMappings = plistlib.readPlist(self.mappingPath)
+      fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
-      if self.testEnabled == 0:
-         fileString = str.replace(internalTemplate,  "{ TEST_IMPORT }", "import US2MapperKit") 
-         internalTemplate = fileString 
-      else:
-         fileString = str.replace(internalTemplate,  "{ TEST_IMPORT }", "") 
-
-      fileString = str.replace(fileString, "{ CLASSNAME }",                         classname)  
       fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))   
       fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(propertyMappings))
       fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(propertyMappings))
@@ -52,34 +34,15 @@ class ClassGenerator:
       fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
 
+      nonOptionalArray = self.filtered_mappings(propertyMappings, True)
+      
+      if len(nonOptionalArray) == 0:
+         fileString = str.replace(fileString, "let valuesDict", "let _")
+
       return fileString
 
    def externalGeneratedClass(self):
-      templatePath = os.getcwd() + "/../../Source/ModelScript/external_class_template.txt"
-   
-      externalTemplate = open(templatePath, 'r').read()
-      externalTemplate = str.replace(externalTemplate, '\n', '\r\n')   
-      fileString = ""
-
-      classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
-
-      propertyMappings = []
-      
-      if self.jsonFormatEnabled:
-         propertyMappings = json.load(open(self.mappingPath))
-      else: 
-         propertyMappings = plistlib.readPlist(self.mappingPath)
-
-      if self.testEnabled == 0:
-         fileString = str.replace(externalTemplate,  "{ TEST_IMPORT }", "import US2MapperKit") 
-         internalTemplate = fileString 
-      else:
-         fileString = str.replace(externalTemplate,  "{ TEST_IMPORT }", "") 
-
-      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
-
-      return fileString
-
+      return self.baseTemplate(self.getPathForFile("external_class_template.txt"))
 
    '''
    Replaces { OPTIONALS } in the template
@@ -204,7 +167,6 @@ class ClassGenerator:
 
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
-
       if len(propertyMappings) == 0 :
          return ""
 
@@ -243,11 +205,33 @@ class ClassGenerator:
       return propertyString
 
 
+   def is_property_mapping_optional(self, mapping):
+      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional]:
+         return False
+      else:
+         return True
+
+
+   def dictionaryValueString(self, templateString, dictionaryValues):
+      renderedString = templateString  
+
+      for key in dictionaryValues.keys():
+         renderedString = str.replace(renderedString, key, str(dictionaryValues[key]))
+
+      return renderedString
+
+
+   def propertyMappingsArray(self):
+      if self.jsonFormatEnabled:
+         return json.load(open(self.mappingPath))
+      else: 
+         return plistlib.readPlist(self.mappingPath)
+
+
    def filtered_mappings(self, propertyMappings, optional):
       filteredMappings = {}
 
       for propertyKey in propertyMappings.keys():
-         
          propertyMapping = propertyMappings[propertyKey]
          
          if self.is_property_mapping_optional(propertyMapping) == optional:
@@ -255,17 +239,25 @@ class ClassGenerator:
 
       return filteredMappings
 
-   def is_property_mapping_optional(self, mapping):
-      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional]:
-         return False
+
+   def getPathForFile(self, fileName):
+      return str.replace(os.path.abspath(__file__), "generator.py", fileName)
+
+
+   def baseTemplate(self, path):
+      propertyMappings = self.propertyMappingsArray()
+      
+      fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')   
+
+      classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
+
+      if self.testEnabled == 0:
+         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit") 
       else:
-         return True
+         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "") 
 
-   def dictionaryValueString(self, templateString, dictionaryValues):
-      print dictionaryValues
-      renderedString = templateString  
+      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
 
-      for key in dictionaryValues.keys():
-         renderedString = str.replace(renderedString, key, str(dictionaryValues[key]))
+      return fileString
 
-      return renderedString
+

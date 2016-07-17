@@ -176,7 +176,6 @@
 		13C6E69A1D3963BD000A0B4B /* US2ExampleTupleTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6E6291D3963BD000A0B4B /* US2ExampleTupleTransformer.swift */; };
 		13C6E69B1D3963BD000A0B4B /* ValueTypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6E62A1D3963BD000A0B4B /* ValueTypeDefinitions.swift */; };
 		13C6E69C1D3963BD000A0B4B /* ValueTypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6E62A1D3963BD000A0B4B /* ValueTypeDefinitions.swift */; };
-		3AC611091D38F4E3002F4B25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AC611081D38F4E3002F4B25 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -689,7 +688,6 @@
 				131FB38F1D398A11008EE4FF /* instantiator.py in Resources */,
 				13C6E6821D3963BD000A0B4B /* TestObjectFour.json in Resources */,
 				13C6E6841D3963BD000A0B4B /* TestObjectNine.json in Resources */,
-				3AC611091D38F4E3002F4B25 /* Info.plist in Resources */,
 				131FB39B1D398A11008EE4FF /* validator.pyc in Resources */,
 				13C6E67C1D3963BD000A0B4B /* TestObjectEight.json in Resources */,
 				131FB38B1D398A11008EE4FF /* generator.py in Resources */,
