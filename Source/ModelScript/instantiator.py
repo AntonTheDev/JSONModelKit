@@ -21,7 +21,7 @@ class InstantiatorGenerator:
       self.jsonFormatEnabled = jsonFormatEnabled
    
    def internalGeneratedClass(self):
-      templatePath = os.getcwd() + "/../../Source/ModelScript/instantiator_template.txt"
+      templatePath = self.getPathForFile("instantiator_template.txt")
 
       internalTemplate = open(templatePath, 'r').read()
       internalTemplate = str.replace(internalTemplate, '\n', '\r\n')
@@ -118,3 +118,8 @@ class InstantiatorGenerator:
       if self.jsonFormatEnabled == True:
          return json.load(open(mappingPath))
       return plistlib.readPlist(mappingPath)
+
+
+   def getPathForFile(self, fileName):
+      return str.replace(os.path.abspath(__file__), "generator.py", fileName)
+
