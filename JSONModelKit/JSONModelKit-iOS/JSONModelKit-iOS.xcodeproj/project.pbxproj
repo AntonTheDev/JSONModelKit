@@ -7,22 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131FB3821D398A11008EE4FF /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3651D398A11008EE4FF /* __init__.py */; };
-		131FB3831D398A11008EE4FF /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3651D398A11008EE4FF /* __init__.py */; };
 		131FB3841D398A11008EE4FF /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3661D398A11008EE4FF /* constants.py */; };
 		131FB3851D398A11008EE4FF /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3661D398A11008EE4FF /* constants.py */; };
-		131FB3861D398A11008EE4FF /* constants.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3671D398A11008EE4FF /* constants.pyc */; };
-		131FB3871D398A11008EE4FF /* constants.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3671D398A11008EE4FF /* constants.pyc */; };
 		131FB3881D398A11008EE4FF /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3681D398A11008EE4FF /* external_class_template.txt */; };
 		131FB3891D398A11008EE4FF /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3681D398A11008EE4FF /* external_class_template.txt */; };
 		131FB38A1D398A11008EE4FF /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3691D398A11008EE4FF /* generator.py */; };
 		131FB38B1D398A11008EE4FF /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3691D398A11008EE4FF /* generator.py */; };
-		131FB38C1D398A11008EE4FF /* generator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36A1D398A11008EE4FF /* generator.pyc */; };
-		131FB38D1D398A11008EE4FF /* generator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36A1D398A11008EE4FF /* generator.pyc */; };
 		131FB38E1D398A11008EE4FF /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36B1D398A11008EE4FF /* instantiator.py */; };
 		131FB38F1D398A11008EE4FF /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36B1D398A11008EE4FF /* instantiator.py */; };
-		131FB3901D398A11008EE4FF /* instantiator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36C1D398A11008EE4FF /* instantiator.pyc */; };
-		131FB3911D398A11008EE4FF /* instantiator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36C1D398A11008EE4FF /* instantiator.pyc */; };
 		131FB3921D398A11008EE4FF /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36D1D398A11008EE4FF /* instantiator_template.txt */; };
 		131FB3931D398A11008EE4FF /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36D1D398A11008EE4FF /* instantiator_template.txt */; };
 		131FB3941D398A11008EE4FF /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36E1D398A11008EE4FF /* internal_class_template.txt */; };
@@ -31,8 +23,6 @@
 		131FB3971D398A11008EE4FF /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB36F1D398A11008EE4FF /* modelgen-swift.py */; };
 		131FB3981D398A11008EE4FF /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3701D398A11008EE4FF /* validator.py */; };
 		131FB3991D398A11008EE4FF /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3701D398A11008EE4FF /* validator.py */; };
-		131FB39A1D398A11008EE4FF /* validator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3711D398A11008EE4FF /* validator.pyc */; };
-		131FB39B1D398A11008EE4FF /* validator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 131FB3711D398A11008EE4FF /* validator.pyc */; };
 		131FB39C1D398A11008EE4FF /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB3741D398A11008EE4FF /* CollectionParser.swift */; };
 		131FB39D1D398A11008EE4FF /* CollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB3741D398A11008EE4FF /* CollectionParser.swift */; };
 		131FB39E1D398A11008EE4FF /* ComplexTypeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FB3751D398A11008EE4FF /* ComplexTypeParser.swift */; };
@@ -189,19 +179,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		131FB3651D398A11008EE4FF /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		131FB3661D398A11008EE4FF /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
-		131FB3671D398A11008EE4FF /* constants.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = constants.pyc; sourceTree = "<group>"; };
 		131FB3681D398A11008EE4FF /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
 		131FB3691D398A11008EE4FF /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
-		131FB36A1D398A11008EE4FF /* generator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.pyc; sourceTree = "<group>"; };
 		131FB36B1D398A11008EE4FF /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
-		131FB36C1D398A11008EE4FF /* instantiator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = instantiator.pyc; sourceTree = "<group>"; };
 		131FB36D1D398A11008EE4FF /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
 		131FB36E1D398A11008EE4FF /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
 		131FB36F1D398A11008EE4FF /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
 		131FB3701D398A11008EE4FF /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
-		131FB3711D398A11008EE4FF /* validator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = validator.pyc; sourceTree = "<group>"; };
 		131FB3741D398A11008EE4FF /* CollectionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionParser.swift; sourceTree = "<group>"; };
 		131FB3751D398A11008EE4FF /* ComplexTypeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexTypeParser.swift; sourceTree = "<group>"; };
 		131FB3761D398A11008EE4FF /* ComplexValueArrayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexValueArrayParser.swift; sourceTree = "<group>"; };
@@ -321,19 +306,14 @@
 		131FB3641D398A11008EE4FF /* ModelScript */ = {
 			isa = PBXGroup;
 			children = (
-				131FB3651D398A11008EE4FF /* __init__.py */,
 				131FB3661D398A11008EE4FF /* constants.py */,
-				131FB3671D398A11008EE4FF /* constants.pyc */,
 				131FB3681D398A11008EE4FF /* external_class_template.txt */,
 				131FB3691D398A11008EE4FF /* generator.py */,
-				131FB36A1D398A11008EE4FF /* generator.pyc */,
 				131FB36B1D398A11008EE4FF /* instantiator.py */,
-				131FB36C1D398A11008EE4FF /* instantiator.pyc */,
 				131FB36D1D398A11008EE4FF /* instantiator_template.txt */,
 				131FB36E1D398A11008EE4FF /* internal_class_template.txt */,
 				131FB36F1D398A11008EE4FF /* modelgen-swift.py */,
 				131FB3701D398A11008EE4FF /* validator.py */,
-				131FB3711D398A11008EE4FF /* validator.pyc */,
 			);
 			path = ModelScript;
 			sourceTree = "<group>";
@@ -635,19 +615,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C6E6691D3963BD000A0B4B /* TestObjectFour.plist in Resources */,
-				131FB39A1D398A11008EE4FF /* validator.pyc in Resources */,
 				13C6E6791D3963BD000A0B4B /* TestObjectTwo.plist in Resources */,
 				131FB3841D398A11008EE4FF /* constants.py in Resources */,
 				13C6E67F1D3963BD000A0B4B /* TestObjectFive.json in Resources */,
 				13C6E6871D3963BD000A0B4B /* TestObjectSix.json in Resources */,
-				131FB3861D398A11008EE4FF /* constants.pyc in Resources */,
 				131FB3941D398A11008EE4FF /* internal_class_template.txt in Resources */,
 				131FB3921D398A11008EE4FF /* instantiator_template.txt in Resources */,
 				13C6E67B1D3963BD000A0B4B /* TestObjectEight.json in Resources */,
 				13C6E6911D3963BD000A0B4B /* TestObjectTwo.json in Resources */,
-				131FB38C1D398A11008EE4FF /* generator.pyc in Resources */,
 				13C6E66F1D3963BD000A0B4B /* TestObjectSix.plist in Resources */,
-				131FB3901D398A11008EE4FF /* instantiator.pyc in Resources */,
 				13C6E68B1D3963BD000A0B4B /* TestObjectThirteen.json in Resources */,
 				13C6E6711D3963BD000A0B4B /* TestObjectTen.plist in Resources */,
 				13C6E6851D3963BD000A0B4B /* TestObjectSeven.json in Resources */,
@@ -655,7 +631,6 @@
 				131FB3961D398A11008EE4FF /* modelgen-swift.py in Resources */,
 				13C6E6891D3963BD000A0B4B /* TestObjectTen.json in Resources */,
 				13C6E6811D3963BD000A0B4B /* TestObjectFour.json in Resources */,
-				131FB3821D398A11008EE4FF /* __init__.py in Resources */,
 				131FB38E1D398A11008EE4FF /* instantiator.py in Resources */,
 				13C6E66B1D3963BD000A0B4B /* TestObjectNine.plist in Resources */,
 				13C6E68F1D3963BD000A0B4B /* TestObjectTwelve.json in Resources */,
@@ -678,7 +653,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				131FB3871D398A11008EE4FF /* constants.pyc in Resources */,
 				13C6E68E1D3963BD000A0B4B /* TestObjectThree.json in Resources */,
 				13C6E6701D3963BD000A0B4B /* TestObjectSix.plist in Resources */,
 				131FB3891D398A11008EE4FF /* external_class_template.txt in Resources */,
@@ -688,7 +662,6 @@
 				131FB38F1D398A11008EE4FF /* instantiator.py in Resources */,
 				13C6E6821D3963BD000A0B4B /* TestObjectFour.json in Resources */,
 				13C6E6841D3963BD000A0B4B /* TestObjectNine.json in Resources */,
-				131FB39B1D398A11008EE4FF /* validator.pyc in Resources */,
 				13C6E67C1D3963BD000A0B4B /* TestObjectEight.json in Resources */,
 				131FB38B1D398A11008EE4FF /* generator.py in Resources */,
 				13C6E6641D3963BD000A0B4B /* TestObjectEight.plist in Resources */,
@@ -698,15 +671,12 @@
 				13C6E6921D3963BD000A0B4B /* TestObjectTwo.json in Resources */,
 				131FB3971D398A11008EE4FF /* modelgen-swift.py in Resources */,
 				13C6E66C1D3963BD000A0B4B /* TestObjectNine.plist in Resources */,
-				131FB3831D398A11008EE4FF /* __init__.py in Resources */,
 				13C6E68C1D3963BD000A0B4B /* TestObjectThirteen.json in Resources */,
 				13C6E66A1D3963BD000A0B4B /* TestObjectFour.plist in Resources */,
 				13C6E6741D3963BD000A0B4B /* TestObjectThirteen.plist in Resources */,
 				13C6E6721D3963BD000A0B4B /* TestObjectTen.plist in Resources */,
 				13C6E67E1D3963BD000A0B4B /* TestObjectEleven.json in Resources */,
-				131FB3911D398A11008EE4FF /* instantiator.pyc in Resources */,
 				13C6E6801D3963BD000A0B4B /* TestObjectFive.json in Resources */,
-				131FB38D1D398A11008EE4FF /* generator.pyc in Resources */,
 				13C6E6861D3963BD000A0B4B /* TestObjectSeven.json in Resources */,
 				13C6E67A1D3963BD000A0B4B /* TestObjectTwo.plist in Resources */,
 				131FB3851D398A11008EE4FF /* constants.py in Resources */,

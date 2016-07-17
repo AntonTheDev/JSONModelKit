@@ -7,6 +7,8 @@ import dircache
 import glob
 import commands
 
+sys.dont_write_bytecode = True
+
 from constants import Type
 from constants import MappingKey
 

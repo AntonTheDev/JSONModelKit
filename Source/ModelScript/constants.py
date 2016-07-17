@@ -1,4 +1,8 @@
 #!/usr/bin/python
+import sys
+
+sys.dont_write_bytecode = True
+
 class MetaConst(type):
     def __getattr__(cls, key):
         return cls[key]

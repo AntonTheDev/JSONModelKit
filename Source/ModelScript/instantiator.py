@@ -8,6 +8,8 @@ import glob
 import commands
 import json
 
+sys.dont_write_bytecode = True
+
 from constants import Type
 from constants import MappingKey
 
@@ -121,5 +123,5 @@ class InstantiatorGenerator:
 
 
    def getPathForFile(self, fileName):
-      return str.replace(os.path.abspath(__file__), "generator.py", fileName)
+      return str.replace(os.path.abspath(__file__), "instantiator.py", fileName)
 

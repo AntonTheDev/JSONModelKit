@@ -8,6 +8,8 @@ import glob
 import commands
 import json
 
+sys.dont_write_bytecode = True
+
 from constants import Type
 from constants import MappingKey
 

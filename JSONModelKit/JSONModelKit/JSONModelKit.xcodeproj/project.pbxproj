@@ -91,7 +91,6 @@
 		3AC60E491D38DEDC002F4B25 /* instantiator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = instantiator.pyc; sourceTree = "<group>"; };
 		3AC60E4A1D38DEDC002F4B25 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
 		3AC60E4B1D38DEDC002F4B25 /* validator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = validator.pyc; sourceTree = "<group>"; };
-		3AC60E4C1D38DEDC002F4B25 /* mappingKeys.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = mappingKeys.pyc; sourceTree = "<group>"; };
 		3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
 		3AC60E4F1D38DEDC002F4B25 /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
 		3AC60E501D38DEDC002F4B25 /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
@@ -190,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				3AC60E421D38DEDC002F4B25 /* generator */,
-				3AC60E4C1D38DEDC002F4B25 /* mappingKeys.pyc */,
 				3AC60E4D1D38DEDC002F4B25 /* modelgen-swift.py */,
 				3AC60E4E1D38DEDC002F4B25 /* Templates */,
 			);
