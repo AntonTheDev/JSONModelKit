@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3AC610FC1D38EC40002F4B25"
-               BuildableName = "JSONModelKit-iOS-JSON-Tests.xctest"
-               BlueprintName = "JSONModelKit-iOS-JSON-Tests"
+               BlueprintIdentifier = "3A3EF1E41D3D0D61003B0527"
+               BuildableName = "JSONModelKit-iOSTests-JSON.xctest"
+               BlueprintName = "JSONModelKit-iOSTests-JSON"
                ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>

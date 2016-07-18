@@ -5,36 +5,14 @@
       location = "group:Source"
       name = "Source">
       <Group
-         location = "group:ModelScript"
-         name = "ModelScript">
+         location = "group:JSONModelKit"
+         name = "JSONModelKit">
          <FileRef
-            location = "group:constants.py">
+            location = "group:JMCompoundValueTransformer.swift">
          </FileRef>
          <FileRef
-            location = "group:external_class_template.txt">
+            location = "group:JSONModelKit.swift">
          </FileRef>
-         <FileRef
-            location = "group:generator.py">
-         </FileRef>
-         <FileRef
-            location = "group:instantiator.py">
-         </FileRef>
-         <FileRef
-            location = "group:instantiator_template.txt">
-         </FileRef>
-         <FileRef
-            location = "group:internal_class_template.txt">
-         </FileRef>
-         <FileRef
-            location = "group:modelgen-swift.py">
-         </FileRef>
-         <FileRef
-            location = "group:validator.py">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:US2MapperKit"
-         name = "US2MapperKit">
          <Group
             location = "group:Parsers"
             name = "Parsers">
@@ -70,12 +48,6 @@
                location = "group:Transformer.swift">
             </FileRef>
          </Group>
-         <FileRef
-            location = "group:US2CompoundValueTransformer.swift">
-         </FileRef>
-         <FileRef
-            location = "group:US2Mapper.swift">
-         </FileRef>
          <Group
             location = "group:Validator"
             name = "Validator">
@@ -83,6 +55,34 @@
                location = "group:Validator.swift">
             </FileRef>
          </Group>
+      </Group>
+      <Group
+         location = "group:ModelScript"
+         name = "ModelScript">
+         <FileRef
+            location = "group:constants.py">
+         </FileRef>
+         <FileRef
+            location = "group:external_class_template.txt">
+         </FileRef>
+         <FileRef
+            location = "group:generator.py">
+         </FileRef>
+         <FileRef
+            location = "group:instantiator.py">
+         </FileRef>
+         <FileRef
+            location = "group:instantiator_template.txt">
+         </FileRef>
+         <FileRef
+            location = "group:internal_class_template.txt">
+         </FileRef>
+         <FileRef
+            location = "group:modelgen-swift.py">
+         </FileRef>
+         <FileRef
+            location = "group:validator.py">
+         </FileRef>
       </Group>
    </Group>
    <Group

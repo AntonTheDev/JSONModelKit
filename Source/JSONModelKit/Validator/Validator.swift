@@ -1,6 +1,6 @@
 //
 //  Validator.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -17,20 +17,20 @@ public class Validator {
                                       forType className : String,
                                       withData data : Dictionary<String, AnyObject>) -> Bool {
         
-        #if US2MAPPER_DEBUG
+        #if JMMAPPER_DEBUG
             var missingPropertyKeyArray = Array<String>()
         #endif
         
         // Validate that all non-optional properties have a value assigned
        
         for (propertyKey, propertyMapping) in mappingConfiguration {
-            if let isPropertyNonOptional : AnyObject = propertyMapping[US2MapperNonOptionalKey] {
+            if let isPropertyNonOptional : AnyObject = propertyMapping[JMMapperNonOptionalKey] {
                 if isPropertyNonOptional.boolValue == true {
                     if let _ = retrievedValues[propertyKey] {
                         // If value was mapped, continue with validation
                         continue
                     } else {
-                        #if US2MAPPER_DEBUG
+                        #if JMMAPPER_DEBUG
                             missingPropertyKeyArray.append(propertyKey)
                             #else
                             return false
@@ -40,7 +40,7 @@ public class Validator {
             }
         }
         
-        #if US2MAPPER_DEBUG
+        #if JMMAPPER_DEBUG
             if (missingPropertyKeyArray.count > 0) {
             printDebugStatement(className, missingPropertyKeyArray: missingPropertyKeyArray, data : data)
                 return false

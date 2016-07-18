@@ -1,6 +1,6 @@
 //
 //  Transformer.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-var transformerInstances : Dictionary<String, US2TransformerProtocol> = Dictionary<String, US2TransformerProtocol> ()
+var transformerInstances : Dictionary<String, JMTransformerProtocol> = Dictionary<String, JMTransformerProtocol> ()
 
 final class Transformer : Parser {
     
-    class func transformedValue(from data : Dictionary<String, AnyObject>, applying propertyMapping : Dictionary<String, AnyObject>, employing instantiator : US2InstantiatorProtocol) -> Any? {
+    class func transformedValue(from data : Dictionary<String, AnyObject>, applying propertyMapping : Dictionary<String, AnyObject>, employing instantiator : JMInstantiatorProtocol) -> Any? {
         
-        if let transformClass = propertyMapping[US2MapperTransformerKey] as? String {
-            if let jsonKeys = propertyMapping[US2MapperJSONKey] as? [String] {
+        if let transformClass = propertyMapping[JMMapperTransformerKey] as? String {
+            if let jsonKeys = propertyMapping[JMMapperJSONKey] as? [String] {
                 if let transformedValue: Any = transformedValueRepresentation(transformClass, jsonKeys : jsonKeys, data: data, instantiator: instantiator) {
                     return transformedValue
                 }
@@ -24,7 +24,7 @@ final class Transformer : Parser {
         return nil
     }
 
-    class func transformedValueRepresentation(mapperClass : String, jsonKeys : [String], data : Dictionary<String, AnyObject>, instantiator : US2InstantiatorProtocol) -> Any? {
+    class func transformedValueRepresentation(mapperClass : String, jsonKeys : [String], data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Any? {
         
         var valueDictionary : Dictionary<String, Any> = Dictionary<String, Any>()
         
@@ -44,7 +44,7 @@ final class Transformer : Parser {
     }
 
     
-    class func customTransformer(className : String, instantiator : US2InstantiatorProtocol) -> US2TransformerProtocol? {
+    class func customTransformer(className : String, instantiator : JMInstantiatorProtocol) -> JMTransformerProtocol? {
         if let transformer = transformerInstances[className] {
             return transformer
         } else {

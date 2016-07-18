@@ -1,6 +1,6 @@
 //
-//  US2Mapper.swift
-//  US2Mapper
+//  JSONModelKit.swift
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 6/22/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol US2InstantiatorProtocol {
+public protocol JMInstantiatorProtocol {
     func newInstance(ofType classname : String, withValue data : Dictionary<String, AnyObject>) -> AnyObject?
-    func transformerFromString(classString: String) -> US2TransformerProtocol?
+    func transformerFromString(classString: String) -> JMTransformerProtocol?
 }
 
-public protocol US2TransformerProtocol {
+public protocol JMTransformerProtocol {
     func transformValues(inputValues : Dictionary<String, Any>?) -> Any?
 }
 
@@ -32,27 +32,27 @@ extension Array {
 
 var propertyMappings : Dictionary<String, Dictionary<String, Dictionary<String, AnyObject>>> = Dictionary()
 
-let US2MapperJSONKey                 = "key"
-let US2MapperTypeKey                 = "type"
-let US2MapperNonOptionalKey          = "nonoptional"
-let US2MapperDefaultKey              = "default"
-let US2MapperTransformerKey          = "transformer"
-let US2MapperCollectionSubTypeKey    = "collection_subtype"
+let JMMapperJSONKey                 = "key"
+let JMMapperTypeKey                 = "type"
+let JMMapperNonOptionalKey          = "nonoptional"
+let JMMapperDefaultKey              = "default"
+let JMMapperTransformerKey          = "transformer"
+let JMMapperCollectionSubTypeKey    = "collection_subtype"
 
-let US2DataTypeString        = "String"
-let US2DataTypeInt           = "Int"
-let US2DataTypeDouble        = "Double"
-let US2DataTypeFloat         = "Float"
-let US2DataTypeBool          = "Bool"
-let US2DataTypeArray         = "Array"
-let US2DataTypeDictionary    = "Dictionary"
+let JMDataTypeString        = "String"
+let JMDataTypeInt           = "Int"
+let JMDataTypeDouble        = "Double"
+let JMDataTypeFloat         = "Float"
+let JMDataTypeBool          = "Bool"
+let JMDataTypeArray         = "Array"
+let JMDataTypeDictionary    = "Dictionary"
 
-let nativeDataTypes      = [US2DataTypeString, US2DataTypeInt, US2DataTypeDouble, US2DataTypeFloat, US2DataTypeBool]
-let collectionTypes      = [US2DataTypeArray, US2DataTypeDictionary]
+let nativeDataTypes      = [JMDataTypeString, JMDataTypeInt, JMDataTypeDouble, JMDataTypeFloat, JMDataTypeBool]
+let collectionTypes      = [JMDataTypeArray, JMDataTypeDictionary]
 
-final public class US2Mapper {
+final public class JSONModelKit {
     
-    public class func mapValues(from dictionary : Dictionary<String, AnyObject>, forType classType : String , employing instantiator : US2InstantiatorProtocol, defaultsEnabled : Bool) -> Dictionary<String, Any>? {
+    public class func mapValues(from dictionary : Dictionary<String, AnyObject>, forType classType : String , employing instantiator : JMInstantiatorProtocol, defaultsEnabled : Bool) -> Dictionary<String, Any>? {
 
         if let mappingConfiguration = retrieveMappingConfiguration(classType) {
        

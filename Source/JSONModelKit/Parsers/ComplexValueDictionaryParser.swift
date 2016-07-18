@@ -1,6 +1,6 @@
 //
 //  ComplexValueDictionaryParser.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -12,7 +12,7 @@ final class ComplexValueDictionaryParser {
     
     // MARK Maps dictionary representation of complex objects from a Dictionary of Dictionary objects
    
-    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, Dictionary<String, AnyObject>>, instantiator : US2InstantiatorProtocol) ->  Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, Dictionary<String, AnyObject>>, instantiator : JMInstantiatorProtocol) ->  Dictionary<String, AnyObject> {
        
         var valueDictionary : Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
         
@@ -26,7 +26,7 @@ final class ComplexValueDictionaryParser {
     
     // MARK Maps dictionary representation of complex objects from an Array of Dictionary objects
     
-    class func dictionaryRepresentation(collectionSubType : String?, data : [Dictionary<String, AnyObject>], instantiator : US2InstantiatorProtocol) ->  Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(collectionSubType : String?, data : [Dictionary<String, AnyObject>], instantiator : JMInstantiatorProtocol) ->  Dictionary<String, AnyObject> {
        
         var valueDictionary : Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
         var intKey = 0
@@ -41,7 +41,7 @@ final class ComplexValueDictionaryParser {
     
     // MARK Maps dictionary representation of complex objects from a single dictionary instance returned
    
-    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : US2InstantiatorProtocol) ->  Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) ->  Dictionary<String, AnyObject> {
         
         var valueDictionary : Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
         

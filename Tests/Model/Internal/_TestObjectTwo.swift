@@ -1,6 +1,6 @@
 import Foundation
 
-class _TestObjectOne  {
+class _TestObjectTwo  {
 	
 	
 	
@@ -14,7 +14,7 @@ class _TestObjectOne  {
 		let dynamicTypeString = "\(self.dynamicType)"
 		let className = dynamicTypeString.componentsSeparatedByString(".").last
 
-		if let valuesDict = US2Mapper.mapValues(from: dictionary, forType: className!, employing: US2Instantiator.sharedInstance, defaultsEnabled : true) {
+		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
 
 			self.init() 
@@ -30,11 +30,10 @@ class _TestObjectOne  {
 		let dynamicTypeString = "\(self.dynamicType)"
 		let className = dynamicTypeString.componentsSeparatedByString(".").last
 
-		if let valuesDict = US2Mapper.mapValues(from: dictionary, forType: className!, employing: US2Instantiator.sharedInstance, defaultsEnabled : false) {
+		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
 			
 			
  		} 
 	}
 } 
- 

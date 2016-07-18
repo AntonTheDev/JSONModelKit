@@ -1,6 +1,6 @@
 //
-//  US2ExampleClosureTransformer.swift
-//  US2MapperKit
+//  JMExampleClosureTransformer.swift
+//  JSONModelKit
 //
 //  Created by Anton on 9/3/15.
 //  Copyright (c) 2015 ustwo. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class US2ExampleClosureTransformer : US2TransformerProtocol {
+public class JMExampleClosureTransformer : JMTransformerProtocol {
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
         if let handlerType = inputValues!["handler_type"] as? String {
             if handlerType == "uppercase" {

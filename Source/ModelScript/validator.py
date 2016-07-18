@@ -51,7 +51,7 @@ class Validator:
       raise Exception('Invalid Configuration')
 
    def print_default_error_header(self, mapping):
-      print "\r\nUS2Mapper Error: Invalid Configuration (" + self.classname + ".plist)\r\n"
+      print "\r\nJMMapper Error: Invalid Configuration (" + self.classname + ".plist)\r\n"
       print "Mapping : \t\t"
       print mapping
       print "\r\n"

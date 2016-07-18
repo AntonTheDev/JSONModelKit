@@ -7,7 +7,7 @@
 		<key>type</key>
 		<string>StructExample</string>
 		<key>transformer</key>
-		<string>US2ExampleStructTransformer</string>
+		<string>JMExampleStructTransformer</string>
 		<key>key</key>
 		<array>
 			<string>string1</string>
@@ -19,7 +19,7 @@
 		<key>type</key>
 		<string>EnumExample</string>
 		<key>transformer</key>
-		<string>US2ExampleEnumTransformer</string>
+		<string>JMExampleEnumTransformer</string>
 		<key>key</key>
 		<array>
 			<string>enumValue</string>
@@ -30,7 +30,7 @@
 		<key>type</key>
 		<string>(val1 : Double, val2 : Double)</string>
 		<key>transformer</key>
-		<string>US2ExampleTupleTransformer</string>
+		<string>JMExampleTupleTransformer</string>
 		<key>key</key>
 		<array>
 			<string>value_one</string>
@@ -42,7 +42,7 @@
 		<key>type</key>
 		<string>((value : String) -&gt; String)</string>
 		<key>transformer</key>
-		<string>US2ExampleClosureTransformer</string>
+		<string>JMExampleClosureTransformer</string>
 		<key>key</key>
 		<array>
 			<string>handler_type</string>
@@ -53,7 +53,7 @@
 		<key>type</key>
 		<string>((value : String) -&gt; String)</string>
 		<key>transformer</key>
-		<string>US2ExampleClosureTransformer</string>
+		<string>JMExampleClosureTransformer</string>
 		<key>key</key>
 		<array>
 			<string>handler_type</string>

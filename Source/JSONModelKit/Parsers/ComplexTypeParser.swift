@@ -1,6 +1,6 @@
 //
 //  ComplexTypeParser.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -12,7 +12,7 @@ final class ComplexTypeParser {
     
     // MARK Maps a dictionary to a complex type
     
-    class func complexObject(fromValue data : Dictionary<String, AnyObject>, ofType objectType : String?, using instantiator : US2InstantiatorProtocol) -> AnyObject? {
+    class func complexObject(fromValue data : Dictionary<String, AnyObject>, ofType objectType : String?, using instantiator : JMInstantiatorProtocol) -> AnyObject? {
         if let complexTypeValue: AnyObject = instantiator.newInstance(ofType: objectType!, withValue: data) {
             return complexTypeValue
         }

@@ -254,7 +254,7 @@ class ClassGenerator:
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
 
       if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit") 
+         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "") 
       else:
          fileString = str.replace(fileString,  "{ TEST_IMPORT }", "") 
 

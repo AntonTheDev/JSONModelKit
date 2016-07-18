@@ -1,12 +1,12 @@
 //
-//  US2CompoundValueTransformer.swift
-//  US2MapperKit
+//  JMCompoundValueTransformer.swift
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 6/29/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
 //
 
-public class US2CompoundValueTransformer : US2TransformerProtocol {
+public class JMCompoundValueTransformer : JMTransformerProtocol {
    
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
         var outputString : String = ""

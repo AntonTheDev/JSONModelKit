@@ -1,6 +1,6 @@
 import Foundation
 
-class _TestObjectTwo  {
+class _TestObjectOne  {
 	
 	
 	
@@ -37,3 +37,4 @@ class _TestObjectTwo  {
  		} 
 	}
 } 
+ 

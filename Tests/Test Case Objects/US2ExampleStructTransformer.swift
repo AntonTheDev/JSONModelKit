@@ -1,6 +1,6 @@
 //
-//  US2ExampleStructTransformer.swift
-//  US2MapperKit
+//  JMExampleStructTransformer.swift
+//  JSONModelKit
 //
 //  Created by Anton on 9/2/15.
 //  Copyright (c) 2015 ustwo. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class US2ExampleStructTransformer : US2TransformerProtocol {
+public class JMExampleStructTransformer : JMTransformerProtocol {
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
        
         if let stringDictionary = inputValues as? Dictionary<String, String> {

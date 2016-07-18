@@ -1,9 +1,9 @@
-// US2MapperKit Generated Model
+// JSONModelKit Generated Model
 // UPDATE LISCENSE HERE
 
 import Foundation
 
-enum US2MapperClassEnum: String {
+enum JMMapperClassEnum: String {
 	case _TestObjectEight 	= "TestObjectEight"
 	case _TestObjectEleven 	= "TestObjectEleven"
 	case _TestObjectFive 	= "TestObjectFive"
@@ -50,40 +50,40 @@ enum US2MapperClassEnum: String {
 	}
 }
 
-enum US2TransformerEnum: String {
-	case _US2CompoundValueTransformer 	= "US2CompoundValueTransformer"
-	case _US2ExampleClosureTransformer 	= "US2ExampleClosureTransformer"
-	case _US2ExampleTupleTransformer 	= "US2ExampleTupleTransformer"
-	case _US2ExampleEnumTransformer 	= "US2ExampleEnumTransformer"
-	case _US2ExampleStructTransformer 	= "US2ExampleStructTransformer"	
+enum JMTransformerEnum: String {
+	case _JMCompoundValueTransformer 	= "JMCompoundValueTransformer"
+	case _JMExampleClosureTransformer 	= "JMExampleClosureTransformer"
+	case _JMExampleTupleTransformer 	= "JMExampleTupleTransformer"
+	case _JMExampleEnumTransformer 	= "JMExampleEnumTransformer"
+	case _JMExampleStructTransformer 	= "JMExampleStructTransformer"	
 	case _None = "None"
 
-	func transformer() -> US2TransformerProtocol? {
+	func transformer() -> JMTransformerProtocol? {
 		switch self {
-		case ._US2CompoundValueTransformer:
-			return US2CompoundValueTransformer()
-		case ._US2ExampleClosureTransformer:
-			return US2ExampleClosureTransformer()
-		case ._US2ExampleTupleTransformer:
-			return US2ExampleTupleTransformer()
-		case ._US2ExampleEnumTransformer:
-			return US2ExampleEnumTransformer()
-		case ._US2ExampleStructTransformer:
-			return US2ExampleStructTransformer()
+		case ._JMCompoundValueTransformer:
+			return JMCompoundValueTransformer()
+		case ._JMExampleClosureTransformer:
+			return JMExampleClosureTransformer()
+		case ._JMExampleTupleTransformer:
+			return JMExampleTupleTransformer()
+		case ._JMExampleEnumTransformer:
+			return JMExampleEnumTransformer()
+		case ._JMExampleStructTransformer:
+			return JMExampleStructTransformer()
 		case ._None:
 			return nil		
 		}
 	} 
 }
 
-class US2Instantiator : US2InstantiatorProtocol {
-	static let sharedInstance : US2Instantiator = US2Instantiator()
+class JMInstantiator : JMInstantiatorProtocol {
+	static let sharedInstance : JMInstantiator = JMInstantiator()
 
 	func newInstance(ofType classname : String, withValue data : Dictionary<String, AnyObject>) -> AnyObject? {
-		return US2MapperClassEnum(rawValue: classname)?.createObject(data)
+		return JMMapperClassEnum(rawValue: classname)?.createObject(data)
 	}
 
-	func transformerFromString(classString: String) -> US2TransformerProtocol? {
-		return US2TransformerEnum(rawValue: classString)!.transformer()
+	func transformerFromString(classString: String) -> JMTransformerProtocol? {
+		return JMTransformerEnum(rawValue: classString)!.transformer()
 	}
 }

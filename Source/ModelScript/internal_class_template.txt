@@ -14,7 +14,7 @@ class _{ CLASSNAME }  {
 		let dynamicTypeString = "\(self.dynamicType)"
 		let className = dynamicTypeString.componentsSeparatedByString(".").last
 
-		if let valuesDict = US2Mapper.mapValues(from: dictionary, forType: className!, employing: US2Instantiator.sharedInstance, defaultsEnabled : true) {
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			{ FAILABLE_INIT_TEMP_NONOPTIONALS }
 
 			self.init({ SELF_NONOPTIONALS_INIT }) 
@@ -30,7 +30,7 @@ class _{ CLASSNAME }  {
 		let dynamicTypeString = "\(self.dynamicType)"
 		let className = dynamicTypeString.componentsSeparatedByString(".").last
 
-		if let valuesDict = US2Mapper.mapValues(from: dictionary, forType: className!, employing: US2Instantiator.sharedInstance, defaultsEnabled : false) {
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
 			{ OPTIONALS_UNWRAP }
 			{ NONOPTIONALS_UNWRAP }

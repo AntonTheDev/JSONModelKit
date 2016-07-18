@@ -1,6 +1,6 @@
 //
 //  Parser.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -10,20 +10,20 @@ import Foundation
 
 class Parser {
     
-    final class func retrieveValue(from dictionary : Dictionary<String, AnyObject>, applying propertyMapping : Dictionary<String, AnyObject>, employing instantiator : US2InstantiatorProtocol, defaultsEnabled : Bool) -> Any? {
+    final class func retrieveValue(from dictionary : Dictionary<String, AnyObject>, applying propertyMapping : Dictionary<String, AnyObject>, employing instantiator : JMInstantiatorProtocol, defaultsEnabled : Bool) -> Any? {
         
-        if propertyMapping[US2MapperTransformerKey] != nil {
+        if propertyMapping[JMMapperTransformerKey] != nil {
             return Transformer.transformedValue(from: dictionary, applying : propertyMapping, employing : instantiator)
         } 
         
-        if let jsonKey = propertyMapping[US2MapperJSONKey] as? String {
-            if let dataType = propertyMapping[US2MapperTypeKey]  as? String {
+        if let jsonKey = propertyMapping[JMMapperJSONKey] as? String {
+            if let dataType = propertyMapping[JMMapperTypeKey]  as? String {
                 
-                let subType = propertyMapping[US2MapperCollectionSubTypeKey] as? String
+                let subType = propertyMapping[JMMapperCollectionSubTypeKey] as? String
                 
                 if let retrievedValue: AnyObject = dictionaryValueForKey(jsonKey, dictionary: dictionary) {
                     return parsedValue(forValue : retrievedValue, dataType, subType, instantiator : instantiator)
-                } else if let retrievedDefaultValue: AnyObject = propertyMapping[US2MapperDefaultKey] {
+                } else if let retrievedDefaultValue: AnyObject = propertyMapping[JMMapperDefaultKey] {
                     
                     if defaultsEnabled {
                         return parsedValue(forValue : retrievedDefaultValue, dataType, subType, instantiator : instantiator)
@@ -37,7 +37,7 @@ class Parser {
         return nil
     }
     
-    final class func parsedValue(forValue value : AnyObject, _ dataType : String, _ subType: String?, instantiator : US2InstantiatorProtocol) -> AnyObject? {
+    final class func parsedValue(forValue value : AnyObject, _ dataType : String, _ subType: String?, instantiator : JMInstantiatorProtocol) -> AnyObject? {
         
         if nativeDataTypes.containsValue(dataType) {
             
@@ -46,9 +46,9 @@ class Parser {
         } else if collectionTypes.containsValue(dataType) {
             
             switch dataType {
-            case US2DataTypeArray:
+            case JMDataTypeArray:
                 return CollectionParser.arrayRepresentation(fromValue : value, ofType : subType, using : instantiator)
-            case US2DataTypeDictionary:
+            case JMDataTypeDictionary:
                 return CollectionParser.dictionaryRepresentation(fromValue : value, ofType : subType, using : instantiator)
             default:
                 if let unwrappedValue = value as? Dictionary<String, AnyObject> {

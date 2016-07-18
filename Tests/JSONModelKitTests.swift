@@ -1,6 +1,6 @@
 //
-//  US2Mapper2iOSScenarioTests.swift
-//  US2Mapper2
+//  JMMapper2iOSScenarioTests.swift
+//  JMMapper2
 //
 //  Created by Anton Doudarev on 7/8/15.
 //  Copyright © 2015 ustwo. All rights reserved.

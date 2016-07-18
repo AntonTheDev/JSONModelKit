@@ -29,7 +29,7 @@ class InstantiatorGenerator:
       internalTemplate = str.replace(internalTemplate, '\n', '\r\n')
       
       if self.testEnabled == 0:
-         internalTemplate = str.replace(internalTemplate,  "{ TEST_IMPORT }", "import US2MapperKit") 
+         internalTemplate = str.replace(internalTemplate,  "{ TEST_IMPORT }", "") 
       else:
          internalTemplate = str.replace(internalTemplate,  "{ TEST_IMPORT }", "")
          

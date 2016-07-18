@@ -15,7 +15,7 @@ from validator 	import Validator
 
 def generate_model(plistPaths, output_directory, version, testEnabled, jsonFormatEnabled):
 	
-	instantiatorPath = output_directory + 'Internal/US2Instantiator.swift'
+	instantiatorPath = output_directory + 'Internal/JMInstantiator.swift'
 	instantiatorGenerator = InstantiatorGenerator(plistPaths, output_directory, version, testEnabled, jsonFormatEnabled)
 	
 	generate_file(instantiatorGenerator.internalGeneratedClass(), instantiatorPath, True)

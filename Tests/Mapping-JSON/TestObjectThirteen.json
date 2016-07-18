@@ -3,14 +3,14 @@
 		"key" : [
 			"handler_type"
 		],
-		"transformer" : "US2ExampleClosureTransformer",
+		"transformer" : "JMExampleClosureTransformer",
 		"type" : "((value : String) -> String)"
 	},
 	"optionalLowercaseCompletionHandler" : {
 		"key" : [
 			"handler_type"
 		],
-		"transformer" : "US2ExampleClosureTransformer",
+		"transformer" : "JMExampleClosureTransformer",
 		"type" : "((value : String) -> String)"
 	},
 	"optionalStruct" : {
@@ -18,7 +18,7 @@
 			"string1",
 			"string2"
 		],
-		"transformer" : "US2ExampleStructTransformer",
+		"transformer" : "JMExampleStructTransformer",
 		"type" : "StructExample"
 	},
 	"optionalTuple" : {
@@ -26,14 +26,14 @@
 			"value_one",
 			"value_two"
 		],
-		"transformer" : "US2ExampleTupleTransformer",
+		"transformer" : "JMExampleTupleTransformer",
 		"type" : "(val1 : Double, val2 : Double)"
 	},
 	"optionalEnum" : {
 		"key" : [
 			"enumValue"
 		],
-		"transformer" : "US2ExampleEnumTransformer",
+		"transformer" : "JMExampleEnumTransformer",
 		"type" : "EnumExample"
 	}
 }

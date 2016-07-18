@@ -6,14 +6,14 @@
 			"non_optional_right_hand_string"
 		],
 		"type" : "String",
-		"transformer" : "US2CompoundValueTransformer"
+		"transformer" : "JMCompoundValueTransformer"
 	},
 	"optionalCompoundString" : {
 		"key" : [
 			"left_hand_string",
 			"right_hand_string"
 		],
-		"transformer" : "US2CompoundValueTransformer",
+		"transformer" : "JMCompoundValueTransformer",
 		"type" : "String"
 	}
 }

@@ -1,6 +1,6 @@
 //
 //  NativeTypeParser.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -16,18 +16,18 @@ final class NativeTypeParser {
     
     class func convertValue(value : AnyObject, dataType : String) -> AnyObject?  {
         switch dataType {
-        case US2DataTypeString:
+        case JMDataTypeString:
             if value is NSNumber {
                 return numericString(value as! NSNumber)
             }
             return "\(value)"
-        case US2DataTypeDouble:
+        case JMDataTypeDouble:
             return Double(value.doubleValue)
-        case US2DataTypeFloat:
+        case JMDataTypeFloat:
             return Float(value.floatValue)
-        case US2DataTypeInt:
+        case JMDataTypeInt:
             return Int(value.integerValue)
-        case US2DataTypeBool:
+        case JMDataTypeBool:
             return value.boolValue
         default:
             return value

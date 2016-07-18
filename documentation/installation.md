@@ -1,21 +1,5 @@
 ##JSONModelKit - Installation
 
-####Manual Install
-
-1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository 
-2. Add the contents of the Source Directory to the project
-3. In the Project's Root Folder create a new folder that will contain all the mapping plist files
-4. In the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
-	
-	``` 
-SCRIPT_LOCATION=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
-python $SCRIPT_LOCATION -v 0.8 -i $PROJECT_DIR/$PROJECT_NAME/Mappings/ -o $PROJECT_DIR/$PROJECT_NAME/Model/
-
-	```
-	
-4. Move the newly created Run Script phase to the second listing right below the "Target Dependencies" task
-
-
 ####CocoaPods
 
 1. Edit the project's podfile
@@ -88,3 +72,20 @@ python $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR
  	$(SRCROOT)/Carthage/Build/iOS/JSONModelKit.framework
   	
   	```
+  	
+  	
+####Manual Install
+
+1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository 
+2. Add the contents of the Source Directory to the project
+3. In the Project's Root Folder create a new folder that will contain all the mapping plist files
+4. In the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
+	
+	``` 
+	TBD
+
+	```
+	
+4. Move the newly created Run Script phase to the second listing right below the "Target Dependencies" task
+
+

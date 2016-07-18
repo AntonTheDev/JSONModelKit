@@ -1,6 +1,6 @@
 //
 //  Structs.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton on 9/2/15.
 //  Copyright (c) 2015 ustwo. All rights reserved.

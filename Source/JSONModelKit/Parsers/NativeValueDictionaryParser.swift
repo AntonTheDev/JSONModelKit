@@ -1,6 +1,6 @@
 //
 //  NativeValueDictionaryParser.swift
-//  US2MapperKit
+//  JSONModelKit
 //
 //  Created by Anton Doudarev on 7/17/15.
 //  Copyright © 2015 Ustwo. All rights reserved.
@@ -12,7 +12,7 @@ final class NativeValueDictionaryParser {
     
     // MARK Maps Dictionary representation of native values from an Array of objects
    
-    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : US2InstantiatorProtocol) -> Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
        
         var valueDictionary = Dictionary<String, AnyObject>()
         var intKey = 0
@@ -27,7 +27,7 @@ final class NativeValueDictionaryParser {
     
     // MARK Maps Dictionary representation of native values from an Array of objects
     
-    class func dictionaryRepresentation(collectionSubType : String?, data : [AnyObject], instantiator : US2InstantiatorProtocol) -> Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(collectionSubType : String?, data : [AnyObject], instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
        
         var valueDictionary = Dictionary<String, AnyObject>()
         var intKey = 0

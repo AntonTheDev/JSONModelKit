@@ -7,7 +7,9 @@
 
 ##Introduction
 
-JSONModelKit is an an extremely lightweight mapping framework that follows an API-first approach to stream line development. JSONModelKit differs by taking an API-first approach by mapping against the response up front, then generatting the model objects based on model mapping definition. By providing a single point of configuration, and driving the model definition against an API reponse, it makes it very easy to keep your model in sync with an API and streamline development.
+JSONModelKit is an an extremely lightweight mapping framework that follows an API-Driven approach to stream line development. JSONModelKit differs from other frameworks by taking an API-first approach and mapping against the response up front, then generatting the model objects based on the definition, so there is one point of update anytime the API changes. 
+
+By providing a single point of configuration, and driving the model definition against an API reponse, it makes it very easy to keep your model in sync with an API and streamline development.
 
 ##Features
 
