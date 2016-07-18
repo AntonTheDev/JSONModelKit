@@ -118,6 +118,7 @@ class InstantiatorGenerator:
 
    def propertyMappingDictionary(self, mappingPath):
       if self.jsonFormatEnabled == True:
+         print mappingPath
          return json.load(open(mappingPath))
       return plistlib.readPlist(mappingPath)
 
