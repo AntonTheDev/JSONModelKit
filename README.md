@@ -5,6 +5,8 @@
 
 #JSONModelKit
 
+NOTE: This is still in dev, should be released, and in master the week of July 18th-24th, 2016.
+
 ##Introduction
 
 JSONModelKit is an an extremely lightweight mapping framework that follows an API-Driven approach to stream line development. JSONModelKit differs from other frameworks by taking an API-first approach, and mapping against the response up front. Once mapped JSONMapperKit generates the model objects based on the definition, ready to to use and extend out of the box.
@@ -88,8 +90,7 @@ Run the build script once **⌘+B**. and you will see that it generated the foll
 
 ![alt tag](/documentation/readme_assets/genrerated_folder_structure.png?raw=true)
 
-Observe the internal file that was generated, all the properties are complete
-
+Observe the internal file that was generated
 
 ```
 class _Business  {
@@ -119,7 +120,7 @@ class _Business  {
 
 ```
 
-Once a a JSON response is received call the following method, and all the properties will be parsed and mapped accordingly.
+Once a JSON response is received call the following method, and all the properties will be parsed and mapped accordingly.
 
 ```
 let newInstance = TestModelObject(dataDictionary)
