@@ -2,8 +2,8 @@ import Foundation
 { TEST_IMPORT }
 class _{ CLASSNAME }  {
 	
-	{ OPTIONALS }
 	{ NONOPTIONALS }
+	{ OPTIONALS }
 
 	required init({ REQUIRED_INIT_PARAMS })  {
  		{ REQUIRED_INIT_SETTERS }
