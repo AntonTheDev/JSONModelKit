@@ -2,12 +2,12 @@
 	"optionalDictionaryType" : {
 		"key" : "optional_sub_object_dictionary",
 		"type" : "Dictionary",
-		"collection_subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour"
 	},
 	"non_optionalDictionaryType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_sub_object_dictionary",
 		"type" : "Dictionary",
-		"collection_subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour"
 	}
 }

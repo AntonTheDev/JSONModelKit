@@ -8,7 +8,7 @@
 		<string>optional_dictionary_string_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>String</string>
 	</dict>
 	<key>optionalDictionaryDoubleType</key>
@@ -17,7 +17,7 @@
 		<string>optional_dictionary_double_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Double</string>
 	</dict>
 	<key>optionalDictionaryFloatType</key>
@@ -26,7 +26,7 @@
 		<string>optional_dictionary_float_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Float</string>
 	</dict>
 	<key>optionalDictionaryIntType</key>
@@ -35,7 +35,7 @@
 		<string>optional_dictionary_int_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Int</string>
 	</dict>
 	<key>non_optionalDictionaryStringType</key>
@@ -46,7 +46,7 @@
 		<string>non_optional_dictionary_string_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>String</string>
 	</dict>
 	<key>non_optionalDictionaryDoubleType</key>
@@ -57,7 +57,7 @@
 		<string>non_optional_dictionary_double_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Double</string>
 	</dict>
 	<key>non_optionalDictionaryFloatType</key>
@@ -68,7 +68,7 @@
 		<string>non_optional_dictionary_float_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Float</string>
 	</dict>
 	<key>non_optionalDictionaryIntType</key>
@@ -79,7 +79,7 @@
 		<string>non_optional_dictionary_int_type</string>
 		<key>type</key>
 		<string>Dictionary</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Int</string>
 	</dict>
 </dict>

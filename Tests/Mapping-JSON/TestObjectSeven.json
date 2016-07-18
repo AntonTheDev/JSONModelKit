@@ -3,11 +3,11 @@
 		"nonoptional" : "true",
 		"key" : "non_optional_sub_object_array",
 		"type" : "Array",
-		"collection_subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour"
 	},
 	"optionalArrayType" : {
 		"key" : "optional_sub_object_array",
 		"type" : "Array",
-		"collection_subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour"
 	}
 }

@@ -37,7 +37,7 @@ let JMMapperTypeKey                 = "type"
 let JMMapperNonOptionalKey          = "nonoptional"
 let JMMapperDefaultKey              = "default"
 let JMMapperTransformerKey          = "transformer"
-let JMMapperCollectionSubTypeKey    = "collection_subtype"
+let JMMapperCollectionSubTypeKey    = "subtype"
 
 let JMDataTypeString        = "String"
 let JMDataTypeInt           = "Int"

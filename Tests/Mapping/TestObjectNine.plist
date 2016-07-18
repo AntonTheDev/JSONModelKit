@@ -8,7 +8,7 @@
 		<string>optional_array_string_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>String</string>
 	</dict>
 	<key>optionalArrayDoubleType</key>
@@ -17,7 +17,7 @@
 		<string>optional_array_double_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Double</string>
 	</dict>
 	<key>optionalArrayFloatType</key>
@@ -26,7 +26,7 @@
 		<string>optional_array_float_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Float</string>
 	</dict>
 	<key>optionalArrayIntType</key>
@@ -35,7 +35,7 @@
 		<string>optional_array_int_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Int</string>
 	</dict>
 	<key>non_optionalArrayStringType</key>
@@ -46,7 +46,7 @@
 		<string>non_optional_array_string_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>String</string>
 	</dict>
 	<key>non_optionalArrayDoubleType</key>
@@ -57,7 +57,7 @@
 		<string>non_optional_array_double_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Double</string>
 	</dict>
 	<key>non_optionalArrayFloatType</key>
@@ -68,7 +68,7 @@
 		<string>non_optional_array_float_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Float</string>
 	</dict>
 	<key>non_optionalArrayIntType</key>
@@ -79,7 +79,7 @@
 		<string>non_optional_array_int_type</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>Int</string>
 	</dict>
 </dict>

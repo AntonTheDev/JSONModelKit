@@ -25,7 +25,7 @@ class MappingKey(Const):
 	DefaultValue 	= "default"
 	NonOptional    	= "nonoptional"
 	Transformer    	= "transformer"
-	SubType      	= "collection_subtype"
+	SubType      	= "subtype"
 
 class Type(Const):
 	NativeTypes       = ["String", "Double", "Float", "Int", "Bool"]

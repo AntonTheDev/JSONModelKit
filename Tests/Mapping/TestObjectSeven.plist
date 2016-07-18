@@ -8,7 +8,7 @@
 		<string>optional_sub_object_array</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>TestObjectFour</string>
 	</dict>
 	<key>non_optionalArrayType</key>
@@ -19,7 +19,7 @@
 		<string>non_optional_sub_object_array</string>
 		<key>type</key>
 		<string>Array</string>
-		<key>collection_subtype</key>
+		<key>subtype</key>
 		<string>TestObjectFour</string>
 	</dict>
 </dict>
