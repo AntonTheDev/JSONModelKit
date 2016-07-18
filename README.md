@@ -119,7 +119,7 @@ class _Business  {
 
 ```
 
-Once a a JSON response is received call the collowing method, and all the properties will be parsed and mapped accordingly.
+Once a a JSON response is received call the following method, and all the properties will be parsed and mapped accordingly.
 
 ```
 let newInstance = TestModelObject(dataDictionary)
