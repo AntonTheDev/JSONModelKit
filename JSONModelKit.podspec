@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files =  "Source/ModelScript/*.*", "Source/ModelScript/Templates/*.*", "Source/JSONModelKit/*.*", "Source/JSONModelKit/Parsers/*.*", "Source/JSONModelKit/Transformer/*.*", "Source/JSONModelKit/Validator/*.*"
+  s.source_files = "Source/*.*", "Source/ModelScript/*.*", "Source/JSONModelKit/*.*", "Source/JSONModelKit/Parsers/*.*", "Source/JSONModelKit/Transformer/*.*", "Source/JSONModelKit/Validator/*.*"
 end
