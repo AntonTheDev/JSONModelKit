@@ -29,9 +29,9 @@ class InstantiatorGenerator:
       internalTemplate = str.replace(internalTemplate, '\n', '\r\n')
       
       if self.testEnabled == 0:
-         internalTemplate = str.replace(internalTemplate,  "{ TEST_IMPORT }", "") 
+         internalTemplate = str.replace(internalTemplate,  "{ PROD_IMPORT }", "import JSONModelKit") 
       else:
-         internalTemplate = str.replace(internalTemplate,  "{ TEST_IMPORT }", "")
+         internalTemplate = str.replace(internalTemplate,  "{ PROD_IMPORT }", "")
          
       classnames = []
 

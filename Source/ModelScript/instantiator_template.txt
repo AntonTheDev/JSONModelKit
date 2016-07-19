@@ -2,7 +2,7 @@
 // UPDATE LISCENSE HERE
 
 import Foundation
-{ TEST_IMPORT }
+{ PROD_IMPORT }
 enum JMMapperClassEnum: String {
 	{ CASE_ENUM_DEFINITION }
 

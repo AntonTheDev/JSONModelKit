@@ -27,6 +27,12 @@ class ClassGenerator:
 
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
+      if self.testEnabled == 0:
+         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit") 
+      else:
+         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "")
+         
+
       fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))   
       fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(propertyMappings))
       fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(propertyMappings))
