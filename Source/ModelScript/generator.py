@@ -28,7 +28,7 @@ class ClassGenerator:
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
       if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit") 
+         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit\r\n") 
       else:
          fileString = str.replace(fileString,  "{ PROD_IMPORT }", "")
          

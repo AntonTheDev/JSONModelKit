@@ -3,6 +3,7 @@ import Foundation
 class _{ CLASSNAME }  {
 	
 	{ NONOPTIONALS }
+	
 	{ OPTIONALS }
 
 	required init({ REQUIRED_INIT_PARAMS })  {
