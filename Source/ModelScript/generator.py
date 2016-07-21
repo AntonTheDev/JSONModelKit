@@ -172,6 +172,7 @@ class ClassGenerator:
 
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
 
+
    '''
    Returns the Serialization Extention for a class
    '''
@@ -190,7 +191,7 @@ class ClassGenerator:
       propertyString = ""
      
       for group in uniqueGroups:
-         propertyString += "\t\t case _" + group + "\t\t= \"" + group + "\"\r\n"
+         propertyString += "\r\n\t\t case _" + group + "\t\t= \"" + group + "\""
 
       return str(propertyString) 
 
@@ -211,15 +212,29 @@ class ClassGenerator:
    def serialization_functions(self, propertyMappings, uniqueGroups):
 
       propertyString = ""
-     
+
       for group in uniqueGroups:
+         print group
+         optionalPropertyString = ""
+         nonOptionalPropertyString = ""
          propertyString += "\tprivate func serialized" + group + "() -> [String : Any] { \r\n\t\tvar params = [String : Any]()\r\n"
      
          for propertyKey in propertyMappings.keys():
-            if group in propertyMappings[propertyKey][MappingKey.Groups]:
-                propertyString += "\r\n\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] = " + propertyKey
-      
+            if MappingKey.Groups in propertyMappings[propertyKey].keys():
+                if group in propertyMappings[propertyKey][MappingKey.Groups]:
+                  mappingOptional = self.is_property_mapping_optional(propertyMappings[propertyKey])
+                
+                  if mappingOptional == False:
+                        nonOptionalPropertyString += "\r\n\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] = " + propertyKey
+                  else:
+                        optionalPropertyString += "\r\n\r\n\t\tif let unwrapped_" + propertyMappings[propertyKey][MappingKey.Key] + " = " + propertyKey + " { "
+                        optionalPropertyString += "\r\n\t\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] =  unwrapped_" +  propertyMappings[propertyKey][MappingKey.Key] + "\r\n\t\t}"
+
+         propertyString += nonOptionalPropertyString
+         propertyString += optionalPropertyString
+                
          propertyString += "\r\n\r\n\t\treturn params\r\n\t}\r\n\r\n\r\n" 
+      
       return str(propertyString)
 
 

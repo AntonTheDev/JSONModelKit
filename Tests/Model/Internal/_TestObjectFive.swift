@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectFive  {
-	
-	
+class _TestObjectFive  {	
+
 	var non_optionalSubType : TestObjectThree
 	
 	var optionalSubType : TestObjectThree?

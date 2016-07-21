@@ -1,8 +1,7 @@
 import Foundation
 { PROD_IMPORT }
-class _{ CLASSNAME }  {
-	
-	{ NONOPTIONALS }
+class _{ CLASSNAME }  {	
+{ NONOPTIONALS }
 	
 	{ OPTIONALS }
 

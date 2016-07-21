@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectSix  {
-	
-	
+class _TestObjectSix  {	
+
 	var non_optionalCompoundString : String
 	
 	var optionalCompoundString : String?

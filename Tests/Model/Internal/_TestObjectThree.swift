@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectThree  {
-	
-	
+class _TestObjectThree  {	
+
 	var non_optionalBool : Bool
     var non_optionalString : String
     var non_optionalInt : Int

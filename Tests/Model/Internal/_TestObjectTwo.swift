@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectTwo  {
-	
-	
+class _TestObjectTwo  {	
+
 	
 	
 

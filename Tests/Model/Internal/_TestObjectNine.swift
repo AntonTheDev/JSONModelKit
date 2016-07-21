@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectNine  {
-	
-	
+class _TestObjectNine  {	
+
 	var non_optionalArrayIntType : [Int]
     var non_optionalArrayDoubleType : [Double]
     var non_optionalArrayFloatType : [Float]

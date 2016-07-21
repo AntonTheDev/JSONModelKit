@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectThirteen  {
-	
-	
+class _TestObjectThirteen  {	
+
 	
 	var optionalLowercaseCompletionHandler : ((value : String) -> String)?
     var optionalTuple : (val1 : Double, val2 : Double)?

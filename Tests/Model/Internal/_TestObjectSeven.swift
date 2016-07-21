@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectSeven  {
-	
-	
+class _TestObjectSeven  {	
+
 	var non_optionalArrayType : [TestObjectFour]
 	
 	var optionalArrayType : [TestObjectFour]?

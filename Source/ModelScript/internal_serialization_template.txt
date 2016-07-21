@@ -1,20 +1,12 @@
 
 
 extension _{ CLASSNAME } {
-    
-    // Find unique tags in the array
-    // Create Enum
-
-    enum _TestObjectFourSerializationEnum: String {
-{ CREATE_SERIALIZATION_ENUM }
+    enum _TestObjectFourSerializationEnum: String { { CREATE_SERIALIZATION_ENUM }
     }
     
     func serializedData(forGroup group : String) -> [String : Any]? {
-        
         if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
-            
-            switch groupType {
-{ SERIALIZATION_SWITCH }
+            switch groupType {{ SERIALIZATION_SWITCH }
             }
         }
         
@@ -22,6 +14,5 @@ extension _{ CLASSNAME } {
         
         return nil
     }
-    
-{ SERIALIZATION_FUNCTIONS }
-}
+
+{ SERIALIZATION_FUNCTIONS }}

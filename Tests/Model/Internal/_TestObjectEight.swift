@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectEight  {
-	
-	
+class _TestObjectEight  {	
+
 	var non_optionalDictionaryType : [String : TestObjectFour]
 	
 	var optionalDictionaryType : [String : TestObjectFour]?

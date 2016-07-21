@@ -1,8 +1,7 @@
 import Foundation
 
-class _TestObjectTen  {
-	
-	
+class _TestObjectTen  {	
+
 	var non_optionalDictionaryIntType : [String : Int]
     var non_optionalDictionaryDoubleType : [String : Double]
     var non_optionalDictionaryFloatType : [String : Float]
