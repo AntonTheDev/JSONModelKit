@@ -27,12 +27,6 @@ class ClassGenerator:
 
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
-      if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit\r\n") 
-      else:
-         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "")
-         
-
       fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))   
       fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(propertyMappings))
       fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(propertyMappings))
@@ -41,7 +35,12 @@ class ClassGenerator:
       fileString = str.replace(fileString, "{ SELF_NONOPTIONALS_INIT }",            self.non_optional_self_init_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
+      
+      uniqueGroups = self.uniqueGroups(propertyMappings)
 
+      if len(uniqueGroups) > 0:
+         fileString += self.serialization_extention(propertyMappings, uniqueGroups)
+         
       nonOptionalArray = self.filtered_mappings(propertyMappings, True)
       
       if len(nonOptionalArray) == 0:
@@ -173,6 +172,56 @@ class ClassGenerator:
 
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
 
+   '''
+   Returns the Serialization Extention for a class
+   '''
+   def serialization_extention(self, propertyMappings, uniqueGroups):
+      fileString = self.baseTemplate(self.getPathForFile("internal_serialization_template.txt"))
+      fileString = str.replace(fileString, "{ CREATE_SERIALIZATION_ENUM }",         self.serialization_enum(propertyMappings, uniqueGroups))
+      fileString = str.replace(fileString, "{ SERIALIZATION_SWITCH }",              self.serialization_switch(propertyMappings, uniqueGroups))
+      fileString = str.replace(fileString, "{ SERIALIZATION_FUNCTIONS }",           self.serialization_functions(propertyMappings, uniqueGroups))
+        
+      return fileString
+
+   '''
+   Replaces { CREATE_SERIALIZATION_ENUM } in the template
+   '''
+   def serialization_enum(self, propertyMappings, uniqueGroups):
+      propertyString = ""
+     
+      for group in uniqueGroups:
+         propertyString += "\t\t case _" + group + "\t\t= \"" + group + "\"\r\n"
+
+      return str(propertyString) 
+
+   '''
+   Replaces { SERIALIZATION_SWITCH } in the template
+   '''
+   def serialization_switch(self, propertyMappings, uniqueGroups):
+      propertyString = ""
+     
+      for group in uniqueGroups:
+         propertyString += "\r\n\t\t\tcase ._" + group + ":\r\n\t\t\t\treturn serialized" + group + "()"
+
+      return str(propertyString)
+
+   '''
+   Replaces { SERIALIZATION_FUNCTIONS } in the template
+   '''
+   def serialization_functions(self, propertyMappings, uniqueGroups):
+
+      propertyString = ""
+     
+      for group in uniqueGroups:
+         propertyString += "\tprivate func serialized" + group + "() -> [String : Any] { \r\n\t\tvar params = [String : Any]()\r\n"
+     
+         for propertyKey in propertyMappings.keys():
+            if group in propertyMappings[propertyKey][MappingKey.Groups]:
+                propertyString += "\r\n\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] = " + propertyKey
+      
+         propertyString += "\r\n\r\n\t\treturn params\r\n\t}\r\n\r\n\r\n" 
+      return str(propertyString)
+
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
       if len(propertyMappings) == 0 :
@@ -251,6 +300,20 @@ class ClassGenerator:
    def getPathForFile(self, fileName):
       return str.replace(os.path.abspath(__file__), "generator.py", fileName)
 
+   '''
+   Finds all the unique groups
+   '''
+   def uniqueGroups(self, propertyMappings):      
+      uniqueGroups = []
+
+      for propertyKey in propertyMappings.keys():
+         if MappingKey.Groups in propertyMappings[propertyKey].keys():
+            for group in propertyMappings[propertyKey][MappingKey.Groups]:
+               if group not in uniqueGroups:
+                  uniqueGroups.append(group)
+
+      return uniqueGroups
+
 
    def baseTemplate(self, path):
       propertyMappings = self.propertyMappingsArray()
@@ -260,10 +323,10 @@ class ClassGenerator:
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
 
       if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "") 
+         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit\r\n") 
       else:
-         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "") 
-
+         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "")
+         
       fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
 
       return fileString

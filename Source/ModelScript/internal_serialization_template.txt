@@ -1,0 +1,27 @@
+
+
+extension _{ CLASSNAME } {
+    
+    // Find unique tags in the array
+    // Create Enum
+
+    enum _TestObjectFourSerializationEnum: String {
+{ CREATE_SERIALIZATION_ENUM }
+    }
+    
+    func serializedData(forGroup group : String) -> [String : Any]? {
+        
+        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+            
+            switch groupType {
+{ SERIALIZATION_SWITCH }
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : { CLASSNAME }")
+        
+        return nil
+    }
+    
+{ SERIALIZATION_FUNCTIONS }
+}

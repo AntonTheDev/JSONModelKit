@@ -26,6 +26,7 @@ class MappingKey(Const):
 	NonOptional    	= "nonoptional"
 	Transformer    	= "transformer"
 	SubType      	= "subtype"
+	Groups      	= "groups"
 
 class Type(Const):
 	NativeTypes       = ["String", "Double", "Float", "Int", "Bool"]

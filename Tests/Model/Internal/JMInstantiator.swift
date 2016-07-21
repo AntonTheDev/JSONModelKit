@@ -52,24 +52,24 @@ enum JMMapperClassEnum: String {
 
 enum JMTransformerEnum: String {
 	case _JMCompoundValueTransformer 	= "JMCompoundValueTransformer"
-	case _JMExampleStructTransformer 	= "JMExampleStructTransformer"
-	case _JMExampleTupleTransformer 	= "JMExampleTupleTransformer"
 	case _JMExampleClosureTransformer 	= "JMExampleClosureTransformer"
-	case _JMExampleEnumTransformer 	= "JMExampleEnumTransformer"	
+	case _JMExampleTupleTransformer 	= "JMExampleTupleTransformer"
+	case _JMExampleEnumTransformer 	= "JMExampleEnumTransformer"
+	case _JMExampleStructTransformer 	= "JMExampleStructTransformer"	
 	case _None = "None"
 
 	func transformer() -> JMTransformerProtocol? {
 		switch self {
 		case ._JMCompoundValueTransformer:
 			return JMCompoundValueTransformer()
-		case ._JMExampleStructTransformer:
-			return JMExampleStructTransformer()
-		case ._JMExampleTupleTransformer:
-			return JMExampleTupleTransformer()
 		case ._JMExampleClosureTransformer:
 			return JMExampleClosureTransformer()
+		case ._JMExampleTupleTransformer:
+			return JMExampleTupleTransformer()
 		case ._JMExampleEnumTransformer:
 			return JMExampleEnumTransformer()
+		case ._JMExampleStructTransformer:
+			return JMExampleStructTransformer()
 		case ._None:
 			return nil		
 		}

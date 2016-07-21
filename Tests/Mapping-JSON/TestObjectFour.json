@@ -1,52 +1,62 @@
 {
 	"optionalString" : {
 		"key" : "optional_string",
-		"type" : "String"
+		"type" : "String",
+		"groups"  : ["update"]
 	},
 	"optionalBool" : {
 		"key" : "optional_bool",
-		"type" : "Bool"
+		"type" : "Bool",
+		"groups"  : ["update"]
 	},
-	"non_optionalFloat" : {
-		"nonoptional" : "true",
-		"key" : "non_optional_float",
-		"default" : "60.0",
-		"type" : "Float"
+	"optionalFloat" : {
+		"key" : "optional_float",
+		"type" : "Float",
+		"groups"  : ["update"]
 	},
 	"optionalDouble" : {
 		"key" : "optional_double",
-		"type" : "Double"
+		"type" : "Double",
+		"groups"  : ["update"]
+	},
+	"optionalInt" : {
+		"key" : "optional_int",
+		"type" : "Int",
+		"groups"  : ["update"]
 	},
 	"non_optionalString" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_string",
 		"default" : "Non-Optional Hello",
-		"type" : "String"
-	},
-	"non_optionalDouble" : {
-		"nonoptional" : "true",
-		"key" : "non_optional_double",
-		"default" : "50.0",
-		"type" : "Double"
+		"type" : "String",
+		"groups"  : ["update", "create"]
 	},
 	"non_optionalBool" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_bool",
 		"default" : "true",
-		"type" : "Bool"
+		"type" : "Bool",
+		"groups"  : ["update", "create"]
 	},
-	"optionalFloat" : {
-		"key" : "optional_float",
-		"type" : "Float"
+	"non_optionalFloat" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_float",
+		"default" : "60.0",
+		"type" : "Float",
+		"groups"  : ["update", "create"]
+	},
+	"non_optionalDouble" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_double",
+		"default" : "50.0",
+		"type" : "Double",
+		"groups"  : ["update", "create"]
 	},
 	"non_optionalInt" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_int",
 		"default" : "500",
-		"type" : "Int"
-	},
-	"optionalInt" : {
-		"key" : "optional_int",
-		"type" : "Int"
+		"type" : "Int",
+		"groups"  : ["update", "create", "delete", "get"]
 	}
 }

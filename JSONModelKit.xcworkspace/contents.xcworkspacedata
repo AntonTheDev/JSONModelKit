@@ -219,6 +219,9 @@
             <FileRef
                location = "group:JMInstantiator.swift">
             </FileRef>
+            <FileRef
+               location = "group:JMSerializer.swift">
+            </FileRef>
          </Group>
          <FileRef
             location = "group:TestObjectEight.swift">

@@ -122,3 +122,90 @@ class _TestObjectFour  {
  		} 
 	}
 } 
+
+extension _TestObjectFour {
+    
+    // Find unique tags in the array
+    // Create Enum
+
+    enum _TestObjectFourSerializationEnum: String {
+		 case _update		= "update"
+		 case _create		= "create"
+		 case _delete		= "delete"
+		 case _get		= "get"
+
+    }
+    
+    func serializedData(forGroup group : String) -> [String : Any]? {
+        
+        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+            
+            switch groupType {
+
+			case ._update:
+				return serializedupdate()
+			case ._create:
+				return serializedcreate()
+			case ._delete:
+				return serializeddelete()
+			case ._get:
+				return serializedget()
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectFour")
+        
+        return nil
+    }
+    
+	private func serializedupdate() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["non_optional_double"] = non_optionalDouble
+		params["non_optional_int"] = non_optionalInt
+		params["non_optional_float"] = non_optionalFloat
+		params["optional_int"] = optionalInt
+		params["optional_bool"] = optionalBool
+		params["optional_string"] = optionalString
+		params["optional_double"] = optionalDouble
+		params["optional_float"] = optionalFloat
+		params["non_optional_bool"] = non_optionalBool
+		params["non_optional_string"] = non_optionalString
+
+		return params
+	}
+
+
+	private func serializedcreate() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["non_optional_double"] = non_optionalDouble
+		params["non_optional_int"] = non_optionalInt
+		params["non_optional_float"] = non_optionalFloat
+		params["non_optional_bool"] = non_optionalBool
+		params["non_optional_string"] = non_optionalString
+
+		return params
+	}
+
+
+	private func serializeddelete() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["non_optional_int"] = non_optionalInt
+
+		return params
+	}
+
+
+	private func serializedget() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["non_optional_int"] = non_optionalInt
+
+		return params
+	}
+
+
+
+}
