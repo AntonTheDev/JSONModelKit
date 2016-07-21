@@ -2,15 +2,16 @@ import Foundation
 
 class _TestObjectNine  {
 	
-	var optionalArrayDoubleType : [Double]?
-    var optionalArrayIntType : [Int]?
-    var optionalArrayStringType : [String]?
-    var optionalArrayFloatType : [Float]?
 	
 	var non_optionalArrayIntType : [Int]
     var non_optionalArrayDoubleType : [Double]
     var non_optionalArrayFloatType : [Float]
     var non_optionalArrayStringType : [String]
+	
+	var optionalArrayDoubleType : [Double]?
+    var optionalArrayIntType : [Int]?
+    var optionalArrayStringType : [String]?
+    var optionalArrayFloatType : [Float]?
 
 	required init(non_optionalArrayIntType  _non_optionalArrayIntType : [Int],
     			  non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],

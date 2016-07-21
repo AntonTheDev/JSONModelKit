@@ -2,15 +2,16 @@ import Foundation
 
 class _TestObjectTen  {
 	
-	var optionalDictionaryIntType : [String : Int]?
-    var optionalDictionaryDoubleType : [String : Double]?
-    var optionalDictionaryFloatType : [String : Float]?
-    var optionalDictionaryStringType : [String : String]?
 	
 	var non_optionalDictionaryIntType : [String : Int]
     var non_optionalDictionaryDoubleType : [String : Double]
     var non_optionalDictionaryFloatType : [String : Float]
     var non_optionalDictionaryStringType : [String : String]
+	
+	var optionalDictionaryIntType : [String : Int]?
+    var optionalDictionaryDoubleType : [String : Double]?
+    var optionalDictionaryFloatType : [String : Float]?
+    var optionalDictionaryStringType : [String : String]?
 
 	required init(non_optionalDictionaryIntType  _non_optionalDictionaryIntType : [String : Int],
     			  non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],

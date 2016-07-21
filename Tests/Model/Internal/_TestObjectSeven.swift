@@ -2,9 +2,10 @@ import Foundation
 
 class _TestObjectSeven  {
 	
-	var optionalArrayType : [TestObjectFour]?
 	
 	var non_optionalArrayType : [TestObjectFour]
+	
+	var optionalArrayType : [TestObjectFour]?
 
 	required init(non_optionalArrayType  _non_optionalArrayType : [TestObjectFour])  {
  		

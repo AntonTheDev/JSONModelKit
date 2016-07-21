@@ -2,17 +2,18 @@ import Foundation
 
 class _TestObjectEleven  {
 	
-	var optionalBool : Bool?
-    var optionalString : String?
-    var optionalInt : Int?
-    var optionalDouble : Double?
-    var optionalFloat : Float?
 	
 	var non_optionalBool : Bool
     var non_optionalString : String
     var non_optionalInt : Int
     var non_optionalDouble : Double
     var non_optionalFloat : Float
+	
+	var optionalBool : Bool?
+    var optionalString : String?
+    var optionalInt : Int?
+    var optionalDouble : Double?
+    var optionalFloat : Float?
 
 	required init(non_optionalBool  _non_optionalBool : Bool,
     			  non_optionalString  _non_optionalString : String,

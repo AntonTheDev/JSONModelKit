@@ -79,16 +79,34 @@ final public class JSONModelKit {
         if let mappingconfiguration = propertyMappings[className] {
             return mappingconfiguration
         } else {
-            if let mappingPath = NSBundle(forClass: self).pathForResource(className, ofType: "plist") {
+            if let mappingPath = NSBundle(forClass: self).pathForResource(className, ofType: "json") {
+                do {
+                    let jsonData = try NSData(contentsOfFile: mappingPath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                    do {
+                        let jsonMapping: NSDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                        
+                        if let mapping = jsonMapping as? Dictionary<String, Dictionary<String, AnyObject>> {
+                           
+                            if mapping.keys.count > 0 {
+                                propertyMappings[className] = mapping
+                                return mapping
+                            }
+                        }
+                        
+                        return nil
+                    } catch {}
+                } catch {}
+
+            } else if let mappingPath = NSBundle(forClass: self).pathForResource(className, ofType: "plist") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
                 
                 if tempMapping!.isEmpty { return nil }
                 
                 propertyMappings[className] = tempMapping
                 return tempMapping!
-            } else {
-                return nil
             }
+            
+            return nil
         }
     }
 }

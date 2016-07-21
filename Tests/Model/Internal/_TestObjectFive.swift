@@ -2,9 +2,10 @@ import Foundation
 
 class _TestObjectFive  {
 	
-	var optionalSubType : TestObjectThree?
 	
 	var non_optionalSubType : TestObjectThree
+	
+	var optionalSubType : TestObjectThree?
 
 	required init(non_optionalSubType  _non_optionalSubType : TestObjectThree)  {
  		

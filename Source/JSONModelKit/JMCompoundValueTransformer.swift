@@ -12,7 +12,7 @@ public class JMCompoundValueTransformer : JMTransformerProtocol {
         var outputString : String = ""
         
         if let stringDictionary = inputValues as? Dictionary<String, String> {
-            for (key, value) in stringDictionary {
+            for (_, value) in stringDictionary {
                 outputString += value
             }
         }

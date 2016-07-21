@@ -1,40 +1,13 @@
+//
+//  _TestObjectOne.swift
+//  US2Mapper
+//
+//  Created by Anton Doudarev on 6/25/15.
+//  Copyright © 2015 US2Mapper. All rights reserved.
+//
+
 import Foundation
 
-class _TestObjectOne  {
-	
-	
-	
+class TestObjectOne : _TestObjectOne {
 
-	required init()  {
- 		
-	}
-
-	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
-
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
-
-		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
-
-			self.init() 
-		
-			
-		} else {
-			return nil
-		}
-	}
-
-	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
-
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
-
-		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
-			
-			
- 		} 
-	}
-} 
- 
+}

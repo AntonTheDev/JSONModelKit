@@ -88,95 +88,6 @@
    <Group
       location = "group:Tests"
       name = "Tests">
-      <Group
-         location = "group:Classes"
-         name = "Classes">
-         <Group
-            location = "group:Internal"
-            name = "Internal">
-            <FileRef
-               location = "group:_TestObjectEight.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectEleven.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectFive.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectFour.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectNine.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectOne.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectSeven.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectSix.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTen.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectThirteen.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectThree.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTwelve.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTwo.swift">
-            </FileRef>
-            <FileRef
-               location = "group:US2Instantiator.swift">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:TestObjectEight.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectEleven.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectFive.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectFour.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectNine.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectOne.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectSeven.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectSix.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectTen.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectThirteen.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectThree.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectTwelve.swift">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectTwo.swift">
-         </FileRef>
-      </Group>
       <FileRef
          location = "group:JSONModelKitTests.swift">
       </FileRef>
@@ -224,10 +135,129 @@
          location = "group:Mapping-JSON"
          name = "Mapping-JSON">
          <FileRef
+            location = "group:TestObjectEight.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectEleven.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectFive.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectFour.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectNine.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectSeven.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectSix.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectTen.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectThirteen.json">
+         </FileRef>
+         <FileRef
             location = "group:TestObjectThree.json">
          </FileRef>
          <FileRef
+            location = "group:TestObjectTwelve.json">
+         </FileRef>
+         <FileRef
             location = "group:TestObjectTwo.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Model"
+         name = "Model">
+         <Group
+            location = "group:Internal"
+            name = "Internal">
+            <FileRef
+               location = "group:_TestObjectEight.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectEleven.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectFive.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectFour.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectNine.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectOne.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectSeven.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectSix.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectTen.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectThirteen.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectThree.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectTwelve.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectTwo.swift">
+            </FileRef>
+            <FileRef
+               location = "group:JMInstantiator.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:TestObjectEight.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectEleven.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectFive.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectFour.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectNine.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectOne.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectSeven.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectSix.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectTen.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectThirteen.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectThree.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectTwelve.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectTwo.swift">
          </FileRef>
       </Group>
       <Group

@@ -2,9 +2,10 @@ import Foundation
 
 class _TestObjectEight  {
 	
-	var optionalDictionaryType : [String : TestObjectFour]?
 	
 	var non_optionalDictionaryType : [String : TestObjectFour]
+	
+	var optionalDictionaryType : [String : TestObjectFour]?
 
 	required init(non_optionalDictionaryType  _non_optionalDictionaryType : [String : TestObjectFour])  {
  		

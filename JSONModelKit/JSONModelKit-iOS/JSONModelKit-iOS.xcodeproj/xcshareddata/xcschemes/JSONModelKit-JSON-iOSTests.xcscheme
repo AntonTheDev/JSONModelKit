@@ -22,6 +22,16 @@
                ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3AA979FF1D3D10D600B8673D"
+               BuildableName = "JSONModelKit-iOSTests.xctest"
+               BlueprintName = "JSONModelKit-iOSTests"
+               ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>

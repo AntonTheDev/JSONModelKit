@@ -47,56 +47,6 @@
 		3A0A0D861D3D180300A1608C /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF31D3D180300A1608C /* modelgen-swift.py */; };
 		3A0A0D881D3D180300A1608C /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF41D3D180300A1608C /* validator.py */; };
 		3A0A0D891D3D180300A1608C /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF41D3D180300A1608C /* validator.py */; };
-		3A0A0D8B1D3D180300A1608C /* _TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF81D3D180300A1608C /* _TestObjectEight.swift */; };
-		3A0A0D8C1D3D180300A1608C /* _TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF81D3D180300A1608C /* _TestObjectEight.swift */; };
-		3A0A0D8E1D3D180300A1608C /* _TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF91D3D180300A1608C /* _TestObjectEleven.swift */; };
-		3A0A0D8F1D3D180300A1608C /* _TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CF91D3D180300A1608C /* _TestObjectEleven.swift */; };
-		3A0A0D911D3D180300A1608C /* _TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFA1D3D180300A1608C /* _TestObjectFive.swift */; };
-		3A0A0D921D3D180300A1608C /* _TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFA1D3D180300A1608C /* _TestObjectFive.swift */; };
-		3A0A0D941D3D180300A1608C /* _TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFB1D3D180300A1608C /* _TestObjectFour.swift */; };
-		3A0A0D951D3D180300A1608C /* _TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFB1D3D180300A1608C /* _TestObjectFour.swift */; };
-		3A0A0D971D3D180300A1608C /* _TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFC1D3D180300A1608C /* _TestObjectNine.swift */; };
-		3A0A0D981D3D180300A1608C /* _TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFC1D3D180300A1608C /* _TestObjectNine.swift */; };
-		3A0A0D9A1D3D180300A1608C /* _TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFD1D3D180300A1608C /* _TestObjectSeven.swift */; };
-		3A0A0D9B1D3D180300A1608C /* _TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFD1D3D180300A1608C /* _TestObjectSeven.swift */; };
-		3A0A0D9D1D3D180300A1608C /* _TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFE1D3D180300A1608C /* _TestObjectSix.swift */; };
-		3A0A0D9E1D3D180300A1608C /* _TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFE1D3D180300A1608C /* _TestObjectSix.swift */; };
-		3A0A0DA01D3D180300A1608C /* _TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFF1D3D180300A1608C /* _TestObjectTen.swift */; };
-		3A0A0DA11D3D180300A1608C /* _TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0CFF1D3D180300A1608C /* _TestObjectTen.swift */; };
-		3A0A0DA31D3D180300A1608C /* _TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D001D3D180300A1608C /* _TestObjectThirteen.swift */; };
-		3A0A0DA41D3D180300A1608C /* _TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D001D3D180300A1608C /* _TestObjectThirteen.swift */; };
-		3A0A0DA61D3D180300A1608C /* _TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D011D3D180300A1608C /* _TestObjectThree.swift */; };
-		3A0A0DA71D3D180300A1608C /* _TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D011D3D180300A1608C /* _TestObjectThree.swift */; };
-		3A0A0DA91D3D180300A1608C /* _TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D021D3D180300A1608C /* _TestObjectTwelve.swift */; };
-		3A0A0DAA1D3D180300A1608C /* _TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D021D3D180300A1608C /* _TestObjectTwelve.swift */; };
-		3A0A0DAC1D3D180300A1608C /* _TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D031D3D180300A1608C /* _TestObjectTwo.swift */; };
-		3A0A0DAD1D3D180300A1608C /* _TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D031D3D180300A1608C /* _TestObjectTwo.swift */; };
-		3A0A0DAF1D3D180300A1608C /* JMInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D041D3D180300A1608C /* JMInstantiator.swift */; };
-		3A0A0DB01D3D180300A1608C /* JMInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D041D3D180300A1608C /* JMInstantiator.swift */; };
-		3A0A0DB21D3D180300A1608C /* TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D051D3D180300A1608C /* TestObjectEight.swift */; };
-		3A0A0DB31D3D180300A1608C /* TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D051D3D180300A1608C /* TestObjectEight.swift */; };
-		3A0A0DB51D3D180300A1608C /* TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D061D3D180300A1608C /* TestObjectEleven.swift */; };
-		3A0A0DB61D3D180300A1608C /* TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D061D3D180300A1608C /* TestObjectEleven.swift */; };
-		3A0A0DB81D3D180300A1608C /* TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D071D3D180300A1608C /* TestObjectFive.swift */; };
-		3A0A0DB91D3D180300A1608C /* TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D071D3D180300A1608C /* TestObjectFive.swift */; };
-		3A0A0DBB1D3D180300A1608C /* TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D081D3D180300A1608C /* TestObjectFour.swift */; };
-		3A0A0DBC1D3D180300A1608C /* TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D081D3D180300A1608C /* TestObjectFour.swift */; };
-		3A0A0DBE1D3D180300A1608C /* TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D091D3D180300A1608C /* TestObjectNine.swift */; };
-		3A0A0DBF1D3D180300A1608C /* TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D091D3D180300A1608C /* TestObjectNine.swift */; };
-		3A0A0DC11D3D180300A1608C /* TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0A1D3D180300A1608C /* TestObjectSeven.swift */; };
-		3A0A0DC21D3D180300A1608C /* TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0A1D3D180300A1608C /* TestObjectSeven.swift */; };
-		3A0A0DC41D3D180300A1608C /* TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0B1D3D180300A1608C /* TestObjectSix.swift */; };
-		3A0A0DC51D3D180300A1608C /* TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0B1D3D180300A1608C /* TestObjectSix.swift */; };
-		3A0A0DC71D3D180300A1608C /* TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0C1D3D180300A1608C /* TestObjectTen.swift */; };
-		3A0A0DC81D3D180300A1608C /* TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0C1D3D180300A1608C /* TestObjectTen.swift */; };
-		3A0A0DCA1D3D180300A1608C /* TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0D1D3D180300A1608C /* TestObjectThirteen.swift */; };
-		3A0A0DCB1D3D180300A1608C /* TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0D1D3D180300A1608C /* TestObjectThirteen.swift */; };
-		3A0A0DCD1D3D180300A1608C /* TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0E1D3D180300A1608C /* TestObjectThree.swift */; };
-		3A0A0DCE1D3D180300A1608C /* TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0E1D3D180300A1608C /* TestObjectThree.swift */; };
-		3A0A0DD01D3D180300A1608C /* TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0F1D3D180300A1608C /* TestObjectTwelve.swift */; };
-		3A0A0DD11D3D180300A1608C /* TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D0F1D3D180300A1608C /* TestObjectTwelve.swift */; };
-		3A0A0DD31D3D180300A1608C /* TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D101D3D180300A1608C /* TestObjectTwo.swift */; };
-		3A0A0DD41D3D180300A1608C /* TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D101D3D180300A1608C /* TestObjectTwo.swift */; };
 		3A0A0DD61D3D180300A1608C /* JSONModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D111D3D180300A1608C /* JSONModelKitTests.swift */; };
 		3A0A0DD71D3D180300A1608C /* JSONModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A0D111D3D180300A1608C /* JSONModelKitTests.swift */; };
 		3A0A0DD91D3D180300A1608C /* TestObjectEight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A0D131D3D180300A1608C /* TestObjectEight.plist */; };
@@ -250,31 +200,6 @@
 		3A0A0CF21D3D180300A1608C /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
 		3A0A0CF31D3D180300A1608C /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
 		3A0A0CF41D3D180300A1608C /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
-		3A0A0CF81D3D180300A1608C /* _TestObjectEight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectEight.swift; sourceTree = "<group>"; };
-		3A0A0CF91D3D180300A1608C /* _TestObjectEleven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectEleven.swift; sourceTree = "<group>"; };
-		3A0A0CFA1D3D180300A1608C /* _TestObjectFive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectFive.swift; sourceTree = "<group>"; };
-		3A0A0CFB1D3D180300A1608C /* _TestObjectFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectFour.swift; sourceTree = "<group>"; };
-		3A0A0CFC1D3D180300A1608C /* _TestObjectNine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectNine.swift; sourceTree = "<group>"; };
-		3A0A0CFD1D3D180300A1608C /* _TestObjectSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectSeven.swift; sourceTree = "<group>"; };
-		3A0A0CFE1D3D180300A1608C /* _TestObjectSix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectSix.swift; sourceTree = "<group>"; };
-		3A0A0CFF1D3D180300A1608C /* _TestObjectTen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectTen.swift; sourceTree = "<group>"; };
-		3A0A0D001D3D180300A1608C /* _TestObjectThirteen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectThirteen.swift; sourceTree = "<group>"; };
-		3A0A0D011D3D180300A1608C /* _TestObjectThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectThree.swift; sourceTree = "<group>"; };
-		3A0A0D021D3D180300A1608C /* _TestObjectTwelve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectTwelve.swift; sourceTree = "<group>"; };
-		3A0A0D031D3D180300A1608C /* _TestObjectTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObjectTwo.swift; sourceTree = "<group>"; };
-		3A0A0D041D3D180300A1608C /* JMInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMInstantiator.swift; sourceTree = "<group>"; };
-		3A0A0D051D3D180300A1608C /* TestObjectEight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectEight.swift; sourceTree = "<group>"; };
-		3A0A0D061D3D180300A1608C /* TestObjectEleven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectEleven.swift; sourceTree = "<group>"; };
-		3A0A0D071D3D180300A1608C /* TestObjectFive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectFive.swift; sourceTree = "<group>"; };
-		3A0A0D081D3D180300A1608C /* TestObjectFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectFour.swift; sourceTree = "<group>"; };
-		3A0A0D091D3D180300A1608C /* TestObjectNine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectNine.swift; sourceTree = "<group>"; };
-		3A0A0D0A1D3D180300A1608C /* TestObjectSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectSeven.swift; sourceTree = "<group>"; };
-		3A0A0D0B1D3D180300A1608C /* TestObjectSix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectSix.swift; sourceTree = "<group>"; };
-		3A0A0D0C1D3D180300A1608C /* TestObjectTen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectTen.swift; sourceTree = "<group>"; };
-		3A0A0D0D1D3D180300A1608C /* TestObjectThirteen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectThirteen.swift; sourceTree = "<group>"; };
-		3A0A0D0E1D3D180300A1608C /* TestObjectThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectThree.swift; sourceTree = "<group>"; };
-		3A0A0D0F1D3D180300A1608C /* TestObjectTwelve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectTwelve.swift; sourceTree = "<group>"; };
-		3A0A0D101D3D180300A1608C /* TestObjectTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObjectTwo.swift; sourceTree = "<group>"; };
 		3A0A0D111D3D180300A1608C /* JSONModelKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONModelKitTests.swift; sourceTree = "<group>"; };
 		3A0A0D131D3D180300A1608C /* TestObjectEight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestObjectEight.plist; sourceTree = "<group>"; };
 		3A0A0D141D3D180300A1608C /* TestObjectEleven.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestObjectEleven.plist; sourceTree = "<group>"; };
@@ -447,7 +372,6 @@
 		3A0A0CF51D3D180300A1608C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3A0A0CF61D3D180300A1608C /* Classes */,
 				3A0A0D111D3D180300A1608C /* JSONModelKitTests.swift */,
 				3A0A0D121D3D180300A1608C /* Mapping */,
 				3A0A0D1F1D3D180300A1608C /* Mapping-JSON */,
@@ -456,46 +380,6 @@
 			);
 			name = Tests;
 			path = ../../Tests;
-			sourceTree = "<group>";
-		};
-		3A0A0CF61D3D180300A1608C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				3A0A0CF71D3D180300A1608C /* Internal */,
-				3A0A0D051D3D180300A1608C /* TestObjectEight.swift */,
-				3A0A0D061D3D180300A1608C /* TestObjectEleven.swift */,
-				3A0A0D071D3D180300A1608C /* TestObjectFive.swift */,
-				3A0A0D081D3D180300A1608C /* TestObjectFour.swift */,
-				3A0A0D091D3D180300A1608C /* TestObjectNine.swift */,
-				3A0A0D0A1D3D180300A1608C /* TestObjectSeven.swift */,
-				3A0A0D0B1D3D180300A1608C /* TestObjectSix.swift */,
-				3A0A0D0C1D3D180300A1608C /* TestObjectTen.swift */,
-				3A0A0D0D1D3D180300A1608C /* TestObjectThirteen.swift */,
-				3A0A0D0E1D3D180300A1608C /* TestObjectThree.swift */,
-				3A0A0D0F1D3D180300A1608C /* TestObjectTwelve.swift */,
-				3A0A0D101D3D180300A1608C /* TestObjectTwo.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		3A0A0CF71D3D180300A1608C /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				3A0A0CF81D3D180300A1608C /* _TestObjectEight.swift */,
-				3A0A0CF91D3D180300A1608C /* _TestObjectEleven.swift */,
-				3A0A0CFA1D3D180300A1608C /* _TestObjectFive.swift */,
-				3A0A0CFB1D3D180300A1608C /* _TestObjectFour.swift */,
-				3A0A0CFC1D3D180300A1608C /* _TestObjectNine.swift */,
-				3A0A0CFD1D3D180300A1608C /* _TestObjectSeven.swift */,
-				3A0A0CFE1D3D180300A1608C /* _TestObjectSix.swift */,
-				3A0A0CFF1D3D180300A1608C /* _TestObjectTen.swift */,
-				3A0A0D001D3D180300A1608C /* _TestObjectThirteen.swift */,
-				3A0A0D011D3D180300A1608C /* _TestObjectThree.swift */,
-				3A0A0D021D3D180300A1608C /* _TestObjectTwelve.swift */,
-				3A0A0D031D3D180300A1608C /* _TestObjectTwo.swift */,
-				3A0A0D041D3D180300A1608C /* JMInstantiator.swift */,
-			);
-			path = Internal;
 			sourceTree = "<group>";
 		};
 		3A0A0D121D3D180300A1608C /* Mapping */ = {
@@ -835,7 +719,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
 		};
 		3A5AAC4A1D38DBAD0001D715 /* Rebuild Model PLIST */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -858,52 +742,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0A0DB31D3D180300A1608C /* TestObjectEight.swift in Sources */,
 				3A0A0E4F1D3D180300A1608C /* TestObjectEleven.swift in Sources */,
-				3A0A0DB61D3D180300A1608C /* TestObjectEleven.swift in Sources */,
 				3A0A0D6E1D3D180300A1608C /* Transformer.swift in Sources */,
-				3A0A0DAA1D3D180300A1608C /* _TestObjectTwelve.swift in Sources */,
 				3A0A0E671D3D180300A1608C /* TestObjectThirteen.swift in Sources */,
 				3A0A0D561D3D180300A1608C /* CollectionParser.swift in Sources */,
 				3A0A0E221D3D180300A1608C /* _TestObjectEight.swift in Sources */,
 				3A0A0E2E1D3D180300A1608C /* _TestObjectNine.swift in Sources */,
-				3A0A0D951D3D180300A1608C /* _TestObjectFour.swift in Sources */,
 				3A0A0E761D3D180300A1608C /* US2ExampleEnumTransformer.swift in Sources */,
 				3A0A0E251D3D180300A1608C /* _TestObjectEleven.swift in Sources */,
 				3A0A0E7C1D3D180300A1608C /* US2ExampleTupleTransformer.swift in Sources */,
 				3A0A0E461D3D180300A1608C /* _TestObjectTwo.swift in Sources */,
-				3A0A0D921D3D180300A1608C /* _TestObjectFive.swift in Sources */,
-				3A0A0DA11D3D180300A1608C /* _TestObjectTen.swift in Sources */,
-				3A0A0D9E1D3D180300A1608C /* _TestObjectSix.swift in Sources */,
-				3A0A0DCE1D3D180300A1608C /* TestObjectThree.swift in Sources */,
-				3A0A0DC81D3D180300A1608C /* TestObjectTen.swift in Sources */,
 				3A0A0D591D3D180300A1608C /* ComplexTypeParser.swift in Sources */,
 				3A0A0D6B1D3D180300A1608C /* Parser.swift in Sources */,
-				3A0A0DD41D3D180300A1608C /* TestObjectTwo.swift in Sources */,
 				3A0A0E7F1D3D180300A1608C /* ValueTypeDefinitions.swift in Sources */,
 				3A0A0E4C1D3D180300A1608C /* TestObjectEight.swift in Sources */,
 				3A0A0D711D3D180300A1608C /* Validator.swift in Sources */,
-				3A0A0DA71D3D180300A1608C /* _TestObjectThree.swift in Sources */,
 				3A0A0E6A1D3D180300A1608C /* TestObjectThree.swift in Sources */,
 				3A0A0E401D3D180300A1608C /* _TestObjectThree.swift in Sources */,
 				3A0A0E311D3D180300A1608C /* _TestObjectOne.swift in Sources */,
 				3A0A0E521D3D180300A1608C /* TestObjectFive.swift in Sources */,
-				3A0A0D8C1D3D180300A1608C /* _TestObjectEight.swift in Sources */,
-				3A0A0DB01D3D180300A1608C /* JMInstantiator.swift in Sources */,
 				3A0A0D531D3D180300A1608C /* JSONModelKit.swift in Sources */,
-				3A0A0DBF1D3D180300A1608C /* TestObjectNine.swift in Sources */,
 				3A0A0E6D1D3D180300A1608C /* TestObjectTwelve.swift in Sources */,
 				3A0A0D5F1D3D180300A1608C /* ComplexValueDictionaryParser.swift in Sources */,
 				3A0A0E341D3D180300A1608C /* _TestObjectSeven.swift in Sources */,
 				3A0A0D621D3D180300A1608C /* NativeTypeParser.swift in Sources */,
-				3A0A0DAD1D3D180300A1608C /* _TestObjectTwo.swift in Sources */,
 				3A0A0E5E1D3D180300A1608C /* TestObjectSeven.swift in Sources */,
 				3A0A0D501D3D180300A1608C /* JMCompoundValueTransformer.swift in Sources */,
 				3A0A0E3D1D3D180300A1608C /* _TestObjectThirteen.swift in Sources */,
-				3A0A0DBC1D3D180300A1608C /* TestObjectFour.swift in Sources */,
-				3A0A0DB91D3D180300A1608C /* TestObjectFive.swift in Sources */,
 				3A0A0E431D3D180300A1608C /* _TestObjectTwelve.swift in Sources */,
-				3A0A0DA41D3D180300A1608C /* _TestObjectThirteen.swift in Sources */,
 				3A0A0D681D3D180300A1608C /* NativeValueDictionaryParser.swift in Sources */,
 				3A0A0E641D3D180300A1608C /* TestObjectTen.swift in Sources */,
 				3A0A0E371D3D180300A1608C /* _TestObjectSix.swift in Sources */,
@@ -912,20 +778,13 @@
 				3A0A0E5B1D3D180300A1608C /* TestObjectOne.swift in Sources */,
 				3A0A0E611D3D180300A1608C /* TestObjectSix.swift in Sources */,
 				3A0A0E3A1D3D180300A1608C /* _TestObjectTen.swift in Sources */,
-				3A0A0DD11D3D180300A1608C /* TestObjectTwelve.swift in Sources */,
-				3A0A0DC51D3D180300A1608C /* TestObjectSix.swift in Sources */,
 				3A0A0E581D3D180300A1608C /* TestObjectNine.swift in Sources */,
 				3A0A0E281D3D180300A1608C /* _TestObjectFive.swift in Sources */,
 				3A0A0D5C1D3D180300A1608C /* ComplexValueArrayParser.swift in Sources */,
 				3A0A0D651D3D180300A1608C /* NativeValueArrayParser.swift in Sources */,
-				3A0A0D8F1D3D180300A1608C /* _TestObjectEleven.swift in Sources */,
-				3A0A0D9B1D3D180300A1608C /* _TestObjectSeven.swift in Sources */,
 				3A0A0E731D3D180300A1608C /* US2ExampleClosureTransformer.swift in Sources */,
-				3A0A0DCB1D3D180300A1608C /* TestObjectThirteen.swift in Sources */,
 				3A0A0E2B1D3D180300A1608C /* _TestObjectFour.swift in Sources */,
-				3A0A0D981D3D180300A1608C /* _TestObjectNine.swift in Sources */,
 				3A0A0DD71D3D180300A1608C /* JSONModelKitTests.swift in Sources */,
-				3A0A0DC21D3D180300A1608C /* TestObjectSeven.swift in Sources */,
 				3A0A0E791D3D180300A1608C /* US2ExampleStructTransformer.swift in Sources */,
 				3A0A0E701D3D180300A1608C /* TestObjectTwo.swift in Sources */,
 			);
@@ -944,52 +803,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0A0DB21D3D180300A1608C /* TestObjectEight.swift in Sources */,
 				3A0A0E4E1D3D180300A1608C /* TestObjectEleven.swift in Sources */,
-				3A0A0DB51D3D180300A1608C /* TestObjectEleven.swift in Sources */,
 				3A0A0D6D1D3D180300A1608C /* Transformer.swift in Sources */,
-				3A0A0DA91D3D180300A1608C /* _TestObjectTwelve.swift in Sources */,
 				3A0A0E661D3D180300A1608C /* TestObjectThirteen.swift in Sources */,
 				3A0A0D551D3D180300A1608C /* CollectionParser.swift in Sources */,
 				3A0A0E211D3D180300A1608C /* _TestObjectEight.swift in Sources */,
 				3A0A0E2D1D3D180300A1608C /* _TestObjectNine.swift in Sources */,
-				3A0A0D941D3D180300A1608C /* _TestObjectFour.swift in Sources */,
 				3A0A0E751D3D180300A1608C /* US2ExampleEnumTransformer.swift in Sources */,
 				3A0A0E241D3D180300A1608C /* _TestObjectEleven.swift in Sources */,
 				3A0A0E7B1D3D180300A1608C /* US2ExampleTupleTransformer.swift in Sources */,
 				3A0A0E451D3D180300A1608C /* _TestObjectTwo.swift in Sources */,
-				3A0A0D911D3D180300A1608C /* _TestObjectFive.swift in Sources */,
-				3A0A0DA01D3D180300A1608C /* _TestObjectTen.swift in Sources */,
-				3A0A0D9D1D3D180300A1608C /* _TestObjectSix.swift in Sources */,
-				3A0A0DCD1D3D180300A1608C /* TestObjectThree.swift in Sources */,
-				3A0A0DC71D3D180300A1608C /* TestObjectTen.swift in Sources */,
 				3A0A0D581D3D180300A1608C /* ComplexTypeParser.swift in Sources */,
 				3A0A0D6A1D3D180300A1608C /* Parser.swift in Sources */,
-				3A0A0DD31D3D180300A1608C /* TestObjectTwo.swift in Sources */,
 				3A0A0E7E1D3D180300A1608C /* ValueTypeDefinitions.swift in Sources */,
 				3A0A0E4B1D3D180300A1608C /* TestObjectEight.swift in Sources */,
 				3A0A0D701D3D180300A1608C /* Validator.swift in Sources */,
-				3A0A0DA61D3D180300A1608C /* _TestObjectThree.swift in Sources */,
 				3A0A0E691D3D180300A1608C /* TestObjectThree.swift in Sources */,
 				3A0A0E3F1D3D180300A1608C /* _TestObjectThree.swift in Sources */,
 				3A0A0E301D3D180300A1608C /* _TestObjectOne.swift in Sources */,
 				3A0A0E511D3D180300A1608C /* TestObjectFive.swift in Sources */,
-				3A0A0D8B1D3D180300A1608C /* _TestObjectEight.swift in Sources */,
-				3A0A0DAF1D3D180300A1608C /* JMInstantiator.swift in Sources */,
 				3A0A0D521D3D180300A1608C /* JSONModelKit.swift in Sources */,
-				3A0A0DBE1D3D180300A1608C /* TestObjectNine.swift in Sources */,
 				3A0A0E6C1D3D180300A1608C /* TestObjectTwelve.swift in Sources */,
 				3A0A0D5E1D3D180300A1608C /* ComplexValueDictionaryParser.swift in Sources */,
 				3A0A0E331D3D180300A1608C /* _TestObjectSeven.swift in Sources */,
 				3A0A0D611D3D180300A1608C /* NativeTypeParser.swift in Sources */,
-				3A0A0DAC1D3D180300A1608C /* _TestObjectTwo.swift in Sources */,
 				3A0A0E5D1D3D180300A1608C /* TestObjectSeven.swift in Sources */,
 				3A0A0D4F1D3D180300A1608C /* JMCompoundValueTransformer.swift in Sources */,
 				3A0A0E3C1D3D180300A1608C /* _TestObjectThirteen.swift in Sources */,
-				3A0A0DBB1D3D180300A1608C /* TestObjectFour.swift in Sources */,
-				3A0A0DB81D3D180300A1608C /* TestObjectFive.swift in Sources */,
 				3A0A0E421D3D180300A1608C /* _TestObjectTwelve.swift in Sources */,
-				3A0A0DA31D3D180300A1608C /* _TestObjectThirteen.swift in Sources */,
 				3A0A0D671D3D180300A1608C /* NativeValueDictionaryParser.swift in Sources */,
 				3A0A0E631D3D180300A1608C /* TestObjectTen.swift in Sources */,
 				3A0A0E361D3D180300A1608C /* _TestObjectSix.swift in Sources */,
@@ -998,20 +839,13 @@
 				3A0A0E5A1D3D180300A1608C /* TestObjectOne.swift in Sources */,
 				3A0A0E601D3D180300A1608C /* TestObjectSix.swift in Sources */,
 				3A0A0E391D3D180300A1608C /* _TestObjectTen.swift in Sources */,
-				3A0A0DD01D3D180300A1608C /* TestObjectTwelve.swift in Sources */,
-				3A0A0DC41D3D180300A1608C /* TestObjectSix.swift in Sources */,
 				3A0A0E571D3D180300A1608C /* TestObjectNine.swift in Sources */,
 				3A0A0E271D3D180300A1608C /* _TestObjectFive.swift in Sources */,
 				3A0A0D5B1D3D180300A1608C /* ComplexValueArrayParser.swift in Sources */,
 				3A0A0D641D3D180300A1608C /* NativeValueArrayParser.swift in Sources */,
-				3A0A0D8E1D3D180300A1608C /* _TestObjectEleven.swift in Sources */,
-				3A0A0D9A1D3D180300A1608C /* _TestObjectSeven.swift in Sources */,
 				3A0A0E721D3D180300A1608C /* US2ExampleClosureTransformer.swift in Sources */,
-				3A0A0DCA1D3D180300A1608C /* TestObjectThirteen.swift in Sources */,
 				3A0A0E2A1D3D180300A1608C /* _TestObjectFour.swift in Sources */,
-				3A0A0D971D3D180300A1608C /* _TestObjectNine.swift in Sources */,
 				3A0A0DD61D3D180300A1608C /* JSONModelKitTests.swift in Sources */,
-				3A0A0DC11D3D180300A1608C /* TestObjectSeven.swift in Sources */,
 				3A0A0E781D3D180300A1608C /* US2ExampleStructTransformer.swift in Sources */,
 				3A0A0E6F1D3D180300A1608C /* TestObjectTwo.swift in Sources */,
 			);

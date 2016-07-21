@@ -2,9 +2,10 @@ import Foundation
 
 class _TestObjectSix  {
 	
-	var optionalCompoundString : String?
 	
 	var non_optionalCompoundString : String
+	
+	var optionalCompoundString : String?
 
 	required init(non_optionalCompoundString  _non_optionalCompoundString : String)  {
  		

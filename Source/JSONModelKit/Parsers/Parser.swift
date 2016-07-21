@@ -66,7 +66,9 @@ class Parser {
         var keys = key.componentsSeparatedByString(".")
         var nestedDictionary = dictionary
         
-        for var x = 0; x < keys.count; x++ {
+        var x = 0
+        
+        repeat {
             if x >= (keys.count - 1) {
                 if let finalValue: AnyObject = nestedDictionary[keys[x]] {
                     return finalValue
@@ -78,7 +80,10 @@ class Parser {
             } else {
                 break
             }
-        }
+
+            x =  x + 1
+        } while (x < keys.count )
+
         return nil
     }
 }
