@@ -4,7 +4,7 @@ extension _{ CLASSNAME } {
     enum _TestObjectFourSerializationEnum: String { { CREATE_SERIALIZATION_ENUM }
     }
     
-    func serializedData(forGroup group : String) -> [String : Any]? {
+    func serializedData(forGroup group : String) -> [String : Any] {
         if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
             switch groupType {{ SERIALIZATION_SWITCH }
             }
@@ -12,7 +12,7 @@ extension _{ CLASSNAME } {
         
         print("Group \(group) not defined, check your spelling or define in your mapping for class : { CLASSNAME }")
         
-        return nil
+        return [String : Any]()
     }
 
 { SERIALIZATION_FUNCTIONS }}

@@ -701,5 +701,58 @@ class JSONModelKitTests: XCTestCase {
         
         XCTAssertEqual(testObjectInstance!.optionalUppercaseCompletionHandler!(value : "HELLO"), "hello", "Completion handler mapped incorrectly")
     }
+
+    func testParameterSerialization() {
+        let dataDictionary  = ["optional_int" : 50,
+                                 "optional_string" : "TestString",
+                                 "optional_double" : 70.0,
+                                 "optional_float" : 80.0,
+                                 "optional_bool" : false,
+                                 "non_optional_int" : 50,
+                                 "non_optional_string" : "TestString2",
+                                 "non_optional_double" : 70.0,
+                                 "non_optional_float" : 80.0,
+                                 "non_optional_bool" : false]
+        
+        let testObjectInstance = TestObjectFour(dataDictionary)
+       
+        print(testObjectInstance!.serializedData(forGroup: "update"))
+        print(testObjectInstance!.serializedData(forGroup: "create"))
+        print(testObjectInstance!.serializedData(forGroup: "delete"))
+        print(testObjectInstance!.serializedData(forGroup: "get"))
+        
+        let createParams = testObjectInstance!.serializedData(forGroup: "create")
+        
+        XCTAssertEqual(createParams.keys.count, 5, "Create Should only have 5 non-optional keys")
+        XCTAssertEqual(createParams["non_optional_int"]! as? Int, Int(50), "Serialization Failed")
+        XCTAssertEqual(createParams["non_optional_string"]! as? String, "TestString2", "Serialization Failed")
+        XCTAssertEqual(createParams["non_optional_double"]! as? Double, Double(70.0), "Serialization Failed")
+        XCTAssertEqual(createParams["non_optional_float"]! as? Float, Float(80.0), "Serialization Failed")
+        XCTAssertEqual(createParams["non_optional_bool"]! as? Bool, false, "Serialization Failed")
+        
+        let updateParams = testObjectInstance!.serializedData(forGroup: "update")
+        
+        XCTAssertEqual(updateParams["optional_int"]! as? Int, Int(50), "Serialization Failed")
+        XCTAssertEqual(updateParams["optional_string"]! as? String, "TestString", "Serialization Failed")
+        XCTAssertEqual(updateParams["optional_double"]! as? Double, Double(70.0), "Serialization Failed")
+        XCTAssertEqual(updateParams["optional_float"]! as? Float, Float(80.0), "Serialization Failed")
+        XCTAssertEqual(updateParams["optional_bool"]! as? Bool, false, "Serialization Failed")
+    
+        XCTAssertEqual(updateParams["non_optional_int"]! as? Int, Int(50), "Serialization Failed")
+        XCTAssertEqual(updateParams["non_optional_string"]! as? String, "TestString2", "Serialization Failed")
+        XCTAssertEqual(updateParams["non_optional_double"]! as? Double, Double(70.0), "Serialization Failed")
+        XCTAssertEqual(updateParams["non_optional_float"]! as? Float, Float(80.0), "Serialization Failed")
+        XCTAssertEqual(updateParams["non_optional_bool"]! as? Bool, false, "Serialization Failed")
+    
+        let getParams = testObjectInstance!.serializedData(forGroup: "get")
+        
+        XCTAssertEqual(getParams.keys.count, 1, "Get Should only have 1 key")
+        XCTAssertEqual(getParams.keys.first, "non_optional_int", "Get Should only have 1 key")
+        
+        let deleteParams = testObjectInstance!.serializedData(forGroup: "delete")
+        
+        XCTAssertEqual(deleteParams.keys.count, 1, "Get Should only have 1 key")
+        XCTAssertEqual(deleteParams.keys.first, "non_optional_int", "Get Should only have 1 key")
+    }
     
 }

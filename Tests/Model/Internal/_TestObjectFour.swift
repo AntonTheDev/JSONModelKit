@@ -130,7 +130,7 @@ extension _TestObjectFour {
 		 case _get		= "get"
     }
     
-    func serializedData(forGroup group : String) -> [String : Any]? {
+    func serializedData(forGroup group : String) -> [String : Any] {
         if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._update:
@@ -146,7 +146,7 @@ extension _TestObjectFour {
         
         print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectFour")
         
-        return nil
+        return [String : Any]()
     }
 
 	private func serializedupdate() -> [String : Any] { 

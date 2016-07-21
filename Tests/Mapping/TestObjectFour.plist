@@ -8,6 +8,10 @@
 		<string>optional_int</string>
 		<key>type</key>
 		<string>Int</string>
+		<key>groups</key>
+		<array>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>optionalString</key>
 	<dict>
@@ -15,6 +19,10 @@
 		<string>optional_string</string>
 		<key>type</key>
 		<string>String</string>
+		<key>groups</key>
+		<array>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>optionalDouble</key>
 	<dict>
@@ -22,6 +30,10 @@
 		<string>optional_double</string>
 		<key>type</key>
 		<string>Double</string>
+		<key>groups</key>
+		<array>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>optionalFloat</key>
 	<dict>
@@ -29,6 +41,10 @@
 		<string>optional_float</string>
 		<key>type</key>
 		<string>Float</string>
+		<key>groups</key>
+		<array>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>optionalBool</key>
 	<dict>
@@ -36,6 +52,10 @@
 		<string>optional_bool</string>
 		<key>type</key>
 		<string>Bool</string>
+		<key>groups</key>
+		<array>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>non_optionalInt</key>
 	<dict>
@@ -47,6 +67,13 @@
 		<string>non_optional_int</string>
 		<key>type</key>
 		<string>Int</string>
+		<key>groups</key>
+		<array>
+			<string>delete</string>
+			<string>get</string>
+			<string>create</string>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>non_optionalString</key>
 	<dict>
@@ -58,6 +85,11 @@
 		<string>non_optional_string</string>
 		<key>type</key>
 		<string>String</string>
+		<key>groups</key>
+		<array>
+			<string>create</string>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>non_optionalDouble</key>
 	<dict>
@@ -69,6 +101,11 @@
 		<string>non_optional_double</string>
 		<key>type</key>
 		<string>Double</string>
+		<key>groups</key>
+		<array>
+			<string>create</string>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>non_optionalFloat</key>
 	<dict>
@@ -80,6 +117,11 @@
 		<string>non_optional_float</string>
 		<key>type</key>
 		<string>Float</string>
+		<key>groups</key>
+		<array>
+			<string>create</string>
+			<string>update</string>
+		</array>
 	</dict>
 	<key>non_optionalBool</key>
 	<dict>
@@ -91,6 +133,11 @@
 		<string>non_optional_bool</string>
 		<key>type</key>
 		<string>Bool</string>
+		<key>groups</key>
+		<array>
+			<string>create</string>
+			<string>update</string>
+		</array>
 	</dict>
 </dict>
 </plist>
