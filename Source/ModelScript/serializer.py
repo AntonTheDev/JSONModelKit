@@ -27,10 +27,10 @@ class Serializer:
       uniqueGroups = self.uniqueGroups(propertyMappings)
 
       if len(uniqueGroups) == 0:
-         return ""
+         return str.replace(open(self.getPathForFile("nil_serialization_template.txt"), 'r').read(), '\n', '\r\n')   
 
-      fileString = self.baseTemplate(self.getPathForFile("internal_serialization_template.txt"))
-     
+      fileString = str.replace(open(self.getPathForFile("internal_serialization_template.txt"), 'r').read(), '\n', '\r\n')   
+
       fileString = str.replace(fileString, "{ CREATE_SERIALIZATION_ENUM }",         self.serialization_enum(propertyMappings, uniqueGroups))
       fileString = str.replace(fileString, "{ SERIALIZATION_SWITCH }",              self.serialization_switch(propertyMappings, uniqueGroups))
       fileString = str.replace(fileString, "{ SERIALIZATION_FUNCTIONS }",           self.serialization_functions(propertyMappings, uniqueGroups))
@@ -62,43 +62,74 @@ class Serializer:
    '''
    Replaces { SERIALIZATION_FUNCTIONS } in the template
    '''
+
+   def parsedCollection(self, subType, group):
+      propertyMappings = self.propertyMappingsArray()
+      propertyString = ""
+
+
+
+
    def serialization_functions(self, propertyMappings, uniqueGroups):
 
       propertyString = ""
-
+      runningClassString = ""
+        
       for group in uniqueGroups:
+         runningClassString += "\tprivate func serialized" + group + "() -> [String : Any] { \r\n\t\tvar params = [String : Any]()\r\n\r\n"
 
-         optionalPropertyString = ""
-         nonOptionalPropertyString = ""
-         propertyString += "\tprivate func serialized" + group + "() -> [String : Any] { \r\n\t\tvar params = [String : Any]()\r\n"
-     
          for propertyKey in propertyMappings.keys():
-            if MappingKey.Groups in propertyMappings[propertyKey].keys():
-                if group in propertyMappings[propertyKey][MappingKey.Groups]:
-                  mappingOptional = self.is_property_mapping_optional(propertyMappings[propertyKey])
+
+            propertyMap  = propertyMappings[propertyKey]
+            propertyKeys = propertyMap.keys()
+
+            if MappingKey.Groups in propertyKeys:
                 
-                  if mappingOptional == False:
-                        nonOptionalPropertyString += "\r\n\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] = " + propertyKey
+                if group in propertyMap[MappingKey.Groups]:
+               
+                  propertyType = propertyMap[MappingKey.Type]
+                  propertyJSONKey = propertyMap[MappingKey.Key]
+               
+                  if propertyType in Type.NativeTypes:
+                     runningClassString += "\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey + "\r\n" 
+                  elif propertyType in Type.CollectionTypes:
+                     runningClassString += self.collectionString(propertyKey, propertyMap, group)
                   else:
-                        optionalPropertyString += "\r\n\r\n\t\tif let unwrapped_" + propertyMappings[propertyKey][MappingKey.Key] + " = " + propertyKey + " { "
-                        optionalPropertyString += "\r\n\t\t\tparams[\"" + propertyMappings[propertyKey][MappingKey.Key] + "\"] =  unwrapped_" +  propertyMappings[propertyKey][MappingKey.Key] + "\r\n\t\t}"
+                     runningClassString += "\t\tif let instance = params[\"" + propertyJSONKey + "\"] as?  " + propertyType + " { \r\n"
+                     runningClassString += "\t\t\tparams[\"" + propertyJSONKey + "\"] =  instance.params(forGroup :\"" + group + "\")\r\n\t\t}\r\n\r\n" 
 
-         propertyString += nonOptionalPropertyString
-         propertyString += optionalPropertyString
-                
-         propertyString += "\r\n\r\n\t\treturn params\r\n\t}\r\n\r\n\r\n" 
+         runningClassString += "\r\n\t\treturn params\r\n\t}\r\n\r\n" 
+
+      return str(runningClassString)
+
+   def collectionString(self, propertyKey, propertyMap, group):
       
-      return str(propertyString)
-
-
-   def baseTemplate(self, path):
-      propertyMappings = self.propertyMappingsArray()
+      runningString = ""
       
-      fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')   
-   
-      return fileString
+      propertyType = propertyMap[MappingKey.Type]
+      propertyJSONKey = propertyMap[MappingKey.Key]         
+      propertySubType = propertyMap[MappingKey.SubType]
+      
+      if propertySubType in Type.NativeTypes:
+         runningString += "\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey  + "\r\n" 
+                 
+      elif propertyType == Type.ArrayType:
+         if propertySubType in Type.CollectionTypes:
+            print "RECURSIVE TIME"
+         else:
+            runningString += "\t\tif let array = params[\"" + propertyJSONKey + "\"] as?  [" + propertySubType + "] { \r\n"
+            runningString += "\t\t\treturn [\"" + propertyJSONKey + "\" : array.map { $0.params(forGroup :\"" + group + "\") }]" + "\r\n\t\t}\r\n\r\n"
+                           
+      elif propertyType == Type.DictionaryType:   
+         if propertySubType in Type.CollectionTypes:
+            print "RECURSIVE TIME"
+         else:
+            runningString += "\r\n\t\tif let dictionary = params[\"" + propertyJSONKey + "\"] as?  [String : " + propertySubType + "] { \r\n"
+            runningString += "\t\t\tvar newDict = [String : Any]()\r\n\r\n\t\t\tfor (key, value) in dictionary {\r\n\t\t\t\tnewDict[key] = value.params(forGroup :\"" + group+   "\")  \r\n\t\t\t}\r\n"
+            runningString += "\r\n\t\t\treturn newDict\r\n\t\t}\r\n"
 
-
+      return runningString
+                    
    '''
    Finds all the unique groups
    '''
@@ -120,8 +151,10 @@ class Serializer:
       else: 
          return plistlib.readPlist(self.mappingPath)
 
+
    def getPathForFile(self, fileName):
       return str.replace(os.path.abspath(__file__), "serializer.py", fileName)
+
 
    def is_property_mapping_optional(self, mapping):
       if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional]:

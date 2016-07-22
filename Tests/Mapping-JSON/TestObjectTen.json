@@ -3,44 +3,52 @@
 		"nonoptional" : "true",
 		"key" : "non_optional_dictionary_string_type",
 		"type" : "Dictionary",
-		"subtype" : "String"
+        "subtype" : "String",
+        "groups"  : ["update"]
 	},
 	"non_optionalDictionaryDoubleType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_dictionary_double_type",
 		"type" : "Dictionary",
-		"subtype" : "Double"
+        "subtype" : "Double",
+        "groups"  : ["update"]
 	},
 	"optionalDictionaryFloatType" : {
 		"key" : "optional_dictionary_float_type",
 		"type" : "Dictionary",
-		"subtype" : "Float"
+        "subtype" : "Float",
+        "groups"  : ["update"]
 	},
 	"optionalDictionaryIntType" : {
 		"key" : "optional_dictionary_int_type",
 		"type" : "Dictionary",
-		"subtype" : "Int"
+        "subtype" : "Int",
+        "groups"  : ["update"]
 	},
 	"optionalDictionaryStringType" : {
 		"key" : "optional_dictionary_string_type",
 		"type" : "Dictionary",
-		"subtype" : "String"
+        "subtype" : "String",
+        "groups"  : ["update"]
 	},
 	"optionalDictionaryDoubleType" : {
 		"key" : "optional_dictionary_double_type",
 		"type" : "Dictionary",
-		"subtype" : "Double"
+        "subtype" : "Double",
+        "groups"  : ["update"]
 	},
 	"non_optionalDictionaryFloatType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_dictionary_float_type",
 		"type" : "Dictionary",
-		"subtype" : "Float"
+        "subtype" : "Float",
+        "groups"  : ["update"]
 	},
 	"non_optionalDictionaryIntType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_dictionary_int_type",
 		"type" : "Dictionary",
-		"subtype" : "Int"
+        "subtype" : "Int",
+        "groups"  : ["update"]
 	}
 }

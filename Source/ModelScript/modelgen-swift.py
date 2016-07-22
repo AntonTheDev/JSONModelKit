@@ -25,7 +25,6 @@ def generate_model(plistPaths, output_directory, version, testEnabled, jsonForma
 		
 		propertyMappings = []
          
-
 		if jsonFormatEnabled == True:
 			propertyMappings = json.load(open(mappingPath))
 		else: 

@@ -4,10 +4,10 @@ class _TestObjectFive  {
 
 	var non_optionalSubType : TestObjectThree
 	
-	var optionalSubType : TestObjectThree?
+var optionalSubType : TestObjectThree?
 
 	required init(non_optionalSubType  _non_optionalSubType : TestObjectThree)  {
- 		
+ 	
 						non_optionalSubType = _non_optionalSubType
 	}
 
@@ -49,3 +49,38 @@ class _TestObjectFive  {
  		} 
 	}
 } 
+
+extension _TestObjectFive {
+    enum _TestObjectFourSerializationEnum: String { 
+		 case _delete		= "delete"
+    }
+    
+    func params(forGroup group : String) -> [String : Any] {
+        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+            switch groupType {
+			case ._delete:
+				return serializeddelete()
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectFive")
+        
+        return [String : Any]()
+    }
+
+	private func serializeddelete() -> [String : Any] { 
+		var params = [String : Any]()
+
+		if let instance = params["optional_subtype"] as?  TestObjectThree { 
+			params["optional_subtype"] =  instance.params(forGroup :"delete")
+		}
+
+		if let instance = params["non_optional_subtype"] as?  TestObjectThree { 
+			params["non_optional_subtype"] =  instance.params(forGroup :"delete")
+		}
+
+
+		return params
+	}
+
+}

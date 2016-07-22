@@ -702,7 +702,7 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(testObjectInstance!.optionalUppercaseCompletionHandler!(value : "HELLO"), "hello", "Completion handler mapped incorrectly")
     }
 
-    func testParameterSerialization() {
+    func testSimpleParameterSerialization() {
         let dataDictionary  = ["optional_int" : 50,
                                  "optional_string" : "TestString",
                                  "optional_double" : 70.0,
@@ -715,13 +715,8 @@ class JSONModelKitTests: XCTestCase {
                                  "non_optional_bool" : false]
         
         let testObjectInstance = TestObjectFour(dataDictionary)
-       
-        print(testObjectInstance!.serializedData(forGroup: "update"))
-        print(testObjectInstance!.serializedData(forGroup: "create"))
-        print(testObjectInstance!.serializedData(forGroup: "delete"))
-        print(testObjectInstance!.serializedData(forGroup: "get"))
-        
-        let createParams = testObjectInstance!.serializedData(forGroup: "create")
+
+        let createParams = testObjectInstance!.params(forGroup: "create")
         
         XCTAssertEqual(createParams.keys.count, 5, "Create Should only have 5 non-optional keys")
         XCTAssertEqual(createParams["non_optional_int"]! as? Int, Int(50), "Serialization Failed")
@@ -730,7 +725,7 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(createParams["non_optional_float"]! as? Float, Float(80.0), "Serialization Failed")
         XCTAssertEqual(createParams["non_optional_bool"]! as? Bool, false, "Serialization Failed")
         
-        let updateParams = testObjectInstance!.serializedData(forGroup: "update")
+        let updateParams = testObjectInstance!.params(forGroup: "update")
         
         XCTAssertEqual(updateParams["optional_int"]! as? Int, Int(50), "Serialization Failed")
         XCTAssertEqual(updateParams["optional_string"]! as? String, "TestString", "Serialization Failed")
@@ -744,15 +739,67 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(updateParams["non_optional_float"]! as? Float, Float(80.0), "Serialization Failed")
         XCTAssertEqual(updateParams["non_optional_bool"]! as? Bool, false, "Serialization Failed")
     
-        let getParams = testObjectInstance!.serializedData(forGroup: "get")
+        let getParams = testObjectInstance!.params(forGroup: "get")
         
         XCTAssertEqual(getParams.keys.count, 1, "Get Should only have 1 key")
         XCTAssertEqual(getParams.keys.first, "non_optional_int", "Get Should only have 1 key")
         
-        let deleteParams = testObjectInstance!.serializedData(forGroup: "delete")
+        let deleteParams = testObjectInstance!.params(forGroup: "delete")
         
         XCTAssertEqual(deleteParams.keys.count, 1, "Get Should only have 1 key")
         XCTAssertEqual(deleteParams.keys.first, "non_optional_int", "Get Should only have 1 key")
     }
+    
+    func testComplexParameterSerialization() {
+        
+        // TestObjectSEven has an array of TestObjectFour(s)
+        let object1Dictionary = ["non_optional_int"     : 50,
+                                 "non_optional_string"  : "TestString1",
+                                 "non_optional_double"  : 60.0,
+                                 "non_optional_float"   : 70.0,
+                                 "non_optional_bool"    : true]
+        
+        let object2Dictionary = ["non_optional_int" : 80,
+                                 "non_optional_string"  : "TestString2",
+                                 "non_optional_double" : 90.0,
+                                 "non_optional_float" : 100.0,
+                                 "non_optional_bool" : false]
+        
+        let object3Dictionary = ["non_optional_int" : 110,
+                                 "non_optional_string" : "TestString3",
+                                 "non_optional_double" : 120.0,
+                                 "non_optional_float" : 130.0,
+                                 "non_optional_bool" : true]
+        
+        let testObjectDictionary = ["1" : object2Dictionary, "2" : object1Dictionary]
+        let testObjectDictionary2 = ["1" : object3Dictionary]
+        
+        let dataDictionary : Dictionary<String, AnyObject> = ["optional_sub_object_array" : testObjectDictionary,
+                                                              "non_optional_sub_object_array" : testObjectDictionary2]
+        
+        let testObjectInstance = TestObjectSeven(dataDictionary)
+        
+        print(testObjectInstance?.params(forGroup: "delete"))
+        
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalInt, Int(50), "Non-Optional Int value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalDouble, Double(60.0), "Non-Optional Double value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalFloat, Float(70.0), "Non-Optional Float value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalString, "TestString1", "Non-Optional String value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalBool, true, "Non-Optional Bool value was parsed incorrectly")
+        
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalInt, Int(80), "Non-Optional Int value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalDouble, Double(90.0), "Non-Optional Double value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalFloat, Float(100.0), "Non-Optional Float value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalString, "TestString2", "Non-Optional String value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalBool, false, "Non-Optional Bool value was parsed incorrectly")
+        
+        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalInt, Int(110), "Non-Optional Int value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalDouble, Double(120.0), "Non-Optional Double value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalFloat, Float(130.0), "Non-Optional Float value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalString, "TestString3", "Non-Optional String value was parsed incorrectly")
+        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalBool, true, "Non-Optional Bool value was parsed incorrectly")
+        
+    }
+
     
 }

@@ -4,10 +4,10 @@ class _TestObjectSeven  {
 
 	var non_optionalArrayType : [TestObjectFour]
 	
-	var optionalArrayType : [TestObjectFour]?
+var optionalArrayType : [TestObjectFour]?
 
 	required init(non_optionalArrayType  _non_optionalArrayType : [TestObjectFour])  {
- 		
+ 	
 						non_optionalArrayType = _non_optionalArrayType
 	}
 
@@ -49,3 +49,38 @@ class _TestObjectSeven  {
  		} 
 	}
 } 
+
+extension _TestObjectSeven {
+    enum _TestObjectFourSerializationEnum: String { 
+		 case _delete		= "delete"
+    }
+    
+    func params(forGroup group : String) -> [String : Any] {
+        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+            switch groupType {
+			case ._delete:
+				return serializeddelete()
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectSeven")
+        
+        return [String : Any]()
+    }
+
+	private func serializeddelete() -> [String : Any] { 
+		var params = [String : Any]()
+
+		if let array = params["non_optional_sub_object_array"] as?  [TestObjectFour] { 
+			return ["non_optional_sub_object_array" : array.map { $0.params(forGroup :"delete") }]
+		}
+
+		if let array = params["optional_sub_object_array"] as?  [TestObjectFour] { 
+			return ["optional_sub_object_array" : array.map { $0.params(forGroup :"delete") }]
+		}
+
+
+		return params
+	}
+
+}

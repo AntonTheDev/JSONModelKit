@@ -3,11 +3,13 @@
 		"nonoptional" : "true",
 		"key" : "non_optional_sub_object_array",
 		"type" : "Array",
-		"subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour",
+        "groups"  : ["delete"]
 	},
 	"optionalArrayType" : {
 		"key" : "optional_sub_object_array",
 		"type" : "Array",
-		"subtype" : "TestObjectFour"
+		"subtype" : "TestObjectFour",
+        "groups"  : ["delete"]
 	}
 }

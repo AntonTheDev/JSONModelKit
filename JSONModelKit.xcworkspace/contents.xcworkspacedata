@@ -135,28 +135,28 @@
          location = "group:Mapping-JSON"
          name = "Mapping-JSON">
          <FileRef
-            location = "group:TestObjectEight.json">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectEleven.json">
+            location = "group:TestObjectFour.json">
          </FileRef>
          <FileRef
             location = "group:TestObjectFive.json">
          </FileRef>
          <FileRef
-            location = "group:TestObjectFour.json">
+            location = "group:TestObjectSeven.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectEight.json">
          </FileRef>
          <FileRef
             location = "group:TestObjectNine.json">
          </FileRef>
          <FileRef
-            location = "group:TestObjectSeven.json">
+            location = "group:TestObjectTen.json">
+         </FileRef>
+         <FileRef
+            location = "group:TestObjectEleven.json">
          </FileRef>
          <FileRef
             location = "group:TestObjectSix.json">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectTen.json">
          </FileRef>
          <FileRef
             location = "group:TestObjectThirteen.json">
@@ -178,37 +178,37 @@
             location = "group:Internal"
             name = "Internal">
             <FileRef
-               location = "group:_TestObjectEight.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectEleven.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectFive.swift">
+               location = "group:_TestObjectThree.swift">
             </FileRef>
             <FileRef
                location = "group:_TestObjectFour.swift">
             </FileRef>
             <FileRef
-               location = "group:_TestObjectNine.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectOne.swift">
+               location = "group:_TestObjectFive.swift">
             </FileRef>
             <FileRef
                location = "group:_TestObjectSeven.swift">
             </FileRef>
             <FileRef
-               location = "group:_TestObjectSix.swift">
+               location = "group:_TestObjectEight.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectNine.swift">
             </FileRef>
             <FileRef
                location = "group:_TestObjectTen.swift">
             </FileRef>
             <FileRef
-               location = "group:_TestObjectThirteen.swift">
+               location = "group:_TestObjectEleven.swift">
             </FileRef>
             <FileRef
-               location = "group:_TestObjectThree.swift">
+               location = "group:_TestObjectOne.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectSix.swift">
+            </FileRef>
+            <FileRef
+               location = "group:_TestObjectThirteen.swift">
             </FileRef>
             <FileRef
                location = "group:_TestObjectTwelve.swift">

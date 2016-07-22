@@ -8,7 +8,7 @@ class _TestObjectFour  {
     var non_optionalDouble : Double
     var non_optionalFloat : Float
 	
-	var optionalBool : Bool?
+var optionalBool : Bool?
     var optionalString : String?
     var optionalInt : Int?
     var optionalDouble : Double?
@@ -19,7 +19,7 @@ class _TestObjectFour  {
     			  non_optionalInt  _non_optionalInt : Int,
     			  non_optionalDouble  _non_optionalDouble : Double,
     			  non_optionalFloat  _non_optionalFloat : Float)  {
- 		
+ 	
 						non_optionalBool = _non_optionalBool
     					non_optionalString = _non_optionalString
     					non_optionalInt = _non_optionalInt
@@ -130,7 +130,7 @@ extension _TestObjectFour {
 		 case _get		= "get"
     }
     
-    func serializedData(forGroup group : String) -> [String : Any] {
+    func params(forGroup group : String) -> [String : Any] {
         if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._update:
@@ -155,32 +155,16 @@ extension _TestObjectFour {
 		params["non_optional_double"] = non_optionalDouble
 		params["non_optional_int"] = non_optionalInt
 		params["non_optional_float"] = non_optionalFloat
+		params["optional_int"] = optionalInt
+		params["optional_bool"] = optionalBool
+		params["optional_string"] = optionalString
+		params["optional_double"] = optionalDouble
+		params["optional_float"] = optionalFloat
 		params["non_optional_bool"] = non_optionalBool
 		params["non_optional_string"] = non_optionalString
 
-		if let unwrapped_optional_int = optionalInt { 
-			params["optional_int"] =  unwrapped_optional_int
-		}
-
-		if let unwrapped_optional_bool = optionalBool { 
-			params["optional_bool"] =  unwrapped_optional_bool
-		}
-
-		if let unwrapped_optional_string = optionalString { 
-			params["optional_string"] =  unwrapped_optional_string
-		}
-
-		if let unwrapped_optional_double = optionalDouble { 
-			params["optional_double"] =  unwrapped_optional_double
-		}
-
-		if let unwrapped_optional_float = optionalFloat { 
-			params["optional_float"] =  unwrapped_optional_float
-		}
-
 		return params
 	}
-
 
 	private func serializedcreate() -> [String : Any] { 
 		var params = [String : Any]()
@@ -194,7 +178,6 @@ extension _TestObjectFour {
 		return params
 	}
 
-
 	private func serializeddelete() -> [String : Any] { 
 		var params = [String : Any]()
 
@@ -203,7 +186,6 @@ extension _TestObjectFour {
 		return params
 	}
 
-
 	private func serializedget() -> [String : Any] { 
 		var params = [String : Any]()
 
@@ -211,6 +193,5 @@ extension _TestObjectFour {
 
 		return params
 	}
-
 
 }

@@ -8,7 +8,7 @@ class _TestObjectThree  {
     var non_optionalDouble : Double
     var non_optionalFloat : Float
 	
-	var optionalBool : Bool?
+var optionalBool : Bool?
     var optionalString : String?
     var optionalInt : Int?
     var optionalDouble : Double?
@@ -19,7 +19,7 @@ class _TestObjectThree  {
     			  non_optionalInt  _non_optionalInt : Int,
     			  non_optionalDouble  _non_optionalDouble : Double,
     			  non_optionalFloat  _non_optionalFloat : Float)  {
- 		
+ 	
 						non_optionalBool = _non_optionalBool
     					non_optionalString = _non_optionalString
     					non_optionalInt = _non_optionalInt
@@ -121,3 +121,9 @@ class _TestObjectThree  {
  		} 
 	}
 } 
+
+extension _TestObjectThree {
+    func params(forGroup group : String) -> [String : Any] {
+        return [String : Any]()
+    }
+}

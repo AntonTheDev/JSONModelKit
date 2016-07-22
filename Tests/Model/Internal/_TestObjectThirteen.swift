@@ -3,14 +3,14 @@ import Foundation
 class _TestObjectThirteen  {	
 
 	
-	var optionalLowercaseCompletionHandler : ((value : String) -> String)?
+var optionalLowercaseCompletionHandler : ((value : String) -> String)?
     var optionalTuple : (val1 : Double, val2 : Double)?
     var optionalUppercaseCompletionHandler : ((value : String) -> String)?
     var optionalStruct : StructExample?
     var optionalEnum : EnumExample?
 
 	required init()  {
- 		
+ 	
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -79,3 +79,9 @@ class _TestObjectThirteen  {
  		} 
 	}
 } 
+
+extension _TestObjectThirteen {
+    func params(forGroup group : String) -> [String : Any] {
+        return [String : Any]()
+    }
+}

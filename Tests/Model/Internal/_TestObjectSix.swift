@@ -4,10 +4,10 @@ class _TestObjectSix  {
 
 	var non_optionalCompoundString : String
 	
-	var optionalCompoundString : String?
+var optionalCompoundString : String?
 
 	required init(non_optionalCompoundString  _non_optionalCompoundString : String)  {
- 		
+ 	
 						non_optionalCompoundString = _non_optionalCompoundString
 	}
 
@@ -49,3 +49,9 @@ class _TestObjectSix  {
  		} 
 	}
 } 
+
+extension _TestObjectSix {
+    func params(forGroup group : String) -> [String : Any] {
+        return [String : Any]()
+    }
+}

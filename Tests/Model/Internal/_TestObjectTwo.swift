@@ -3,10 +3,10 @@ import Foundation
 class _TestObjectTwo  {	
 
 	
-	
+
 
 	required init()  {
- 		
+ 	
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -37,3 +37,9 @@ class _TestObjectTwo  {
  		} 
 	}
 } 
+
+extension _TestObjectTwo {
+    func params(forGroup group : String) -> [String : Any] {
+        return [String : Any]()
+    }
+}

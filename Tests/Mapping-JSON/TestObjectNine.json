@@ -2,45 +2,53 @@
 	"optionalArrayFloatType" : {
 		"key" : "optional_array_float_type",
 		"type" : "Array",
-		"subtype" : "Float"
+		"subtype" : "Float",
+        "groups"  : ["update"]
 	},
 	"non_optionalArrayDoubleType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_array_double_type",
 		"type" : "Array",
-		"subtype" : "Double"
+        "subtype" : "Double",
+        "groups"  : ["update"]
 	},
 	"optionalArrayDoubleType" : {
 		"key" : "optional_array_double_type",
 		"type" : "Array",
-		"subtype" : "Double"
+        "subtype" : "Double",
+        "groups"  : ["update"]
 	},
 	"optionalArrayStringType" : {
 		"key" : "optional_array_string_type",
 		"type" : "Array",
-		"subtype" : "String"
+        "subtype" : "String",
+        "groups"  : ["update"]
 	},
 	"optionalArrayIntType" : {
 		"key" : "optional_array_int_type",
 		"type" : "Array",
-		"subtype" : "Int"
+        "subtype" : "Int",
+        "groups"  : ["update"]
 	},
 	"non_optionalArrayStringType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_array_string_type",
 		"type" : "Array",
-		"subtype" : "String"
+        "subtype" : "String",
+        "groups"  : ["update"]
 	},
 	"non_optionalArrayFloatType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_array_float_type",
 		"type" : "Array",
-		"subtype" : "Float"
+        "subtype" : "Float",
+        "groups"  : ["update"]
 	},
 	"non_optionalArrayIntType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_array_int_type",
 		"type" : "Array",
-		"subtype" : "Int"
+        "subtype" : "Int",
+        "groups"  : ["update"]
 	}
 }

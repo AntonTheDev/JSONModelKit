@@ -7,7 +7,7 @@ class _TestObjectTen  {
     var non_optionalDictionaryFloatType : [String : Float]
     var non_optionalDictionaryStringType : [String : String]
 	
-	var optionalDictionaryIntType : [String : Int]?
+var optionalDictionaryIntType : [String : Int]?
     var optionalDictionaryDoubleType : [String : Double]?
     var optionalDictionaryFloatType : [String : Float]?
     var optionalDictionaryStringType : [String : String]?
@@ -16,7 +16,7 @@ class _TestObjectTen  {
     			  non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],
     			  non_optionalDictionaryFloatType  _non_optionalDictionaryFloatType : [String : Float],
     			  non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String])  {
- 		
+ 	
 						non_optionalDictionaryIntType = _non_optionalDictionaryIntType
     					non_optionalDictionaryDoubleType = _non_optionalDictionaryDoubleType
     					non_optionalDictionaryFloatType = _non_optionalDictionaryFloatType
@@ -103,3 +103,38 @@ class _TestObjectTen  {
  		} 
 	}
 } 
+
+extension _TestObjectTen {
+    enum _TestObjectFourSerializationEnum: String { 
+		 case _update		= "update"
+    }
+    
+    func params(forGroup group : String) -> [String : Any] {
+        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+            switch groupType {
+			case ._update:
+				return serializedupdate()
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectTen")
+        
+        return [String : Any]()
+    }
+
+	private func serializedupdate() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["non_optional_dictionary_double_type"] = non_optionalDictionaryDoubleType
+		params["optional_dictionary_float_type"] = optionalDictionaryFloatType
+		params["optional_dictionary_string_type"] = optionalDictionaryStringType
+		params["optional_dictionary_int_type"] = optionalDictionaryIntType
+		params["non_optional_dictionary_int_type"] = non_optionalDictionaryIntType
+		params["non_optional_dictionary_float_type"] = non_optionalDictionaryFloatType
+		params["non_optional_dictionary_string_type"] = non_optionalDictionaryStringType
+		params["optional_dictionary_double_type"] = optionalDictionaryDoubleType
+
+		return params
+	}
+
+}

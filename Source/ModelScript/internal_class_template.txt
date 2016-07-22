@@ -3,10 +3,10 @@ import Foundation
 class _{ CLASSNAME }  {	
 { NONOPTIONALS }
 	
-	{ OPTIONALS }
+{ OPTIONALS }
 
 	required init({ REQUIRED_INIT_PARAMS })  {
- 		{ REQUIRED_INIT_SETTERS }
+ 	{ REQUIRED_INIT_SETTERS }
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
