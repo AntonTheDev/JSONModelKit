@@ -99,9 +99,7 @@ def main(argv):
    else:
    		mappinglist = glob.glob(mapdir + "*.plist") 
    		generate_model(mappinglist, classdir, currentVersion, testEnabled, False)
-  
-
-   
+ 
    #print 'Input file is "', inputfile
    #print 'Output file is "', outputfile
 

@@ -135,6 +135,9 @@
          location = "group:Mapping-JSON"
          name = "Mapping-JSON">
          <FileRef
+            location = "group:TestObjectThree.json">
+         </FileRef>
+         <FileRef
             location = "group:TestObjectFour.json">
          </FileRef>
          <FileRef
@@ -160,9 +163,6 @@
          </FileRef>
          <FileRef
             location = "group:TestObjectThirteen.json">
-         </FileRef>
-         <FileRef
-            location = "group:TestObjectThree.json">
          </FileRef>
          <FileRef
             location = "group:TestObjectTwelve.json">

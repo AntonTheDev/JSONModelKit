@@ -62,14 +62,6 @@ class Serializer:
    '''
    Replaces { SERIALIZATION_FUNCTIONS } in the template
    '''
-
-   def parsedCollection(self, subType, group):
-      propertyMappings = self.propertyMappingsArray()
-      propertyString = ""
-
-
-
-
    def serialization_functions(self, propertyMappings, uniqueGroups):
 
       propertyString = ""
@@ -82,7 +74,9 @@ class Serializer:
 
             propertyMap  = propertyMappings[propertyKey]
             propertyKeys = propertyMap.keys()
-
+           
+            optional = self.is_property_mapping_optional(propertyMap)
+            
             if MappingKey.Groups in propertyKeys:
                 
                 if group in propertyMap[MappingKey.Groups]:
@@ -93,16 +87,19 @@ class Serializer:
                   if propertyType in Type.NativeTypes:
                      runningClassString += "\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey + "\r\n" 
                   elif propertyType in Type.CollectionTypes:
-                     runningClassString += self.collectionString(propertyKey, propertyMap, group)
+                     runningClassString += self.collectionString(propertyKey, propertyMap, group, optional)
                   else:
-                     runningClassString += "\t\tif let instance = params[\"" + propertyJSONKey + "\"] as?  " + propertyType + " { \r\n"
-                     runningClassString += "\t\t\tparams[\"" + propertyJSONKey + "\"] =  instance.params(forGroup :\"" + group + "\")\r\n\t\t}\r\n\r\n" 
+                     if optional == False:
+                        runningClassString += "\t\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey + ".params(forGroup :\"" + group + "\")\r\n\t\t\r\n" 
+                     else:
+                        runningClassString += "\t\tif let instance = " + propertyKey + " { \r\n"
+                        runningClassString += "\t\t\tparams[\"" + propertyJSONKey + "\"] =  instance.params(forGroup :\"" + group + "\")\r\n\t\t}\r\n\r\n" 
 
          runningClassString += "\r\n\t\treturn params\r\n\t}\r\n\r\n" 
 
       return str(runningClassString)
 
-   def collectionString(self, propertyKey, propertyMap, group):
+   def collectionString(self, propertyKey, propertyMap, group, optional):
       
       runningString = ""
       
@@ -117,17 +114,26 @@ class Serializer:
          if propertySubType in Type.CollectionTypes:
             print "RECURSIVE TIME"
          else:
-            runningString += "\t\tif let array = params[\"" + propertyJSONKey + "\"] as?  [" + propertySubType + "] { \r\n"
-            runningString += "\t\t\treturn [\"" + propertyJSONKey + "\" : array.map { $0.params(forGroup :\"" + group + "\") }]" + "\r\n\t\t}\r\n\r\n"
+            if optional == False:
+                runningString += "\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey + ".map { $0.params(forGroup :\"" + group + "\")" + " }\r\n\r\n"
+            else:   
+               runningString += "\t\tif let array = " + propertyKey + " { \r\n"
+               runningString += "\t\t\tparams[\"" + propertyJSONKey + "\"] = array.map { $0.params(forGroup :\"" + group + "\") }" + "\r\n\t\t}\r\n\r\n"
                            
       elif propertyType == Type.DictionaryType:   
          if propertySubType in Type.CollectionTypes:
             print "RECURSIVE TIME"
          else:
-            runningString += "\r\n\t\tif let dictionary = params[\"" + propertyJSONKey + "\"] as?  [String : " + propertySubType + "] { \r\n"
-            runningString += "\t\t\tvar newDict = [String : Any]()\r\n\r\n\t\t\tfor (key, value) in dictionary {\r\n\t\t\t\tnewDict[key] = value.params(forGroup :\"" + group+   "\")  \r\n\t\t\t}\r\n"
-            runningString += "\r\n\t\t\treturn newDict\r\n\t\t}\r\n"
-
+            if optional == True:
+               runningString += "\r\n\t\tif let dictionary = " + propertyKey + " { \r\n"
+               runningString += "\t\t\tvar newDict = [String : Any]()\r\n\r\n\t\t\tfor (key, value) in dictionary {\r\n\t\t\t\tnewDict[key] = value.params(forGroup :\"" + group+   "\")  \r\n\t\t\t}\r\n"
+               runningString += "\r\n\t\t\tparams[\"" + propertyJSONKey + "\"] = newDict\r\n\t\t}\r\n"
+            else:
+               runningString += "\t\tvar new"+ propertyKey +"Dict = [String : Any]()\r\n\r\n\t\tfor (key, value) in "+ propertyKey + " {\r\n\t\t\tnew"+ propertyKey +"Dict[key] = value.params(forGroup :\"" + group+   "\")  \r\n\t\t\t}\r\n"
+               runningString += "\r\n\t\tparams[\"" + propertyJSONKey + "\"] = new"+ propertyKey +"Dict\r\n\t\t\r\n"
+            
+               #runningString += "\r\n\t\t\tparams[\"" + propertyJSONKey + "\"] = " + propertyKey + ".params(forGroup :\"" + group + "\")" + "\r\n\r\"\r\n\t\t\r\n"
+            
       return runningString
                     
    '''

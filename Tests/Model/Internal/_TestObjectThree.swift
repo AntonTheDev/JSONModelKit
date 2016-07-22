@@ -123,7 +123,30 @@ var optionalBool : Bool?
 } 
 
 extension _TestObjectThree {
+
+    enum _TestObjectThreeSerializationEnum: String { 
+		 case _delete		= "delete"
+    }
+    
     func params(forGroup group : String) -> [String : Any] {
+        if let groupType = _TestObjectThreeSerializationEnum(rawValue: group) {
+            switch groupType {
+			case ._delete:
+				return serializeddelete()
+            }
+        }
+        
+        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectThree")
+        
         return [String : Any]()
     }
+
+	private func serializeddelete() -> [String : Any] { 
+		var params = [String : Any]()
+
+		params["optional_string"] = optionalString
+
+		return params
+	}
+
 }

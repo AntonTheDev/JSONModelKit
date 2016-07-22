@@ -123,6 +123,7 @@ var optionalBool : Bool?
 } 
 
 extension _TestObjectFour {
+
     enum _TestObjectFourSerializationEnum: String { 
 		 case _update		= "update"
 		 case _create		= "create"

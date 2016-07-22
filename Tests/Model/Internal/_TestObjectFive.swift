@@ -51,12 +51,13 @@ var optionalSubType : TestObjectThree?
 } 
 
 extension _TestObjectFive {
-    enum _TestObjectFourSerializationEnum: String { 
+
+    enum _TestObjectFiveSerializationEnum: String { 
 		 case _delete		= "delete"
     }
     
     func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+        if let groupType = _TestObjectFiveSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._delete:
 				return serializeddelete()
@@ -71,14 +72,12 @@ extension _TestObjectFive {
 	private func serializeddelete() -> [String : Any] { 
 		var params = [String : Any]()
 
-		if let instance = params["optional_subtype"] as?  TestObjectThree { 
+		if let instance = optionalSubType { 
 			params["optional_subtype"] =  instance.params(forGroup :"delete")
 		}
 
-		if let instance = params["non_optional_subtype"] as?  TestObjectThree { 
-			params["non_optional_subtype"] =  instance.params(forGroup :"delete")
-		}
-
+			params["non_optional_subtype"] = non_optionalSubType.params(forGroup :"delete")
+		
 
 		return params
 	}

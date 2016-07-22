@@ -2,7 +2,8 @@
 	"optionalString" : {
 		"key" : "optional_string",
 		"type" : "String",
-		"default" : "Hello"
+		"default" : "Hello",
+        "groups"  : ["delete"]
 	},
 	"optionalBool" : {
 		"key" : "optional_bool",

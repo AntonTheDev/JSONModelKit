@@ -105,12 +105,13 @@ var optionalDictionaryIntType : [String : Int]?
 } 
 
 extension _TestObjectTen {
-    enum _TestObjectFourSerializationEnum: String { 
+
+    enum _TestObjectTenSerializationEnum: String { 
 		 case _update		= "update"
     }
     
     func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+        if let groupType = _TestObjectTenSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._update:
 				return serializedupdate()

@@ -1,11 +1,12 @@
 
 
 extension _{ CLASSNAME } {
-    enum _TestObjectFourSerializationEnum: String { { CREATE_SERIALIZATION_ENUM }
+
+    enum _{ CLASSNAME }SerializationEnum: String { { CREATE_SERIALIZATION_ENUM }
     }
     
     func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+        if let groupType = _{ CLASSNAME }SerializationEnum(rawValue: group) {
             switch groupType {{ SERIALIZATION_SWITCH }
             }
         }

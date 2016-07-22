@@ -51,12 +51,13 @@ var optionalDictionaryType : [String : TestObjectFour]?
 } 
 
 extension _TestObjectEight {
-    enum _TestObjectFourSerializationEnum: String { 
+
+    enum _TestObjectEightSerializationEnum: String { 
 		 case _delete		= "delete"
     }
     
     func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+        if let groupType = _TestObjectEightSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._delete:
 				return serializeddelete()
@@ -71,25 +72,23 @@ extension _TestObjectEight {
 	private func serializeddelete() -> [String : Any] { 
 		var params = [String : Any]()
 
+		var newnon_optionalDictionaryTypeDict = [String : Any]()
 
-		if let dictionary = params["non_optional_sub_object_dictionary"] as?  [String : TestObjectFour] { 
+		for (key, value) in non_optionalDictionaryType {
+			newnon_optionalDictionaryTypeDict[key] = value.params(forGroup :"delete")  
+			}
+
+		params["non_optional_sub_object_dictionary"] = newnon_optionalDictionaryTypeDict
+		
+
+		if let dictionary = optionalDictionaryType { 
 			var newDict = [String : Any]()
 
 			for (key, value) in dictionary {
 				newDict[key] = value.params(forGroup :"delete")  
 			}
 
-			return newDict
-		}
-
-		if let dictionary = params["optional_sub_object_dictionary"] as?  [String : TestObjectFour] { 
-			var newDict = [String : Any]()
-
-			for (key, value) in dictionary {
-				newDict[key] = value.params(forGroup :"delete")  
-			}
-
-			return newDict
+			params["optional_sub_object_dictionary"] = newDict
 		}
 
 		return params

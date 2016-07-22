@@ -702,7 +702,7 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(testObjectInstance!.optionalUppercaseCompletionHandler!(value : "HELLO"), "hello", "Completion handler mapped incorrectly")
     }
 
-    func testSimpleParameterSerialization() {
+    func testSerializationNativeTypes() {
         let dataDictionary  = ["optional_int" : 50,
                                  "optional_string" : "TestString",
                                  "optional_double" : 70.0,
@@ -750,7 +750,39 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(deleteParams.keys.first, "non_optional_int", "Get Should only have 1 key")
     }
     
-    func testComplexParameterSerialization() {
+    func testSerializationCustomTypes() {
+        
+        let subtypeDictionary = ["non_optional_int" : 50, "non_optional_string" : "TestString", "non_optional_double" : 70.0, "non_optional_float" : 80.0, "non_optional_bool" : false]
+        let dictionaryBoolValue = ["optional_subtype" : subtypeDictionary, "non_optional_subtype" : subtypeDictionary]
+        
+        let testObjectInstance = TestObjectFive(dictionaryBoolValue)
+        
+        let params = testObjectInstance?.params(forGroup: "delete")
+        
+        let description = params?.description
+        let trueDescription = "[\"non_optional_subtype\": [\"optional_string\": \"Hello\"], \"optional_subtype\": [\"optional_string\": \"Hello\"]]"
+        
+        XCTAssertEqual(trueDescription,description, "Failed Serialization of Custom Types")
+    }
+    
+    func testSerializationArrayNativeTypes() {
+        let stringArray = ["String1", "String2", "String3"]
+        let intArray = [1, 2, 3]
+        let doubleArray = [Double(4.0), Double(5.0), Double(6.0)]
+        let floatArray = [Float(7.0), Float(8.0), Float(9.0)]
+        
+        let dataDictionary : Dictionary<String, AnyObject> = ["optional_array_string_type" : stringArray, "optional_array_int_type" : intArray, "optional_array_double_type" : doubleArray, "optional_array_float_type" : floatArray, "non_optional_array_string_type" : stringArray, "non_optional_array_int_type" : intArray, "non_optional_array_double_type" : doubleArray, "non_optional_array_float_type" : floatArray]
+        
+        let testObjectInstance = TestObjectNine(dataDictionary)
+        let params = testObjectInstance?.params(forGroup: "update")
+        
+        let description = params?.description
+        let trueDescription = "[\"non_optional_array_double_type\": [4.0, 5.0, 6.0], \"non_optional_array_string_type\": [\"String1\", \"String2\", \"String3\"], \"optional_array_string_type\": [\"String1\", \"String2\", \"String3\"], \"optional_array_float_type\": [7.0, 8.0, 9.0], \"non_optional_array_float_type\": [7.0, 8.0, 9.0], \"non_optional_array_int_type\": [1, 2, 3], \"optional_array_double_type\": [4.0, 5.0, 6.0], \"optional_array_int_type\": [1, 2, 3]]"
+        
+        XCTAssertEqual(trueDescription,description, "Failed Serialization of Array of Native Types")
+    }
+
+    func testSerializationArrayCustomTypes() {
         
         // TestObjectSEven has an array of TestObjectFour(s)
         let object1Dictionary = ["non_optional_int"     : 50,
@@ -778,27 +810,49 @@ class JSONModelKitTests: XCTestCase {
                                                               "non_optional_sub_object_array" : testObjectDictionary2]
         
         let testObjectInstance = TestObjectSeven(dataDictionary)
+        let params = testObjectInstance?.params(forGroup: "delete")
         
-        print(testObjectInstance?.params(forGroup: "delete"))
+        let description = params?.description
+        let trueDescription = "[\"non_optional_sub_object_array\": [[\"non_optional_int\": 110]], \"optional_sub_object_array\": [[\"non_optional_int\": 50], [\"non_optional_int\": 80]]]"
+    
+        XCTAssertEqual(trueDescription,description, "Failed Serialization of Array of Custom Types")
+    }
+    
+    func testSerializationDictionaryNativeTypes() {
+        let stringDictionary = ["1" : "String1", "2" : "String2", "3" : "String3"]
+        let intDictionary = ["1" : 1, "2" : 2, "3" : 3]
+        let doubleDictionary = ["1" : Double(4.0), "2" : Double(5.0), "3" : Double(6.0)]
+        let floatDictionary = ["1" : Float(7.0), "2" : Float(8.0), "3" : Float(9.0)]
         
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalInt, Int(50), "Non-Optional Int value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalDouble, Double(60.0), "Non-Optional Double value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalFloat, Float(70.0), "Non-Optional Float value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalString, "TestString1", "Non-Optional String value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![0].non_optionalBool, true, "Non-Optional Bool value was parsed incorrectly")
+        let dataDictionary : Dictionary<String, AnyObject> = ["optional_dictionary_string_type" : stringDictionary, "optional_dictionary_int_type" : intDictionary, "optional_dictionary_double_type" : doubleDictionary, "optional_dictionary_float_type" : floatDictionary, "non_optional_dictionary_string_type" : stringDictionary, "non_optional_dictionary_int_type" : intDictionary, "non_optional_dictionary_double_type" : doubleDictionary, "non_optional_dictionary_float_type" : floatDictionary]
         
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalInt, Int(80), "Non-Optional Int value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalDouble, Double(90.0), "Non-Optional Double value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalFloat, Float(100.0), "Non-Optional Float value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalString, "TestString2", "Non-Optional String value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.optionalArrayType![1].non_optionalBool, false, "Non-Optional Bool value was parsed incorrectly")
+        let testObjectInstance = TestObjectTen(dataDictionary)
+        let params = testObjectInstance?.params(forGroup: "update")
         
-        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalInt, Int(110), "Non-Optional Int value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalDouble, Double(120.0), "Non-Optional Double value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalFloat, Float(130.0), "Non-Optional Float value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalString, "TestString3", "Non-Optional String value was parsed incorrectly")
-        XCTAssertEqual(testObjectInstance!.non_optionalArrayType[0].non_optionalBool, true, "Non-Optional Bool value was parsed incorrectly")
+        let description = params?.description
+        let trueDescription = "[\"non_optional_dictionary_string_type\": [\"2\": \"String2\", \"1\": \"String1\", \"3\": \"String3\"], \"non_optional_dictionary_float_type\": [\"2\": 8.0, \"1\": 7.0, \"3\": 9.0], \"optional_dictionary_float_type\": [\"2\": 8.0, \"1\": 7.0, \"3\": 9.0], \"non_optional_dictionary_double_type\": [\"2\": 5.0, \"1\": 4.0, \"3\": 6.0], \"optional_dictionary_double_type\": [\"2\": 5.0, \"1\": 4.0, \"3\": 6.0], \"non_optional_dictionary_int_type\": [\"2\": 2, \"1\": 1, \"3\": 3], \"optional_dictionary_int_type\": [\"2\": 2, \"1\": 1, \"3\": 3], \"optional_dictionary_string_type\": [\"2\": \"String2\", \"1\": \"String1\", \"3\": \"String3\"]]"
         
+        XCTAssertEqual(trueDescription,description, "Failed Serialization of Dictionary of Native Types")
+    }
+    
+    func testSerializationDictionaryCustomTypes() {
+        // TestObjectSEven has an array of TestObjectFour(s)
+        let object1Dictionary = ["non_optional_int" : 50, "non_optional_string"  : "TestString1", "non_optional_double" : 60.0, "non_optional_float" : 70.0, "non_optional_bool" : true]
+        let object2Dictionary = ["non_optional_int" : 80, "non_optional_string"  : "TestString2", "non_optional_double" : 90.0, "non_optional_float" : 100.0, "non_optional_bool" : false]
+        let object3Dictionary = ["non_optional_int" : 110, "non_optional_string" : "TestString3", "non_optional_double" : 120.0, "non_optional_float" : 130.0, "non_optional_bool" : true]
+        let object4Dictionary = ["non_optional_int" : 140, "non_optional_string" : "TestString4", "non_optional_double" : 150.0, "non_optional_float" : 160.0, "non_optional_bool" : false]
+        
+        let testObjectArray = [object1Dictionary, object2Dictionary]
+        let testObjectArray2 = [object3Dictionary, object4Dictionary]
+        let dataDictionary : Dictionary<String, AnyObject> = ["optional_sub_object_dictionary" : testObjectArray, "non_optional_sub_object_dictionary" : testObjectArray2]
+        
+        let testObjectInstance = TestObjectEight(dataDictionary)
+        let params = testObjectInstance?.params(forGroup: "delete")
+        
+        let description = params?.description
+        let trueDescription = "[\"optional_sub_object_dictionary\": [\"0\": [\"non_optional_int\": 50], \"1\": [\"non_optional_int\": 80]], \"non_optional_sub_object_dictionary\": [\"0\": [\"non_optional_int\": 110], \"1\": [\"non_optional_int\": 140]]]"
+        
+        XCTAssertEqual(trueDescription,description, "Failed Serialization of Dictionary of Custom Types")
     }
 
     

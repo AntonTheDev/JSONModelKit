@@ -105,12 +105,13 @@ var optionalArrayDoubleType : [Double]?
 } 
 
 extension _TestObjectNine {
-    enum _TestObjectFourSerializationEnum: String { 
+
+    enum _TestObjectNineSerializationEnum: String { 
 		 case _update		= "update"
     }
     
     func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFourSerializationEnum(rawValue: group) {
+        if let groupType = _TestObjectNineSerializationEnum(rawValue: group) {
             switch groupType {
 			case ._update:
 				return serializedupdate()
