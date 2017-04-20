@@ -50,7 +50,7 @@ Note: Anytime a new mapping is added, remove the reference to the Model group fo
 
 #### Simple Example
 
-Let look as a simple mapping that defined a class below in JSON.
+Let look as a simple mapping that defines a class below in JSON.
 
 ```
 Input File: JSOModelKit/Mappings/Business.json
