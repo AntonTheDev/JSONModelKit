@@ -40,7 +40,9 @@ By providing a single point of configuration, and driving the model definition a
 
 Once configured per the [Installation](/documentation/installation.md) instructions, run the build script once **⌘+B**. Navigate to your project directory and notice that the script generated the following inside the base directory of your project.
 
-![alt tag](/documentation/readme_assets/folder_structure.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/folder_structure.png?raw=true" width="378" height="134" />
+</p>
 
 All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory during build time. 
 
@@ -88,7 +90,10 @@ Input File: JSOModelKit/Mappings/Business.json
 ```
 Run the build script once **⌘+B**. and you will see that it generated the following files in the ourput directory.
 
-![alt tag](/documentation/readme_assets/genrerated_folder_structure.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="414" height="206" />
+</p>
+
 
 Observe the internal file that was generated
 
