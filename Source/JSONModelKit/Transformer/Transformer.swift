@@ -24,7 +24,7 @@ final class Transformer : Parser {
         return nil
     }
 
-    class func transformedValueRepresentation(mapperClass : String, jsonKeys : [String], data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Any? {
+    class func transformedValueRepresentation(_ mapperClass : String, jsonKeys : [String], data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Any? {
         
         var valueDictionary : Dictionary<String, Any> = Dictionary<String, Any>()
         
@@ -44,7 +44,7 @@ final class Transformer : Parser {
     }
 
     
-    class func customTransformer(className : String, instantiator : JMInstantiatorProtocol) -> JMTransformerProtocol? {
+    class func customTransformer(_ className : String, instantiator : JMInstantiatorProtocol) -> JMTransformerProtocol? {
         if let transformer = transformerInstances[className] {
             return transformer
         } else {

@@ -47,9 +47,9 @@ class Parser {
             
             switch dataType {
             case JMDataTypeArray:
-                return CollectionParser.arrayRepresentation(fromValue : value, ofType : subType, using : instantiator)
+                return CollectionParser.arrayRepresentation(fromValue : value, ofType : subType, using : instantiator) as AnyObject
             case JMDataTypeDictionary:
-                return CollectionParser.dictionaryRepresentation(fromValue : value, ofType : subType, using : instantiator)
+                return CollectionParser.dictionaryRepresentation(fromValue : value, ofType : subType, using : instantiator) as AnyObject
             default:
                 if let unwrappedValue = value as? Dictionary<String, AnyObject> {
                     return ComplexTypeParser.complexObject(fromValue: unwrappedValue, ofType: subType, using : instantiator)
@@ -62,8 +62,8 @@ class Parser {
         return nil
     }
     
-    final class func dictionaryValueForKey(key : String, dictionary : Dictionary<String, AnyObject>) -> AnyObject? {
-        var keys = key.componentsSeparatedByString(".")
+    final class func dictionaryValueForKey(_ key : String, dictionary : Dictionary<String, AnyObject>) -> AnyObject? {
+        var keys = key.components(separatedBy: ".")
         var nestedDictionary = dictionary
         
         var x = 0

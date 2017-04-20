@@ -12,7 +12,7 @@ final class NativeValueDictionaryParser {
     
     // MARK Maps Dictionary representation of native values from an Array of objects
    
-    class func dictionaryRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(_ collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
        
         var valueDictionary = Dictionary<String, AnyObject>()
         var intKey = 0
@@ -27,7 +27,7 @@ final class NativeValueDictionaryParser {
     
     // MARK Maps Dictionary representation of native values from an Array of objects
     
-    class func dictionaryRepresentation(collectionSubType : String?, data : [AnyObject], instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
+    class func dictionaryRepresentation(_ collectionSubType : String?, data : [AnyObject], instantiator : JMInstantiatorProtocol) -> Dictionary<String, AnyObject> {
        
         var valueDictionary = Dictionary<String, AnyObject>()
         var intKey = 0

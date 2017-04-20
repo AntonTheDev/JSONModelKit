@@ -9,7 +9,7 @@
 import Foundation
 
 public class JMExampleStructTransformer : JMTransformerProtocol {
-    public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
+    public func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any? {
        
         if let stringDictionary = inputValues as? Dictionary<String, String> {
             if let string1 = stringDictionary["string1"] {

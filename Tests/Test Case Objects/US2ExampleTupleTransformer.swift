@@ -9,7 +9,7 @@
 import Foundation
 
 public class JMExampleTupleTransformer : JMTransformerProtocol {
-    public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
+    public func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any? {
         
         if let valueOne = inputValues!["value_one"] as? Double {
             if let valueTwo = inputValues!["value_two"] as? Double {

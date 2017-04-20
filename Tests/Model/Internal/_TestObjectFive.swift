@@ -13,8 +13,8 @@ var optionalSubType : TestObjectThree?
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
@@ -33,8 +33,8 @@ var optionalSubType : TestObjectThree?
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
@@ -49,37 +49,3 @@ var optionalSubType : TestObjectThree?
  		} 
 	}
 } 
-
-extension _TestObjectFive {
-
-    enum _TestObjectFiveSerializationEnum: String { 
-		 case _delete		= "delete"
-    }
-    
-    func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectFiveSerializationEnum(rawValue: group) {
-            switch groupType {
-			case ._delete:
-				return serializeddelete()
-            }
-        }
-        
-        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectFive")
-        
-        return [String : Any]()
-    }
-
-	private func serializeddelete() -> [String : Any] { 
-		var params = [String : Any]()
-
-		if let instance = optionalSubType { 
-			params["optional_subtype"] =  instance.params(forGroup :"delete")
-		}
-
-			params["non_optional_subtype"] = non_optionalSubType.params(forGroup :"delete")
-		
-
-		return params
-	}
-
-}

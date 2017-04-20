@@ -11,8 +11,8 @@ class _TestObjectTwo  {
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
@@ -27,8 +27,8 @@ class _TestObjectTwo  {
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
@@ -37,9 +37,3 @@ class _TestObjectTwo  {
  		} 
 	}
 } 
-
-extension _TestObjectTwo {
-    func params(forGroup group : String) -> [String : Any] {
-        return [String : Any]()
-    }
-}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,10 +16,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "131FB1A41D397569008EE4FF"
-               BuildableName = "JSONModelKit-tvOS-JSON-Tests.xctest"
-               BlueprintName = "JSONModelKit-tvOS-JSON-Tests"
-               ReferencedContainer = "container:JSONModelKit-tvOS.xcodeproj">
+               BlueprintIdentifier = "3A5AABA01D38DB3A0001D715"
+               BuildableName = "JSONModelKit-OSXTests.xctest"
+               BlueprintName = "JSONModelKit-OSXTests"
+               ReferencedContainer = "container:JSONModelKit-OSX.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

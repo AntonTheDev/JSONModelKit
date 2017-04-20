@@ -11,8 +11,8 @@ class _{ CLASSNAME }  {
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			{ FAILABLE_INIT_TEMP_NONOPTIONALS }
@@ -27,8 +27,8 @@ class _{ CLASSNAME }  {
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 

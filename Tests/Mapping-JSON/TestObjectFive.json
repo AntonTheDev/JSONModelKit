@@ -1,13 +1,11 @@
 {
 	"optionalSubType" : {
 		"key" : "optional_subtype",
-        "type" : "TestObjectThree",
-        "groups"  : ["delete"]
+        "type" : "TestObjectThree"
 	},
 	"non_optionalSubType" : {
 		"nonoptional" : "true",
 		"key" : "non_optional_subtype",
-        "type" : "TestObjectThree",
-        "groups"  : ["delete"]
+        "type" : "TestObjectThree"
 	}
 }

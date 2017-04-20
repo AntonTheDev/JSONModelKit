@@ -25,8 +25,8 @@ var optionalArrayDoubleType : [Double]?
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
@@ -63,8 +63,8 @@ var optionalArrayDoubleType : [Double]?
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
@@ -103,39 +103,3 @@ var optionalArrayDoubleType : [Double]?
  		} 
 	}
 } 
-
-extension _TestObjectNine {
-
-    enum _TestObjectNineSerializationEnum: String { 
-		 case _update		= "update"
-    }
-    
-    func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectNineSerializationEnum(rawValue: group) {
-            switch groupType {
-			case ._update:
-				return serializedupdate()
-            }
-        }
-        
-        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectNine")
-        
-        return [String : Any]()
-    }
-
-	private func serializedupdate() -> [String : Any] { 
-		var params = [String : Any]()
-
-		params["optional_array_int_type"] = optionalArrayIntType
-		params["optional_array_string_type"] = optionalArrayStringType
-		params["non_optional_array_float_type"] = non_optionalArrayFloatType
-		params["non_optional_array_double_type"] = non_optionalArrayDoubleType
-		params["non_optional_array_int_type"] = non_optionalArrayIntType
-		params["non_optional_array_string_type"] = non_optionalArrayStringType
-		params["optional_array_double_type"] = optionalArrayDoubleType
-		params["optional_array_float_type"] = optionalArrayFloatType
-
-		return params
-	}
-
-}

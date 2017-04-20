@@ -16,8 +16,8 @@ class _TestObjectOne {
     }
     
     convenience init?(_ dictionary: Dictionary<String, AnyObject>) {
-        let dynamicTypeString = "\(self.dynamicType)"
-        let className = dynamicTypeString.componentsSeparatedByString(".").last
+        let dynamicTypeString = "\(type(of: self))"
+        let className = dynamicTypeString.components(separatedBy:".").last
         
         if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled: true) {
             self.init(_optionalString: valuesDict["optionalString"]!)

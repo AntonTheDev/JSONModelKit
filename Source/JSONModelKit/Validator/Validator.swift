@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Validator {
+open class Validator {
     
     // MARK Validates that all the non-optional values were received or defaulted
     
@@ -52,7 +52,7 @@ public class Validator {
     
     // MARK Debug Enabled Methods
     
-    final class func printDebugStatement(className : String, missingPropertyKeyArray : Array<String>, data : Dictionary<String, AnyObject>){
+    final class func printDebugStatement(_ className : String, missingPropertyKeyArray : Array<String>, data : Dictionary<String, AnyObject>){
         if (missingPropertyKeyArray.count > 0) {
             print("\n\n\(className) instance could not be parsed, missing values for the following non-optional properties:")
             for propertyKey in missingPropertyKeyArray {

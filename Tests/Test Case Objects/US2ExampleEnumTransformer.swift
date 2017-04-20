@@ -9,7 +9,7 @@
 import Foundation
 
 public class JMExampleEnumTransformer : JMTransformerProtocol {
-    public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
+    public func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any? {
 
         if let enumValue = inputValues!["enumValue"] as? Int {
             return EnumExample(rawValue : enumValue)!

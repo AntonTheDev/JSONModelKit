@@ -40,7 +40,7 @@
 	<key>optionalUppercaseCompletionHandler</key>
 	<dict>
 		<key>type</key>
-		<string>((value : String) -&gt; String)</string>
+		<string>((_ value : String) -&gt; String)</string>
 		<key>transformer</key>
 		<string>JMExampleClosureTransformer</string>
 		<key>key</key>
@@ -51,7 +51,7 @@
 	<key>optionalLowercaseCompletionHandler</key>
 	<dict>
 		<key>type</key>
-		<string>((value : String) -&gt; String)</string>
+		<string>((_ value : String) -&gt; String)</string>
 		<key>transformer</key>
 		<string>JMExampleClosureTransformer</string>
 		<key>key</key>

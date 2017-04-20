@@ -12,7 +12,7 @@ final class ComplexValueArrayParser {
     
     // MARK Maps array representation of complex objects from an Array of Dictionary objects
    
-    class func arrayRepresentation(collectionSubType : String?, data : [Dictionary<String, AnyObject>], instantiator : JMInstantiatorProtocol) -> [AnyObject] {
+    class func arrayRepresentation(_ collectionSubType : String?, data : [Dictionary<String, AnyObject>], instantiator : JMInstantiatorProtocol) -> [AnyObject] {
        
         var valueArray : [AnyObject] = []
         
@@ -26,7 +26,7 @@ final class ComplexValueArrayParser {
     
     // MARK array representation of complex objects from a Dictionary of Dictionary objects
     
-    class func arrayRepresentation(collectionSubType : String?, data : Dictionary<String, Dictionary<String, AnyObject>>, instantiator : JMInstantiatorProtocol) -> [AnyObject] {
+    class func arrayRepresentation(_ collectionSubType : String?, data : Dictionary<String, Dictionary<String, AnyObject>>, instantiator : JMInstantiatorProtocol) -> [AnyObject] {
        
         var valueArray : [AnyObject] = []
         

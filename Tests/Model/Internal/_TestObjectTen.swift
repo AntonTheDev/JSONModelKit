@@ -25,8 +25,8 @@ var optionalDictionaryIntType : [String : Int]?
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
@@ -63,8 +63,8 @@ var optionalDictionaryIntType : [String : Int]?
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
@@ -103,39 +103,3 @@ var optionalDictionaryIntType : [String : Int]?
  		} 
 	}
 } 
-
-extension _TestObjectTen {
-
-    enum _TestObjectTenSerializationEnum: String { 
-		 case _update		= "update"
-    }
-    
-    func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectTenSerializationEnum(rawValue: group) {
-            switch groupType {
-			case ._update:
-				return serializedupdate()
-            }
-        }
-        
-        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectTen")
-        
-        return [String : Any]()
-    }
-
-	private func serializedupdate() -> [String : Any] { 
-		var params = [String : Any]()
-
-		params["non_optional_dictionary_double_type"] = non_optionalDictionaryDoubleType
-		params["optional_dictionary_float_type"] = optionalDictionaryFloatType
-		params["optional_dictionary_string_type"] = optionalDictionaryStringType
-		params["optional_dictionary_int_type"] = optionalDictionaryIntType
-		params["non_optional_dictionary_int_type"] = non_optionalDictionaryIntType
-		params["non_optional_dictionary_float_type"] = non_optionalDictionaryFloatType
-		params["non_optional_dictionary_string_type"] = non_optionalDictionaryStringType
-		params["optional_dictionary_double_type"] = optionalDictionaryDoubleType
-
-		return params
-	}
-
-}

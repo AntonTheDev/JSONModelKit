@@ -10,14 +10,14 @@ import Foundation
 
 public protocol JMInstantiatorProtocol {
     func newInstance(ofType classname : String, withValue data : Dictionary<String, AnyObject>) -> AnyObject?
-    func transformerFromString(classString: String) -> JMTransformerProtocol?
+    func transformerFromString(_ classString: String) -> JMTransformerProtocol?
 }
 
 public protocol JMTransformerProtocol {
-    func transformValues(inputValues : Dictionary<String, Any>?) -> Any?
+    func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any?
 }
 
-public func typeCast<U>(object: Any?) -> U? {
+public func typeCast<U>(_ object: Any?) -> U? {
     if let typed = object as? U {
         return typed
     }
@@ -25,7 +25,7 @@ public func typeCast<U>(object: Any?) -> U? {
 }
 
 extension Array {
-    func containsValue<T where T : Equatable>(obj: T) -> Bool {
+    func containsValue<T>(_ obj: T) -> Bool where T : Equatable {
         return self.filter({$0 as? T == obj}).count > 0
     }
 }
@@ -75,15 +75,15 @@ final public class JSONModelKit {
         return nil
     }
     
-    class func retrieveMappingConfiguration(className : String) -> Dictionary<String, Dictionary<String, AnyObject>>? {
+    class func retrieveMappingConfiguration(_ className : String) -> Dictionary<String, Dictionary<String, AnyObject>>? {
         if let mappingconfiguration = propertyMappings[className] {
             return mappingconfiguration
         } else {
-            if let mappingPath = NSBundle(forClass: self).pathForResource(className, ofType: "json") {
+            if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "json") {
                 do {
-                    let jsonData = try NSData(contentsOfFile: mappingPath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                    let jsonData = try Data(contentsOf: URL(fileURLWithPath: mappingPath), options: NSData.ReadingOptions.mappedIfSafe)
                     do {
-                        let jsonMapping: NSDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                        let jsonMapping: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                         
                         if let mapping = jsonMapping as? Dictionary<String, Dictionary<String, AnyObject>> {
                            
@@ -97,7 +97,7 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
 
-            } else if let mappingPath = NSBundle(forClass: self).pathForResource(className, ofType: "plist") {
+            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
                 
                 if tempMapping!.isEmpty { return nil }

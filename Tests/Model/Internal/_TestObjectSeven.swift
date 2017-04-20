@@ -13,8 +13,8 @@ var optionalArrayType : [TestObjectFour]?
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
 			
@@ -33,8 +33,8 @@ var optionalArrayType : [TestObjectFour]?
 
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
-		let dynamicTypeString = "\(self.dynamicType)"
-		let className = dynamicTypeString.componentsSeparatedByString(".").last
+		let dynamicTypeString = "\(type(of: self))"
+		let className = dynamicTypeString.components(separatedBy: ".").last
 
 		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
 
@@ -49,37 +49,3 @@ var optionalArrayType : [TestObjectFour]?
  		} 
 	}
 } 
-
-extension _TestObjectSeven {
-
-    enum _TestObjectSevenSerializationEnum: String { 
-		 case _delete		= "delete"
-    }
-    
-    func params(forGroup group : String) -> [String : Any] {
-        if let groupType = _TestObjectSevenSerializationEnum(rawValue: group) {
-            switch groupType {
-			case ._delete:
-				return serializeddelete()
-            }
-        }
-        
-        print("Group \(group) not defined, check your spelling or define in your mapping for class : TestObjectSeven")
-        
-        return [String : Any]()
-    }
-
-	private func serializeddelete() -> [String : Any] { 
-		var params = [String : Any]()
-
-		params["non_optional_sub_object_array"] = non_optionalArrayType.map { $0.params(forGroup :"delete") }
-
-		if let array = optionalArrayType { 
-			params["optional_sub_object_array"] = array.map { $0.params(forGroup :"delete") }
-		}
-
-
-		return params
-	}
-
-}

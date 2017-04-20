@@ -52,24 +52,24 @@ enum JMMapperClassEnum: String {
 
 enum JMTransformerEnum: String {
 	case _JMCompoundValueTransformer 	= "JMCompoundValueTransformer"
-	case _JMExampleClosureTransformer 	= "JMExampleClosureTransformer"
+	case _JMExampleStructTransformer 	= "JMExampleStructTransformer"
 	case _JMExampleTupleTransformer 	= "JMExampleTupleTransformer"
-	case _JMExampleEnumTransformer 	= "JMExampleEnumTransformer"
-	case _JMExampleStructTransformer 	= "JMExampleStructTransformer"	
+	case _JMExampleClosureTransformer 	= "JMExampleClosureTransformer"
+	case _JMExampleEnumTransformer 	= "JMExampleEnumTransformer"	
 	case _None = "None"
 
 	func transformer() -> JMTransformerProtocol? {
 		switch self {
 		case ._JMCompoundValueTransformer:
 			return JMCompoundValueTransformer()
-		case ._JMExampleClosureTransformer:
-			return JMExampleClosureTransformer()
-		case ._JMExampleTupleTransformer:
-			return JMExampleTupleTransformer()
-		case ._JMExampleEnumTransformer:
-			return JMExampleEnumTransformer()
 		case ._JMExampleStructTransformer:
 			return JMExampleStructTransformer()
+		case ._JMExampleTupleTransformer:
+			return JMExampleTupleTransformer()
+		case ._JMExampleClosureTransformer:
+			return JMExampleClosureTransformer()
+		case ._JMExampleEnumTransformer:
+			return JMExampleEnumTransformer()
 		case ._None:
 			return nil		
 		}
@@ -80,10 +80,10 @@ class JMInstantiator : JMInstantiatorProtocol {
 	static let sharedInstance : JMInstantiator = JMInstantiator()
 
 	func newInstance(ofType classname : String, withValue data : Dictionary<String, AnyObject>) -> AnyObject? {
-		return JMMapperClassEnum(rawValue: classname)?.createObject(data)
+		return JMMapperClassEnum(rawValue: classname)?.createObject(data : data)
 	}
 
-	func transformerFromString(classString: String) -> JMTransformerProtocol? {
+	func transformerFromString(_ classString: String) -> JMTransformerProtocol? {
 		return JMTransformerEnum(rawValue: classString)!.transformer()
 	}
 }

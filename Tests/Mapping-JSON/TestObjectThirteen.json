@@ -4,14 +4,14 @@
 			"handler_type"
 		],
 		"transformer" : "JMExampleClosureTransformer",
-		"type" : "((value : String) -> String)"
+		"type" : "((_ value : String) -> String)"
 	},
 	"optionalLowercaseCompletionHandler" : {
 		"key" : [
 			"handler_type"
 		],
 		"transformer" : "JMExampleClosureTransformer",
-		"type" : "((value : String) -> String)"
+		"type" : "((_ value : String) -> String)"
 	},
 	"optionalStruct" : {
 		"key" : [

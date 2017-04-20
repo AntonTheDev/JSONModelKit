@@ -12,7 +12,7 @@ final class NativeValueArrayParser {
    
     // MARK Maps Array representation of native values from a Dictionary of objects
    
-    class func arrayRepresentation(collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> [AnyObject] {
+    class func arrayRepresentation(_ collectionSubType : String?, data : Dictionary<String, AnyObject>, instantiator : JMInstantiatorProtocol) -> [AnyObject] {
       
         var valueArray : [AnyObject] = []
        
@@ -25,7 +25,7 @@ final class NativeValueArrayParser {
     
     // MARK Maps Array representation of native values from an Array of objects
    
-    class func arrayRepresentation(collectionSubType : String?, data :[AnyObject], instantiator : JMInstantiatorProtocol) -> [AnyObject] {
+    class func arrayRepresentation(_ collectionSubType : String?, data :[AnyObject], instantiator : JMInstantiatorProtocol) -> [AnyObject] {
        
         var valueArray : [AnyObject] = []
         

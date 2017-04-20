@@ -10,18 +10,18 @@ import Foundation
 
 
 public class JMExampleClosureTransformer : JMTransformerProtocol {
-    public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
+    public func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any? {
         if let handlerType = inputValues!["handler_type"] as? String {
             if handlerType == "uppercase" {
               
                 func returnCapitalizedString(value: String) -> String {
-                    return value.uppercaseString
+                    return value.uppercased()
                 }
                 return returnCapitalizedString
             
             } else if handlerType == "lowercase" {
                 func returnLowercaseString(value: String) -> String {
-                    return value.lowercaseString
+                    return value.lowercased()
                 }
                 return returnLowercaseString
             }

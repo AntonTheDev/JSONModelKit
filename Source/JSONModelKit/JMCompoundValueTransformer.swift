@@ -6,9 +6,9 @@
 //  Copyright © 2015 Ustwo. All rights reserved.
 //
 
-public class JMCompoundValueTransformer : JMTransformerProtocol {
+open class JMCompoundValueTransformer : JMTransformerProtocol {
    
-    public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
+    open func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any? {
         var outputString : String = ""
         
         if let stringDictionary = inputValues as? Dictionary<String, String> {

@@ -13,9 +13,6 @@ sys.dont_write_bytecode = True
 from constants import Type
 from constants import MappingKey
 
-from serializer import Serializer
-
-
 class ClassGenerator:
 
    def __init__(self, mappingPath, output_directory, version, testEnabled, jsonFormatEnabled):
@@ -40,10 +37,7 @@ class ClassGenerator:
       fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
    
       nonOptionalArray = self.filtered_mappings(propertyMappings, True)
-      
-      serializer = Serializer(self.mappingPath, self.output_directory, self.version, self.testEnabled, self.jsonFormatEnabled)
-      fileString += serializer.serializerString()
-
+    
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
  
       fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
