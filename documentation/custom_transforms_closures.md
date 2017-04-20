@@ -1,13 +1,13 @@
-##Example - Closure Transformations
+## Example - Closure Transformations
 
-As of version 0.2.0 of U2MapperKit, the ability to map closures via the `US2TransformerProtocol` as support was added. This ensures that we can return an a value of `Any` type. Let's look at a dictionary for a business object, and see how we can map a function/closure. 
+A closure is mapped by using a custom transformer implementing the `JMTransformerProtocol`. Let's look at a dictionary for a business object, and see how we can map a function/closure. 
 
 **Response Dictionary**
 
 ```
 {
-	'business_uuid'  	 		:  9223123456754775807,
-	'business_name'  			: 'UsTwo Restaurant',
+	'business_uuid'  	 	:  9223123456754775807,
+	'business_name'  		: 'UsTwo Restaurant',
 	'business_facebook_id'  	: '123456789323123',
 	'business_yelp_id'  		: '409283409238409',
 }
@@ -63,8 +63,9 @@ Now that we have created a transformer, let's create some mapping to map our clo
 
 **Business.plist**
 <br/>
-
-![alt tag](/documentation/readme_assets/closure_example.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/closure_example.png?raw=true" width="622" height="288" />
+</p>
 <br/>
 
 After the creation of the mapping, perform a build **(⌘-B)**. The changes should be reflected accordingly in the internal `_Business.swift` class.
@@ -72,7 +73,7 @@ After the creation of the mapping, perform a build **(⌘-B)**. The changes shou
 
 ```
 import Foundation
-import US2MapperKit
+import JSONModelKit
 
 class _Business {
 	var uuid : Double?
@@ -86,6 +87,6 @@ class _Business {
 } 
 ```
 
-After calling the fail-able initializer - or udpateWithDictionary method with a dictioanry representation - US2MapperKit will use the custom transformer to map the custom closure accordingly. Although this is a simple and abstract scenerio, the potential for this funtionality has many outcomes to be explored.
+After calling the fail-able initializer - or udpateWithDictionary method with a dictioanry representation - JSONMapperKit will use the custom transformer to map the custom closure accordingly. Although this is a simple and abstract scenerio, the potential for this funtionality has many outcomes to be explored.
 
 Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol. 
