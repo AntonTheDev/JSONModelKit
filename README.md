@@ -5,7 +5,7 @@
 
 # JSONModelKit
 
-NOTE: This is still in dev, should be released, and in master the week of July 18th-24th, 2016.
+NOTE: This is still in dev, should be released soon :)
 
 ## Introduction
 
