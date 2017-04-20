@@ -1,10 +1,10 @@
-##Example - Custom Transformations
+## Example - Custom Transformations
 
-To perform transformations of a single or multiple values, US2MapperKit provides the ability to map multiple values from a dictionary response, and process them using the `US2TransformerProtocol`. Currently all transformed output properties must be optional, and the script will error out with a description in the build log.
+To perform transformations of a single or multiple values, JSONModelKit provides the ability to map multiple values from a dictionary response, and process them using the `US2TransformerProtocol`. Currently all transformed output properties must be optional, and the script will error out with a description in the build log.
 
 ```
-public protocol US2TransformerProtocol {
-    func transformValues(inputValues : Dictionary<String, Any>?) -> Any?
+public protocol JMTransformerProtocol {
+    func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any?
 }
 ```
 
@@ -23,13 +23,13 @@ Transformations are great approach, especially for Date transforms by reusing th
 Assuming the need to store the user's full name as a single property, the transformer implementation below takes in a user's first name and last name as a parsed dictionary of strings keyed according to the property mapping defined and transforms them into a single full name property value before being returned and assigned.
 
 
-**US2TransformerProtocol Implementation**
+**JMTransformerProtocol Implementation**
 
 ```
 let firstNameKey    = "first_name"
 let lastNameKey     = "last_name"
 
-public class US2FullNameValueTransformer : US2TransformerProtocol {
+public class FullNameValueTransformer : JMTransformerProtocol {
     
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
         var fullNameString : String = ""
@@ -58,14 +58,15 @@ To implement the transformer as part of the model mapping, observe how the **key
 
 **User.plist**
 <br/>
-
-![alt tag](/documentation/readme_assets/transformer_fullname_example.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/transformer_fullname_example.png?raw=true" width="400" height="156" />
+</p>
 <br/>
 
 Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol. 
 
 
-###Compound Value Transformer
+### Compound Value Transformer
 
 Currently the only packaged trasnformer shipped with the framework is  the `US2CompoundValueTransformer` which takes in a dictionary of values per `US2TransformerProtocol`, and creates a compound output value from the values passed into it.
 
