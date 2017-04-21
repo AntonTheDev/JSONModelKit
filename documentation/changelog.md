@@ -1,8 +1,8 @@
-#US2MapperKit ChangeLog
+# JSONModelKit ChangeLog
 
-###Version 0.2.0
+### Version 0.2.0
 
-#####Important Upgrade Notes
+##### Important Upgrade Notes
 
 Please note the following API/project changes have been made:
 
@@ -11,7 +11,7 @@ Please note the following API/project changes have been made:
 * The `US2TransformerProtocol` has been updated with support for returning objects of `Any` type, which includes support for _Struct_, _Enums_, _Closures_, and _Tuples_.
 	* Fixes [Issue #23](https://github.com/ustwo/US2MapperKit/issues/23)
 	
-#####Important Upgrade Notes
+##### Important Upgrade Notes
 
 Be sure to update your custom transformers accordingly for continued support of custom transformers.
 
@@ -31,7 +31,7 @@ public protocol US2TransformerProtocol {
 
 ``` 
 
-###Version 0.1.0
+### Version 0.1.0
 
 Initial Release
 

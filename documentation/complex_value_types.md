@@ -1,5 +1,5 @@
-##Example - Complex Value Types
-US2MapperKit's support for mapping complete types allows for creating object types as other objects generated. Let's assume in the example below that the business listing result returns a sub-dictionary for a location, and we would like to store it as a Location type.
+## Example - Complex Value Types
+JSONModelKit's support for mapping complete types allows for creating object types as other objects generated. Let's assume in the example below that the business listing result returns a sub-dictionary for a location, and we would like to store it as a Location type.
 
 **Response Dictionary**
 
@@ -35,4 +35,4 @@ Once the model mapping for a location has generated a `Location` object, and it 
 <br/>
 
 
-When parsing the data for a `Business` object, US2MapperKit will create a `Location` instance, and will assign the resulting value to the location property of the `Business` instance before returning it :)
+When parsing the data for a `Business` object, JSONModelKit will create a `Location` instance, and will assign the resulting value to the location property of the `Business` instance before returning it :)

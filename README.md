@@ -3,17 +3,17 @@
 [![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos-lightgrey.svg)](https://github.com/AntonTheDev/JSONModelKit/)
 [![License](https://img.shields.io/badge/license-MIT-343434.svg)](https://github.com/AntonTheDev/JSONModelKit/)
 
-#JSONModelKit
+# JSONModelKit
 
-NOTE: This is still in dev, should be released, and in master the week of July 18th-24th, 2016.
+NOTE: This is still in dev, should be released soon :)
 
-##Introduction
+## Introduction
 
-JSONModelKit is an an extremely lightweight mapping framework that follows an API-Driven approach to stream line development. JSONModelKit differs from other frameworks by taking an API-first approach, and mapping against the response up front. Once mapped JSONMapperKit generates the model objects based on the definition, ready to to use and extend out of the box.
+JSONModelKit is an an extremely lightweight mapping framework that follows an API-Driven approach to stream line development. JSONModelKit differs from other frameworks by taking an API-first focus by mapping against the response from the start. Once mapped JSONMapperKit will auto generate the model objects based on the definition, ready to to use and extend out of the box.
 
-By providing a single point of configuration, and driving the model definition against an API reponse, it makes it very easy to keep your model in sync with an API and streamline development.
+By providing a single point of configuration, and driving the model definition against an API reponse, it makes it very easy to keep your model in sync with an API to streamline development.
 
-##Features
+## Features
 
 - [X] Auto-Model Generation .json/.plists configuration files
 - [X] String, Int, Double, Float, Bool, Array, Dictionary
@@ -24,23 +24,25 @@ By providing a single point of configuration, and driving the model definition a
 - [X] Mapping Nested Values
 - [X] Predefined Default Values
 
-##Installation
+## Installation
 
 * **Requirements** : XCode 7.3+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
 * [Installation Instructions](/documentation/installation.md)
 * [Release Notes](/documentation/changelog.md)
 
-##Communication
+## Communication
 
 - If you **found a bug**, or **have a feature request**, open an issue.
 - If you **need help** or a **general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/json-mapperkit). (tag 'json-mapperkit')
 - If you **want to contribute**, review the [Contribution Guidelines](/Documentation/CONTRIBUTING.md), and submit a pull request. 
 
-##Basic Use
+## Basic Use
 
 Once configured per the [Installation](/documentation/installation.md) instructions, run the build script once **⌘+B**. Navigate to your project directory and notice that the script generated the following inside the base directory of your project.
 
-![alt tag](/documentation/readme_assets/folder_structure.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/folder_structure.png?raw=true" width="378" height="134" />
+</p>
 
 All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory during build time. 
 
@@ -48,7 +50,7 @@ Note: Anytime a new mapping is added, remove the reference to the Model group fo
 
 #### Simple Example
 
-Let look as a simple mapping that defined a class below in JSON.
+Let look as a simple mapping that defines a class below in JSON.
 
 ```
 Input File: JSOModelKit/Mappings/Business.json
@@ -88,7 +90,10 @@ Input File: JSOModelKit/Mappings/Business.json
 ```
 Run the build script once **⌘+B**. and you will see that it generated the following files in the ourput directory.
 
-![alt tag](/documentation/readme_assets/genrerated_folder_structure.png?raw=true)
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="414" height="206" />
+</p>
+
 
 Observe the internal file that was generated
 
