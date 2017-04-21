@@ -8,6 +8,8 @@ import glob
 import commands
 import json
 
+from fileimporter import ProjectFileImporter
+
 sys.dont_write_bytecode = True
 
 from constants import Type
@@ -24,7 +26,7 @@ class ClassGenerator:
       
    def internalGeneratedClass(self):
       propertyMappings = self.propertyMappingsArray()
-
+      
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
       fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))   
@@ -48,7 +50,8 @@ class ClassGenerator:
       return fileString
 
    def externalGeneratedClass(self):
-      return self.baseTemplate(self.getPathForFile("external_class_template.txt"))
+      path =  self.baseTemplate(self.getPathForFile("external_class_template.txt"))
+      return path
 
    '''
    Replaces { OPTIONALS } in the template
@@ -250,6 +253,7 @@ class ClassGenerator:
       return str.replace(os.path.abspath(__file__), "generator.py", fileName)
 
    def baseTemplate(self, path):
+
       propertyMappings = self.propertyMappingsArray()
       
       fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')   
@@ -257,10 +261,12 @@ class ClassGenerator:
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
      
       if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "import JSONModelKit\r\n") 
+         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit\r\n") 
       else:
-         fileString = str.replace(fileString,  "{ PROD_IMPORT }", "")
+         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "")
         
+      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
+
       return fileString
 
 
