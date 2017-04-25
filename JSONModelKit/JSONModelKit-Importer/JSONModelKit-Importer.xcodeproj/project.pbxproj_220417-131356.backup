@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		045D4F39BB50B81E46A18A07 /* TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D41208FDD0AA059A101C4 /* TestObjectEleven.swift */; };
-		20E04742B047D181AF525A86 /* _TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044049D49CBED27748ECC52A /* _TestObjectEight.swift */; };
-		278841A59EBE5565CFBBFCC3 /* _TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E864FBD9CDD8EF1ED8A9173 /* _TestObjectThree.swift */; };
-		382946FCBC59BD226F1191F8 /* _TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230247AB87CACF8338A41DCF /* _TestObjectEleven.swift */; };
+		0097480E895886CB26716CBF /* _TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA4A69ADB3216AA4781976 /* _TestObjectTwo.swift */; };
+		01B0457683027E363922D2C4 /* TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D748B0A0945D8EA8AD22E2 /* TestObjectFive.swift */; };
+		020642438E22A57492C6C084 /* _TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2864D64B5C85A59A9B3D2D6 /* _TestObjectTwelve.swift */; };
+		057B4E00840308D2EE75D8D5 /* _TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8844CCBB5A1835099BD4B9 /* _TestObjectFour.swift */; };
+		07F142A8B9441DA5227946C7 /* JMInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D4BC29E6FED3AE7BBB877 /* JMInstantiator.swift */; };
+		10E2480390FD32C96166421F /* _TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063446679AFF915599124014 /* _TestObjectEight.swift */; };
+		1A684AD6964EEDABC8052ED4 /* TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42004651A90FFF6752EB6859 /* TestObjectThirteen.swift */; };
+		1B20420B9AD6E3302A86A193 /* _TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB44206822B6B3BDBD31C92 /* _TestObjectSeven.swift */; };
+		216B423EB010C0A3A206340C /* TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D4D2E822524E634A72423 /* TestObjectTwelve.swift */; };
+		2713422BA8E108A6AB1A3262 /* _TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991246869BABD8C8B02928B4 /* _TestObjectTen.swift */; };
+		28FC4CD8A10F8041BC5F3CEF /* TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0743B7B02CBB0F8B57409F /* TestObjectFour.swift */; };
+		384F4E21933E865C033BC54D /* TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2514D7F966D528E135C7A54 /* TestObjectTen.swift */; };
 		3A7851BA1EAA58C800826330 /* US2ExampleClosureTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */; };
 		3A7851BB1EAA58C800826330 /* US2ExampleEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */; };
 		3A7851BC1EAA58C800826330 /* US2ExampleStructTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */; };
@@ -79,42 +87,24 @@
 		3AC446B01EA98FE3003CA6C5 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446761EA98FE3003CA6C5 /* XcodeProject.py */; };
 		3AC446B11EA98FE3003CA6C5 /* serializer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446771EA98FE3003CA6C5 /* serializer.py */; };
 		3AC446B21EA98FE3003CA6C5 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446781EA98FE3003CA6C5 /* validator.py */; };
-		57A54974923A1A57F819216B /* _TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C4AF5B58ECBF811B042B3 /* _TestObjectFive.swift */; };
-		6B3F49268749B7E027B6194A /* _TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409742838A653C1439B83124 /* _TestObjectNine.swift */; };
-		6EEA4FA4A7AC681A045B1C84 /* _TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E4EC88DE5999A2281C834 /* _TestObjectSix.swift */; };
-		788341E684A9C38390439745 /* _TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17424378B251E98D1950E09C /* _TestObjectThirteen.swift */; };
-		78BD46D3BD6BB41791D6028E /* TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65434619B39EF78AECFABDBA /* TestObjectEight.swift */; };
-		78D245FCAA2FDE28AA0C67EC /* _TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72164201A24A39666B4525D1 /* _TestObjectFour.swift */; };
-		8D6247DC8304197C329485F3 /* TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18274AD38F9A296225D2BEF9 /* TestObjectThirteen.swift */; };
-		94E54A449A4672B46559AE57 /* TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B74B6EA91F93049F0906AD /* TestObjectTwo.swift */; };
-		A2FE4DBFB8437BC514FEF21A /* _TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC4711A7E13F740E53C470 /* _TestObjectSeven.swift */; };
-		ABDD46C59B9CB979E2789643 /* _TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6B4A3EA9D2729C23EA0ED3 /* _TestObjectTwelve.swift */; };
-		B4B84D57BB6217955D57BFF5 /* TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B46F9AAE410BF79460F01 /* TestObjectTen.swift */; };
-		BEEF499AAC25D3E5BB1DC34C /* TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21214CDFA3ACC9F3DD21E9CD /* TestObjectSeven.swift */; };
-		CBA24A7482608A916AFE05F4 /* TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540449AA966B4F6A73FD2724 /* TestObjectThree.swift */; };
-		D05F49D7917E5680926326FC /* TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB204CA191EB5016894D535F /* TestObjectNine.swift */; };
-		E4DE42EDB70282F3F93FC772 /* TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5846AA9BD4695E971B67DB /* TestObjectSix.swift */; };
-		E70F4358A726EAA3B41D36AC /* JMInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644AECB66F1E48B72D6781 /* JMInstantiator.swift */; };
-		E84D462091458E3EB41229EA /* TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08874FAC9B774131BE79B8A0 /* TestObjectFive.swift */; };
-		ED4B4E73B39A94C9F720071F /* TestObjectTwelve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12640C98295E93C08EA8C3D /* TestObjectTwelve.swift */; };
-		F1E14F5293359A8E442D8A78 /* _TestObjectTen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D4CB0BA092670751D2FCA /* _TestObjectTen.swift */; };
-		F47340A8929AFFE1E7BB6544 /* _TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE4133885563E56D6E90EA /* _TestObjectTwo.swift */; };
-		F8184CF9B4EB057021092DD7 /* TestObjectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF74E808F8F8A1703F4BE4F /* TestObjectFour.swift */; };
+		47C046A9BE4CADAED8DADF61 /* _TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16846388A87EAD8881F1338 /* _TestObjectSix.swift */; };
+		54CF468EA49546AF0513A59F /* _TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C74C03BC1997CC3A362852 /* _TestObjectThree.swift */; };
+		64C644D094E98C5D1925E7CE /* TestObjectEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C74EDB87D39AC8E4065BA7 /* TestObjectEight.swift */; };
+		695F40909BC79B4D268D53C0 /* _TestObjectFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A84D54B422020777D86F39 /* _TestObjectFive.swift */; };
+		895A43B7B43E37774F94FA59 /* _TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF4E6393DB688F58B11074 /* _TestObjectNine.swift */; };
+		926F49D8BB25B4273BBCBFCA /* TestObjectNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590C467FBAC8E924BB16BF8F /* TestObjectNine.swift */; };
+		92B64411A669EB933259E95D /* TestObjectThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC644DBB4C179C08A6CF627 /* TestObjectThree.swift */; };
+		AD9B4C61ADAF2D67E045160A /* _TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921348CDB6D23B8BAC68CE1E /* _TestObjectEleven.swift */; };
+		B0574E3F93D45EECDC37EAA5 /* TestObjectSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9047B293E60EFE0B489554 /* TestObjectSeven.swift */; };
+		B76947659A629EBEB2A24744 /* TestObjectSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B84C5B947490A0250E5A12 /* TestObjectSix.swift */; };
+		D5B74CBE880840FC42B5D1E9 /* TestObjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1174CB1A10F87FA0BF26A15 /* TestObjectTwo.swift */; };
+		E990486C819111AD23AA1170 /* _TestObjectThirteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75494B878D926CDBB1FF6D /* _TestObjectThirteen.swift */; };
+		FB644A89A04E86788F61EBE3 /* TestObjectEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F37466E8E16373FD421C9C2 /* TestObjectEleven.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		044049D49CBED27748ECC52A /* _TestObjectEight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectEight.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectEight.swift"; sourceTree = SOURCE_ROOT; };
-		05CC4711A7E13F740E53C470 /* _TestObjectSeven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectSeven.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectSeven.swift"; sourceTree = SOURCE_ROOT; };
-		08874FAC9B774131BE79B8A0 /* TestObjectFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectFive.swift; path = "JSONModelKit-Importer/Model/TestObjectFive.swift"; sourceTree = SOURCE_ROOT; };
-		17424378B251E98D1950E09C /* _TestObjectThirteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectThirteen.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectThirteen.swift"; sourceTree = SOURCE_ROOT; };
-		18274AD38F9A296225D2BEF9 /* TestObjectThirteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectThirteen.swift; path = "JSONModelKit-Importer/Model/TestObjectThirteen.swift"; sourceTree = SOURCE_ROOT; };
-		1B5846AA9BD4695E971B67DB /* TestObjectSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectSix.swift; path = "JSONModelKit-Importer/Model/TestObjectSix.swift"; sourceTree = SOURCE_ROOT; };
-		21214CDFA3ACC9F3DD21E9CD /* TestObjectSeven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectSeven.swift; path = "JSONModelKit-Importer/Model/TestObjectSeven.swift"; sourceTree = SOURCE_ROOT; };
-		22644AECB66F1E48B72D6781 /* JMInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JMInstantiator.swift; path = "JSONModelKit-Importer/Model/Internal/JMInstantiator.swift"; sourceTree = SOURCE_ROOT; };
-		230247AB87CACF8338A41DCF /* _TestObjectEleven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectEleven.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectEleven.swift"; sourceTree = SOURCE_ROOT; };
-		2D6B4A3EA9D2729C23EA0ED3 /* _TestObjectTwelve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTwelve.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTwelve.swift"; sourceTree = SOURCE_ROOT; };
-		2E9D4CB0BA092670751D2FCA /* _TestObjectTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTen.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTen.swift"; sourceTree = SOURCE_ROOT; };
-		32B74B6EA91F93049F0906AD /* TestObjectTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTwo.swift; path = "JSONModelKit-Importer/Model/TestObjectTwo.swift"; sourceTree = SOURCE_ROOT; };
+		063446679AFF915599124014 /* _TestObjectEight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectEight.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectEight.swift"; sourceTree = SOURCE_ROOT; };
+		29A84D54B422020777D86F39 /* _TestObjectFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectFive.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectFive.swift"; sourceTree = SOURCE_ROOT; };
 		3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleClosureTransformer.swift; sourceTree = "<group>"; };
 		3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleEnumTransformer.swift; sourceTree = "<group>"; };
 		3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleStructTransformer.swift; sourceTree = "<group>"; };
@@ -185,19 +175,29 @@
 		3AC446761EA98FE3003CA6C5 /* XcodeProject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XcodeProject.py; sourceTree = "<group>"; };
 		3AC446771EA98FE3003CA6C5 /* serializer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serializer.py; sourceTree = "<group>"; };
 		3AC446781EA98FE3003CA6C5 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
-		409742838A653C1439B83124 /* _TestObjectNine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectNine.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectNine.swift"; sourceTree = SOURCE_ROOT; };
-		540449AA966B4F6A73FD2724 /* TestObjectThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectThree.swift; path = "JSONModelKit-Importer/Model/TestObjectThree.swift"; sourceTree = SOURCE_ROOT; };
-		65434619B39EF78AECFABDBA /* TestObjectEight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectEight.swift; path = "JSONModelKit-Importer/Model/TestObjectEight.swift"; sourceTree = SOURCE_ROOT; };
-		680C4AF5B58ECBF811B042B3 /* _TestObjectFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectFive.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectFive.swift"; sourceTree = SOURCE_ROOT; };
-		699D41208FDD0AA059A101C4 /* TestObjectEleven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectEleven.swift; path = "JSONModelKit-Importer/Model/TestObjectEleven.swift"; sourceTree = SOURCE_ROOT; };
-		6AFE4133885563E56D6E90EA /* _TestObjectTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTwo.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTwo.swift"; sourceTree = SOURCE_ROOT; };
-		72164201A24A39666B4525D1 /* _TestObjectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectFour.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectFour.swift"; sourceTree = SOURCE_ROOT; };
-		7E864FBD9CDD8EF1ED8A9173 /* _TestObjectThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectThree.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectThree.swift"; sourceTree = SOURCE_ROOT; };
-		889B46F9AAE410BF79460F01 /* TestObjectTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTen.swift; path = "JSONModelKit-Importer/Model/TestObjectTen.swift"; sourceTree = SOURCE_ROOT; };
-		9DF74E808F8F8A1703F4BE4F /* TestObjectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectFour.swift; path = "JSONModelKit-Importer/Model/TestObjectFour.swift"; sourceTree = SOURCE_ROOT; };
-		A12640C98295E93C08EA8C3D /* TestObjectTwelve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTwelve.swift; path = "JSONModelKit-Importer/Model/TestObjectTwelve.swift"; sourceTree = SOURCE_ROOT; };
-		F92E4EC88DE5999A2281C834 /* _TestObjectSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectSix.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectSix.swift"; sourceTree = SOURCE_ROOT; };
-		FB204CA191EB5016894D535F /* TestObjectNine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectNine.swift; path = "JSONModelKit-Importer/Model/TestObjectNine.swift"; sourceTree = SOURCE_ROOT; };
+		3BC644DBB4C179C08A6CF627 /* TestObjectThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectThree.swift; path = "JSONModelKit-Importer/Model/TestObjectThree.swift"; sourceTree = SOURCE_ROOT; };
+		42004651A90FFF6752EB6859 /* TestObjectThirteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectThirteen.swift; path = "JSONModelKit-Importer/Model/TestObjectThirteen.swift"; sourceTree = SOURCE_ROOT; };
+		4C0743B7B02CBB0F8B57409F /* TestObjectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectFour.swift; path = "JSONModelKit-Importer/Model/TestObjectFour.swift"; sourceTree = SOURCE_ROOT; };
+		51CF4E6393DB688F58B11074 /* _TestObjectNine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectNine.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectNine.swift"; sourceTree = SOURCE_ROOT; };
+		590C467FBAC8E924BB16BF8F /* TestObjectNine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectNine.swift; path = "JSONModelKit-Importer/Model/TestObjectNine.swift"; sourceTree = SOURCE_ROOT; };
+		5F37466E8E16373FD421C9C2 /* TestObjectEleven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectEleven.swift; path = "JSONModelKit-Importer/Model/TestObjectEleven.swift"; sourceTree = SOURCE_ROOT; };
+		60C74EDB87D39AC8E4065BA7 /* TestObjectEight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectEight.swift; path = "JSONModelKit-Importer/Model/TestObjectEight.swift"; sourceTree = SOURCE_ROOT; };
+		70D748B0A0945D8EA8AD22E2 /* TestObjectFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectFive.swift; path = "JSONModelKit-Importer/Model/TestObjectFive.swift"; sourceTree = SOURCE_ROOT; };
+		70FA4A69ADB3216AA4781976 /* _TestObjectTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTwo.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTwo.swift"; sourceTree = SOURCE_ROOT; };
+		7DB44206822B6B3BDBD31C92 /* _TestObjectSeven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectSeven.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectSeven.swift"; sourceTree = SOURCE_ROOT; };
+		921348CDB6D23B8BAC68CE1E /* _TestObjectEleven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectEleven.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectEleven.swift"; sourceTree = SOURCE_ROOT; };
+		991246869BABD8C8B02928B4 /* _TestObjectTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTen.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTen.swift"; sourceTree = SOURCE_ROOT; };
+		9A7D4D2E822524E634A72423 /* TestObjectTwelve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTwelve.swift; path = "JSONModelKit-Importer/Model/TestObjectTwelve.swift"; sourceTree = SOURCE_ROOT; };
+		A2514D7F966D528E135C7A54 /* TestObjectTen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTen.swift; path = "JSONModelKit-Importer/Model/TestObjectTen.swift"; sourceTree = SOURCE_ROOT; };
+		BF9047B293E60EFE0B489554 /* TestObjectSeven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectSeven.swift; path = "JSONModelKit-Importer/Model/TestObjectSeven.swift"; sourceTree = SOURCE_ROOT; };
+		C10D4BC29E6FED3AE7BBB877 /* JMInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JMInstantiator.swift; path = "JSONModelKit-Importer/Model/Internal/JMInstantiator.swift"; sourceTree = SOURCE_ROOT; };
+		C16846388A87EAD8881F1338 /* _TestObjectSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectSix.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectSix.swift"; sourceTree = SOURCE_ROOT; };
+		C2864D64B5C85A59A9B3D2D6 /* _TestObjectTwelve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectTwelve.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectTwelve.swift"; sourceTree = SOURCE_ROOT; };
+		D1C74C03BC1997CC3A362852 /* _TestObjectThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectThree.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectThree.swift"; sourceTree = SOURCE_ROOT; };
+		DF75494B878D926CDBB1FF6D /* _TestObjectThirteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectThirteen.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectThirteen.swift"; sourceTree = SOURCE_ROOT; };
+		EE8844CCBB5A1835099BD4B9 /* _TestObjectFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _TestObjectFour.swift; path = "JSONModelKit-Importer/Model/Internal/_TestObjectFour.swift"; sourceTree = SOURCE_ROOT; };
+		F1174CB1A10F87FA0BF26A15 /* TestObjectTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectTwo.swift; path = "JSONModelKit-Importer/Model/TestObjectTwo.swift"; sourceTree = SOURCE_ROOT; };
+		F7B84C5B947490A0250E5A12 /* TestObjectSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestObjectSix.swift; path = "JSONModelKit-Importer/Model/TestObjectSix.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3A7851BF1EAA58D500826330 /* Application */,
-				8F894CCBA429B696D34CDF2F /* Model */,
+				CCE941CD8225EF4665981BFF /* Model */,
 			);
 			path = "JSONModelKit-Importer";
 			sourceTree = "<group>";
@@ -419,44 +419,44 @@
 			path = pbxsections;
 			sourceTree = "<group>";
 		};
-		8F894CCBA429B696D34CDF2F /* Model */ = {
+		A3B94179A94FF20EC4826FC6 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				F255419D8781C2584B632719 /* Internal */,
-				65434619B39EF78AECFABDBA /* TestObjectEight.swift */,
-				699D41208FDD0AA059A101C4 /* TestObjectEleven.swift */,
-				08874FAC9B774131BE79B8A0 /* TestObjectFive.swift */,
-				9DF74E808F8F8A1703F4BE4F /* TestObjectFour.swift */,
-				FB204CA191EB5016894D535F /* TestObjectNine.swift */,
-				21214CDFA3ACC9F3DD21E9CD /* TestObjectSeven.swift */,
-				1B5846AA9BD4695E971B67DB /* TestObjectSix.swift */,
-				889B46F9AAE410BF79460F01 /* TestObjectTen.swift */,
-				18274AD38F9A296225D2BEF9 /* TestObjectThirteen.swift */,
-				540449AA966B4F6A73FD2724 /* TestObjectThree.swift */,
-				A12640C98295E93C08EA8C3D /* TestObjectTwelve.swift */,
-				32B74B6EA91F93049F0906AD /* TestObjectTwo.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		F255419D8781C2584B632719 /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				22644AECB66F1E48B72D6781 /* JMInstantiator.swift */,
-				044049D49CBED27748ECC52A /* _TestObjectEight.swift */,
-				230247AB87CACF8338A41DCF /* _TestObjectEleven.swift */,
-				680C4AF5B58ECBF811B042B3 /* _TestObjectFive.swift */,
-				72164201A24A39666B4525D1 /* _TestObjectFour.swift */,
-				409742838A653C1439B83124 /* _TestObjectNine.swift */,
-				05CC4711A7E13F740E53C470 /* _TestObjectSeven.swift */,
-				F92E4EC88DE5999A2281C834 /* _TestObjectSix.swift */,
-				2E9D4CB0BA092670751D2FCA /* _TestObjectTen.swift */,
-				17424378B251E98D1950E09C /* _TestObjectThirteen.swift */,
-				7E864FBD9CDD8EF1ED8A9173 /* _TestObjectThree.swift */,
-				2D6B4A3EA9D2729C23EA0ED3 /* _TestObjectTwelve.swift */,
-				6AFE4133885563E56D6E90EA /* _TestObjectTwo.swift */,
+				C10D4BC29E6FED3AE7BBB877 /* JMInstantiator.swift */,
+				063446679AFF915599124014 /* _TestObjectEight.swift */,
+				921348CDB6D23B8BAC68CE1E /* _TestObjectEleven.swift */,
+				29A84D54B422020777D86F39 /* _TestObjectFive.swift */,
+				EE8844CCBB5A1835099BD4B9 /* _TestObjectFour.swift */,
+				51CF4E6393DB688F58B11074 /* _TestObjectNine.swift */,
+				7DB44206822B6B3BDBD31C92 /* _TestObjectSeven.swift */,
+				C16846388A87EAD8881F1338 /* _TestObjectSix.swift */,
+				991246869BABD8C8B02928B4 /* _TestObjectTen.swift */,
+				DF75494B878D926CDBB1FF6D /* _TestObjectThirteen.swift */,
+				D1C74C03BC1997CC3A362852 /* _TestObjectThree.swift */,
+				C2864D64B5C85A59A9B3D2D6 /* _TestObjectTwelve.swift */,
+				70FA4A69ADB3216AA4781976 /* _TestObjectTwo.swift */,
 			);
 			name = Internal;
+			sourceTree = "<group>";
+		};
+		CCE941CD8225EF4665981BFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3B94179A94FF20EC4826FC6 /* Internal */,
+				60C74EDB87D39AC8E4065BA7 /* TestObjectEight.swift */,
+				5F37466E8E16373FD421C9C2 /* TestObjectEleven.swift */,
+				70D748B0A0945D8EA8AD22E2 /* TestObjectFive.swift */,
+				4C0743B7B02CBB0F8B57409F /* TestObjectFour.swift */,
+				590C467FBAC8E924BB16BF8F /* TestObjectNine.swift */,
+				BF9047B293E60EFE0B489554 /* TestObjectSeven.swift */,
+				F7B84C5B947490A0250E5A12 /* TestObjectSix.swift */,
+				A2514D7F966D528E135C7A54 /* TestObjectTen.swift */,
+				42004651A90FFF6752EB6859 /* TestObjectThirteen.swift */,
+				3BC644DBB4C179C08A6CF627 /* TestObjectThree.swift */,
+				9A7D4D2E822524E634A72423 /* TestObjectTwelve.swift */,
+				F1174CB1A10F87FA0BF26A15 /* TestObjectTwo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,7 +466,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC446321EA98FC5003CA6C5 /* Build configuration list for PBXNativeTarget "JSONModelKit-Importer" */;
 			buildPhases = (
-				3A7851C11EAA59A900826330 /* JSON Model Generation */,
+				3A7851C11EAA59A900826330 /* ShellScript */,
 				3AC4461C1EA98FC5003CA6C5 /* Sources */,
 				3AC4461D1EA98FC5003CA6C5 /* Frameworks */,
 				3AC4461E1EA98FC5003CA6C5 /* Resources */,
@@ -575,7 +575,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A7851C11EAA59A900826330 /* JSON Model Generation */ = {
+		3A7851C11EAA59A900826330 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -587,7 +587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\necho $SCRIPT_LOCATION";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1 -m 1";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -615,31 +615,31 @@
 				3AC446791EA98FE3003CA6C5 /* JMCompoundValueTransformer.swift in Sources */,
 				3A7851BC1EAA58C800826330 /* US2ExampleStructTransformer.swift in Sources */,
 				3A7851BA1EAA58C800826330 /* US2ExampleClosureTransformer.swift in Sources */,
-				E70F4358A726EAA3B41D36AC /* JMInstantiator.swift in Sources */,
-				20E04742B047D181AF525A86 /* _TestObjectEight.swift in Sources */,
-				382946FCBC59BD226F1191F8 /* _TestObjectEleven.swift in Sources */,
-				57A54974923A1A57F819216B /* _TestObjectFive.swift in Sources */,
-				78D245FCAA2FDE28AA0C67EC /* _TestObjectFour.swift in Sources */,
-				6B3F49268749B7E027B6194A /* _TestObjectNine.swift in Sources */,
-				A2FE4DBFB8437BC514FEF21A /* _TestObjectSeven.swift in Sources */,
-				6EEA4FA4A7AC681A045B1C84 /* _TestObjectSix.swift in Sources */,
-				F1E14F5293359A8E442D8A78 /* _TestObjectTen.swift in Sources */,
-				788341E684A9C38390439745 /* _TestObjectThirteen.swift in Sources */,
-				278841A59EBE5565CFBBFCC3 /* _TestObjectThree.swift in Sources */,
-				ABDD46C59B9CB979E2789643 /* _TestObjectTwelve.swift in Sources */,
-				F47340A8929AFFE1E7BB6544 /* _TestObjectTwo.swift in Sources */,
-				78BD46D3BD6BB41791D6028E /* TestObjectEight.swift in Sources */,
-				045D4F39BB50B81E46A18A07 /* TestObjectEleven.swift in Sources */,
-				E84D462091458E3EB41229EA /* TestObjectFive.swift in Sources */,
-				F8184CF9B4EB057021092DD7 /* TestObjectFour.swift in Sources */,
-				D05F49D7917E5680926326FC /* TestObjectNine.swift in Sources */,
-				BEEF499AAC25D3E5BB1DC34C /* TestObjectSeven.swift in Sources */,
-				E4DE42EDB70282F3F93FC772 /* TestObjectSix.swift in Sources */,
-				B4B84D57BB6217955D57BFF5 /* TestObjectTen.swift in Sources */,
-				8D6247DC8304197C329485F3 /* TestObjectThirteen.swift in Sources */,
-				CBA24A7482608A916AFE05F4 /* TestObjectThree.swift in Sources */,
-				ED4B4E73B39A94C9F720071F /* TestObjectTwelve.swift in Sources */,
-				94E54A449A4672B46559AE57 /* TestObjectTwo.swift in Sources */,
+				07F142A8B9441DA5227946C7 /* JMInstantiator.swift in Sources */,
+				10E2480390FD32C96166421F /* _TestObjectEight.swift in Sources */,
+				AD9B4C61ADAF2D67E045160A /* _TestObjectEleven.swift in Sources */,
+				695F40909BC79B4D268D53C0 /* _TestObjectFive.swift in Sources */,
+				057B4E00840308D2EE75D8D5 /* _TestObjectFour.swift in Sources */,
+				895A43B7B43E37774F94FA59 /* _TestObjectNine.swift in Sources */,
+				1B20420B9AD6E3302A86A193 /* _TestObjectSeven.swift in Sources */,
+				47C046A9BE4CADAED8DADF61 /* _TestObjectSix.swift in Sources */,
+				2713422BA8E108A6AB1A3262 /* _TestObjectTen.swift in Sources */,
+				E990486C819111AD23AA1170 /* _TestObjectThirteen.swift in Sources */,
+				54CF468EA49546AF0513A59F /* _TestObjectThree.swift in Sources */,
+				020642438E22A57492C6C084 /* _TestObjectTwelve.swift in Sources */,
+				0097480E895886CB26716CBF /* _TestObjectTwo.swift in Sources */,
+				64C644D094E98C5D1925E7CE /* TestObjectEight.swift in Sources */,
+				FB644A89A04E86788F61EBE3 /* TestObjectEleven.swift in Sources */,
+				01B0457683027E363922D2C4 /* TestObjectFive.swift in Sources */,
+				28FC4CD8A10F8041BC5F3CEF /* TestObjectFour.swift in Sources */,
+				926F49D8BB25B4273BBCBFCA /* TestObjectNine.swift in Sources */,
+				B0574E3F93D45EECDC37EAA5 /* TestObjectSeven.swift in Sources */,
+				B76947659A629EBEB2A24744 /* TestObjectSix.swift in Sources */,
+				384F4E21933E865C033BC54D /* TestObjectTen.swift in Sources */,
+				1A684AD6964EEDABC8052ED4 /* TestObjectThirteen.swift in Sources */,
+				92B64411A669EB933259E95D /* TestObjectThree.swift in Sources */,
+				216B423EB010C0A3A206340C /* TestObjectTwelve.swift in Sources */,
+				D5B74CBE880840FC42B5D1E9 /* TestObjectTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1441,281 +1441,6 @@
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.flightlayout.JSONModelKit-Importer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1856,281 +1581,6 @@
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
-					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
