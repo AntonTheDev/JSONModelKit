@@ -7,7 +7,6 @@ import dircache
 import glob
 import commands
 import json
-from pbxproj import XcodeProject
 
 sys.dont_write_bytecode = True
 

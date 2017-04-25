@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = "Source/*.*", "Source/ModelScript/*.*", "Source/ModelScript/pbxproj/*.*", "Source/ModelScript/pbxproj/pbxcli/*.*", "Source/ModelScript/pbxproj/pbxextensions/*.*", "Source/ModelScript/pbxproj/pbxsections/*.*", "Source/JSONModelKit/*.*", "Source/JSONModelKit/Parsers/*.*", "Source/JSONModelKit/Transformer/*.*", "Source/JSONModelKit/Validator/*.*"
+  s.source_files = "Source/*.*"
 end
