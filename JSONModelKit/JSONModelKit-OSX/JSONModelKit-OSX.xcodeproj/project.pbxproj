@@ -167,16 +167,6 @@
 		3A5AAB961D38DADD0001D715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5AAB941D38DADD0001D715 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3A5AABA61D38DB3A0001D715 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A5AAB831D38DADD0001D715 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A5AAB8A1D38DADD0001D715;
-			remoteInfo = "JSONModelKit-OSX";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		13C6E81B1D396BB4000A0B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0A0CDD1D3D180300A1608C /* JMCompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCompoundValueTransformer.swift; sourceTree = "<group>"; };
@@ -575,7 +565,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3A5AABA71D38DB3A0001D715 /* PBXTargetDependency */,
 			);
 			name = "JSONModelKit-OSXTests";
 			productName = "JSONModelKit-OSXTests";
@@ -863,14 +852,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3A5AABA71D38DB3A0001D715 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A5AAB8A1D38DADD0001D715 /* JSONModelKit-OSX */;
-			targetProxy = 3A5AABA61D38DB3A0001D715 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A5AAB941D38DADD0001D715 /* Main.storyboard */ = {
