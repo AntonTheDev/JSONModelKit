@@ -884,6 +884,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS-JSON-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -895,6 +896,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS-JSON-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -996,6 +998,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1009,6 +1012,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1020,6 +1024,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1031,6 +1036,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

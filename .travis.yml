@@ -1,43 +1,10 @@
 language: objective-c
 osx_image: xcode8.3
+before_install:
+    - brew update
+    - brew install xctool --HEAD
+
 xcode_workspace: JSONModelKit.xcworkspace
-
-xcode_scheme:
-- PLIST-iOSTests
-- JSON-iOSTests
-- PLIST-tvOSTests
-- JSON-tvOSTests
-- PLIST-OSXTests
-- JSON-OSXTests
-
-xcode_sdk:
-- iphonesimulator10.0
-- macosx10.10
-- tvos9.0
-
-matrix:
-  exclude:
-    - xcode_scheme: PLIST-iOSTests
-      xcode_sdk: macosx10.10
-    - xcode_scheme: PLIST-iOSTests
-      xcode_sdk: tvos9.0
-    - xcode_scheme: JSON-iOSTests
-      xcode_sdk: macosx10.10
-    - xcode_scheme: JSON-iOSTests
-      xcode_sdk: tvos9.0
-    - xcode_scheme: PLIST-OSXTests
-      xcode_sdk: iphonesimulator10.0
-    - xcode_scheme: PLIST-OSXTests
-      xcode_sdk: tvos9.0
-    - xcode_scheme: JSON-OSXTests
-      xcode_sdk: iphonesimulator10.0
-    - xcode_scheme: JSON-OSXTests
-      xcode_sdk: tvos9.0
-    - xcode_scheme: PLIST-tvOSTests
-      xcode_sdk: iphonesimulator10.0
-    - xcode_scheme: PLIST-tvOSTests
-      xcode_sdk: macosx10.10
-    - xcode_scheme: JSON-tvOSTests
-      xcode_sdk: iphonesimulator10.0
-    - xcode_scheme: JSON-tvOSTests
-      xcode_sdk: macosx10.10
+script:
+    - xctool -workspace JSONModelKit.xcworkspace -scheme PLIST-iOSTests -sdk iphonesimulator10.3 run-tests
+    - xctool -workspace JSONModelKit.xcworkspace -scheme JSON-iOSTests -sdk iphonesimulator10.3 run-tests
