@@ -603,7 +603,6 @@
 					3A5AABA01D38DB3A0001D715 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
-						TestTargetID = 3A5AAB8A1D38DADD0001D715;
 					};
 				};
 			};
@@ -1029,28 +1028,24 @@
 		3A5AABA81D38DB3A0001D715 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "JSONModelKit-OSXTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-osx.JSONModelKit-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-OSX.app/Contents/MacOS/JSONModelKit-OSX";
 			};
 			name = Debug;
 		};
 		3A5AABA91D38DB3A0001D715 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "JSONModelKit-OSXTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-osx.JSONModelKit-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-OSX.app/Contents/MacOS/JSONModelKit-OSX";
 			};
 			name = Release;
 		};

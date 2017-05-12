@@ -603,12 +603,10 @@
 					3A3EF1E41D3D0D61003B0527 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
-						TestTargetID = 13C6E2E51D38606A000A0B4B;
 					};
 					3AA979FF1D3D10D600B8673D = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
-						TestTargetID = 13C6E2E51D38606A000A0B4B;
 					};
 				};
 			};
@@ -736,7 +734,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
 		};
 		3AA97A0A1D3D10DC00B8673D /* Rebuild Model PLIST */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -750,7 +748,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1 -f plist\n";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1 -f plist\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1019,33 +1017,28 @@
 		3A3EF1ED1D3D0D61003B0527 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-iOSTests-JSON/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-ios.JSONModelKit-iOSTests-JSON";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-iOS.app/JSONModelKit-iOS";
 			};
 			name = Debug;
 		};
 		3A3EF1EE1D3D0D61003B0527 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-iOSTests-JSON/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-ios.JSONModelKit-iOSTests-JSON";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-iOS.app/JSONModelKit-iOS";
 			};
 			name = Release;
 		};
 		3AA97A081D3D10D600B8673D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -1059,14 +1052,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-ios.JSONModelKit-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-iOS.app/JSONModelKit-iOS";
 			};
 			name = Debug;
 		};
 		3AA97A091D3D10D600B8673D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -1080,7 +1071,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit-ios.JSONModelKit-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-iOS.app/JSONModelKit-iOS";
 			};
 			name = Release;
 		};

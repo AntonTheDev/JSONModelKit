@@ -583,7 +583,6 @@
 					131FB1A41D397569008EE4FF = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
-						TestTargetID = 13C6E3031D386083000A0B4B;
 					};
 					13C6E3031D386083000A0B4B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -592,7 +591,6 @@
 					13C6E4041D3862F8000A0B4B = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
-						TestTargetID = 13C6E3031D386083000A0B4B;
 					};
 				};
 			};
@@ -719,7 +717,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping-JSON/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1";
 		};
 		13C6E5E51D386462000A0B4B /* Rebuild Model PLIST */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -733,7 +731,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR/\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1 -f plist";
+			shellScript = "SCRIPT_LOCATION=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\nPROJ_DIR=$PROJECT_DIR\nMAPPING_DIR=$PROJ_DIR/../../Tests/Mapping/\nMODEL_DIR=$PROJ_DIR/../../Tests/Model/\npython $SCRIPT_LOCATION -v 0.8 -i $MAPPING_DIR -o $MODEL_DIR -t 1 -f plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -881,26 +879,22 @@
 		131FB1AD1D397569008EE4FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-tvOS-JSON-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS-JSON-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-tvOS.app/JSONModelKit-tvOS";
 			};
 			name = Debug;
 		};
 		131FB1AE1D397569008EE4FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-tvOS-JSON-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOS-JSON-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-tvOS.app/JSONModelKit-tvOS";
 			};
 			name = Release;
 		};
@@ -1021,26 +1015,22 @@
 		13C6E40D1D3862F8000A0B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-tvOS.app/JSONModelKit-tvOS";
 			};
 			name = Debug;
 		};
 		13C6E40E1D3862F8000A0B4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "JSONModelKit-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.jsonmodelkit.JSONModelKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONModelKit-tvOS.app/JSONModelKit-tvOS";
 			};
 			name = Release;
 		};

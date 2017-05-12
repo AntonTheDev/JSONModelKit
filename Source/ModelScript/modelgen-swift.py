@@ -72,7 +72,8 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 		generate_file(internalClass, internalClassPath, True)
 		generate_file(externalClass, externalClassPath, False)
 
-	save_files_to_project(fullOutputDirectory, internal_file_names, external_file_names)
+	if testEnabled == 0:
+		save_files_to_project(fullOutputDirectory, internal_file_names, external_file_names)
 
 
 def save_files_to_project(project_directory, internal_file_names, external_file_names):
