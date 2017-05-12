@@ -16,28 +16,28 @@ xcode_sdk:
 - tvos9.0
 
 matrix:
-     exclude:
-           - xcode_scheme: PLIST-iOSTests
-             xcode_sdk: macosx10.10
-           - xcode_scheme: PLIST-iOSTests
-             xcode_sdk: tvos9.0
-           - xcode_scheme: JSON-iOSTests
-             xcode_sdk: macosx10.10
-           - xcode_scheme: JSON-iOSTests
-             xcode_sdk: tvos9.0
-           - xcode_scheme: PLIST-OSXTests
-             xcode_sdk: iphonesimulator10.0
-           - xcode_scheme: PLIST-OSXTests
-             xcode_sdk: tvos9.0
-           - xcode_scheme: JSON-OSXTests
-             xcode_sdk: iphonesimulator10.0
-           - xcode_scheme: JSON-OSXTests
-             xcode_sdk: tvos9.0
-           - xcode_scheme: PLIST-tvOSTests
-             xcode_sdk: iphonesimulator10.0
-           - xcode_scheme: PLIST-tvOSTests
-             xcode_sdk: macosx10.10
-           - xcode_scheme: JSON-tvOSTests
-             xcode_sdk: iphonesimulator10.0
-           - xcode_scheme: JSON-tvOSTests
-             xcode_sdk: macosx10.10
+  exclude:
+    - xcode_scheme: PLIST-iOSTests
+      xcode_sdk: macosx10.10
+    - xcode_scheme: PLIST-iOSTests
+      xcode_sdk: tvos9.0
+    - xcode_scheme: JSON-iOSTests
+      xcode_sdk: macosx10.10
+    - xcode_scheme: JSON-iOSTests
+      xcode_sdk: tvos9.0
+    - xcode_scheme: PLIST-OSXTests
+      xcode_sdk: iphonesimulator10.0
+    - xcode_scheme: PLIST-OSXTests
+      xcode_sdk: tvos9.0
+    - xcode_scheme: JSON-OSXTests
+      xcode_sdk: iphonesimulator10.0
+    - xcode_scheme: JSON-OSXTests
+      xcode_sdk: tvos9.0
+    - xcode_scheme: PLIST-tvOSTests
+      xcode_sdk: iphonesimulator10.0
+    - xcode_scheme: PLIST-tvOSTests
+      xcode_sdk: macosx10.10
+    - xcode_scheme: JSON-tvOSTests
+      xcode_sdk: iphonesimulator10.0
+    - xcode_scheme: JSON-tvOSTests
+      xcode_sdk: macosx10.10
