@@ -16,15 +16,15 @@ from instantiator import InstantiatorGenerator
 from validator 	import Validator
 from fileimporter import ProjectFileImporter
 from pbxproj import XcodeProject
-from keystroke_generator import KeystrokeGenerator
+#from keystroke_generator import KeystrokeGenerator
 
-from Quartz.CoreGraphics import CGEventCreateKeyboardEvent
-from Quartz.CoreGraphics import CGEventPost
+#from Quartz.CoreGraphics import CGEventCreateKeyboardEvent
+#from Quartz.CoreGraphics import CGEventPost
 
 # Python releases things automatically, using CFRelease will result in a scary error
 #from Quartz.CoreGraphics import CFRelease
 
-from Quartz.CoreGraphics import kCGHIDEventTap
+#from Quartz.CoreGraphics import kCGHIDEventTap
 
 # From http://stackoverflow.com/questions/281133/controlling-the-mouse-from-python-in-os-x
 # and from https://developer.apple.com/library/mac/documentation/Carbon/Reference/QuartzEventServicesRef/index.html#//apple_ref/c/func/CGEventCreateKeyboardEvent
