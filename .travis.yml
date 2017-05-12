@@ -4,7 +4,9 @@ before_install:
     - brew update
     - brew install xctool
 
+xcode_sdk:
+- iphonesimulator10.3
+
 xcode_workspace: JSONModelKit.xcworkspace
 script:
-    - xctool -workspace JSONModelKit.xcworkspace -scheme PLIST-iOSTests -sdk iphonesimulator10.3 run-tests
-    - xctool -workspace JSONModelKit.xcworkspace -scheme JSON-iOSTests -sdk iphonesimulator10.3 run-tests
+    - xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-iOSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
