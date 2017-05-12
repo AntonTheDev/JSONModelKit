@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode8.3
 before_install:
     - brew update
-    - brew install xctool --HEAD
+    - brew install xctool
 
 xcode_workspace: JSONModelKit.xcworkspace
 script:
