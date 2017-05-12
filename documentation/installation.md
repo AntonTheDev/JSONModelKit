@@ -1,5 +1,28 @@
 ## JSONModelKit - Installation
 
+###Add New Run Script Build Phase
+Navigate to the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” to add the script below. Adjust the order of the Build phases, and Move the script right below the "Target Dependencies" task. Ensure you are using the correct one for your preferred method of installation.
+
+**Carthage && CocoaPods**
+
+```
+	SCRIPT_LOC=$(find $SRCROOT -name modelgen-swift.py | head -n 1)
+
+	if [ ! -z $PODS_ROOT ]; then
+		SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
+		fi
+
+	python $SCRIPT_LOC -o $PROJECT_DIR
+```
+or
+
+**Manual Installation**
+
+```
+	SCRIPT_LOC=$PROJECT_DIR/Source/ModelScript/modelgen-swift.py
+	python $SCRIPT_LOC -o $PROJECT_DIR
+```
+
 #### CocoaPods
 
 1. Edit the project's podfile
@@ -11,17 +34,6 @@
 
 ```
 	pod install
-```
-3. Navigate to the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” to add the script below. Adjust the order of the Build phases, and Move the script right below the "Target Dependencies" task.
-
-```
-SCRIPT_LOC=$(find $SRCROOT -name modelgen-swift.py | head -n 1)
-
-if [ ! -z $PODS_ROOT ]; then
-		SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
-fi
-
-python $SCRIPT_LOC -o $PROJECT_DIR
 ```
 
 #### Carthage
@@ -41,30 +53,13 @@ The installation instruction below are a for OSX and iOS, follow the extra steps
 ```
 	$ carthage update
 ```
-
-3. Navigate to the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” to add the script below. Adjust the order of the Build phases, and Move the script right below the "Target Dependencies" task.
-
-```
-		SCRIPT_LOC=$(find $SRCROOT -name modelgen-swift.py | head -n 1)
-
-		if [ ! -z $PODS_ROOT ]; then
-				SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
-		fi
-
-		python $SCRIPT_LOC -o $PROJECT_DIR
-```
-
-##### iOS Installation
-
-1. Follow the installation instruction above. Once complete, perform the following steps
-(If you have setup a carthage build task for iOS already skip to Step 3)
-2. Navigate to the targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
+3. Navigate to the targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
 
 ```
 	/usr/local/bin/carthage copy-frameworks
 ```
 
-3. Add the paths to the frameworks you want to use under “Input Files” within the carthage build phase as follows e.g.:
+4. Add the paths to the frameworks you want to use under “Input Files” within the carthage build phase as follows e.g.:
 
 ```
 	$(SRCROOT)/Carthage/Build/iOS/JSONModelKit.framework
@@ -73,13 +68,11 @@ The installation instruction below are a for OSX and iOS, follow the extra steps
 
 #### Manual Install
 
-1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository
-2. Add the contents of the Source Directory to the project
-3. In the Project's Root Folder create a new folder that will contain all the mapping plist files
-4. In the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
+1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository, copy the Source Folder into your project's root directory, and add it to your project
+
+2. In the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
 
 ```
-	TBD
+	SCRIPT_LOC=$PROJECT_DIR/Source/ModelScript/modelgen-swift.py
+	python $SCRIPT_LOC -o $PROJECT_DIR
 ```
-
-4. Move the newly created Run Script phase to the second listing right below the "Target Dependencies" task

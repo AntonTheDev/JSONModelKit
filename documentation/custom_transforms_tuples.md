@@ -47,7 +47,6 @@ Now that we have created a transformer, let's create mapping for our business Ob
 
 After the creation of the mapping, perform a build **(⌘-B)**. The changes should be reflected accordingly in the internal `_Business.swift` class.
 
-
 ```
 import Foundation
 import US2MapperKit
@@ -60,9 +59,9 @@ class _Business {
  	required init() {...}
 
  	convenience init?(_ dictionary: Dictionary<String, Any>) {...}
-} 
+}
 ```
 
 After calling the fail-able initializer - or udpateWithDictionary method with a dictioanry representation - US2MapperKit will use the custom transformer to map the tuple accordingly.
 
-Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol. 
+Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol.

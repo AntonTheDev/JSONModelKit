@@ -9,9 +9,9 @@ NOTE: This is still in dev, should be released soon :)
 
 ## Introduction
 
-JSONModelKit is an an extremely lightweight mapping framework that follows an API-Driven approach to stream line development. JSONModelKit differs from other frameworks by taking an API-first focus by mapping against the response from the start. Once mapped JSONMapperKit will auto generate the model objects based on the definition, ready to to use and extend out of the box.
+JSONModelKit uses a JSON, or Plist, mapping file to generate flexible data models against API. JSONModelKit differs from mapping frameworks by taking an API-centric focus in mapping properties against the dictionary, and then it will generate the model objects, and automatically will idd it to your project based on the definition.
 
-By providing a single point of configuration, and driving the model definition against an API reponse, it makes it very easy to keep your model in sync with an API to streamline development.
+By providing a single point of configuration, and driving the model definition against a JSON dictionary.The benefits to this approach ensures that the model continuously stays in sync with the API in a single place, which then allows development effort to focus towards using MVVM, and Protocol Oriented Programming paradigms for maximum flexibility in the code base.
 
 ## Features
 
@@ -26,7 +26,7 @@ By providing a single point of configuration, and driving the model definition a
 
 ## Installation
 
-* **Requirements** : XCode 7.3+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
+* **Requirements** : XCode 8.0+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
 * [Installation Instructions](/documentation/installation.md)
 * [Release Notes](/documentation/changelog.md)
 
@@ -34,7 +34,7 @@ By providing a single point of configuration, and driving the model definition a
 
 - If you **found a bug**, or **have a feature request**, open an issue.
 - If you **need help** or a **general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/json-mapperkit). (tag 'json-mapperkit')
-- If you **want to contribute**, review the [Contribution Guidelines](/Documentation/CONTRIBUTING.md), and submit a pull request. 
+- If you **want to contribute**, review the [Contribution Guidelines](/Documentation/CONTRIBUTING.md), and submit a pull request.
 
 ## Basic Use
 
@@ -44,9 +44,10 @@ Once configured per the [Installation](/documentation/installation.md) instructi
 <img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/folder_structure.png?raw=true" width="378" height="134" />
 </p>
 
-All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory during build time. 
+All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory, and automatically added to your project during build time.
 
-Note: Anytime a new mapping is added, remove the reference to the Model group folder within your project, then drag and drop the Model folder into your project. This only needed to be done when a new Class is defined. If the mapping changes on an existing Class, all the updates will be reflected automatically without any manual intervention.
+**NOTE: Every time a new mapping configurations is added, the first build will always be canceled by Xcode, and will need to run again. This is due to the project file changing in the middle of a build, since a new file is added. If not new mapping is added, it will build as usual**
+
 
 #### Simple Example
 
@@ -62,7 +63,7 @@ Input File: JSOModelKit/Mappings/Business.json
 		"nonoptional" : "true"		 
 	},
 	"businessName" : {
-		"key" : "business_name",	
+		"key" : "business_name",
 		"type" : "String"			
 	},
 	"ratings" : {
@@ -71,14 +72,14 @@ Input File: JSOModelKit/Mappings/Business.json
 		"subtype" : "Float"			
 	},
 	"metaTags" : {
-		"key" : "metadata.tags",	
+		"key" : "metadata.tags",
 		"type" : "Array",			
 		"subtype" : "Float"			
 	},
 	"locations" : {
 		"key" : "locations",
 		"type" : "Array",			
-		"subtype" : "Coordinate"	
+		"subtype" : "Coordinate"
 	},
 	"dateOpened" : {
 		"key" : "grand_opening_date",		
@@ -88,7 +89,7 @@ Input File: JSOModelKit/Mappings/Business.json
 }
 
 ```
-Run the build script once **⌘+B**. and you will see that it generated the following files in the ourput directory.
+Run the build script once **⌘+B**. and you will see that it generated the following files in the output directory. This will also be reflected in the Project structure within the **Model** group
 
 <p align="center">
 <img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="414" height="206" />
@@ -101,26 +102,26 @@ Observe the internal file that was generated
 class _Business  {
 
 	var uuid : Double
-	
+
 	var metaTags : [Float]?
 	var ratings : [Float]?
 	var locations : [Coordinate]?
 	var dateOpened : Date?
 	var businessName : String?
-	
+
 	..........
-	
+
 	required init(uuid  _uuid : Double)  {
 		// Required init with all non-optionals defined
 	}
-	
+
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>) {
 		// Failable initializer, returns nil when any non-optional values is not defined
 	}
-	
+
 	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 		// Helper methods to updated an instance with a new dictionary of values
-	}	
+	}
 }
 
 ```

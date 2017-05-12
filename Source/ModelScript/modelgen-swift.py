@@ -7,6 +7,7 @@ import glob
 import commands
 import json
 import shutil
+import time
 
 sys.dont_write_bytecode = True
 
@@ -16,9 +17,6 @@ from validator 	import Validator
 from fileimporter import ProjectFileImporter
 from pbxproj import XcodeProject
 from keystroke_generator import KeystrokeGenerator
-
-
-import time
 
 from Quartz.CoreGraphics import CGEventCreateKeyboardEvent
 from Quartz.CoreGraphics import CGEventPost
@@ -213,9 +211,6 @@ def main(argv):
 	else:
    		mappinglist = glob.glob(mapdir + "*.plist")
    		generate_model(mappinglist, fullOutputDirectory, currentVersion, testEnabled, False, autoImport)
-
-   #print 'Input file is "', inputfile
-   #print 'Output file is "', outputfile
 
 if __name__ == "__main__":
    main(sys.argv[1:])
