@@ -66,10 +66,3 @@ $(SRCROOT)/Carthage/Build/iOS/JSONModelKit.framework
 ### Manual Install
 
 1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository, copy the Source Folder into your project's root directory, and add it to your project
-
-2. In the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
-
-```
-	SCRIPT_LOC=$PROJECT_DIR/Source/ModelScript/modelgen-swift.py
-	python $SCRIPT_LOC -o $PROJECT_DIR
-```
