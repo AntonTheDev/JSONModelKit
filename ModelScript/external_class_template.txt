@@ -1,5 +1,0 @@
-import Foundation
-{ TEST_IMPORT }
-class { CLASSNAME }  : _{ CLASSNAME } {
-	
-} 

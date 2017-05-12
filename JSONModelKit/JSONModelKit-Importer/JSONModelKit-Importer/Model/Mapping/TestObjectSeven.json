@@ -1,0 +1,13 @@
+{
+	"non_optionalArrayType" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_sub_object_array",
+		"type" : "Array",
+		"subtype" : "TestObjectFour"
+    },
+	"optionalArrayType" : {
+		"key" : "optional_sub_object_array",
+		"type" : "Array",
+		"subtype" : "TestObjectFour"
+	}
+}

@@ -2,7 +2,7 @@
 // UPDATE LISCENSE HERE
 
 import Foundation
-
+import JSONModelKit
 enum JMMapperClassEnum: String {
 	case _TestObjectEight 	= "TestObjectEight"
 	case _TestObjectEleven 	= "TestObjectEleven"

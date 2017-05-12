@@ -1,0 +1,39 @@
+{
+	"optionalUppercaseCompletionHandler" : {
+		"key" : [
+			"handler_type"
+		],
+		"transformer" : "JMExampleClosureTransformer",
+		"type" : "((_ value : String) -> String)"
+	},
+	"optionalLowercaseCompletionHandler" : {
+		"key" : [
+			"handler_type"
+		],
+		"transformer" : "JMExampleClosureTransformer",
+		"type" : "((_ value : String) -> String)"
+	},
+	"optionalStruct" : {
+		"key" : [
+			"string1",
+			"string2"
+		],
+		"transformer" : "JMExampleStructTransformer",
+		"type" : "StructExample"
+	},
+	"optionalTuple" : {
+		"key" : [
+			"value_one",
+			"value_two"
+		],
+		"transformer" : "JMExampleTupleTransformer",
+		"type" : "(val1 : Double, val2 : Double)"
+	},
+	"optionalEnum" : {
+		"key" : [
+			"enumValue"
+		],
+		"transformer" : "JMExampleEnumTransformer",
+		"type" : "EnumExample"
+	}
+}

@@ -7,9 +7,6 @@
    <Group
       location = "group:Source"
       name = "Source">
-      <FileRef
-         location = "group:../JSONModelKit/JSONModelKit-Importer/JSONModelKit-Importer.xcodeproj">
-      </FileRef>
       <Group
          location = "group:JSONModelKit"
          name = "JSONModelKit">

@@ -33,6 +33,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "13C6E2E51D38606A000A0B4B"
+            BuildableName = "JSONModelKit-iOS.app"
+            BlueprintName = "JSONModelKit-iOS"
+            ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -46,6 +55,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "13C6E2E51D38606A000A0B4B"
+            BuildableName = "JSONModelKit-iOS.app"
+            BlueprintName = "JSONModelKit-iOS"
+            ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -55,6 +74,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "13C6E2E51D38606A000A0B4B"
+            BuildableName = "JSONModelKit-iOS.app"
+            BlueprintName = "JSONModelKit-iOS"
+            ReferencedContainer = "container:JSONModelKit-iOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

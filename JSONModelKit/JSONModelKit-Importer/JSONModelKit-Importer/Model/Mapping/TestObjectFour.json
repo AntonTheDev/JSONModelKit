@@ -1,0 +1,61 @@
+{
+	"optionalString" : {
+		"key" : "optional_string",
+		"type" : "String",
+		"groups"  : ["update", "delete"]
+	},
+	"optionalBool" : {
+		"key" : "optional_bool",
+		"type" : "Bool",
+		"groups"  : ["update", "delete"]
+	},
+	"optionalFloat" : {
+		"key" : "optional_float",
+		"type" : "Float",
+		"groups"  : ["update", "delete"]
+	},
+	"optionalDouble" : {
+		"key" : "optional_double",
+		"type" : "Double",
+		"groups"  : ["update", "delete"]
+	},
+	"optionalInt" : {
+		"key" : "optional_int",
+		"type" : "Int",
+		"groups"  : ["update", "delete"]
+	},
+	"non_optionalString" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_string",
+		"default" : "Non-Optional Hello",
+        "type" : "String",
+        "groups"  : ["delete"]
+	},
+	"non_optionalBool" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_bool",
+		"default" : "true",
+        "type" : "Bool",
+        "groups"  : ["delete"]
+	},
+	"non_optionalFloat" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_float",
+		"default" : "60.0",
+        "type" : "Float",
+        "groups"  : ["delete"]
+	},
+	"non_optionalDouble" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_double",
+		"default" : "50.0",
+        "type" : "Double",
+        "groups"  : ["delete"]
+	},
+	"non_optionalInt" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_int",
+		"default" : "500",
+		"type" : "Int"
+	}
+}

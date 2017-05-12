@@ -1,0 +1,52 @@
+{
+	"optionalString" : {
+		"key" : "top_level_key.optional_string",
+		"type" : "String"
+	},
+	"optionalBool" : {
+		"key" : "top_level_key.optional_bool",
+		"type" : "Bool"
+	},
+	"non_optionalFloat" : {
+		"nonoptional" : "true",
+		"key" : "top_level_key.non_optional_float",
+		"default" : "60.0",
+		"type" : "Float"
+	},
+	"optionalDouble" : {
+		"key" : "top_level_key,optional_double",
+		"type" : "Double"
+	},
+	"non_optionalString" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_string",
+		"default" : "Non-Optional Hello",
+		"type" : "String"
+	},
+	"non_optionalDouble" : {
+		"nonoptional" : "true",
+		"key" : "top_level_key.non_optional_double",
+		"default" : "50.0",
+		"type" : "Double"
+	},
+	"non_optionalBool" : {
+		"nonoptional" : "true",
+		"key" : "top_level_key.non_optional_bool",
+		"default" : "true",
+		"type" : "Bool"
+	},
+	"optionalFloat" : {
+		"key" : "top_level_key.optional_float",
+		"type" : "Float"
+	},
+	"non_optionalInt" : {
+		"nonoptional" : "true",
+		"key" : "non_optional_int",
+		"default" : "500",
+		"type" : "Int"
+	},
+	"optionalInt" : {
+		"key" : "top_level_key.optional_int",
+		"type" : "Int"
+	}
+}

@@ -378,6 +378,7 @@ def main(argv):
    if fileformat == "json":
    	   	mappinglist = glob.glob(mapdir + "*.json") 
    		generate_model(mappinglist, classdir, currentVersion, testEnabled, True, autoImport)
+        print mappinglist
    else:
    		mappinglist = glob.glob(mapdir + "*.plist") 
    		generate_model(mappinglist, classdir, currentVersion, testEnabled, False, autoImport)
