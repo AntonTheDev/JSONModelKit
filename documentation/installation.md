@@ -22,7 +22,7 @@ SCRIPT_LOC=$PROJECT_DIR/Source/ModelScript/modelgen-swift.py
 python $SCRIPT_LOC -o $PROJECT_DIR
 ```
 
-#### CocoaPods
+### CocoaPods
 
 1. Edit the project's podfile
 
@@ -35,11 +35,9 @@ pod 'JSONModelKit', :git => 'https://github.com/AntonTheDev/JSONModelKit.git'
 pod install
 ```
 
-#### Carthage
+### Carthage
 
 The installation instruction below are a for OSX and iOS, follow the extra steps documented when installing for iOS.
-
-##### Installation
 
 1. Create/Update the Cartfile with with the following
 
@@ -65,7 +63,7 @@ $(SRCROOT)/Carthage/Build/iOS/JSONModelKit.framework
 ```
 
 
-#### Manual Install
+### Manual Install
 
 1. Clone the [JSONModelKit](https://github.com/AntonTheDev/JSONModelKit.git) repository, copy the Source Folder into your project's root directory, and add it to your project
 
