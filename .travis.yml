@@ -8,15 +8,9 @@ xcode_workspace: JSONModelKit.xcworkspace
 
 jobs:
   include:
-    - stage: iOS - JSON Mapping Configuration Tests
-      script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-iOSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
-    - stage: iOS - PLIST Mapping Configuration Tests
-      script:  xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-iOSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
-    - stage: tvOS - JSON Mapping Configuration Tests
-      script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-tvOSTests -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.2' test
-    - stage: tvOS - PLIST Mapping Configuration Tests
-      script:  xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-tvOSTests -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.2' test
-    - stage: OS X - JSON Mapping Configuration Tests
-      script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
-    - stage: OS X - PLIST Mapping Configuration Tests
-      script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-iOSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
+    - script:  xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-iOSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-tvOSTests -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.2' test
+    - script:  xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-tvOSTests -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.2' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
