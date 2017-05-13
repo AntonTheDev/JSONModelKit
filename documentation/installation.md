@@ -1,24 +1,10 @@
 ## JSONModelKit - Installation
 
 ### Add New Run Script Build Phase
-Navigate to the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” to add the script below. Adjust the order of the Build phases, and Move the script right below the "Target Dependencies" task. Ensure you are using the correct one for your preferred method of installation.
-
-**Carthage && CocoaPods**
+Navigate to the application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” to add the script below. Adjust the order of the Build phases, and Move the script right below the "Target Dependencies" task.
 
 ```
-SCRIPT_LOC=$(find $SRCROOT -name modelgen-swift.py | head -n 1)
-
-if [ ! -z $PODS_ROOT ]; then
-    SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
-fi
-
-python $SCRIPT_LOC -o $PROJECT_DIR
-```
-
-**Manual Installation**
-
-```
-SCRIPT_LOC=$PROJECT_DIR/Source/ModelScript/modelgen-swift.py
+SCRIPT_LOC=$(find $SRCROOT/.. -name modelgen-swift.py | head -n 1)
 python $SCRIPT_LOC -o $PROJECT_DIR
 ```
 
