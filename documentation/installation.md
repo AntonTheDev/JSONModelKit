@@ -9,7 +9,7 @@ Navigate to the application targets’ “Build Phases” settings tab, click th
 SCRIPT_LOC=$(find $SRCROOT -name modelgen-swift.py | head -n 1)
 
 if [ ! -z $PODS_ROOT ]; then
-	SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
+    SCRIPT_LOC=$(find ${PODS_ROOT} -name modelgen-swift.py | head -n 1)
 fi
 
 python $SCRIPT_LOC -o $PROJECT_DIR
