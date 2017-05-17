@@ -56,37 +56,31 @@ Let look as a simple mapping that defines a class below in JSON.
 Input File: JSOModelKit/Mappings/Business.json
 
 {
-	"uuid" : {						 
-		"key" : "identifier",		 
-		"type" : "Double",			 
-		"nonoptional" : "true"		 
-	},
-	"businessName" : {
-		"key" : "business_name",
-		"type" : "String"			
-	},
-	"ratings" : {
-		"key" : "ratings",
-		"type" : "Array",			
-		"subtype" : "Float"			
-	},
-	"metaTags" : {
-		"key" : "metadata.tags",
-		"type" : "Array",			
-		"subtype" : "Float"			
-	},
-	"locations" : {
-		"key" : "locations",
-		"type" : "Array",			
-		"subtype" : "Coordinate"
-	},
-	"dateOpened" : {
-		"key" : "grand_opening_date",		
-		"type" : "Date",					
-		"transformer" : "DateTransformer"
-	}
+    "uuid" : {
+        "key" : "identifier",
+        "type" : "Double",
+        "nonoptional" : "true"
+    },
+    "businessName" : {
+        "key" : "business_name",
+        "type" : "String"
+    },
+    "ratings" : {
+        "key" : "ratings",
+        "type" : "Array",
+        "subtype" : "Double"
+    },
+    "metaTags" : {
+        "key" : "metadata.tags",
+        "type" : "Array",
+        "subtype" : "String"
+    },
+    "open" : {
+        "key" : "open",
+        "type" : "Bool",
+        "default" : "0"
+    }
 }
-
 ```
 Run the build script once **⌘+B**. and you will see that it generated the following files in the output directory. This will also be reflected in the Project structure within the **Model** group
 
@@ -122,7 +116,6 @@ class _Business  {
 		// Helper methods to updated an instance with a new dictionary of values
 	}
 }
-
 ```
 
 Once a JSON response is received call the following method, and all the properties will be parsed and mapped accordingly.

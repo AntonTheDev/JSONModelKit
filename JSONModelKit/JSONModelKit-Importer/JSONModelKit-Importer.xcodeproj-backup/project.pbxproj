@@ -226,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				3A7851BF1EAA58D500826330 /* Application */,
-				8A4949CE8D4330A73606E211 /* Model */,
 			);
 			path = "JSONModelKit-Importer";
 			sourceTree = "<group>";
@@ -367,21 +366,6 @@
 				3AC446751EA98FE3003CA6C5 /* XCConfigurationList.py */,
 			);
 			path = pbxsections;
-			sourceTree = "<group>";
-		};
-		8A4949CE8D4330A73606E211 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B2A9422D98DFFD8C76662F14 /* Mapping */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		B2A9422D98DFFD8C76662F14 /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Mapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1798,6 +1782,31 @@
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iagd.flightlayout.JSONModelKit-Importer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2920,6 +2929,31 @@
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
+					"$(SRCROOT)/JSONModelKit-Importer/Model",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
 					"$(SRCROOT)/JSONModelKit-Importer/Model/Internal",
