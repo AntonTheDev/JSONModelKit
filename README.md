@@ -15,13 +15,13 @@ The benefits to this approach ensures that the model continuously stays in sync 
 ## Features
 
 - [X] Auto-Model Generation .json/.plists configuration files
-- [X] String, Int, Double, Float, Bool, Array, Dictionary
-- [X] Optional & Non-Optional Property Support:
-	* Native Types: String, Int, Double, Float, Bool, Array, Dictionary
-	* Collections Types: Array\<AnyObject\>, Dictionary\<String, AnyObject\>
+- [X] Optional & Non-Optional Property Mapping:
+	* String, Int, Double, Float, Bool, Array, Dictionary
+	* Collections Types: Array, Dictionary
 	* Structs, Enums, Closures, Tuples via Transformations
+- [X] Supports Nested Types
 - [X] Mapping Nested Values
-- [X] Predefined Default Values
+- [X] Predefine Default Values
 
 ## Installation
 
@@ -44,9 +44,6 @@ Once configured per the [Installation](/documentation/installation.md) instructi
 </p>
 
 All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory, and automatically added to your project during build time.
-
-**NOTE: Every time a new mapping configurations is added, the first build will always be canceled by Xcode, and will need to run again. This is due to the project file changing in the middle of a build, since a new file is added. If not new mapping is added, it will build as usual**
-
 
 #### Simple Example
 
@@ -83,6 +80,8 @@ Input File: JSOModelKit/Mappings/Business.json
 }
 ```
 Run the build script once **⌘+B**. and you will see that it generated the following files in the output directory. This will also be reflected in the Project structure within the **Model** group
+
+**NOTE: Every time a new mapping configurations is added, the first following will always be canceled by Xcode, and need to be run again. This is due to the project file changing in the middle of a build, since a new file is added. If no new mapping is added, it will build as usual**
 
 <p align="center">
 <img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="286" height="196" />
