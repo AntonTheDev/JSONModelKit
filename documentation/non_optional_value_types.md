@@ -14,7 +14,7 @@ Once the model mapping has been updated, perform a build **(⌘-B)**, and the ch
 
 ```
 import Foundation
-import US2MapperKit
+import JSONModelKit
 
 class _Business {
 
@@ -29,7 +29,7 @@ class _Business {
  	required init(_uuid : Double) {...}
 
  	convenience init?(_ dictionary: Dictionary<String, AnyObject>) {...}
-} 
+}
 ```
 
 Once the script has updated the internal file, the uuid property should be a non-optional property, and been added to the required initializer as an input parameter. In the case that the response dictionary does not contain a value for the uuid, the fail-able initializer will return nil.

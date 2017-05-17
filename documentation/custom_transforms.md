@@ -1,6 +1,6 @@
 ## Example - Custom Transformations
 
-To perform transformations of a single or multiple values, JSONModelKit provides the ability to map multiple values from a dictionary response, and process them using the `US2TransformerProtocol`. Currently all transformed output properties must be optional, and the script will error out with a description in the build log.
+To perform transformations of a single or multiple values, JSONModelKit provides the ability to map multiple values from a dictionary response, and process them using the `JMTransformerProtocol`. Currently all transformed output properties must be optional, and the script will error out with a description in the build log.
 
 ```
 public protocol JMTransformerProtocol {
@@ -30,25 +30,25 @@ let firstNameKey    = "first_name"
 let lastNameKey     = "last_name"
 
 public class FullNameValueTransformer : JMTransformerProtocol {
-    
+
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
         var fullNameString : String = ""
-        
+
         if let componentDictionary = inputValues as? Dictionary<String, String> {
-           
+
             if let firstName = componentDictionary[firstNameKey] {
                 fullNameString += firstName
             }
-            
+
             if fullNameString.isEmpty == false { fullNameString += " " }
-            
+
             if let lastName = componentDictionary[lastNameKey] {
                 fullNameString += lastName
             }
         }
-        
+
         if fullNameString.isEmpty { return nil }
-       
+
         return fullNameString
     }
 }
@@ -63,11 +63,11 @@ To implement the transformer as part of the model mapping, observe how the **key
 </p>
 <br/>
 
-Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol. 
+Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol.
 
 
 ### Compound Value Transformer
 
-Currently the only packaged trasnformer shipped with the framework is  the `US2CompoundValueTransformer` which takes in a dictionary of values per `US2TransformerProtocol`, and creates a compound output value from the values passed into it.
+Currently the only packaged trasnformer shipped with the framework is  the `JSONModelKitCompoundValueTransformer` which takes in a dictionary of values per `JMTransformerProtocol`, and creates a compound output value from the values passed into it.
 
 There is potential for more transformers to be added in future releases.

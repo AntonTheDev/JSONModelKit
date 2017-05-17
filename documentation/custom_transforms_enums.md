@@ -1,18 +1,18 @@
 ##Example - Enums Transformations
 
-As of version 0.2.0 of U2MapperKit, the ability to map enums via the `US2TransformerProtocol` as support was added. This ensures that we can return an a value of `Any` type. Let's look at a dictionary for a business object, and see how we can map an enum to represent the type business:
+To map enums use the `JMTransformerProtocol`. Let's look at a dictionary for a business object, and see how we can map an enum to represent the type of business:
 
 **Response Dictionary**
 
 ```
 {
 	'business_uuid'  	 	: 9223123456754775807,
-	'business_name'  		: 'UsTwo Restaurant',
+	'business_name'  		: 'NY Restaurant',
 	'business_type'			: 'Lounge'
 }
 ```
 
-Unlike the model objects, US2MapperKit does not autogenerate enums, due to the fact they would be uncustomizable. This would prevent the developer from using the many features Swift offers with enums. For the purposes of the example, let's assume that a business_type key value parsed can be 'Lounge', 'Dinner', and 'Coffee Shop'. First, create an enum to represent the business type for our custom Business Object:
+Unlike the model objects, JSONModelKit does not autogenerate enums, due to the fact they would be un-customizable. This would prevent the developer from using the many features Swift offers with enums. For the purposes of the example, let's assume that a business_type key value parsed can be 'Lounge', 'Dinner', and 'Coffee Shop'. First, create an enum to represent the business type for our custom Business Object:
 
 **Enum Definition**
 
@@ -22,16 +22,16 @@ enum BusinessType : Int {
 }
 ```
 
-Once we have defined a BusinessType enum, create a mapper that parses out the values from the response and return the BusinessType type enum value. 
+Once we have defined a BusinessType enum, create a mapper that parses out the values from the response and return the BusinessType type enum value.
 
-**US2ExampleCoordinateTransformer Implementation**
+**JSONModelKitCoordinateTransformer Implementation**
 
 ```
 let businessTypeKey    = "business_type"
 
-public class US2ExampleBusinessTypeTransformer : US2TransformerProtocol {
+public class JSONModelKitCoordinateTransformer : JMTransformerProtocol {
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
-        
+
         if let typeValue = inputValues![businessTypeKey] as? String {
             switch typeValue {
                 case "Lounge":
@@ -62,7 +62,7 @@ After the creation of the mapping, perform a build **(⌘-B)**. The changes shou
 
 ```
 import Foundation
-import US2MapperKit
+import JSONModelKit
 
 class _Business {
 	var uuid : Double?
@@ -72,10 +72,10 @@ class _Business {
  	required init() {...}
 
  	convenience init?(_ dictionary: Dictionary<String, Any>) {...}
-} 
+}
 
 ```
-After calling the fail-able initializer - or udpateWithDictionary method with a dictionary representation - US2MapperKit will use the custom transformer to map the enumerator accordingly.
+After calling the fail-able initializer - or udpateWithDictionary method with a dictionary representation - JSONModelKit will use the custom transformer to map the enumerator accordingly.
 
 
-Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol. 
+Note: The the keys defined in the property mapping correspond to the keys in the dictionary of values passed to the ` public func transformValues(inputValues : Dictionary<String, Any>?) -> Any?` method defined by the protocol.

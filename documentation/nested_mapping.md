@@ -1,6 +1,6 @@
 ##Example - Nested Mapping
 
-US2MapperKit supports nested mapping for added flexibility. When mapping against a Dictionary, **dot** notation can be used to reference values in the response. Observe the following response.
+JSONModelKit supports nested mapping for added flexibility. When mapping against a Dictionary, **dot** notation can be used to reference values in the response. Observe the following response.
 
 **Response Dictionary**
 
@@ -17,7 +17,7 @@ US2MapperKit supports nested mapping for added flexibility. When mapping against
 }
 ```
 
-Although the location in the dictionary is formatted to be handled as custom Location object, assume the need to directly assign the longitude and latitude, as properties of a Business object. 
+Although the location in the dictionary is formatted to be handled as custom Location object, assume the need to directly assign the longitude and latitude, as properties of a Business object.
 
 **Business.plist**
 <br/>
@@ -25,4 +25,4 @@ Although the location in the dictionary is formatted to be handled as custom Loc
 ![alt tag](/documentation/readme_assets/nested_mapping_example.png?raw=true)
 <br/>
 
-Using the **dot** notation per the example above one can map values as needed with ease. 
+Using the **dot** notation per the example above one can map values as needed with ease.

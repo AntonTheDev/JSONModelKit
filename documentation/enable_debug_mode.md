@@ -2,7 +2,7 @@
 
 It is not always feasible to know why a a fail-able initializer may have failed to parse a response. USMapperKit provides the ability to use a build-time flag to print out failures to the console.
 
-To enable Debug mode, add the  **-DUS2MAPPER_DEBUG** flag to the **Other Swift Flags** in your build settings.
+To enable Debug mode, add the  **-DJMMAPPER_DEBUG** flag to the **Other Swift Flags** in your build settings.
 
 <br>
 ![alt tag](/documentation/readme_assets/debug_flag.png?raw=true)
@@ -20,5 +20,4 @@ Response:
     "business_ratings"	: [ 5, 4, 5, 4 ];
     "business_open"		: 1;
 }]
-
 ```

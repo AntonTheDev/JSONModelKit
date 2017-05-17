@@ -15,24 +15,42 @@ JSONModelKit's support for mapping complete types allows for creating object typ
 		},					
 	'business_open'    	 : 1
 }
-
 ```
 
 First, create a model mapping for the Location object.
 
-**Location.plist**
-<br/>
+```
+Input File: JSOModelKit/Mappings/Location.json
 
-![alt tag](/documentation/readme_assets/location_plist.png?raw=true)
-<br/>
+{
+		"longitude" : {
+				"key" : "longitude",
+				"type" : "Double"
+		}
+    "latitude" : {
+        "key" : "latitude",
+        "type" : "Double"
+    }
+}
+```
 
 Once the model mapping for a location has generated a `Location` object, and it has been added to the project, update the Business object mapping by defining a location property typed as **Location**
 
-**Business.plist**
-<br/>
+```
+Input File: JSOModelKit/Mappings/Business.json
 
-![alt tag](/documentation/readme_assets/business_location_example.png?raw=true)
-<br/>
+{
+    "uuid" : { ... },
+    "businessName" : { ... },
+    "ratings" : { ... },
+    "metaTags" : { ... },
+    "open" : { ... }
+		"location" : {
+        "key" : "business_location",
+        "type" : "Location"
+    },
+}
+```
 
 
 When parsing the data for a `Business` object, JSONModelKit will create a `Location` instance, and will assign the resulting value to the location property of the `Business` instance before returning it :)
