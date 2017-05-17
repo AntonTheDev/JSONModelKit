@@ -37,13 +37,10 @@ The benefits to this approach ensures that the model continuously stays in sync 
 
 ## Basic Use
 
-Once configured per the [Installation](/documentation/installation.md) instructions, run the build script once **⌘+B**. Navigate to your project directory and notice that the script generated the following inside the base directory of your project.
+Once configured per the [Installation](/documentation/installation.md) instructions, run the build script once **⌘+B**. You will see the Model folder appears within your project.
 
-<p align="center">
-<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/folder_structure.png?raw=true" width="378" height="134" />
-</p>
 
-All JSON Mappings will go into the Mappings directory from this point forward, and your Classes will be generated into the Model directory, and automatically added to your project during build time.
+All JSON Mappings will go into the **Model/Mappings** directory, and your Classes will be generated into the Model directory, then automatically added to your project during build time.
 
 #### Simple Example
 
