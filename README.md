@@ -85,7 +85,7 @@ Input File: JSOModelKit/Mappings/Business.json
 Run the build script once **⌘+B**. and you will see that it generated the following files in the output directory. This will also be reflected in the Project structure within the **Model** group
 
 <p align="center">
-<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="414" height="206" />
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="286" height="196" />
 </p>
 
 
