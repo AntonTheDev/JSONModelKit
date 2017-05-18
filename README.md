@@ -78,7 +78,7 @@ Input File: JSOModelKit/Mappings/Business.json
 ```
 Run the build script once **⌘+B**. and you will see that it generated the following files in the output directory. This will also be reflected in the Project structure within the **Model** group
 
-**NOTE: Every time a new mapping configurations is added, the first following will always be canceled by Xcode, and need to be run again. This is due to the project file changing in the middle of a build, since a new file is added. If no new mapping is added, it will build as usual**
+**NOTE: Every time a new mapping configurations is added, the following build will always be canceled by Xcode, and needs to be run again. This is due to the project file changing in the middle of a build, since a new file is added. If no new mapping is added, it will build as usual**
 
 <p align="center">
 <img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/genrerated_folder_structure.png?raw=true" width="286" height="196" />

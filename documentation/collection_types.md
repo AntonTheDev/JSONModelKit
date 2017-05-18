@@ -33,6 +33,9 @@ Input File: JSOModelKit/Mappings/Business.json
     "open" : { ... }
 }
 ```
+<p align="center">
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/ratings_array_example.png?raw=true?raw=true" width="286" height="196" />
+</p>
 
 When parsing the data for a `Business` object, JSONModelKit will create a parsed ratings `Array<Double>`, and will assign the resulting value to the ratings property of the `Business` instance before returning it.
 
