@@ -1,4 +1,4 @@
-## Example - Collection Types
+## Collection Types
 JSONModelKit's support for mapping Dictionaries and Arrays when parsing a responses' collection values is quite easy. Let's assume in the example below that the business listing result returns an array of ratings, and we would like to store them as an Array<Int> type
 
 **Response Dictionary**
@@ -19,7 +19,7 @@ First, update a model mapping for the Business object by defining setting the **
 
 
 ```
-Input File: JSOModelKit/Mappings/Business.json
+JSON: JSONModelKit/Mappings/Business.json
 
 {
     "uuid" : { ... },
@@ -33,9 +33,18 @@ Input File: JSOModelKit/Mappings/Business.json
     "open" : { ... }
 }
 ```
-<p align="center">
-<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/ratings_array_example.png?raw=true?raw=true" width="286" height="196" />
+<table >
+  <tr bgcolor="#FF0000" width=400px>
+<p align="left">
+    PLIST: JSONModelKit/Mappings/Business.plist 
+</br></br>
+<img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/ratings_array_example.png?raw=true?raw=true" width="400" height="168" />
+
 </p>
+  </tr>
+<table> 
+
+</br>
 
 When parsing the data for a `Business` object, JSONModelKit will create a parsed ratings `Array<Double>`, and will assign the resulting value to the ratings property of the `Business` instance before returning it.
 
