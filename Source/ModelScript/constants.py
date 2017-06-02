@@ -20,13 +20,17 @@ class Const(object):
         raise TypeError
 
 class MappingKey(Const):
-	Key   			= "key"
-	Type 			= "type"
-	DefaultValue 	= "default"
-	NonOptional    	= "nonoptional"
-	Transformer    	= "transformer"
-	SubType      	= "subtype"
-	Groups      	= "groups"
+    Key   			    = "key"
+    Type 			    = "type"
+    DefaultValue 	    = "default"
+    NonOptional    	    = "nonoptional"
+    Attributes          = "attributes"
+    Transformer    	    = "transformer"
+    SubType      	    = "subtype"
+    Groups              = "groups"
+    ModelConfig         = "model_config"
+    ModelImport         = "import"
+    ModelBaseClass      = "extends"
 
 class Type(Const):
 	NativeTypes       = ["String", "Double", "Float", "Int", "Bool"]

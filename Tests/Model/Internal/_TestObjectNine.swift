@@ -1,13 +1,14 @@
 import Foundation
 
-class _TestObjectNine  {	
+
+class _TestObjectNine   {
 
 	var non_optionalArrayIntType : [Int]
     var non_optionalArrayDoubleType : [Double]
     var non_optionalArrayFloatType : [Float]
     var non_optionalArrayStringType : [String]
-	
-var optionalArrayDoubleType : [Double]?
+
+	var optionalArrayDoubleType : [Double]?
     var optionalArrayIntType : [Int]?
     var optionalArrayStringType : [String]?
     var optionalArrayFloatType : [Float]?
@@ -16,11 +17,11 @@ var optionalArrayDoubleType : [Double]?
     			  non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],
     			  non_optionalArrayFloatType  _non_optionalArrayFloatType : [Float],
     			  non_optionalArrayStringType  _non_optionalArrayStringType : [String])  {
- 	
-						non_optionalArrayIntType = _non_optionalArrayIntType
-    					non_optionalArrayDoubleType = _non_optionalArrayDoubleType
-    					non_optionalArrayFloatType = _non_optionalArrayFloatType
-    					non_optionalArrayStringType = _non_optionalArrayStringType
+
+			non_optionalArrayIntType = _non_optionalArrayIntType
+    		non_optionalArrayDoubleType = _non_optionalArrayDoubleType
+    		non_optionalArrayFloatType = _non_optionalArrayFloatType
+    		non_optionalArrayStringType = _non_optionalArrayStringType
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -28,8 +29,11 @@ var optionalArrayDoubleType : [Double]?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{
 			let temp_non_optionalArrayIntType : [Int] = typeCast(valuesDict["non_optionalArrayIntType"])!
     		let temp_non_optionalArrayDoubleType : [Double] = typeCast(valuesDict["non_optionalArrayDoubleType"])!
     		let temp_non_optionalArrayFloatType : [Float] = typeCast(valuesDict["non_optionalArrayFloatType"])!
@@ -38,8 +42,8 @@ var optionalArrayDoubleType : [Double]?
 			self.init(non_optionalArrayIntType : temp_non_optionalArrayIntType,
     			      non_optionalArrayDoubleType : temp_non_optionalArrayDoubleType,
     			      non_optionalArrayFloatType : temp_non_optionalArrayFloatType,
-    			      non_optionalArrayStringType : temp_non_optionalArrayStringType) 
-		
+    			      non_optionalArrayStringType : temp_non_optionalArrayStringType)
+
 			if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
 				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
@@ -66,8 +70,11 @@ var optionalArrayDoubleType : [Double]?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
 				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
@@ -100,6 +107,6 @@ var optionalArrayDoubleType : [Double]?
 				non_optionalArrayStringType = typeCast(unwrapped_non_optionalArrayStringType)! 
 			}
 
- 		} 
+ 		}
 	}
-} 
+}

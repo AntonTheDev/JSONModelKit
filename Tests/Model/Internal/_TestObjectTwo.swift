@@ -1,12 +1,13 @@
 import Foundation
 
-class _TestObjectTwo  {	
+
+class _TestObjectTwo   {
+
 
 	
 
-
 	required init()  {
- 	
+
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -14,11 +15,14 @@ class _TestObjectTwo  {
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
+		if let _ = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{
 
-			self.init() 
-		
+			self.init()
+
 			
 		} else {
 			return nil
@@ -30,10 +34,13 @@ class _TestObjectTwo  {
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let _ = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let _ = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			
 			
- 		} 
+ 		}
 	}
-} 
+}

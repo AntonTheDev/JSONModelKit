@@ -1,14 +1,15 @@
 import Foundation
 
-class _TestObjectTwelve  {	
+
+class _TestObjectTwelve   {
 
 	var non_optionalBool : Bool
     var non_optionalString : String
     var non_optionalInt : Int
     var non_optionalDouble : Double
     var non_optionalFloat : Float
-	
-var optionalBool : Bool?
+
+	var optionalBool : Bool?
     var optionalString : String?
     var optionalInt : Int?
     var optionalDouble : Double?
@@ -19,12 +20,12 @@ var optionalBool : Bool?
     			  non_optionalInt  _non_optionalInt : Int,
     			  non_optionalDouble  _non_optionalDouble : Double,
     			  non_optionalFloat  _non_optionalFloat : Float)  {
- 	
-						non_optionalBool = _non_optionalBool
-    					non_optionalString = _non_optionalString
-    					non_optionalInt = _non_optionalInt
-    					non_optionalDouble = _non_optionalDouble
-    					non_optionalFloat = _non_optionalFloat
+
+			non_optionalBool = _non_optionalBool
+    		non_optionalString = _non_optionalString
+    		non_optionalInt = _non_optionalInt
+    		non_optionalDouble = _non_optionalDouble
+    		non_optionalFloat = _non_optionalFloat
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -32,8 +33,11 @@ var optionalBool : Bool?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{
 			let temp_non_optionalBool : Bool = typeCast(valuesDict["non_optionalBool"])!
     		let temp_non_optionalString : String = typeCast(valuesDict["non_optionalString"])!
     		let temp_non_optionalInt : Int = typeCast(valuesDict["non_optionalInt"])!
@@ -44,8 +48,8 @@ var optionalBool : Bool?
     			      non_optionalString : temp_non_optionalString,
     			      non_optionalInt : temp_non_optionalInt,
     			      non_optionalDouble : temp_non_optionalDouble,
-    			      non_optionalFloat : temp_non_optionalFloat) 
-		
+    			      non_optionalFloat : temp_non_optionalFloat)
+
 			if let unwrapped_optionalBool : Any = valuesDict["optionalBool"]  { 
 				optionalBool = typeCast(unwrapped_optionalBool)! 
 			}
@@ -76,8 +80,11 @@ var optionalBool : Bool?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			if let unwrapped_optionalBool : Any = valuesDict["optionalBool"]  { 
 				optionalBool = typeCast(unwrapped_optionalBool)! 
 			}
@@ -118,6 +125,6 @@ var optionalBool : Bool?
 				non_optionalFloat = typeCast(unwrapped_non_optionalFloat)! 
 			}
 
- 		} 
+ 		}
 	}
-} 
+}

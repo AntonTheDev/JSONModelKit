@@ -1,12 +1,12 @@
-import Foundation
+import Foundation{ BASE_CLASS_LIBRARY_IMPORT }
 { TEST_IMPORT }
-class _{ CLASSNAME }  {	
+class _{ CLASSNAME }  { BASE_CLASS } {
 { NONOPTIONALS }
-	
+
 { OPTIONALS }
 
 	required init({ REQUIRED_INIT_PARAMS })  {
- 	{ REQUIRED_INIT_SETTERS }
+{ REQUIRED_INIT_SETTERS }
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -14,11 +14,14 @@ class _{ CLASSNAME }  {
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			{ FAILABLE_INIT_TEMP_NONOPTIONALS }
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{{ FAILABLE_INIT_TEMP_NONOPTIONALS }
 
-			self.init({ SELF_NONOPTIONALS_INIT }) 
-		
+			self.init({ SELF_NONOPTIONALS_INIT })
+
 			{ OPTIONALS_UNWRAP }
 		} else {
 			return nil
@@ -30,10 +33,13 @@ class _{ CLASSNAME }  {
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			{ OPTIONALS_UNWRAP }
 			{ NONOPTIONALS_UNWRAP }
- 		} 
+ 		}
 	}
-} 
+}

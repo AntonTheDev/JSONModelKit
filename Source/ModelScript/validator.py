@@ -13,21 +13,25 @@ from constants import Type
 from constants import MappingKey
 
 class Validator:
-   
+
    def __init__(self, classname, mapping):
       self.classname = classname
       self.mapping = mapping
 
    def validateMapping(self):
+      # self.mapping.pop(MappingKey.ModelConfig, None)
+
       for propertyKey in self.mapping.keys():
+         if propertyKey == MappingKey.ModelConfig:
+             continue
          if MappingKey.Type not in self.mapping[propertyKey].keys():
             if MappingKey.Transformer not in self.mapping[propertyKey].keys():
                self.throw_missing_type_error(MappingKey.Transformer, self.mapping[propertyKey])
-         
+
          if MappingKey.Key not in self.mapping[propertyKey].keys():
             if MappingKey.Transformer not in self.mapping[propertyKey].keys():
                self.throw_missing_json_key_error(MappingKey.MappingKey, self.mapping[propertyKey])
-            
+
             else:
                propertyType = self.mapping[propertyKey][MappingKey.Key]
                if xcode_version() == 6.0 and propertyType not in Type.NativeTypes:
@@ -55,4 +59,3 @@ class Validator:
       print "Mapping : \t\t"
       print mapping
       print "\r\n"
-

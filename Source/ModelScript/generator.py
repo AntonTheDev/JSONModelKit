@@ -23,13 +23,15 @@ class ClassGenerator:
       self.version = version
       self.testEnabled = testEnabled
       self.jsonFormatEnabled = jsonFormatEnabled
-      
+
    def internalGeneratedClass(self):
       propertyMappings = self.propertyMappingsArray()
-      
+
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
-      fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))   
+      fileString = str.replace(fileString, "{ BASE_CLASS_LIBRARY_IMPORT }",         self.base_class_imports(propertyMappings))
+      fileString = str.replace(fileString, "{ BASE_CLASS }",                        self.base_class_extention(propertyMappings))
+      fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))
       fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(propertyMappings))
       fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(propertyMappings))
       fileString = str.replace(fileString, "{ REQUIRED_INIT_SETTERS }",             self.required_init_properties_setters_string(propertyMappings))
@@ -37,12 +39,12 @@ class ClassGenerator:
       fileString = str.replace(fileString, "{ SELF_NONOPTIONALS_INIT }",            self.non_optional_self_init_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
-   
+
       nonOptionalArray = self.filtered_mappings(propertyMappings, True)
-    
+
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
- 
-      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
+
+      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)
 
       if len(nonOptionalArray) == 0:
          fileString = str.replace(fileString, "let valuesDict", "let _")
@@ -53,34 +55,62 @@ class ClassGenerator:
       path =  self.baseTemplate(self.getPathForFile("external_class_template.txt"))
       return path
 
+
+   '''
+   Replaces { BASE_CLASS_LIBRARY_IMPORT } in the template
+   '''
+   def base_class_imports(self, propertyMappings):
+
+      baseClassString = ""
+
+      if MappingKey.ModelConfig in propertyMappings.keys():
+          if MappingKey.ModelImport in propertyMappings[MappingKey.ModelConfig].keys():
+               for lib in propertyMappings[MappingKey.ModelConfig][MappingKey.ModelImport]:
+                   baseClassString = baseClassString + '\n' + 'import ' + str(lib)
+
+      return baseClassString
+
+   '''
+   Replaces { BASE_CLASS } in the template
+   '''
+   def base_class_extention(self, propertyMappings):
+
+      baseClassString = ""
+
+      if MappingKey.ModelConfig in propertyMappings.keys():
+          if MappingKey.ModelBaseClass in propertyMappings[MappingKey.ModelConfig].keys():
+               baseClassString = ": " + str(propertyMappings[MappingKey.ModelConfig][MappingKey.ModelBaseClass])
+
+      return baseClassString
+
    '''
    Replaces { OPTIONALS } in the template
    '''
    def optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "var propertyname : datatype?"
-      arrayTemplate        = "var propertyname : [datatype]?"
-      dictionatyTemplate   = "var propertyname : [String : datatype]?"
-      
+      valueTemplate        = "attributes var propertyname : datatype?"
+      arrayTemplate        = "attributes var propertyname : [datatype]?"
+      dictionatyTemplate   = "attributes var propertyname : [String : datatype]?"
+
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, True)
-      return self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " ) 
+      return "\t" + self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " )
 
 
    '''
    Replaces { NONOPTIONALS } in the template
    '''
    def non_optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "var propertyname : datatype"
-      arrayTemplate        = "var propertyname : [datatype]"
-      dictionatyTemplate   = "var propertyname : [String : datatype]"
-      
+      valueTemplate        = "attributes var propertyname : datatype"
+      arrayTemplate        = "attributes var propertyname : [datatype]"
+      dictionatyTemplate   = "attributes var propertyname : [String : datatype]"
+
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
 
       if len(filteredMappings) == 0 :
          return ""
 
-      return "\r\n\t" +  self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " )  
+      return "\r\n\t" +  self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " )
 
 
    '''
@@ -90,10 +120,10 @@ class ClassGenerator:
       valueTemplate        = "propertyname  _propertyname : datatype"
       arrayTemplate        = "propertyname  _propertyname : [datatype]"
       dictionatyTemplate   = "propertyname  _propertyname : [String : datatype]"
-      
+
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t  ", ",\r\n    " ) 
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t  ", ",\r\n    " )
 
 
    '''
@@ -101,14 +131,14 @@ class ClassGenerator:
    '''
    def required_init_properties_setters_string(self, propertyMappings):
       valueTemplate      = "propertyname = _propertyname"
-      
+
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
-      
+
       if len(filteredMappings) == 0 :
          return ""
-      
-      return "\r\n\t" + self.generate_template_string(filteredMappings, templateArray, False,  "\t\t\t\t\t", "\r\n    " )
+
+      return "\r\n\t" + self.generate_template_string(filteredMappings, templateArray, False,  "\t\t", "\r\n    " )
 
 
    '''
@@ -118,14 +148,14 @@ class ClassGenerator:
       valueTemplate        = "let temp_propertyname : datatype = typeCast(valuesDict[\"propertyname\"])!"
       arrayTemplate        = "let temp_propertyname : [datatype] = typeCast(valuesDict[\"propertyname\"])!"
       dictionatyTemplate   = "let temp_propertyname : [String : datatype] = typeCast(valuesDict[\"propertyname\"])!"
-      
+
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
-      
+
       if len(filteredMappings) == 0 :
          return ""
 
-      return "\r\n\t\t\t" + self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )  
+      return "\r\n\t\t\t" + self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
 
 
    '''
@@ -136,7 +166,7 @@ class ClassGenerator:
 
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t\t     ", "\r\n    " )  
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t\t     ", "\r\n    " )
 
 
    '''
@@ -147,7 +177,7 @@ class ClassGenerator:
 
       templateArray     = [valueTemplate, valueTemplate, valueTemplate]
       filteredMappings  = self.filtered_mappings(propertyMappings, False)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t      ", ",\r\n    " )  
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t      ", ",\r\n    " )
 
 
    '''
@@ -160,7 +190,7 @@ class ClassGenerator:
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, True)
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
 
 
    '''
@@ -172,7 +202,7 @@ class ClassGenerator:
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
 
-      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )   
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
 
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
@@ -182,35 +212,39 @@ class ClassGenerator:
       propertyString = ""
 
       for propertyKey in propertyMappings.keys():
-         
+
          propertyMapping = propertyMappings[propertyKey]
-         propertyType = propertyMapping[MappingKey.Type]
+         propertyType = str(propertyMapping[MappingKey.Type])
          isMappingOptional = self.is_property_mapping_optional(propertyMapping)
-         
+
          templateValues = {}
          templateValues["propertyname"] = propertyKey
          templateValues["datatype"] = propertyType
-         
+         templateValues["attributes "] = ''
+
+         if MappingKey.Attributes in propertyMapping.keys():
+             templateValues["attributes "] = str(propertyMapping[MappingKey.Attributes]) + ' '
+
          templateIndex = 0
 
          if skipInitialIndentation == False or propertyString != "":
             propertyString += indentation
 
          if propertyType in Type.CollectionTypes:
-            templateValues["datatype"] = propertyMapping[MappingKey.SubType]
-               
+            templateValues["datatype"] = str(propertyMapping[MappingKey.SubType])
+
             if propertyType == Type.ArrayType:
                templateIndex = 1
             elif propertyType == Type.DictionaryType:
                templateIndex = 2
-            
+
          propertyString += self.dictionaryValueString(templateArray[templateIndex], templateValues)
 
          if propertyMappings.keys().index(propertyKey) <= len(propertyMappings.keys()) - 2:
             propertyString += carriageString
          else:
             propertyString += ""
-            
+
       return propertyString
 
 
@@ -222,7 +256,7 @@ class ClassGenerator:
 
 
    def dictionaryValueString(self, templateString, dictionaryValues):
-      renderedString = templateString  
+      renderedString = templateString
 
       for key in dictionaryValues.keys():
          renderedString = str.replace(renderedString, key, str(dictionaryValues[key]))
@@ -233,7 +267,7 @@ class ClassGenerator:
    def propertyMappingsArray(self):
       if self.jsonFormatEnabled:
          return json.load(open(self.mappingPath))
-      else: 
+      else:
          return plistlib.readPlist(self.mappingPath)
 
 
@@ -241,10 +275,15 @@ class ClassGenerator:
       filteredMappings = {}
 
       for propertyKey in propertyMappings.keys():
-         propertyMapping = propertyMappings[propertyKey]
-         
-         if self.is_property_mapping_optional(propertyMapping) == optional:
-            filteredMappings[propertyKey] = propertyMapping
+          propertyMapping = propertyMappings[propertyKey]
+
+          if MappingKey.ModelConfig == propertyKey:
+
+              # print(propertyMapping)
+              continue
+
+          if self.is_property_mapping_optional(propertyMapping) == optional:
+               filteredMappings[propertyKey] = propertyMapping
 
       return filteredMappings
 
@@ -253,20 +292,16 @@ class ClassGenerator:
       return str.replace(os.path.abspath(__file__), "generator.py", fileName)
 
    def baseTemplate(self, path):
+      propertyMappings  = self.propertyMappingsArray()
 
-      propertyMappings = self.propertyMappingsArray()
-      
-      fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')   
-
+      fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
-     
+
       if self.testEnabled == 0:
-         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit\r\n") 
+          fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit\r\n")
       else:
-         fileString = str.replace(fileString,  "{ TEST_IMPORT }", "")
-        
-      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)  
+          fileString = str.replace(fileString,  "{ TEST_IMPORT }", '\n')
+
+      fileString = str.replace(fileString, "{ CLASSNAME }",  classname)
 
       return fileString
-
-

@@ -1,13 +1,14 @@
 import Foundation
 
-class _TestObjectTen  {	
+
+class _TestObjectTen   {
 
 	var non_optionalDictionaryIntType : [String : Int]
     var non_optionalDictionaryDoubleType : [String : Double]
     var non_optionalDictionaryFloatType : [String : Float]
     var non_optionalDictionaryStringType : [String : String]
-	
-var optionalDictionaryIntType : [String : Int]?
+
+	var optionalDictionaryIntType : [String : Int]?
     var optionalDictionaryDoubleType : [String : Double]?
     var optionalDictionaryFloatType : [String : Float]?
     var optionalDictionaryStringType : [String : String]?
@@ -16,11 +17,11 @@ var optionalDictionaryIntType : [String : Int]?
     			  non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],
     			  non_optionalDictionaryFloatType  _non_optionalDictionaryFloatType : [String : Float],
     			  non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String])  {
- 	
-						non_optionalDictionaryIntType = _non_optionalDictionaryIntType
-    					non_optionalDictionaryDoubleType = _non_optionalDictionaryDoubleType
-    					non_optionalDictionaryFloatType = _non_optionalDictionaryFloatType
-    					non_optionalDictionaryStringType = _non_optionalDictionaryStringType
+
+			non_optionalDictionaryIntType = _non_optionalDictionaryIntType
+    		non_optionalDictionaryDoubleType = _non_optionalDictionaryDoubleType
+    		non_optionalDictionaryFloatType = _non_optionalDictionaryFloatType
+    		non_optionalDictionaryStringType = _non_optionalDictionaryStringType
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -28,8 +29,11 @@ var optionalDictionaryIntType : [String : Int]?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{
 			let temp_non_optionalDictionaryIntType : [String : Int] = typeCast(valuesDict["non_optionalDictionaryIntType"])!
     		let temp_non_optionalDictionaryDoubleType : [String : Double] = typeCast(valuesDict["non_optionalDictionaryDoubleType"])!
     		let temp_non_optionalDictionaryFloatType : [String : Float] = typeCast(valuesDict["non_optionalDictionaryFloatType"])!
@@ -38,8 +42,8 @@ var optionalDictionaryIntType : [String : Int]?
 			self.init(non_optionalDictionaryIntType : temp_non_optionalDictionaryIntType,
     			      non_optionalDictionaryDoubleType : temp_non_optionalDictionaryDoubleType,
     			      non_optionalDictionaryFloatType : temp_non_optionalDictionaryFloatType,
-    			      non_optionalDictionaryStringType : temp_non_optionalDictionaryStringType) 
-		
+    			      non_optionalDictionaryStringType : temp_non_optionalDictionaryStringType)
+
 			if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
 				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
@@ -66,8 +70,11 @@ var optionalDictionaryIntType : [String : Int]?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
 				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
@@ -100,6 +107,6 @@ var optionalDictionaryIntType : [String : Int]?
 				non_optionalDictionaryStringType = typeCast(unwrapped_non_optionalDictionaryStringType)! 
 			}
 
- 		} 
+ 		}
 	}
-} 
+}

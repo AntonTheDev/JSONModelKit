@@ -1,15 +1,19 @@
 {
-	"optionalDictionaryType" : {
-		"key" : "optional_sub_object_dictionary",
-		"type" : "Dictionary",
-        "subtype" : "TestObjectFour",
-        "groups"  : ["delete"]
-	},
-	"non_optionalDictionaryType" : {
-		"nonoptional" : "true",
-		"key" : "non_optional_sub_object_dictionary",
-		"type" : "Dictionary",
-        "subtype" : "TestObjectFour",
-        "groups"  : ["delete"]
-	}
+    "optionalDictionaryType": {
+        "key": "optional_sub_object_dictionary",
+        "type": "Dictionary",
+        "subtype": "TestObjectFour",
+        "groups": ["delete"]
+    },
+    "non_optionalDictionaryType": {
+        "nonoptional": "true",
+        "key": "non_optional_sub_object_dictionary",
+        "type": "Dictionary",
+        "subtype": "TestObjectFour",
+        "groups": ["delete"],
+        "attributes" : "@objc"
+    },
+    "model_config" : {
+        "extends" : "NSObject"
+    }
 }

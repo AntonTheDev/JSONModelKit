@@ -51,30 +51,30 @@ let nativeDataTypes      = [JMDataTypeString, JMDataTypeInt, JMDataTypeDouble, J
 let collectionTypes      = [JMDataTypeArray, JMDataTypeDictionary]
 
 final public class JSONModelKit {
-    
+
     public class func mapValues(from dictionary : Dictionary<String, AnyObject>, forType classType : String , employing instantiator : JMInstantiatorProtocol, defaultsEnabled : Bool) -> Dictionary<String, Any>? {
 
         if let mappingConfiguration = retrieveMappingConfiguration(classType) {
-       
+
             // Dictionary to store parsed values to be returned
             var retrievedValueDictionary = Dictionary<String, Any>()
-            
+
             for (propertyKey, propertyMapping) in mappingConfiguration {
                 retrievedValueDictionary[propertyKey] = Parser.retrieveValue(from : dictionary, applying : propertyMapping, employing : instantiator, defaultsEnabled : defaultsEnabled)
             }
-            
+
             if defaultsEnabled == false {
                 return retrievedValueDictionary
             }
-            
+
             if Validator.validateResponse(forValues: retrievedValueDictionary, mappedTo : mappingConfiguration, forType : classType, withData : dictionary) {
                 return retrievedValueDictionary
             }
         }
-        
+
         return nil
     }
-    
+
     class func retrieveMappingConfiguration(_ className : String) -> Dictionary<String, Dictionary<String, AnyObject>>? {
         if let mappingconfiguration = propertyMappings[className] {
             return mappingconfiguration
@@ -84,30 +84,29 @@ final public class JSONModelKit {
                     let jsonData = try Data(contentsOf: URL(fileURLWithPath: mappingPath), options: NSData.ReadingOptions.mappedIfSafe)
                     do {
                         let jsonMapping: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                        
+
                         if let mapping = jsonMapping as? Dictionary<String, Dictionary<String, AnyObject>> {
-                           
+
                             if mapping.keys.count > 0 {
                                 propertyMappings[className] = mapping
                                 return mapping
                             }
                         }
-                        
+
                         return nil
                     } catch {}
                 } catch {}
 
             } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
-                
+
                 if tempMapping!.isEmpty { return nil }
-                
+
                 propertyMappings[className] = tempMapping
                 return tempMapping!
             }
-            
+
             return nil
         }
     }
 }
-

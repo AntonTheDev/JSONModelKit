@@ -1,14 +1,15 @@
 import Foundation
 
-class _TestObjectSix  {	
+
+class _TestObjectSix   {
 
 	var non_optionalCompoundString : String
-	
-var optionalCompoundString : String?
+
+	var optionalCompoundString : String?
 
 	required init(non_optionalCompoundString  _non_optionalCompoundString : String)  {
- 	
-						non_optionalCompoundString = _non_optionalCompoundString
+
+			non_optionalCompoundString = _non_optionalCompoundString
 	}
 
 	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -16,12 +17,15 @@ var optionalCompoundString : String?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : true) {
-			
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : true)
+		{
 			let temp_non_optionalCompoundString : String = typeCast(valuesDict["non_optionalCompoundString"])!
 
-			self.init(non_optionalCompoundString : temp_non_optionalCompoundString) 
-		
+			self.init(non_optionalCompoundString : temp_non_optionalCompoundString)
+
 			if let unwrapped_optionalCompoundString : Any = valuesDict["optionalCompoundString"]  { 
 				optionalCompoundString = typeCast(unwrapped_optionalCompoundString)! 
 			}
@@ -36,8 +40,11 @@ var optionalCompoundString : String?
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
 
-		if let valuesDict = JSONModelKit.mapValues(from: dictionary, forType: className!, employing: JMInstantiator.sharedInstance, defaultsEnabled : false) {
-
+		if let valuesDict = JSONModelKit.mapValues(from: dictionary,
+												   forType: className!,
+												   employing: JMInstantiator.sharedInstance,
+												   defaultsEnabled : false)
+		{
 			if let unwrapped_optionalCompoundString : Any = valuesDict["optionalCompoundString"]  { 
 				optionalCompoundString = typeCast(unwrapped_optionalCompoundString)! 
 			}
@@ -46,6 +53,6 @@ var optionalCompoundString : String?
 				non_optionalCompoundString = typeCast(unwrapped_non_optionalCompoundString)! 
 			}
 
- 		} 
+ 		}
 	}
-} 
+}

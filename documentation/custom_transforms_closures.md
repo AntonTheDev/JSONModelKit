@@ -23,7 +23,7 @@ import UIKit
 let facebookIDKey = "facebook_id"
 let yelpIDKey     = "yelp_id"
 
-public class JSONModelKitSocialClosureTransformer : US2TransformerProtocol {
+public class JSONModelKitSocialClosureTransformer : JMTransformerProtocol {
 
     public func transformValues(inputValues : Dictionary<String, Any>?) -> Any? {
 
