@@ -1,5 +1,5 @@
 
-[![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos-lightgrey.svg)](https://github.com/AntonTheDev/JSONModelKit/)
+[![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchOS-lightgrey.svg)](https://github.com/AntonTheDev/JSONModelKit/)
 [![Cocoapods Compatible](https://img.shields.io/badge/pod-1.0.0rc1-blue.svg)](https://cocoapods.org/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/AntonTheDev/JSONModelKit.svg?branch=dev)](https://travis-ci.org/AntonTheDev/JSONModelKit)
@@ -8,7 +8,7 @@
 
 # JSONModelKit
 
-JSONModelKit is an API centric mapping framework that uses, JSON or Plist, mapping files to define a model against an arbitrary dictionary. At build time, the library will generate the model files based on the definitions, and add them to the project automatically, or update any existing files. 
+JSONModelKit is an API centric mapping framework that uses, JSON or Plist, mapping files to define a model against an arbitrary dictionary. At build time, the library will generate the model files based on the definitions, and add them to the project automatically, or update any existing files.
 
 By reducing the focus on the model layer itself, and keeping it continuously in sync with an API response in a single place, we can now treat the model as just a "data bucket", and extend it as needed. It comes really handy when implementing MVVM as part of a project's architecture, as it basically reduces the model(s) to ingestible wrapper(s) around dictionary data.
 
