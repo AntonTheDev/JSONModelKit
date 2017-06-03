@@ -8,7 +8,7 @@
 
 # JSONModelKit
 
-JSONModelKit is an API centric mapping framework that uses, JSON or Plist, mapping files to define a model against an arbitrary dictionary. At build time, the library will generate the model files based in the definitions, and add them to the project automatically, or update any existing files. By reducing the focus on the model layer itself, and keeping it continuously in sync with an API response in a single place, we can now treat the model as just a "data bucket", and extend it as needed. It comes especially hand when implementing MVVM in a project's architecture, as it basically reduces the model(s) to an ingestible wrapper(s) around dictionary data.
+JSONModelKit is an API centric mapping framework that uses, JSON or Plist, mapping files to define a model against an arbitrary dictionary. At build time, the library will generate the model files based in the definitions, and add them to the project automatically, or update any existing files. By reducing the focus on the model layer itself, and keeping it continuously in sync with an API response in a single place, we can now treat the model as just a "data bucket", and extend it as needed. It comes really handy when implementing MVVM as part of a project's architecture, as it basically reduces the model(s) to an ingestible wrapper(s) around dictionary data.
 
 ## Features
 
