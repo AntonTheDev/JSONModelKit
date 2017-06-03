@@ -4,7 +4,7 @@ A closure is mapped by using a custom transformer implementing the `JMTransforme
 
 **Response Dictionary**
 
-```
+```swift
 {
 	'business_uuid'  	 				: 9223123456754775807,
 	'business_name'  					: 'Somewhere Epic',
@@ -16,7 +16,7 @@ Let's create a mapper that parses out the values from the response which, based 
 
 **JSONModelKitSocialClosureTransformer Implementation**
 
-```
+```swift
 import Foundation
 import UIKit
 
@@ -66,7 +66,7 @@ public class JSONModelKitSocialClosureTransformer : JMTransformerProtocol {
 
 Now that we have created a transformer, let's create some mapping to map our closures to an instance variable.
 
-```
+```swift
 Input File: JSOModelKit/Mappings/Business.json
 
 {
@@ -91,7 +91,7 @@ Input File: JSOModelKit/Mappings/Business.json
 After the creation of the mapping, perform a build **(⌘-B)**. The changes should be reflected accordingly in the internal `_Business.swift` class.
 
 
-```
+```swift
 import Foundation
 import JSONModelKit
 

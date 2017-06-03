@@ -12,7 +12,7 @@ Once the model mapping has been updated, perform a build **(⌘-B)**, and the ch
 **Business.swift**
 <br/>
 
-```
+```swift
 import Foundation
 import JSONModelKit
 

@@ -2,7 +2,7 @@
 
 To perform transformations of a single or multiple values, JSONModelKit provides the ability to map multiple values from a dictionary response, and process them using the `JMTransformerProtocol`. Currently all transformed output properties must be optional, and the script will error out with a description in the build log.
 
-```
+```swift
 public protocol JMTransformerProtocol {
     func transformValues(_ inputValues : Dictionary<String, Any>?) -> Any?
 }
@@ -12,7 +12,7 @@ Transformations are great approach, especially for Date transforms by reusing th
 
 **Response Dictionary**
 
-```
+```swift
 {
     "user_id"		: 9223123456754776000,
     "first_name"	: "John",
@@ -25,7 +25,7 @@ Assuming the need to store the user's full name as a single property, the transf
 
 **JMTransformerProtocol Implementation**
 
-```
+```swift
 let firstNameKey    = "first_name"
 let lastNameKey     = "last_name"
 

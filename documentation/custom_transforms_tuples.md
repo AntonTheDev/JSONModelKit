@@ -4,7 +4,7 @@ To map enums use the `JMTransformerProtocol`. Let's look at a dictionary for a b
 
 **Response Dictionary**
 
-```
+```swift
 {
 	'business_uuid'  	 	:  9223123456754775807,
 	'business_name'  		: 'UsTwo Restaurant',
@@ -18,7 +18,7 @@ For the purposes of the example, let's create a mapper that returns a tuple. Fir
 
 **JSONModelKitTupleCoordinateExampleTransformer Implementation**
 
-```
+```swift
 let longitudeKey    = "business_longitude"
 let latitudeKey     = "business_latitude"
 

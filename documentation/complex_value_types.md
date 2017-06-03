@@ -3,7 +3,7 @@ JSONModelKit's support for mapping complete types allows for creating object typ
 
 **Response Dictionary**
 
-```
+```swift
 {
 	'business_uuid'  	 :  9223123456754775807,
 	'business_name'  	 : 'UsTwo Restaurant',
@@ -19,7 +19,7 @@ JSONModelKit's support for mapping complete types allows for creating object typ
 
 First, create a model mapping for the Location object.
 
-```
+```swift
 Input File: JSOModelKit/Mappings/Location.json
 
 {
@@ -36,7 +36,7 @@ Input File: JSOModelKit/Mappings/Location.json
 
 Once the model mapping for a location has generated a `Location` object, and it has been added to the project, update the Business object mapping by defining a location property typed as **Location**
 
-```
+```swift
 Input File: JSOModelKit/Mappings/Business.json
 
 {

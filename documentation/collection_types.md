@@ -3,7 +3,7 @@ JSONModelKit's support for mapping Dictionaries and Arrays when parsing a respon
 
 **Response Dictionary**
 
-```
+```swift
 {
     "business_uuid"		: 9223123456754776000,
     "business_name"		: "UsTwoRestaurant",
@@ -18,7 +18,7 @@ JSONModelKit's support for mapping Dictionaries and Arrays when parsing a respon
 First, update a model mapping for the Business object by defining setting the **type** key definition to `Array`, and adding a new **collection_subtype** key to define the subtype as `Int`.
 
 
-```
+```swift
 JSON: JSONModelKit/Mappings/Business.json
 
 {
@@ -36,13 +36,13 @@ JSON: JSONModelKit/Mappings/Business.json
 <table >
   <tr bgcolor="#FF0000" width=400px>
 <p align="left">
-    PLIST: JSONModelKit/Mappings/Business.plist 
+    PLIST: JSONModelKit/Mappings/Business.plist
 </br></br>
 <img align="center"  src="https://github.com/AntonTheDev/JSONModelKit/blob/dev/documentation/readme_assets/ratings_array_example.png?raw=true?raw=true" width="400" height="168" />
 
 </p>
   </tr>
-<table> 
+<table>
 
 </br>
 

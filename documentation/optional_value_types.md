@@ -4,7 +4,7 @@ JSONModelKit supports mapping basic data types including `String`, `Int`, `Doubl
 
 **Response Dictionary**
 
-```
+```swift
 {
 	'business_uuid'  	 	:  9223123456754775807,
 	'business_name'  		: 'UsTwo Restaurant',
@@ -33,7 +33,7 @@ From this example we'll find there has been created an internal `_Business.swift
 **_Business.swift**
 <br/>
 
-```
+```swift
 import Foundation
 import JSONModelKit
 
@@ -57,7 +57,7 @@ The internal file is where all the magic happens. At a high level, it provides a
 **Business.swift**
 <br/>
 
-```
+```swift
 import Foundation
 
 class Business : _Business {

@@ -4,7 +4,7 @@ JSONModelKit supports nested mapping for added flexibility. When mapping against
 
 **Response Dictionary**
 
-```
+```swift
 {
     "business_uuid"		: 9223123456754776000,
     "business_name"		: "UsTwoRestaurant",

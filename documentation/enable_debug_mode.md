@@ -16,7 +16,7 @@ Business instance could not be parsed, missing values for the following non-opti
 
 Response:
 [response: {
-    "business_name"		: "UsTwoRestaurant";
+    "business_name"		: "NYC Restaurant";
     "business_ratings"	: [ 5, 4, 5, 4 ];
     "business_open"		: 1;
 }]

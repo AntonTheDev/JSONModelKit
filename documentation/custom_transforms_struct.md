@@ -4,7 +4,7 @@ To map enums use the `JMTransformerProtocol`. Let's look at a dictionary for a b
 
 **Response Dictionary**
 
-```
+```swift
 {
 	'business_uuid'  	 	:  9223123456754775807,
 	'business_name'  		: 'UsTwo Restaurant',
@@ -17,7 +17,7 @@ Unlike the model objects, JSONModelKit does not autogenerate structs, due to the
 
 **Struct Definition**
 
-```
+```swift
 struct Coordinate {
   	var longitude: Double
    	var latitude: Double
@@ -28,7 +28,7 @@ Once we have defined a Coordinate struct, let's create a mapper that parses out 
 
 **JSONModelKitCoordinateTransformer Implementation**
 
-```
+```swift
 let longitudeKey    = "longitude"
 let latitudeKey     = "latitude"
 
@@ -60,7 +60,7 @@ Now that we have created a transformeer, let's create some mapping for our busin
 After the creation of the mapping, perform a build **(⌘-B)**. The changes should be reflected accordingly in the internal `_Business.swift` class.
 
 
-```
+```swift
 import Foundation
 import JSONModelKit
 
