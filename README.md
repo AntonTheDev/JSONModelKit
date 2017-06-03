@@ -46,7 +46,7 @@ All JSON Mappings will go into the **Model/Mappings** directory, and your Classe
 
 Let look as a simple mapping that defines a class below in JSON.
 
-```
+```swift
 Input File: JSOModelKit/Mappings/Business.json
 
 {
@@ -87,7 +87,7 @@ Run the build script once **⌘+B**. and you will see that it generated the foll
 
 Observe the internal file that was generated
 
-```
+```swift
 class _Business  {
 
 	var uuid : Double
