@@ -1,6 +1,6 @@
 
 [![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos-lightgrey.svg)](https://github.com/AntonTheDev/JSONModelKit/)
-[![Cocoapods Compatible](https://img.shields.io/badge/pod-v1.0.0rc1-blue.svg)](https://cocoapods.org/)
+[![Cocoapods Compatible](https://img.shields.io/badge/pod-1.0.0rc1-blue.svg)](https://cocoapods.org/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/AntonTheDev/JSONModelKit.svg?branch=dev)](https://travis-ci.org/AntonTheDev/JSONModelKit)
 [![License](https://img.shields.io/badge/license-MIT-343434.svg)](https://github.com/AntonTheDev/JSONModelKit/)
