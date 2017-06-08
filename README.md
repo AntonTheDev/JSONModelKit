@@ -26,7 +26,7 @@ By reducing the focus on the model layer itself, and keeping it continuously in 
 ## Installation
 
 * **Requirements** : XCode 8.0+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
-* [Installation Instructions](https://github.com/AntonTheDev/JSONModelKit/wiki/Installation.md)
+* [Installation Instructions](https://github.com/AntonTheDev/JSONModelKit/wiki/Installation)
 * [Release Notes](https://github.com/AntonTheDev/JSONModelKit/wiki/Release-Notes)
 
 ## Communication

@@ -530,7 +530,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_LOC=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\npython $SCRIPT_LOC -o $PROJECT_DIR -t 1";
+			shellScript = "SCRIPT_LOC=$PROJECT_DIR/../../Source/ModelScript/modelgen-swift.py\npython $SCRIPT_LOC -o $PROJECT_DIR -t 1\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

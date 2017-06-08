@@ -6,7 +6,7 @@ import getopt
 import dircache
 import glob
 import commands
-
+import sys
 sys.dont_write_bytecode = True
 
 from constants import Type
@@ -19,8 +19,6 @@ class Validator:
       self.mapping = mapping
 
    def validateMapping(self):
-      # self.mapping.pop(MappingKey.ModelConfig, None)
-
       for propertyKey in self.mapping.keys():
          if propertyKey == MappingKey.ModelConfig:
              continue
@@ -30,7 +28,7 @@ class Validator:
 
          if MappingKey.Key not in self.mapping[propertyKey].keys():
             if MappingKey.Transformer not in self.mapping[propertyKey].keys():
-               self.throw_missing_json_key_error(MappingKey.MappingKey, self.mapping[propertyKey])
+               self.throw_missing_json_key_error(MappingKey.Key, self.mapping[propertyKey])
 
             else:
                propertyType = self.mapping[propertyKey][MappingKey.Key]
