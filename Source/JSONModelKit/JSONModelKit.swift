@@ -79,7 +79,7 @@ final public class JSONModelKit {
         if let mappingconfiguration = propertyMappings[className] {
             return mappingconfiguration
         } else {
-            if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "json") {
+            if let mappingPath = Bundle.main.path(forResource: className, ofType: "json") {
                 do {
                     let jsonData = try Data(contentsOf: URL(fileURLWithPath: mappingPath), options: NSData.ReadingOptions.mappedIfSafe)
                     do {
@@ -97,18 +97,7 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
 
-            } else if let mappingPath = Bundle.main.path(forResource: className, ofType: "json") {
-                let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
-
-                if tempMapping!.isEmpty {
-                       print("2 Mapping Not Found")
-                    return nil
-                }
-
-                propertyMappings[className] = tempMapping
-                print(tempMapping)
-                return tempMapping!
-            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
+            }  else if let mappingPath = Bundle.main.path(forResource: className, ofType: "plist") {
                 do {
                     let jsonData = try Data(contentsOf: URL(fileURLWithPath: mappingPath), options: NSData.ReadingOptions.mappedIfSafe)
                     do {
@@ -126,13 +115,6 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
                 
-            } else if let mappingPath = Bundle.main.path(forResource: className, ofType: "plist") {
-                let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
-                
-                if tempMapping!.isEmpty { return nil }
-                
-                propertyMappings[className] = tempMapping
-                return tempMapping!
             }
     print("3 Mapping Not Found")
             return nil
