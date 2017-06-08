@@ -97,11 +97,36 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
 
-            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
+            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "json") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
 
                 if tempMapping!.isEmpty { return nil }
 
+                propertyMappings[className] = tempMapping
+                return tempMapping!
+            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
+                do {
+                    let jsonData = try Data(contentsOf: URL(fileURLWithPath: mappingPath), options: NSData.ReadingOptions.mappedIfSafe)
+                    do {
+                        let jsonMapping: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                        
+                        if let mapping = jsonMapping as? Dictionary<String, Dictionary<String, AnyObject>> {
+                            
+                            if mapping.keys.count > 0 {
+                                propertyMappings[className] = mapping
+                                return mapping
+                            }
+                        }
+                        
+                        return nil
+                    } catch {}
+                } catch {}
+                
+            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
+                let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
+                
+                if tempMapping!.isEmpty { return nil }
+                
                 propertyMappings[className] = tempMapping
                 return tempMapping!
             }
