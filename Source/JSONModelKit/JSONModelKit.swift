@@ -92,7 +92,7 @@ final public class JSONModelKit {
                                 return mapping
                             }
                         }
-
+                        print("1Mapping Not Found")
                         return nil
                     } catch {}
                 } catch {}
@@ -100,9 +100,13 @@ final public class JSONModelKit {
             } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "json") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
 
-                if tempMapping!.isEmpty { return nil }
+                if tempMapping!.isEmpty {
+                       print("2 Mapping Not Found")
+                    return nil
+                }
 
                 propertyMappings[className] = tempMapping
+                print(tempMapping)
                 return tempMapping!
             } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
                 do {
@@ -130,7 +134,7 @@ final public class JSONModelKit {
                 propertyMappings[className] = tempMapping
                 return tempMapping!
             }
-
+    print("3 Mapping Not Found")
             return nil
         }
     }
