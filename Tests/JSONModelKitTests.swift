@@ -16,6 +16,12 @@ class JSONModelKitTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        
+        #if JMMAPPER_FORMAT_PLIST
+            JMConfig.fileFormat = .plist
+        #else
+            JMConfig.fileFormat = .json
+        #endif
     }
     
     override func tearDown() {

@@ -1,7 +1,7 @@
 import Foundation
 
 
-class _TestObjectFour   {
+class _TestObjectFour  : NSObject {
 
 	var non_optionalBool : Bool
     var non_optionalString : String

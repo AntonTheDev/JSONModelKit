@@ -8,10 +8,10 @@
          location = "group:JSONModelKit"
          name = "JSONModelKit">
          <FileRef
-            location = "group:JMCompoundValueTransformer.swift">
+            location = "group:JSONModelKit.swift">
          </FileRef>
          <FileRef
-            location = "group:JSONModelKit.swift">
+            location = "group:JMCompoundValueTransformer.swift">
          </FileRef>
          <Group
             location = "group:Parsers"
@@ -53,6 +53,13 @@
             name = "Validator">
             <FileRef
                location = "group:Validator.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "Logger">
+            <FileRef
+               location = "group:Source/JSONModelKit/Logger/JMLogger.swift">
             </FileRef>
          </Group>
       </Group>

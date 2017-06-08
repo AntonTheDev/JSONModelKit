@@ -26,18 +26,18 @@ By reducing the focus on the model layer itself, and keeping it continuously in 
 ## Installation
 
 * **Requirements** : XCode 8.0+, iOS 8.0+, OSX 10.9+, tvOS 9.0+
-* [Installation Instructions](/documentation/installation.md)
-* [Release Notes](/documentation/changelog.md)
+* [Installation Instructions](https://github.com/AntonTheDev/JSONModelKit/wiki/Installation.md)
+* [Release Notes](https://github.com/AntonTheDev/JSONModelKit/wiki/Release-Notes)
 
 ## Communication
 
 - If you **found a bug**, or **have a feature request**, open an issue.
-- If you **need help** or a **general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/json-mapperkit). (tag 'json-mapperkit')
-- If you **want to contribute**, review the [Contribution Guidelines](/Documentation/CONTRIBUTING.md), and submit a pull request.
+- If you **need help** or a **general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/json-modelkit). (tag 'json-modelkit')
+- If you **want to contribute**, review the [Contribution Guidelines](https://github.com/AntonTheDev/JSONModelKit/wiki/Contributing-Guidelines), and submit a pull request.
 
 ## Basic Use
 
-Once configured per the [Installation](/documentation/installation.md) instructions, run the build script once **⌘+B**. You will see the Model folder appears within your project.
+Once configured per the [Installation](https://github.com/AntonTheDev/JSONModelKit/wiki/Installation.md) instructions, run the build script once **⌘+B**. You will see the Model folder appears within your project.
 
 
 All JSON Mappings will go into the **Model/Mappings** directory, and your Classes will be generated into the Model directory, then automatically added to your project during build time.

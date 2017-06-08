@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class Validator {
+final class Validator {
     
     // MARK Validates that all the non-optional values were received or defaulted
     
@@ -17,9 +17,7 @@ open class Validator {
                                       forType className : String,
                                       withData data : Dictionary<String, AnyObject>) -> Bool {
         
-        #if JMMAPPER_DEBUG
-            var missingPropertyKeyArray = Array<String>()
-        #endif
+        var missingPropertyKeyArray = Array<String>()
         
         // Validate that all non-optional properties have a value assigned
        
@@ -30,22 +28,23 @@ open class Validator {
                         // If value was mapped, continue with validation
                         continue
                     } else {
-                        #if JMMAPPER_DEBUG
+                        if JMConfig.debugEnabled {
                             missingPropertyKeyArray.append(propertyKey)
-                            #else
+                        } else {
                             return false
-                        #endif
+                        }
                     }
                 }
             }
         }
         
-        #if JMMAPPER_DEBUG
-            if (missingPropertyKeyArray.count > 0) {
-            printDebugStatement(className, missingPropertyKeyArray: missingPropertyKeyArray, data : data)
+        
+        if JMConfig.debugEnabled {
+            if missingPropertyKeyArray.count > 0 {
+                printDebugStatement(className, missingPropertyKeyArray: missingPropertyKeyArray, data : data)
                 return false
             }
-        #endif
+        }
         
         return true
     }

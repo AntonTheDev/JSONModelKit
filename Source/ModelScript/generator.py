@@ -278,8 +278,6 @@ class ClassGenerator:
           propertyMapping = propertyMappings[propertyKey]
 
           if MappingKey.ModelConfig == propertyKey:
-
-              # print(propertyMapping)
               continue
 
           if self.is_property_mapping_optional(propertyMapping) == optional:

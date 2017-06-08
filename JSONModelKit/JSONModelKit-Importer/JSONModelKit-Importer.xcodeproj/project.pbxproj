@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FD6B091EE991E800C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6B081EE991E800C586AE /* JMLogger.swift */; };
 		3A7851BA1EAA58C800826330 /* US2ExampleClosureTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */; };
 		3A7851BB1EAA58C800826330 /* US2ExampleEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */; };
 		3A7851BC1EAA58C800826330 /* US2ExampleStructTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13FD6B081EE991E800C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
 		3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleClosureTransformer.swift; sourceTree = "<group>"; };
 		3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleEnumTransformer.swift; sourceTree = "<group>"; };
 		3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleStructTransformer.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 			name = Mapping;
 			sourceTree = "<group>";
 		};
+		13FD6B071EE991E800C586AE /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				13FD6B081EE991E800C586AE /* JMLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		3A7851B31EAA58AA00826330 /* JSONModelKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 			children = (
 				3AC446371EA98FE3003CA6C5 /* JMCompoundValueTransformer.swift */,
 				3AC446381EA98FE3003CA6C5 /* JSONModelKit.swift */,
+				13FD6B071EE991E800C586AE /* Logger */,
 				3AC446391EA98FE3003CA6C5 /* Parsers */,
 				3AC446421EA98FE3003CA6C5 /* Transformer */,
 				3AC446441EA98FE3003CA6C5 /* Validator */,
@@ -536,6 +547,7 @@
 				3AC446841EA98FE3003CA6C5 /* Validator.swift in Sources */,
 				3AC446801EA98FE3003CA6C5 /* NativeValueArrayParser.swift in Sources */,
 				3AC4467A1EA98FE3003CA6C5 /* JSONModelKit.swift in Sources */,
+				13FD6B091EE991E800C586AE /* JMLogger.swift in Sources */,
 				3AC446261EA98FC5003CA6C5 /* ViewController.swift in Sources */,
 				3A7851BB1EAA58C800826330 /* US2ExampleEnumTransformer.swift in Sources */,
 				3A7851BE1EAA58C800826330 /* ValueTypeDefinitions.swift in Sources */,

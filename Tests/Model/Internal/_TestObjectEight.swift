@@ -1,9 +1,9 @@
 import Foundation
 
 
-class _TestObjectEight   {
+class _TestObjectEight  : NSObject {
 
-	var non_optionalDictionaryType : [String : TestObjectFour]
+	@objc var non_optionalDictionaryType : [String : TestObjectFour]
 
 	var optionalDictionaryType : [String : TestObjectFour]?
 

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A2DA0391EE2513300B68320"
-               BuildableName = "JSONModelKit-watchOS.framework"
+               BuildableName = "JSONModelKit.framework"
                BlueprintName = "JSONModelKit-watchOS"
                ReferencedContainer = "container:JSONModelKit.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A2DA0391EE2513300B68320"
-            BuildableName = "JSONModelKit-watchOS.framework"
+            BuildableName = "JSONModelKit.framework"
             BlueprintName = "JSONModelKit-watchOS"
             ReferencedContainer = "container:JSONModelKit.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A2DA0391EE2513300B68320"
-            BuildableName = "JSONModelKit-watchOS.framework"
+            BuildableName = "JSONModelKit.framework"
             BlueprintName = "JSONModelKit-watchOS"
             ReferencedContainer = "container:JSONModelKit.xcodeproj">
          </BuildableReference>

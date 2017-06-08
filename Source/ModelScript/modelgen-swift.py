@@ -96,7 +96,7 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 	shutil.copytree(project_file_path, backup_project_path)
 
 	project = XcodeProject.load(project_file_path + '/project.pbxproj')
-	backup_file = project.backup()
+	#backup_file = project.backup()
 
 	parent_group = project.get_or_create_group(projectName)
 	model_group = project.get_or_create_group('Model', parent=parent_group)

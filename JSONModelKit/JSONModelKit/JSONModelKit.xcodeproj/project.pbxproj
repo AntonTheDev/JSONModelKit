@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FD6AF61EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
+		13FD6AF71EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
+		13FD6AF81EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
+		13FD6AF91EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
 		3A2D9CDE1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CDF1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CE01EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -248,6 +252,7 @@
 		13C6E2D21D38604D000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E3361D386101000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E3431D386112000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13FD6AF51EE9917B00C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
 		3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelKit.h; sourceTree = "<group>"; };
 		3A2DA03A1EE2513300B68320 /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2DA0441EE2523D00B68320 /* JMCompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCompoundValueTransformer.swift; sourceTree = "<group>"; };
@@ -361,6 +366,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		13FD6AF41EE9917B00C586AE /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				13FD6AF51EE9917B00C586AE /* JMLogger.swift */,
+			);
+			name = Logger;
+			path = JSONModelKit/Logger;
+			sourceTree = "<group>";
+		};
 		3A2D9CDC1EE24B1E00B68320 /* JSONModelKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +387,7 @@
 		3A2DA0421EE2523D00B68320 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				13FD6AF41EE9917B00C586AE /* Logger */,
 				3A2DA0431EE2523D00B68320 /* JSONModelKit */,
 				3A2DA0531EE2523D00B68320 /* ModelScript */,
 			);
@@ -896,6 +911,7 @@
 				3A2DA09E1EE2523D00B68320 /* NativeTypeParser.swift in Sources */,
 				3A2DA0861EE2523D00B68320 /* JMCompoundValueTransformer.swift in Sources */,
 				3A2DA0A61EE2523D00B68320 /* NativeValueDictionaryParser.swift in Sources */,
+				13FD6AF61EE9917B00C586AE /* JMLogger.swift in Sources */,
 				3A2DA0961EE2523D00B68320 /* ComplexValueArrayParser.swift in Sources */,
 				3A2DA0A21EE2523D00B68320 /* NativeValueArrayParser.swift in Sources */,
 			);
@@ -915,6 +931,7 @@
 				3A2DA0A01EE2523D00B68320 /* NativeTypeParser.swift in Sources */,
 				3A2DA0881EE2523D00B68320 /* JMCompoundValueTransformer.swift in Sources */,
 				3A2DA0A81EE2523D00B68320 /* NativeValueDictionaryParser.swift in Sources */,
+				13FD6AF81EE9917B00C586AE /* JMLogger.swift in Sources */,
 				3A2DA0981EE2523D00B68320 /* ComplexValueArrayParser.swift in Sources */,
 				3A2DA0A41EE2523D00B68320 /* NativeValueArrayParser.swift in Sources */,
 			);
@@ -934,6 +951,7 @@
 				3A2DA09F1EE2523D00B68320 /* NativeTypeParser.swift in Sources */,
 				3A2DA0871EE2523D00B68320 /* JMCompoundValueTransformer.swift in Sources */,
 				3A2DA0A71EE2523D00B68320 /* NativeValueDictionaryParser.swift in Sources */,
+				13FD6AF71EE9917B00C586AE /* JMLogger.swift in Sources */,
 				3A2DA0971EE2523D00B68320 /* ComplexValueArrayParser.swift in Sources */,
 				3A2DA0A31EE2523D00B68320 /* NativeValueArrayParser.swift in Sources */,
 			);
@@ -953,6 +971,7 @@
 				3A2DA0A11EE2523D00B68320 /* NativeTypeParser.swift in Sources */,
 				3A2DA0891EE2523D00B68320 /* JMCompoundValueTransformer.swift in Sources */,
 				3A2DA0A91EE2523D00B68320 /* NativeValueDictionaryParser.swift in Sources */,
+				13FD6AF91EE9917B00C586AE /* JMLogger.swift in Sources */,
 				3A2DA0991EE2523D00B68320 /* ComplexValueArrayParser.swift in Sources */,
 				3A2DA0A51EE2523D00B68320 /* NativeValueArrayParser.swift in Sources */,
 			);
@@ -1280,6 +1299,7 @@
 				3A2DA0411EE2513300B68320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

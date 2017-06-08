@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FD6B091EE991E800C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6B081EE991E800C586AE /* JMLogger.swift */; };
 		3A7851BA1EAA58C800826330 /* US2ExampleClosureTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */; };
 		3A7851BB1EAA58C800826330 /* US2ExampleEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */; };
 		3A7851BC1EAA58C800826330 /* US2ExampleStructTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */; };
@@ -73,12 +74,12 @@
 		3AC446AE1EA98FE3003CA6C5 /* XCBuildConfiguration.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446741EA98FE3003CA6C5 /* XCBuildConfiguration.py */; };
 		3AC446AF1EA98FE3003CA6C5 /* XCConfigurationList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446751EA98FE3003CA6C5 /* XCConfigurationList.py */; };
 		3AC446B01EA98FE3003CA6C5 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446761EA98FE3003CA6C5 /* XcodeProject.py */; };
-		3AC446B11EA98FE3003CA6C5 /* serializer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446771EA98FE3003CA6C5 /* serializer.py */; };
 		3AC446B21EA98FE3003CA6C5 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3AC446781EA98FE3003CA6C5 /* validator.py */; };
 		9C3540EF9AA19DEF7B4D09EB /* JMInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6548AAB9025F7EE0F01BD0 /* JMInstantiator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13FD6B081EE991E800C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
 		3A7851B51EAA58C800826330 /* US2ExampleClosureTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleClosureTransformer.swift; sourceTree = "<group>"; };
 		3A7851B61EAA58C800826330 /* US2ExampleEnumTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleEnumTransformer.swift; sourceTree = "<group>"; };
 		3A7851B71EAA58C800826330 /* US2ExampleStructTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US2ExampleStructTransformer.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		3AC446741EA98FE3003CA6C5 /* XCBuildConfiguration.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XCBuildConfiguration.py; sourceTree = "<group>"; };
 		3AC446751EA98FE3003CA6C5 /* XCConfigurationList.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XCConfigurationList.py; sourceTree = "<group>"; };
 		3AC446761EA98FE3003CA6C5 /* XcodeProject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XcodeProject.py; sourceTree = "<group>"; };
-		3AC446771EA98FE3003CA6C5 /* serializer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serializer.py; sourceTree = "<group>"; };
 		3AC446781EA98FE3003CA6C5 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
 		5E6548AAB9025F7EE0F01BD0 /* JMInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JMInstantiator.swift; path = "JSONModelKit-Importer/Model/Internal/JMInstantiator.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -168,6 +168,14 @@
 			children = (
 			);
 			name = Mapping;
+			sourceTree = "<group>";
+		};
+		13FD6B071EE991E800C586AE /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				13FD6B081EE991E800C586AE /* JMLogger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		3A7851B31EAA58AA00826330 /* JSONModelKit */ = {
@@ -255,6 +263,7 @@
 			children = (
 				3AC446371EA98FE3003CA6C5 /* JMCompoundValueTransformer.swift */,
 				3AC446381EA98FE3003CA6C5 /* JSONModelKit.swift */,
+				13FD6B071EE991E800C586AE /* Logger */,
 				3AC446391EA98FE3003CA6C5 /* Parsers */,
 				3AC446421EA98FE3003CA6C5 /* Transformer */,
 				3AC446441EA98FE3003CA6C5 /* Validator */,
@@ -305,7 +314,6 @@
 				3AC4464D1EA98FE3003CA6C5 /* internal_class_template.txt */,
 				3AC4464E1EA98FE3003CA6C5 /* modelgen-swift.py */,
 				3AC4464F1EA98FE3003CA6C5 /* pbxproj */,
-				3AC446771EA98FE3003CA6C5 /* serializer.py */,
 				3AC446781EA98FE3003CA6C5 /* validator.py */,
 			);
 			path = ModelScript;
@@ -402,7 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC446321EA98FC5003CA6C5 /* Build configuration list for PBXNativeTarget "JSONModelKit-Importer" */;
 			buildPhases = (
-				3A7851C11EAA59A900826330 /* ShellScript */,
+				3A7851C11EAA59A900826330 /* JSON Model Generation */,
 				3AC4461C1EA98FC5003CA6C5 /* Sources */,
 				3AC4461D1EA98FC5003CA6C5 /* Frameworks */,
 				3AC4461E1EA98FC5003CA6C5 /* Resources */,
@@ -503,7 +511,6 @@
 				3AC446AF1EA98FE3003CA6C5 /* XCConfigurationList.py in Resources */,
 				3AC446961EA98FE3003CA6C5 /* ProjectGroups.py in Resources */,
 				3AC4468D1EA98FE3003CA6C5 /* __init__.py in Resources */,
-				3AC446B11EA98FE3003CA6C5 /* serializer.py in Resources */,
 				3AC446291EA98FC5003CA6C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +518,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A7851C11EAA59A900826330 /* ShellScript */ = {
+		3A7851C11EAA59A900826330 /* JSON Model Generation */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -540,6 +547,7 @@
 				3AC446841EA98FE3003CA6C5 /* Validator.swift in Sources */,
 				3AC446801EA98FE3003CA6C5 /* NativeValueArrayParser.swift in Sources */,
 				3AC4467A1EA98FE3003CA6C5 /* JSONModelKit.swift in Sources */,
+				13FD6B091EE991E800C586AE /* JMLogger.swift in Sources */,
 				3AC446261EA98FC5003CA6C5 /* ViewController.swift in Sources */,
 				3A7851BB1EAA58C800826330 /* US2ExampleEnumTransformer.swift in Sources */,
 				3A7851BE1EAA58C800826330 /* ValueTypeDefinitions.swift in Sources */,

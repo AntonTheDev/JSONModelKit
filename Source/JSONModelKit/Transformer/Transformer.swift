@@ -43,7 +43,6 @@ final class Transformer : Parser {
         return nil
     }
 
-    
     class func customTransformer(_ className : String, instantiator : JMInstantiatorProtocol) -> JMTransformerProtocol? {
         if let transformer = transformerInstances[className] {
             return transformer
