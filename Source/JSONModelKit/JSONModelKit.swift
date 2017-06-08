@@ -97,7 +97,7 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
 
-            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "json") {
+            } else if let mappingPath = Bundle.main.path(forResource: className, ofType: "json") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
 
                 if tempMapping!.isEmpty {
@@ -126,7 +126,7 @@ final public class JSONModelKit {
                     } catch {}
                 } catch {}
                 
-            } else if let mappingPath = Bundle(for: self).path(forResource: className, ofType: "plist") {
+            } else if let mappingPath = Bundle.main.path(forResource: className, ofType: "plist") {
                 let tempMapping = NSDictionary(contentsOfFile: mappingPath) as? Dictionary<String, Dictionary<String, AnyObject>>
                 
                 if tempMapping!.isEmpty { return nil }
