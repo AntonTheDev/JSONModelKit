@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import XcodeProject
+from pbxproj import XcodeProject
 
 class ProjectFileImporter:
 

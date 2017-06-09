@@ -11,6 +11,10 @@
 		13FD6AF71EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
 		13FD6AF81EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
 		13FD6AF91EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
+		13FD6B2B1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
+		13FD6B2C1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
+		13FD6B2D1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
+		13FD6B2E1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
 		3A2D9CDE1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CDF1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CE01EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,150 +102,6 @@
 		3A2DA0D71EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
 		3A2DA0D81EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
 		3A2DA0D91EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
-		3A2DA0DA1EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05E1EE2523D00B68320 /* __init__.py */; };
-		3A2DA0DB1EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05E1EE2523D00B68320 /* __init__.py */; };
-		3A2DA0DC1EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05E1EE2523D00B68320 /* __init__.py */; };
-		3A2DA0DD1EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05E1EE2523D00B68320 /* __init__.py */; };
-		3A2DA0DE1EE2523E00B68320 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05F1EE2523D00B68320 /* __main__.py */; };
-		3A2DA0DF1EE2523E00B68320 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05F1EE2523D00B68320 /* __main__.py */; };
-		3A2DA0E01EE2523E00B68320 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05F1EE2523D00B68320 /* __main__.py */; };
-		3A2DA0E11EE2523E00B68320 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05F1EE2523D00B68320 /* __main__.py */; };
-		3A2DA0E21EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0611EE2523D00B68320 /* __init__.py */; };
-		3A2DA0E31EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0611EE2523D00B68320 /* __init__.py */; };
-		3A2DA0E41EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0611EE2523D00B68320 /* __init__.py */; };
-		3A2DA0E51EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0611EE2523D00B68320 /* __init__.py */; };
-		3A2DA0E61EE2523E00B68320 /* pbxproj_file.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0621EE2523D00B68320 /* pbxproj_file.py */; };
-		3A2DA0E71EE2523E00B68320 /* pbxproj_file.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0621EE2523D00B68320 /* pbxproj_file.py */; };
-		3A2DA0E81EE2523E00B68320 /* pbxproj_file.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0621EE2523D00B68320 /* pbxproj_file.py */; };
-		3A2DA0E91EE2523E00B68320 /* pbxproj_file.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0621EE2523D00B68320 /* pbxproj_file.py */; };
-		3A2DA0EA1EE2523E00B68320 /* pbxproj_flag.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */; };
-		3A2DA0EB1EE2523E00B68320 /* pbxproj_flag.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */; };
-		3A2DA0EC1EE2523E00B68320 /* pbxproj_flag.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */; };
-		3A2DA0ED1EE2523E00B68320 /* pbxproj_flag.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */; };
-		3A2DA0EE1EE2523E00B68320 /* pbxproj_folder.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */; };
-		3A2DA0EF1EE2523E00B68320 /* pbxproj_folder.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */; };
-		3A2DA0F01EE2523E00B68320 /* pbxproj_folder.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */; };
-		3A2DA0F11EE2523E00B68320 /* pbxproj_folder.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */; };
-		3A2DA0F21EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0661EE2523D00B68320 /* __init__.py */; };
-		3A2DA0F31EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0661EE2523D00B68320 /* __init__.py */; };
-		3A2DA0F41EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0661EE2523D00B68320 /* __init__.py */; };
-		3A2DA0F51EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0661EE2523D00B68320 /* __init__.py */; };
-		3A2DA0F61EE2523E00B68320 /* ProjectFiles.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0671EE2523D00B68320 /* ProjectFiles.py */; };
-		3A2DA0F71EE2523E00B68320 /* ProjectFiles.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0671EE2523D00B68320 /* ProjectFiles.py */; };
-		3A2DA0F81EE2523E00B68320 /* ProjectFiles.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0671EE2523D00B68320 /* ProjectFiles.py */; };
-		3A2DA0F91EE2523E00B68320 /* ProjectFiles.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0671EE2523D00B68320 /* ProjectFiles.py */; };
-		3A2DA0FA1EE2523E00B68320 /* ProjectFlags.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0681EE2523D00B68320 /* ProjectFlags.py */; };
-		3A2DA0FB1EE2523E00B68320 /* ProjectFlags.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0681EE2523D00B68320 /* ProjectFlags.py */; };
-		3A2DA0FC1EE2523E00B68320 /* ProjectFlags.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0681EE2523D00B68320 /* ProjectFlags.py */; };
-		3A2DA0FD1EE2523E00B68320 /* ProjectFlags.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0681EE2523D00B68320 /* ProjectFlags.py */; };
-		3A2DA0FE1EE2523E00B68320 /* ProjectGroups.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0691EE2523D00B68320 /* ProjectGroups.py */; };
-		3A2DA0FF1EE2523E00B68320 /* ProjectGroups.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0691EE2523D00B68320 /* ProjectGroups.py */; };
-		3A2DA1001EE2523E00B68320 /* ProjectGroups.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0691EE2523D00B68320 /* ProjectGroups.py */; };
-		3A2DA1011EE2523E00B68320 /* ProjectGroups.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0691EE2523D00B68320 /* ProjectGroups.py */; };
-		3A2DA1021EE2523E00B68320 /* PBXGenericObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */; };
-		3A2DA1031EE2523E00B68320 /* PBXGenericObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */; };
-		3A2DA1041EE2523E00B68320 /* PBXGenericObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */; };
-		3A2DA1051EE2523E00B68320 /* PBXGenericObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */; };
-		3A2DA1061EE2523E00B68320 /* PBXKey.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06B1EE2523D00B68320 /* PBXKey.py */; };
-		3A2DA1071EE2523E00B68320 /* PBXKey.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06B1EE2523D00B68320 /* PBXKey.py */; };
-		3A2DA1081EE2523E00B68320 /* PBXKey.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06B1EE2523D00B68320 /* PBXKey.py */; };
-		3A2DA1091EE2523E00B68320 /* PBXKey.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06B1EE2523D00B68320 /* PBXKey.py */; };
-		3A2DA10A1EE2523E00B68320 /* PBXList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06C1EE2523D00B68320 /* PBXList.py */; };
-		3A2DA10B1EE2523E00B68320 /* PBXList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06C1EE2523D00B68320 /* PBXList.py */; };
-		3A2DA10C1EE2523E00B68320 /* PBXList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06C1EE2523D00B68320 /* PBXList.py */; };
-		3A2DA10D1EE2523E00B68320 /* PBXList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06C1EE2523D00B68320 /* PBXList.py */; };
-		3A2DA10E1EE2523E00B68320 /* PBXObjects.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06D1EE2523D00B68320 /* PBXObjects.py */; };
-		3A2DA10F1EE2523E00B68320 /* PBXObjects.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06D1EE2523D00B68320 /* PBXObjects.py */; };
-		3A2DA1101EE2523E00B68320 /* PBXObjects.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06D1EE2523D00B68320 /* PBXObjects.py */; };
-		3A2DA1111EE2523E00B68320 /* PBXObjects.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06D1EE2523D00B68320 /* PBXObjects.py */; };
-		3A2DA1121EE2523E00B68320 /* PBXRootObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */; };
-		3A2DA1131EE2523E00B68320 /* PBXRootObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */; };
-		3A2DA1141EE2523E00B68320 /* PBXRootObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */; };
-		3A2DA1151EE2523E00B68320 /* PBXRootObject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */; };
-		3A2DA1161EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0701EE2523D00B68320 /* __init__.py */; };
-		3A2DA1171EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0701EE2523D00B68320 /* __init__.py */; };
-		3A2DA1181EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0701EE2523D00B68320 /* __init__.py */; };
-		3A2DA1191EE2523E00B68320 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0701EE2523D00B68320 /* __init__.py */; };
-		3A2DA11A1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */; };
-		3A2DA11B1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */; };
-		3A2DA11C1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */; };
-		3A2DA11D1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */; };
-		3A2DA11E1EE2523E00B68320 /* PBXBuildFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */; };
-		3A2DA11F1EE2523E00B68320 /* PBXBuildFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */; };
-		3A2DA1201EE2523E00B68320 /* PBXBuildFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */; };
-		3A2DA1211EE2523E00B68320 /* PBXBuildFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */; };
-		3A2DA1221EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */; };
-		3A2DA1231EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */; };
-		3A2DA1241EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */; };
-		3A2DA1251EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */; };
-		3A2DA1261EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */; };
-		3A2DA1271EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */; };
-		3A2DA1281EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */; };
-		3A2DA1291EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */; };
-		3A2DA12A1EE2523E00B68320 /* PBXFileReference.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0751EE2523D00B68320 /* PBXFileReference.py */; };
-		3A2DA12B1EE2523E00B68320 /* PBXFileReference.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0751EE2523D00B68320 /* PBXFileReference.py */; };
-		3A2DA12C1EE2523E00B68320 /* PBXFileReference.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0751EE2523D00B68320 /* PBXFileReference.py */; };
-		3A2DA12D1EE2523E00B68320 /* PBXFileReference.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0751EE2523D00B68320 /* PBXFileReference.py */; };
-		3A2DA12E1EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */; };
-		3A2DA12F1EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */; };
-		3A2DA1301EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */; };
-		3A2DA1311EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */; };
-		3A2DA1321EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */; };
-		3A2DA1331EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */; };
-		3A2DA1341EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */; };
-		3A2DA1351EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */; };
-		3A2DA1361EE2523E00B68320 /* PBXGenericTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */; };
-		3A2DA1371EE2523E00B68320 /* PBXGenericTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */; };
-		3A2DA1381EE2523E00B68320 /* PBXGenericTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */; };
-		3A2DA1391EE2523E00B68320 /* PBXGenericTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */; };
-		3A2DA13A1EE2523E00B68320 /* PBXGroup.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0791EE2523D00B68320 /* PBXGroup.py */; };
-		3A2DA13B1EE2523E00B68320 /* PBXGroup.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0791EE2523D00B68320 /* PBXGroup.py */; };
-		3A2DA13C1EE2523E00B68320 /* PBXGroup.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0791EE2523D00B68320 /* PBXGroup.py */; };
-		3A2DA13D1EE2523E00B68320 /* PBXGroup.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0791EE2523D00B68320 /* PBXGroup.py */; };
-		3A2DA13E1EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */; };
-		3A2DA13F1EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */; };
-		3A2DA1401EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */; };
-		3A2DA1411EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */; };
-		3A2DA1421EE2523E00B68320 /* PBXLegacyTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */; };
-		3A2DA1431EE2523E00B68320 /* PBXLegacyTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */; };
-		3A2DA1441EE2523E00B68320 /* PBXLegacyTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */; };
-		3A2DA1451EE2523E00B68320 /* PBXLegacyTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */; };
-		3A2DA1461EE2523E00B68320 /* PBXNativeTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */; };
-		3A2DA1471EE2523E00B68320 /* PBXNativeTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */; };
-		3A2DA1481EE2523E00B68320 /* PBXNativeTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */; };
-		3A2DA1491EE2523E00B68320 /* PBXNativeTarget.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */; };
-		3A2DA14A1EE2523E00B68320 /* PBXProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07D1EE2523D00B68320 /* PBXProject.py */; };
-		3A2DA14B1EE2523E00B68320 /* PBXProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07D1EE2523D00B68320 /* PBXProject.py */; };
-		3A2DA14C1EE2523E00B68320 /* PBXProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07D1EE2523D00B68320 /* PBXProject.py */; };
-		3A2DA14D1EE2523E00B68320 /* PBXProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07D1EE2523D00B68320 /* PBXProject.py */; };
-		3A2DA14E1EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */; };
-		3A2DA14F1EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */; };
-		3A2DA1501EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */; };
-		3A2DA1511EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */; };
-		3A2DA1521EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */; };
-		3A2DA1531EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */; };
-		3A2DA1541EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */; };
-		3A2DA1551EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */; };
-		3A2DA1561EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */; };
-		3A2DA1571EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */; };
-		3A2DA1581EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */; };
-		3A2DA1591EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */; };
-		3A2DA15A1EE2523E00B68320 /* PBXTargetDependency.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */; };
-		3A2DA15B1EE2523E00B68320 /* PBXTargetDependency.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */; };
-		3A2DA15C1EE2523E00B68320 /* PBXTargetDependency.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */; };
-		3A2DA15D1EE2523E00B68320 /* PBXTargetDependency.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */; };
-		3A2DA15E1EE2523E00B68320 /* XCBuildConfiguration.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */; };
-		3A2DA15F1EE2523E00B68320 /* XCBuildConfiguration.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */; };
-		3A2DA1601EE2523E00B68320 /* XCBuildConfiguration.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */; };
-		3A2DA1611EE2523E00B68320 /* XCBuildConfiguration.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */; };
-		3A2DA1621EE2523E00B68320 /* XCConfigurationList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */; };
-		3A2DA1631EE2523E00B68320 /* XCConfigurationList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */; };
-		3A2DA1641EE2523E00B68320 /* XCConfigurationList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */; };
-		3A2DA1651EE2523E00B68320 /* XCConfigurationList.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */; };
-		3A2DA1661EE2523E00B68320 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0841EE2523D00B68320 /* XcodeProject.py */; };
-		3A2DA1671EE2523E00B68320 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0841EE2523D00B68320 /* XcodeProject.py */; };
-		3A2DA1681EE2523E00B68320 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0841EE2523D00B68320 /* XcodeProject.py */; };
-		3A2DA1691EE2523E00B68320 /* XcodeProject.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0841EE2523D00B68320 /* XcodeProject.py */; };
 		3A2DA16A1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
 		3A2DA16B1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
 		3A2DA16C1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
@@ -253,6 +113,7 @@
 		13C6E3361D386101000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E3431D386112000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FD6AF51EE9917B00C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
+		13FD6B2A1EEAF59E00C586AE /* pbxproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pbxproj; sourceTree = "<group>"; };
 		3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelKit.h; sourceTree = "<group>"; };
 		3A2DA03A1EE2513300B68320 /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2DA0441EE2523D00B68320 /* JMCompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCompoundValueTransformer.swift; sourceTree = "<group>"; };
@@ -276,42 +137,6 @@
 		3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
 		3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
 		3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nil_serialization_template.txt; sourceTree = "<group>"; };
-		3A2DA05E1EE2523D00B68320 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3A2DA05F1EE2523D00B68320 /* __main__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
-		3A2DA0611EE2523D00B68320 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3A2DA0621EE2523D00B68320 /* pbxproj_file.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pbxproj_file.py; sourceTree = "<group>"; };
-		3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pbxproj_flag.py; sourceTree = "<group>"; };
-		3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pbxproj_folder.py; sourceTree = "<group>"; };
-		3A2DA0661EE2523D00B68320 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3A2DA0671EE2523D00B68320 /* ProjectFiles.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ProjectFiles.py; sourceTree = "<group>"; };
-		3A2DA0681EE2523D00B68320 /* ProjectFlags.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ProjectFlags.py; sourceTree = "<group>"; };
-		3A2DA0691EE2523D00B68320 /* ProjectGroups.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ProjectGroups.py; sourceTree = "<group>"; };
-		3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXGenericObject.py; sourceTree = "<group>"; };
-		3A2DA06B1EE2523D00B68320 /* PBXKey.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXKey.py; sourceTree = "<group>"; };
-		3A2DA06C1EE2523D00B68320 /* PBXList.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXList.py; sourceTree = "<group>"; };
-		3A2DA06D1EE2523D00B68320 /* PBXObjects.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXObjects.py; sourceTree = "<group>"; };
-		3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXRootObject.py; sourceTree = "<group>"; };
-		3A2DA0701EE2523D00B68320 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXAggregatedTarget.py; sourceTree = "<group>"; };
-		3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXBuildFile.py; sourceTree = "<group>"; };
-		3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXContainerItemProxy.py; sourceTree = "<group>"; };
-		3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXCopyFilesBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA0751EE2523D00B68320 /* PBXFileReference.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXFileReference.py; sourceTree = "<group>"; };
-		3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXFrameworksBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXGenericBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXGenericTarget.py; sourceTree = "<group>"; };
-		3A2DA0791EE2523D00B68320 /* PBXGroup.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXGroup.py; sourceTree = "<group>"; };
-		3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXHeadersBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXLegacyTarget.py; sourceTree = "<group>"; };
-		3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXNativeTarget.py; sourceTree = "<group>"; };
-		3A2DA07D1EE2523D00B68320 /* PBXProject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXProject.py; sourceTree = "<group>"; };
-		3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXResourcesBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXShellScriptBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXSourcesBuildPhase.py; sourceTree = "<group>"; };
-		3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXTargetDependency.py; sourceTree = "<group>"; };
-		3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XCBuildConfiguration.py; sourceTree = "<group>"; };
-		3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XCConfigurationList.py; sourceTree = "<group>"; };
-		3A2DA0841EE2523D00B68320 /* XcodeProject.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XcodeProject.py; sourceTree = "<group>"; };
 		3A2DA0851EE2523D00B68320 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -441,6 +266,7 @@
 		3A2DA0531EE2523D00B68320 /* ModelScript */ = {
 			isa = PBXGroup;
 			children = (
+				13FD6B2A1EEAF59E00C586AE /* pbxproj */,
 				3A2DA0541EE2523D00B68320 /* constants.py */,
 				3A2DA0551EE2523D00B68320 /* external_class_template.txt */,
 				3A2DA0561EE2523D00B68320 /* fileimporter.py */,
@@ -450,77 +276,9 @@
 				3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */,
 				3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */,
 				3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */,
-				3A2DA05D1EE2523D00B68320 /* pbxproj */,
 				3A2DA0851EE2523D00B68320 /* validator.py */,
 			);
 			path = ModelScript;
-			sourceTree = "<group>";
-		};
-		3A2DA05D1EE2523D00B68320 /* pbxproj */ = {
-			isa = PBXGroup;
-			children = (
-				3A2DA05E1EE2523D00B68320 /* __init__.py */,
-				3A2DA05F1EE2523D00B68320 /* __main__.py */,
-				3A2DA0601EE2523D00B68320 /* pbxcli */,
-				3A2DA0651EE2523D00B68320 /* pbxextensions */,
-				3A2DA06A1EE2523D00B68320 /* PBXGenericObject.py */,
-				3A2DA06B1EE2523D00B68320 /* PBXKey.py */,
-				3A2DA06C1EE2523D00B68320 /* PBXList.py */,
-				3A2DA06D1EE2523D00B68320 /* PBXObjects.py */,
-				3A2DA06E1EE2523D00B68320 /* PBXRootObject.py */,
-				3A2DA06F1EE2523D00B68320 /* pbxsections */,
-				3A2DA0841EE2523D00B68320 /* XcodeProject.py */,
-			);
-			path = pbxproj;
-			sourceTree = "<group>";
-		};
-		3A2DA0601EE2523D00B68320 /* pbxcli */ = {
-			isa = PBXGroup;
-			children = (
-				3A2DA0611EE2523D00B68320 /* __init__.py */,
-				3A2DA0621EE2523D00B68320 /* pbxproj_file.py */,
-				3A2DA0631EE2523D00B68320 /* pbxproj_flag.py */,
-				3A2DA0641EE2523D00B68320 /* pbxproj_folder.py */,
-			);
-			path = pbxcli;
-			sourceTree = "<group>";
-		};
-		3A2DA0651EE2523D00B68320 /* pbxextensions */ = {
-			isa = PBXGroup;
-			children = (
-				3A2DA0661EE2523D00B68320 /* __init__.py */,
-				3A2DA0671EE2523D00B68320 /* ProjectFiles.py */,
-				3A2DA0681EE2523D00B68320 /* ProjectFlags.py */,
-				3A2DA0691EE2523D00B68320 /* ProjectGroups.py */,
-			);
-			path = pbxextensions;
-			sourceTree = "<group>";
-		};
-		3A2DA06F1EE2523D00B68320 /* pbxsections */ = {
-			isa = PBXGroup;
-			children = (
-				3A2DA0701EE2523D00B68320 /* __init__.py */,
-				3A2DA0711EE2523D00B68320 /* PBXAggregatedTarget.py */,
-				3A2DA0721EE2523D00B68320 /* PBXBuildFile.py */,
-				3A2DA0731EE2523D00B68320 /* PBXContainerItemProxy.py */,
-				3A2DA0741EE2523D00B68320 /* PBXCopyFilesBuildPhase.py */,
-				3A2DA0751EE2523D00B68320 /* PBXFileReference.py */,
-				3A2DA0761EE2523D00B68320 /* PBXFrameworksBuildPhase.py */,
-				3A2DA0771EE2523D00B68320 /* PBXGenericBuildPhase.py */,
-				3A2DA0781EE2523D00B68320 /* PBXGenericTarget.py */,
-				3A2DA0791EE2523D00B68320 /* PBXGroup.py */,
-				3A2DA07A1EE2523D00B68320 /* PBXHeadersBuildPhase.py */,
-				3A2DA07B1EE2523D00B68320 /* PBXLegacyTarget.py */,
-				3A2DA07C1EE2523D00B68320 /* PBXNativeTarget.py */,
-				3A2DA07D1EE2523D00B68320 /* PBXProject.py */,
-				3A2DA07E1EE2523D00B68320 /* PBXResourcesBuildPhase.py */,
-				3A2DA07F1EE2523D00B68320 /* PBXShellScriptBuildPhase.py */,
-				3A2DA0801EE2523D00B68320 /* PBXSourcesBuildPhase.py */,
-				3A2DA0811EE2523D00B68320 /* PBXTargetDependency.py */,
-				3A2DA0821EE2523D00B68320 /* XCBuildConfiguration.py */,
-				3A2DA0831EE2523D00B68320 /* XCConfigurationList.py */,
-			);
-			path = pbxsections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,51 +445,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DA0D61EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA1061EE2523E00B68320 /* PBXKey.py in Resources */,
-				3A2DA0FE1EE2523E00B68320 /* ProjectGroups.py in Resources */,
 				3A2DA0CA1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0F21EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA12A1EE2523E00B68320 /* PBXFileReference.py in Resources */,
-				3A2DA1561EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */,
-				3A2DA0F61EE2523E00B68320 /* ProjectFiles.py in Resources */,
-				3A2DA0DE1EE2523E00B68320 /* __main__.py in Resources */,
 				3A2DA0C61EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA1261EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */,
-				3A2DA1521EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */,
-				3A2DA0E61EE2523E00B68320 /* pbxproj_file.py in Resources */,
 				3A2DA16A1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BA1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				3A2DA0EA1EE2523E00B68320 /* pbxproj_flag.py in Resources */,
-				3A2DA15A1EE2523E00B68320 /* PBXTargetDependency.py in Resources */,
-				3A2DA13A1EE2523E00B68320 /* PBXGroup.py in Resources */,
-				3A2DA10A1EE2523E00B68320 /* PBXList.py in Resources */,
 				3A2DA0CE1EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA1161EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA10E1EE2523E00B68320 /* PBXObjects.py in Resources */,
-				3A2DA11E1EE2523E00B68320 /* PBXBuildFile.py in Resources */,
-				3A2DA11A1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */,
-				3A2DA0FA1EE2523E00B68320 /* ProjectFlags.py in Resources */,
 				3A2DA0B61EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA1461EE2523E00B68320 /* PBXNativeTarget.py in Resources */,
-				3A2DA12E1EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */,
-				3A2DA1321EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */,
-				3A2DA1661EE2523E00B68320 /* XcodeProject.py in Resources */,
-				3A2DA14A1EE2523E00B68320 /* PBXProject.py in Resources */,
 				3A2DA0D21EE2523E00B68320 /* modelgen-swift.py in Resources */,
+				13FD6B2B1EEAF59E00C586AE /* pbxproj in Resources */,
 				3A2DA0C21EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA1361EE2523E00B68320 /* PBXGenericTarget.py in Resources */,
-				3A2DA0DA1EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1021EE2523E00B68320 /* PBXGenericObject.py in Resources */,
-				3A2DA1121EE2523E00B68320 /* PBXRootObject.py in Resources */,
-				3A2DA0E21EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1621EE2523E00B68320 /* XCConfigurationList.py in Resources */,
-				3A2DA14E1EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */,
-				3A2DA13E1EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */,
-				3A2DA1221EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */,
-				3A2DA15E1EE2523E00B68320 /* XCBuildConfiguration.py in Resources */,
-				3A2DA0EE1EE2523E00B68320 /* pbxproj_folder.py in Resources */,
 				3A2DA0BE1EE2523D00B68320 /* fileimporter.py in Resources */,
-				3A2DA1421EE2523E00B68320 /* PBXLegacyTarget.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,51 +463,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DA0D81EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA1081EE2523E00B68320 /* PBXKey.py in Resources */,
-				3A2DA1001EE2523E00B68320 /* ProjectGroups.py in Resources */,
 				3A2DA0CC1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0F41EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA12C1EE2523E00B68320 /* PBXFileReference.py in Resources */,
-				3A2DA1581EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */,
-				3A2DA0F81EE2523E00B68320 /* ProjectFiles.py in Resources */,
-				3A2DA0E01EE2523E00B68320 /* __main__.py in Resources */,
 				3A2DA0C81EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA1281EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */,
-				3A2DA1541EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */,
-				3A2DA0E81EE2523E00B68320 /* pbxproj_file.py in Resources */,
 				3A2DA16C1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BC1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				3A2DA0EC1EE2523E00B68320 /* pbxproj_flag.py in Resources */,
-				3A2DA15C1EE2523E00B68320 /* PBXTargetDependency.py in Resources */,
-				3A2DA13C1EE2523E00B68320 /* PBXGroup.py in Resources */,
-				3A2DA10C1EE2523E00B68320 /* PBXList.py in Resources */,
 				3A2DA0D01EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA1181EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1101EE2523E00B68320 /* PBXObjects.py in Resources */,
-				3A2DA1201EE2523E00B68320 /* PBXBuildFile.py in Resources */,
-				3A2DA11C1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */,
-				3A2DA0FC1EE2523E00B68320 /* ProjectFlags.py in Resources */,
 				3A2DA0B81EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA1481EE2523E00B68320 /* PBXNativeTarget.py in Resources */,
-				3A2DA1301EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */,
-				3A2DA1341EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */,
-				3A2DA1681EE2523E00B68320 /* XcodeProject.py in Resources */,
-				3A2DA14C1EE2523E00B68320 /* PBXProject.py in Resources */,
 				3A2DA0D41EE2523E00B68320 /* modelgen-swift.py in Resources */,
+				13FD6B2D1EEAF59E00C586AE /* pbxproj in Resources */,
 				3A2DA0C41EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA1381EE2523E00B68320 /* PBXGenericTarget.py in Resources */,
-				3A2DA0DC1EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1041EE2523E00B68320 /* PBXGenericObject.py in Resources */,
-				3A2DA1141EE2523E00B68320 /* PBXRootObject.py in Resources */,
-				3A2DA0E41EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1641EE2523E00B68320 /* XCConfigurationList.py in Resources */,
-				3A2DA1501EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */,
-				3A2DA1401EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */,
-				3A2DA1241EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */,
-				3A2DA1601EE2523E00B68320 /* XCBuildConfiguration.py in Resources */,
-				3A2DA0F01EE2523E00B68320 /* pbxproj_folder.py in Resources */,
 				3A2DA0C01EE2523D00B68320 /* fileimporter.py in Resources */,
-				3A2DA1441EE2523E00B68320 /* PBXLegacyTarget.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,51 +481,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DA0D71EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA1071EE2523E00B68320 /* PBXKey.py in Resources */,
-				3A2DA0FF1EE2523E00B68320 /* ProjectGroups.py in Resources */,
 				3A2DA0CB1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0F31EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA12B1EE2523E00B68320 /* PBXFileReference.py in Resources */,
-				3A2DA1571EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */,
-				3A2DA0F71EE2523E00B68320 /* ProjectFiles.py in Resources */,
-				3A2DA0DF1EE2523E00B68320 /* __main__.py in Resources */,
 				3A2DA0C71EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA1271EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */,
-				3A2DA1531EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */,
-				3A2DA0E71EE2523E00B68320 /* pbxproj_file.py in Resources */,
 				3A2DA16B1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BB1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				3A2DA0EB1EE2523E00B68320 /* pbxproj_flag.py in Resources */,
-				3A2DA15B1EE2523E00B68320 /* PBXTargetDependency.py in Resources */,
-				3A2DA13B1EE2523E00B68320 /* PBXGroup.py in Resources */,
-				3A2DA10B1EE2523E00B68320 /* PBXList.py in Resources */,
 				3A2DA0CF1EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA1171EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA10F1EE2523E00B68320 /* PBXObjects.py in Resources */,
-				3A2DA11F1EE2523E00B68320 /* PBXBuildFile.py in Resources */,
-				3A2DA11B1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */,
-				3A2DA0FB1EE2523E00B68320 /* ProjectFlags.py in Resources */,
 				3A2DA0B71EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA1471EE2523E00B68320 /* PBXNativeTarget.py in Resources */,
-				3A2DA12F1EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */,
-				3A2DA1331EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */,
-				3A2DA1671EE2523E00B68320 /* XcodeProject.py in Resources */,
-				3A2DA14B1EE2523E00B68320 /* PBXProject.py in Resources */,
 				3A2DA0D31EE2523E00B68320 /* modelgen-swift.py in Resources */,
+				13FD6B2C1EEAF59E00C586AE /* pbxproj in Resources */,
 				3A2DA0C31EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA1371EE2523E00B68320 /* PBXGenericTarget.py in Resources */,
-				3A2DA0DB1EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1031EE2523E00B68320 /* PBXGenericObject.py in Resources */,
-				3A2DA1131EE2523E00B68320 /* PBXRootObject.py in Resources */,
-				3A2DA0E31EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1631EE2523E00B68320 /* XCConfigurationList.py in Resources */,
-				3A2DA14F1EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */,
-				3A2DA13F1EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */,
-				3A2DA1231EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */,
-				3A2DA15F1EE2523E00B68320 /* XCBuildConfiguration.py in Resources */,
-				3A2DA0EF1EE2523E00B68320 /* pbxproj_folder.py in Resources */,
 				3A2DA0BF1EE2523D00B68320 /* fileimporter.py in Resources */,
-				3A2DA1431EE2523E00B68320 /* PBXLegacyTarget.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,51 +499,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DA0D91EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA1091EE2523E00B68320 /* PBXKey.py in Resources */,
-				3A2DA1011EE2523E00B68320 /* ProjectGroups.py in Resources */,
 				3A2DA0CD1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0F51EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA12D1EE2523E00B68320 /* PBXFileReference.py in Resources */,
-				3A2DA1591EE2523E00B68320 /* PBXSourcesBuildPhase.py in Resources */,
-				3A2DA0F91EE2523E00B68320 /* ProjectFiles.py in Resources */,
-				3A2DA0E11EE2523E00B68320 /* __main__.py in Resources */,
 				3A2DA0C91EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA1291EE2523E00B68320 /* PBXCopyFilesBuildPhase.py in Resources */,
-				3A2DA1551EE2523E00B68320 /* PBXShellScriptBuildPhase.py in Resources */,
-				3A2DA0E91EE2523E00B68320 /* pbxproj_file.py in Resources */,
 				3A2DA16D1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BD1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				3A2DA0ED1EE2523E00B68320 /* pbxproj_flag.py in Resources */,
-				3A2DA15D1EE2523E00B68320 /* PBXTargetDependency.py in Resources */,
-				3A2DA13D1EE2523E00B68320 /* PBXGroup.py in Resources */,
-				3A2DA10D1EE2523E00B68320 /* PBXList.py in Resources */,
 				3A2DA0D11EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA1191EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1111EE2523E00B68320 /* PBXObjects.py in Resources */,
-				3A2DA1211EE2523E00B68320 /* PBXBuildFile.py in Resources */,
-				3A2DA11D1EE2523E00B68320 /* PBXAggregatedTarget.py in Resources */,
-				3A2DA0FD1EE2523E00B68320 /* ProjectFlags.py in Resources */,
 				3A2DA0B91EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA1491EE2523E00B68320 /* PBXNativeTarget.py in Resources */,
-				3A2DA1311EE2523E00B68320 /* PBXFrameworksBuildPhase.py in Resources */,
-				3A2DA1351EE2523E00B68320 /* PBXGenericBuildPhase.py in Resources */,
-				3A2DA1691EE2523E00B68320 /* XcodeProject.py in Resources */,
-				3A2DA14D1EE2523E00B68320 /* PBXProject.py in Resources */,
 				3A2DA0D51EE2523E00B68320 /* modelgen-swift.py in Resources */,
+				13FD6B2E1EEAF59E00C586AE /* pbxproj in Resources */,
 				3A2DA0C51EE2523E00B68320 /* generator.py in Resources */,
-				3A2DA1391EE2523E00B68320 /* PBXGenericTarget.py in Resources */,
-				3A2DA0DD1EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1051EE2523E00B68320 /* PBXGenericObject.py in Resources */,
-				3A2DA1151EE2523E00B68320 /* PBXRootObject.py in Resources */,
-				3A2DA0E51EE2523E00B68320 /* __init__.py in Resources */,
-				3A2DA1651EE2523E00B68320 /* XCConfigurationList.py in Resources */,
-				3A2DA1511EE2523E00B68320 /* PBXResourcesBuildPhase.py in Resources */,
-				3A2DA1411EE2523E00B68320 /* PBXHeadersBuildPhase.py in Resources */,
-				3A2DA1251EE2523E00B68320 /* PBXContainerItemProxy.py in Resources */,
-				3A2DA1611EE2523E00B68320 /* XCBuildConfiguration.py in Resources */,
-				3A2DA0F11EE2523E00B68320 /* pbxproj_folder.py in Resources */,
 				3A2DA0C11EE2523D00B68320 /* fileimporter.py in Resources */,
-				3A2DA1451EE2523E00B68320 /* PBXLegacyTarget.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
