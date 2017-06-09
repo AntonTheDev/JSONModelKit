@@ -15,6 +15,10 @@
 		13FD6B2C1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
 		13FD6B2D1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
 		13FD6B2E1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
+		13FD6B301EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
+		13FD6B311EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
+		13FD6B321EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
+		13FD6B331EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
 		3A2D9CDE1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CDF1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CE01EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,6 +118,7 @@
 		13C6E3431D386112000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FD6AF51EE9917B00C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
 		13FD6B2A1EEAF59E00C586AE /* pbxproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pbxproj; sourceTree = "<group>"; };
+		13FD6B2F1EEAF6AB00C586AE /* openstep_parser */ = {isa = PBXFileReference; lastKnownFileType = folder; path = openstep_parser; sourceTree = "<group>"; };
 		3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelKit.h; sourceTree = "<group>"; };
 		3A2DA03A1EE2513300B68320 /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2DA0441EE2523D00B68320 /* JMCompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCompoundValueTransformer.swift; sourceTree = "<group>"; };
@@ -266,6 +271,7 @@
 		3A2DA0531EE2523D00B68320 /* ModelScript */ = {
 			isa = PBXGroup;
 			children = (
+				13FD6B2F1EEAF6AB00C586AE /* openstep_parser */,
 				13FD6B2A1EEAF59E00C586AE /* pbxproj */,
 				3A2DA0541EE2523D00B68320 /* constants.py */,
 				3A2DA0551EE2523D00B68320 /* external_class_template.txt */,
@@ -449,6 +455,7 @@
 				3A2DA0C61EE2523E00B68320 /* instantiator.py in Resources */,
 				3A2DA16A1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BA1EE2523D00B68320 /* external_class_template.txt in Resources */,
+				13FD6B301EEAF6AB00C586AE /* openstep_parser in Resources */,
 				3A2DA0CE1EE2523E00B68320 /* internal_class_template.txt in Resources */,
 				3A2DA0B61EE2523D00B68320 /* constants.py in Resources */,
 				3A2DA0D21EE2523E00B68320 /* modelgen-swift.py in Resources */,
@@ -467,6 +474,7 @@
 				3A2DA0C81EE2523E00B68320 /* instantiator.py in Resources */,
 				3A2DA16C1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BC1EE2523D00B68320 /* external_class_template.txt in Resources */,
+				13FD6B321EEAF6AB00C586AE /* openstep_parser in Resources */,
 				3A2DA0D01EE2523E00B68320 /* internal_class_template.txt in Resources */,
 				3A2DA0B81EE2523D00B68320 /* constants.py in Resources */,
 				3A2DA0D41EE2523E00B68320 /* modelgen-swift.py in Resources */,
@@ -485,6 +493,7 @@
 				3A2DA0C71EE2523E00B68320 /* instantiator.py in Resources */,
 				3A2DA16B1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BB1EE2523D00B68320 /* external_class_template.txt in Resources */,
+				13FD6B311EEAF6AB00C586AE /* openstep_parser in Resources */,
 				3A2DA0CF1EE2523E00B68320 /* internal_class_template.txt in Resources */,
 				3A2DA0B71EE2523D00B68320 /* constants.py in Resources */,
 				3A2DA0D31EE2523E00B68320 /* modelgen-swift.py in Resources */,
@@ -503,6 +512,7 @@
 				3A2DA0C91EE2523E00B68320 /* instantiator.py in Resources */,
 				3A2DA16D1EE2523E00B68320 /* validator.py in Resources */,
 				3A2DA0BD1EE2523D00B68320 /* external_class_template.txt in Resources */,
+				13FD6B331EEAF6AB00C586AE /* openstep_parser in Resources */,
 				3A2DA0D11EE2523E00B68320 /* internal_class_template.txt in Resources */,
 				3A2DA0B91EE2523D00B68320 /* constants.py in Resources */,
 				3A2DA0D51EE2523E00B68320 /* modelgen-swift.py in Resources */,
