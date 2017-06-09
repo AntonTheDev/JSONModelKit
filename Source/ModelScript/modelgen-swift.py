@@ -104,7 +104,7 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 	internal_group = project.get_or_create_group('Internal', parent=model_group)
 
 	#print('Project Name ' + projectName + ' Path ' + project_file_path)
-	print 'Backup File Name ' + backup_file
+	#print 'Backup File Name ' + backup_file
 
 	for internal_name in internal_file_names:
 		found_files = project.get_files_by_name(internal_name)
