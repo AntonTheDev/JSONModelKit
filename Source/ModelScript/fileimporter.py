@@ -1,8 +1,5 @@
 #!/usr/bin/python
-import sys
-print sys.path
-
-import pbxproj
+from .pbxproj import XcodeProject
 
 class ProjectFileImporter:
 
