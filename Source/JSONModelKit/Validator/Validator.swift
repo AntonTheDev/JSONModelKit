@@ -40,25 +40,20 @@ final class Validator {
         
         
         if JMConfig.debugEnabled {
+            
             if missingPropertyKeyArray.count > 0 {
-                printDebugStatement(className, missingPropertyKeyArray: missingPropertyKeyArray, data : data)
+                
+                print("\n\n\(className) instance could not be parsed, missing values for the following non-optional properties:")
+                
+                for propertyKey in missingPropertyKeyArray {
+                    print("\n- \(propertyKey)")
+                }
+                
+                print("\n\nResponse:\n\(data)\n\n")
                 return false
             }
         }
         
         return true
-    }
-    
-    // MARK Debug Enabled Methods
-    
-    final class func printDebugStatement(_ className : String, missingPropertyKeyArray : Array<String>, data : Dictionary<String, AnyObject>){
-        if (missingPropertyKeyArray.count > 0) {
-            print("\n\n\(className) instance could not be parsed, missing values for the following non-optional properties:")
-            for propertyKey in missingPropertyKeyArray {
-                print("\n- \(propertyKey)")
-            }
-            
-            print("\n\nResponse:\n\(data)\n\n")
-        }
     }
 }
