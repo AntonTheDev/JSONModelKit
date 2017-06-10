@@ -433,6 +433,9 @@
       location = "group:JSONModelKit/JSONModelKit-tvOS/JSONModelKit-tvOS.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:JSONModelKit/JSONModelKit-watchOS/JSONModelKit-watchOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:JSONModelKit/JSONModelKit-Importer/JSONModelKit-Importer.xcodeproj">
    </FileRef>
 </Workspace>
