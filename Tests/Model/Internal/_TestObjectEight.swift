@@ -79,7 +79,7 @@ extension _TestObjectEight : CustomDebugStringConvertible {
 			
 			if non_optionalDictionaryType.keys.count > 0 {
 				for (key, value) in non_optionalDictionaryType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(key)"
 					debug_string += " : "
 					debug_string += "\(value)"

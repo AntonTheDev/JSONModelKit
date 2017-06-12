@@ -52,6 +52,7 @@ class _TestObjectFive   {
 			if let unwrapped_non_optionalSubType : Any = valuesDict["non_optionalSubType"]  { 
 				non_optionalSubType = typeCast(unwrapped_non_optionalSubType)! 
 			}
+
  		}
 	}
 }
@@ -63,10 +64,10 @@ extension _TestObjectFive : CustomDebugStringConvertible {
 		var debug_string = "TestObjectFive"
 
 			if let unwrapped_optionalSubType = optionalSubType { 
-				debug_string += "       - optionalSubType : \(unwrapped_optionalSubType)"
+				debug_string += "\n       - optionalSubType : \(unwrapped_optionalSubType)"
 			}
 
-			debug_string += "       - non_optionalSubType : \(non_optionalSubType)"
+			debug_string += "\n       - non_optionalSubType : \(non_optionalSubType)"
 
 			debug_string += "\n"
 			

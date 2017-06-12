@@ -168,7 +168,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 			
 			if non_optionalArrayIntType.count > 0 {
 				for value in non_optionalArrayIntType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(value)"
 					debug_string += " ]"
 				}
@@ -177,7 +177,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 			}    		
 			if non_optionalArrayDoubleType.count > 0 {
 				for value in non_optionalArrayDoubleType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(value)"
 					debug_string += " ]"
 				}
@@ -186,7 +186,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 			}    		
 			if non_optionalArrayFloatType.count > 0 {
 				for value in non_optionalArrayFloatType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(value)"
 					debug_string += " ]"
 				}
@@ -195,7 +195,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 			}    		
 			if non_optionalArrayStringType.count > 0 {
 				for value in non_optionalArrayStringType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(value)"
 					debug_string += " ]"
 				}

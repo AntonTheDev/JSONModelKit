@@ -212,7 +212,7 @@ class ClassGenerator:
    Replaces { DEBUG_DESCRIPTION_OPTIONALS } in the template
    '''
    def debug_optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"       - propertyname : \(unwrapped_propertyname)\"\r\n\t\t\t}\r\n"
+      valueTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"\\n       - propertyname : \(unwrapped_propertyname)\"\r\n\t\t\t}\r\n"
       dictionatyTemplate   = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.keys.count > 0 {\n\t\t\t\t\tfor (key, value) in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t\t}\n\t\t\t}"
       arrayTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\t\tfor value in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}\n\t\t\t"
 
@@ -224,9 +224,9 @@ class ClassGenerator:
    Replaces { DEBUG_DESCRIPTION_NONOPTIONALS } in the template
    '''
    def debug_non_optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "debug_string += \"       - propertyname : \(propertyname)\""
-      dictionatyTemplate   = "\r\n\t\t\tif propertyname.keys.count > 0 {\n\t\t\t\tfor (key, value) in propertyname {\n\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t}"
-      arrayTemplate        = "\r\n\t\t\tif propertyname.count > 0 {\n\t\t\t\tfor value in propertyname {\n\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+      valueTemplate        = "debug_string += \"\\n       - propertyname : \(propertyname)\""
+      dictionatyTemplate   = "\r\n\t\t\tif propertyname.keys.count > 0 {\n\t\t\t\tfor (key, value) in propertyname {\n\t\t\t\t\tdebug_string += \"\\n              - [ \"\n\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t}"
+      arrayTemplate        = "\r\n\t\t\tif propertyname.count > 0 {\n\t\t\t\tfor value in propertyname {\n\t\t\t\t\tdebug_string += \"\\n              - [ \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)

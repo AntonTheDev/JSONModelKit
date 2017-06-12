@@ -78,7 +78,7 @@ extension _TestObjectSeven : CustomDebugStringConvertible {
 			
 			if non_optionalArrayType.count > 0 {
 				for value in non_optionalArrayType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(value)"
 					debug_string += " ]"
 				}

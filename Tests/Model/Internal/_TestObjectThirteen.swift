@@ -94,23 +94,23 @@ extension _TestObjectThirteen : CustomDebugStringConvertible {
 		var debug_string = "TestObjectThirteen"
 
 			if let unwrapped_optionalLowercaseCompletionHandler = optionalLowercaseCompletionHandler { 
-				debug_string += "       - optionalLowercaseCompletionHandler : \(unwrapped_optionalLowercaseCompletionHandler)"
+				debug_string += "\n       - optionalLowercaseCompletionHandler : \(unwrapped_optionalLowercaseCompletionHandler)"
 			}
 
     		if let unwrapped_optionalTuple = optionalTuple { 
-				debug_string += "       - optionalTuple : \(unwrapped_optionalTuple)"
+				debug_string += "\n       - optionalTuple : \(unwrapped_optionalTuple)"
 			}
 
     		if let unwrapped_optionalUppercaseCompletionHandler = optionalUppercaseCompletionHandler { 
-				debug_string += "       - optionalUppercaseCompletionHandler : \(unwrapped_optionalUppercaseCompletionHandler)"
+				debug_string += "\n       - optionalUppercaseCompletionHandler : \(unwrapped_optionalUppercaseCompletionHandler)"
 			}
 
     		if let unwrapped_optionalStruct = optionalStruct { 
-				debug_string += "       - optionalStruct : \(unwrapped_optionalStruct)"
+				debug_string += "\n       - optionalStruct : \(unwrapped_optionalStruct)"
 			}
 
     		if let unwrapped_optionalEnum = optionalEnum { 
-				debug_string += "       - optionalEnum : \(unwrapped_optionalEnum)"
+				debug_string += "\n       - optionalEnum : \(unwrapped_optionalEnum)"
 			}
 
 			

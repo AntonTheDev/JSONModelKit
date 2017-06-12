@@ -172,7 +172,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 			
 			if non_optionalDictionaryIntType.keys.count > 0 {
 				for (key, value) in non_optionalDictionaryIntType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(key)"
 					debug_string += " : "
 					debug_string += "\(value)"
@@ -183,7 +183,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 			}    		
 			if non_optionalDictionaryDoubleType.keys.count > 0 {
 				for (key, value) in non_optionalDictionaryDoubleType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(key)"
 					debug_string += " : "
 					debug_string += "\(value)"
@@ -194,7 +194,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 			}    		
 			if non_optionalDictionaryFloatType.keys.count > 0 {
 				for (key, value) in non_optionalDictionaryFloatType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(key)"
 					debug_string += " : "
 					debug_string += "\(value)"
@@ -205,7 +205,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 			}    		
 			if non_optionalDictionaryStringType.keys.count > 0 {
 				for (key, value) in non_optionalDictionaryStringType {
-					debug_string += "              - [ "
+					debug_string += "\n              - [ "
 					debug_string += "\(key)"
 					debug_string += " : "
 					debug_string += "\(value)"

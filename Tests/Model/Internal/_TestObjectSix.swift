@@ -64,10 +64,10 @@ extension _TestObjectSix : CustomDebugStringConvertible {
 		var debug_string = "TestObjectSix"
 
 			if let unwrapped_optionalCompoundString = optionalCompoundString { 
-				debug_string += "       - optionalCompoundString : \(unwrapped_optionalCompoundString)"
+				debug_string += "\n       - optionalCompoundString : \(unwrapped_optionalCompoundString)"
 			}
 
-			debug_string += "       - non_optionalCompoundString : \(non_optionalCompoundString)"
+			debug_string += "\n       - non_optionalCompoundString : \(non_optionalCompoundString)"
 
 			debug_string += "\n"
 			
