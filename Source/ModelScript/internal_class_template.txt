@@ -50,12 +50,10 @@ extension _{ CLASSNAME } : CustomDebugStringConvertible {
 
 		var debug_string = "[{ CLASSNAME }]"
 
+		{ DEBUG_DESCRIPTION_OPTIONALS }
+		{ DEBUG_DESCRIPTION_NONOPTIONALS }
+		debug_string += "\n"
 
-			{ DEBUG_DESCRIPTION_OPTIONALS }
-			{ DEBUG_DESCRIPTION_NONOPTIONALS }
-
-			debug_string += "\n"
-
-			return debug_string
+		return debug_string
 	}
 }

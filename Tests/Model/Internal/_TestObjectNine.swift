@@ -115,96 +115,96 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "[TestObjectNine]\n"
+		var debug_string = "[TestObjectNine]"
 
-			if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
-				if unwrapped_optionalArrayDoubleType.count > 0 {
-					for value in unwrapped_optionalArrayDoubleType {
-						debug_string += "              - [ "
-						debug_string += "\(value)"
-						debug_string += " ]"
-					}
-				} 
-			} else {
-				debug_string += "[ ]"
-			}
-			
-    		if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
-				if unwrapped_optionalArrayIntType.count > 0 {
-					for value in unwrapped_optionalArrayIntType {
-						debug_string += "              - [ "
-						debug_string += "\(value)"
-						debug_string += " ]"
-					}
-				} 
-			} else {
-				debug_string += "[ ]"
-			}
-			
-    		if let unwrapped_optionalArrayStringType = optionalArrayStringType { 
-				if unwrapped_optionalArrayStringType.count > 0 {
-					for value in unwrapped_optionalArrayStringType {
-						debug_string += "              - [ "
-						debug_string += "\(value)"
-						debug_string += " ]"
-					}
-				} 
-			} else {
-				debug_string += "[ ]"
-			}
-			
-    		if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
-				if unwrapped_optionalArrayFloatType.count > 0 {
-					for value in unwrapped_optionalArrayFloatType {
-						debug_string += "              - [ "
-						debug_string += "\(value)"
-						debug_string += " ]"
-					}
-				} 
-			} else {
-				debug_string += "[ ]"
-			}
-			
-			
-			if non_optionalArrayIntType.count > 0 {
-				for value in non_optionalArrayIntType {
-					debug_string += "\n              - [ "
-					debug_string += "\(value)"
-					debug_string += " ]"
-				}
-			} else {
-				debug_string += "[ ]"
-			}    		
-			if non_optionalArrayDoubleType.count > 0 {
-				for value in non_optionalArrayDoubleType {
-					debug_string += "\n              - [ "
-					debug_string += "\(value)"
-					debug_string += " ]"
-				}
-			} else {
-				debug_string += "[ ]"
-			}    		
-			if non_optionalArrayFloatType.count > 0 {
-				for value in non_optionalArrayFloatType {
-					debug_string += "\n              - [ "
-					debug_string += "\(value)"
-					debug_string += " ]"
-				}
-			} else {
-				debug_string += "[ ]"
-			}    		
-			if non_optionalArrayStringType.count > 0 {
-				for value in non_optionalArrayStringType {
-					debug_string += "\n              - [ "
-					debug_string += "\(value)"
-					debug_string += " ]"
-				}
-			} else {
-				debug_string += "[ ]"
-			}
+		if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
+			debug_string += "       \n\n       - optionalArrayDoubleType : \n"
 
-			debug_string += "\n"
+			if unwrapped_optionalArrayDoubleType.count > 0 {
+				for value in unwrapped_optionalArrayDoubleType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
+			
+    	if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
+			debug_string += "       \n\n       - optionalArrayIntType : \n"
 
-			return debug_string
+			if unwrapped_optionalArrayIntType.count > 0 {
+				for value in unwrapped_optionalArrayIntType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
+			
+    	if let unwrapped_optionalArrayStringType = optionalArrayStringType { 
+			debug_string += "       \n\n       - optionalArrayStringType : \n"
+
+			if unwrapped_optionalArrayStringType.count > 0 {
+				for value in unwrapped_optionalArrayStringType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
+			
+    	if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
+			debug_string += "       \n\n       - optionalArrayFloatType : \n"
+
+			if unwrapped_optionalArrayFloatType.count > 0 {
+				for value in unwrapped_optionalArrayFloatType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
+			
+		
+		debug_string += "       \n\n       - non_optionalArrayIntType : \n"
+
+		if non_optionalArrayIntType.count > 0 {
+			for value in non_optionalArrayIntType {
+				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+			}
+		} else {
+			debug_string += "[ ]"
+		}    	
+		debug_string += "       \n\n       - non_optionalArrayDoubleType : \n"
+
+		if non_optionalArrayDoubleType.count > 0 {
+			for value in non_optionalArrayDoubleType {
+				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+			}
+		} else {
+			debug_string += "[ ]"
+		}    	
+		debug_string += "       \n\n       - non_optionalArrayFloatType : \n"
+
+		if non_optionalArrayFloatType.count > 0 {
+			for value in non_optionalArrayFloatType {
+				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+			}
+		} else {
+			debug_string += "[ ]"
+		}    	
+		debug_string += "       \n\n       - non_optionalArrayStringType : \n"
+
+		if non_optionalArrayStringType.count > 0 {
+			for value in non_optionalArrayStringType {
+				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+			}
+		} else {
+			debug_string += "[ ]"
+		}
+
+		debug_string += "\n"
+
+		return debug_string
 	}
 }

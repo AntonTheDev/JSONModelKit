@@ -61,36 +61,34 @@ extension _TestObjectEight : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "[TestObjectEight]\n"
+		var debug_string = "[TestObjectEight]"
 
-			if let unwrapped_optionalDictionaryType = optionalDictionaryType { 
-				if unwrapped_optionalDictionaryType.keys.count > 0 {
-					for (key, value) in unwrapped_optionalDictionaryType {
-						debug_string += "              - [ "
-						debug_string += "\(key)"
-						debug_string += " : "
-						debug_string += "\(value)"
-						debug_string += " ]"
-					}
-				} else {
-					debug_string += "[ : ]"
+		if let unwrapped_optionalDictionaryType = optionalDictionaryType { 
+			debug_string += "       \n\n       - optionalDictionaryType : \n"
+
+			if unwrapped_optionalDictionaryType.count > 0 {
+				for (_, value) in unwrapped_optionalDictionaryType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				}
-			}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
 			
-			if non_optionalDictionaryType.keys.count > 0 {
-				for (key, value) in non_optionalDictionaryType {
-					debug_string += "\n              - [ "
-					debug_string += "\(key)"
-					debug_string += " : "
-					debug_string += "\(value)"
-					debug_string += " ]"
-				}
-			} else {
-				debug_string += "[ : ]"
+		
+		debug_string += "       \n\n       - non_optionalDictionaryType : \n"
+
+		if non_optionalDictionaryType.count > 0 {
+			for (_, value) in non_optionalDictionaryType {
+				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				debug_string += ""
 			}
+		} else {
+			debug_string += "[ ]"
+		}
 
-			debug_string += "\n"
+		debug_string += "\n"
 
-			return debug_string
+		return debug_string
 	}
 }

@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/AntonTheDev/JSONModelKit.svg?branch=dev)](https://travis-ci.org/AntonTheDev/JSONModelKit)
 [![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg)](https://github.com/AntonTheDev/JSONModelKit/)
 [![License](https://img.shields.io/badge/license-MIT-343434.svg)](https://github.com/AntonTheDev/JSONModelKit/)
+[![Join the chat at https://gitter.im/AntonTheDev/JSONModelKit](https://badges.gitter.im/AntonTheDev/JSONModelKit.svg)](https://gitter.im/AntonTheDev/JSONModelKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 # JSONModelKit

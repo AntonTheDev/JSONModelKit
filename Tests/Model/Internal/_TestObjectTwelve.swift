@@ -133,32 +133,32 @@ extension _TestObjectTwelve : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "[TestObjectTwelve]\n"
+		var debug_string = "[TestObjectTwelve]"
 
-			if let unwrapped_optionalBool = optionalBool { 
-				debug_string += "\n       - optionalBool : \(unwrapped_optionalBool)"
-			}
+		if let unwrapped_optionalBool = optionalBool { 
+			debug_string += "\n       - optionalBool : \(unwrapped_optionalBool)"
+		}
 
-    		if let unwrapped_optionalString = optionalString { 
-				debug_string += "\n       - optionalString : \(unwrapped_optionalString)"
-			}
+    	if let unwrapped_optionalString = optionalString { 
+			debug_string += "\n       - optionalString : \(unwrapped_optionalString)"
+		}
 
-    		if let unwrapped_optionalInt = optionalInt { 
-				debug_string += "\n       - optionalInt : \(unwrapped_optionalInt)"
-			}
+    	if let unwrapped_optionalInt = optionalInt { 
+			debug_string += "\n       - optionalInt : \(unwrapped_optionalInt)"
+		}
 
-    		if let unwrapped_optionalDouble = optionalDouble { 
-				debug_string += "\n       - optionalDouble : \(unwrapped_optionalDouble)"
-			}
+    	if let unwrapped_optionalDouble = optionalDouble { 
+			debug_string += "\n       - optionalDouble : \(unwrapped_optionalDouble)"
+		}
 
-    		if let unwrapped_optionalFloat = optionalFloat { 
-				debug_string += "\n       - optionalFloat : \(unwrapped_optionalFloat)"
-			}
+    	if let unwrapped_optionalFloat = optionalFloat { 
+			debug_string += "\n       - optionalFloat : \(unwrapped_optionalFloat)"
+		}
 
-			debug_string += "\n       - non_optionalBool : \(non_optionalBool)"    		debug_string += "\n       - non_optionalString : \(non_optionalString)"    		debug_string += "\n       - non_optionalInt : \(non_optionalInt)"    		debug_string += "\n       - non_optionalDouble : \(non_optionalDouble)"    		debug_string += "\n       - non_optionalFloat : \(non_optionalFloat)"
+		debug_string += "\n       - non_optionalBool : \(non_optionalBool)"    	debug_string += "\n       - non_optionalString : \(non_optionalString)"    	debug_string += "\n       - non_optionalInt : \(non_optionalInt)"    	debug_string += "\n       - non_optionalDouble : \(non_optionalDouble)"    	debug_string += "\n       - non_optionalFloat : \(non_optionalFloat)"
 
-			debug_string += "\n"
+		debug_string += "\n"
 
-			return debug_string
+		return debug_string
 	}
 }

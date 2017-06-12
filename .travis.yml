@@ -14,3 +14,5 @@ jobs:
     - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-tvOSTests -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.2' test
     - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
     - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-OSXTests -sdk macosx -destination 'platform=macOS,arch=x86_64' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme JSON-watchOSTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3.1' test
+    - script: xcodebuild -workspace JSONModelKit.xcworkspace -scheme PLIST-watchOSTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3.1' test
