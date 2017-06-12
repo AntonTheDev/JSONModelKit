@@ -44,3 +44,18 @@ class _TestObjectTwo   {
  		}
 	}
 }
+
+extension _TestObjectTwo : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectTwo"
+
+			
+			
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

@@ -110,3 +110,113 @@ class _TestObjectTen   {
  		}
 	}
 }
+
+extension _TestObjectTen : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectTen"
+
+			if let unwrapped_optionalDictionaryIntType = optionalDictionaryIntType { 
+				if unwrapped_optionalDictionaryIntType.keys.count > 0 {
+					for (key, value) in unwrapped_optionalDictionaryIntType {
+						debug_string += "              - [ "
+						debug_string += "\(key)"
+						debug_string += " : "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} else {
+					debug_string += "[ : ]"
+				}
+			}
+    		if let unwrapped_optionalDictionaryDoubleType = optionalDictionaryDoubleType { 
+				if unwrapped_optionalDictionaryDoubleType.keys.count > 0 {
+					for (key, value) in unwrapped_optionalDictionaryDoubleType {
+						debug_string += "              - [ "
+						debug_string += "\(key)"
+						debug_string += " : "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} else {
+					debug_string += "[ : ]"
+				}
+			}
+    		if let unwrapped_optionalDictionaryFloatType = optionalDictionaryFloatType { 
+				if unwrapped_optionalDictionaryFloatType.keys.count > 0 {
+					for (key, value) in unwrapped_optionalDictionaryFloatType {
+						debug_string += "              - [ "
+						debug_string += "\(key)"
+						debug_string += " : "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} else {
+					debug_string += "[ : ]"
+				}
+			}
+    		if let unwrapped_optionalDictionaryStringType = optionalDictionaryStringType { 
+				if unwrapped_optionalDictionaryStringType.keys.count > 0 {
+					for (key, value) in unwrapped_optionalDictionaryStringType {
+						debug_string += "              - [ "
+						debug_string += "\(key)"
+						debug_string += " : "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} else {
+					debug_string += "[ : ]"
+				}
+			}
+			
+			if non_optionalDictionaryIntType.keys.count > 0 {
+				for (key, value) in non_optionalDictionaryIntType {
+					debug_string += "              - [ "
+					debug_string += "\(key)"
+					debug_string += " : "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ : ]"
+			}    		
+			if non_optionalDictionaryDoubleType.keys.count > 0 {
+				for (key, value) in non_optionalDictionaryDoubleType {
+					debug_string += "              - [ "
+					debug_string += "\(key)"
+					debug_string += " : "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ : ]"
+			}    		
+			if non_optionalDictionaryFloatType.keys.count > 0 {
+				for (key, value) in non_optionalDictionaryFloatType {
+					debug_string += "              - [ "
+					debug_string += "\(key)"
+					debug_string += " : "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ : ]"
+			}    		
+			if non_optionalDictionaryStringType.keys.count > 0 {
+				for (key, value) in non_optionalDictionaryStringType {
+					debug_string += "              - [ "
+					debug_string += "\(key)"
+					debug_string += " : "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ : ]"
+			}
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

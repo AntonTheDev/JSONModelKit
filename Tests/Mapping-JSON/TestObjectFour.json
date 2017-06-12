@@ -1,7 +1,4 @@
 {
-	"model_config" : {
-        "extends" : "NSObject"
-    },
 	"optionalString" : {
 		"key" : "optional_string",
 		"type" : "String",

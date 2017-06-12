@@ -40,6 +40,9 @@ class ClassGenerator:
       fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(propertyMappings))
       fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
 
+      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_OPTIONALS }",       self.debug_optional_property_definitions(propertyMappings))
+      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_NONOPTIONALS }",    self.debug_non_optional_property_definitions(propertyMappings))
+
       nonOptionalArray = self.filtered_mappings(propertyMappings, True)
 
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
@@ -203,6 +206,32 @@ class ClassGenerator:
       filteredMappings = self.filtered_mappings(propertyMappings, False)
 
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
+
+
+   '''
+   Replaces { DEBUG_DESCRIPTION_OPTIONALS } in the template
+   '''
+   def debug_optional_property_definitions(self, propertyMappings):
+      valueTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"       - propertyname : \(unwrapped_propertyname)\"\r\n\t\t\t}\r\n"
+      dictionatyTemplate   = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.keys.count > 0 {\n\t\t\t\t\tfor (key, value) in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t\t}\n\t\t\t}"
+      arrayTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\t\tfor value in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}\n\t\t\t"
+
+      templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
+      filteredMappings = self.filtered_mappings(propertyMappings, True)
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
+
+   '''
+   Replaces { DEBUG_DESCRIPTION_NONOPTIONALS } in the template
+   '''
+   def debug_non_optional_property_definitions(self, propertyMappings):
+      valueTemplate        = "debug_string += \"       - propertyname : \(propertyname)\""
+      dictionatyTemplate   = "\r\n\t\t\tif propertyname.keys.count > 0 {\n\t\t\t\tfor (key, value) in propertyname {\n\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t}"
+      arrayTemplate        = "\r\n\t\t\tif propertyname.count > 0 {\n\t\t\t\tfor value in propertyname {\n\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+
+      templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
+      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r    " )
+
 
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):

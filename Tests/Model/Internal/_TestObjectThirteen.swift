@@ -4,11 +4,11 @@ import Foundation
 class _TestObjectThirteen   {
 
 
-	var optionalStruct : StructExample?
+	var optionalLowercaseCompletionHandler : ((_ value : String) -> String)?
     var optionalTuple : (val1 : Double, val2 : Double)?
     var optionalUppercaseCompletionHandler : ((_ value : String) -> String)?
+    var optionalStruct : StructExample?
     var optionalEnum : EnumExample?
-    var optionalLowercaseCompletionHandler : ((_ value : String) -> String)?
 
 	required init()  {
 
@@ -27,8 +27,8 @@ class _TestObjectThirteen   {
 
 			self.init()
 
-			if let unwrapped_optionalStruct : Any = valuesDict["optionalStruct"]  { 
-				optionalStruct = typeCast(unwrapped_optionalStruct)! 
+			if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
+				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
 			}
 
     		if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
@@ -39,12 +39,12 @@ class _TestObjectThirteen   {
 				optionalUppercaseCompletionHandler = typeCast(unwrapped_optionalUppercaseCompletionHandler)! 
 			}
 
-    		if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
-				optionalEnum = typeCast(unwrapped_optionalEnum)! 
+    		if let unwrapped_optionalStruct : Any = valuesDict["optionalStruct"]  { 
+				optionalStruct = typeCast(unwrapped_optionalStruct)! 
 			}
 
-    		if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
-				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
+    		if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
+				optionalEnum = typeCast(unwrapped_optionalEnum)! 
 			}
 
 		} else {
@@ -62,8 +62,8 @@ class _TestObjectThirteen   {
 												   employing: JMInstantiator.sharedInstance,
 												   defaultsEnabled : false)
 		{
-			if let unwrapped_optionalStruct : Any = valuesDict["optionalStruct"]  { 
-				optionalStruct = typeCast(unwrapped_optionalStruct)! 
+			if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
+				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
 			}
 
     		if let unwrapped_optionalTuple : Any = valuesDict["optionalTuple"]  { 
@@ -74,15 +74,49 @@ class _TestObjectThirteen   {
 				optionalUppercaseCompletionHandler = typeCast(unwrapped_optionalUppercaseCompletionHandler)! 
 			}
 
+    		if let unwrapped_optionalStruct : Any = valuesDict["optionalStruct"]  { 
+				optionalStruct = typeCast(unwrapped_optionalStruct)! 
+			}
+
     		if let unwrapped_optionalEnum : Any = valuesDict["optionalEnum"]  { 
 				optionalEnum = typeCast(unwrapped_optionalEnum)! 
 			}
 
-    		if let unwrapped_optionalLowercaseCompletionHandler : Any = valuesDict["optionalLowercaseCompletionHandler"]  { 
-				optionalLowercaseCompletionHandler = typeCast(unwrapped_optionalLowercaseCompletionHandler)! 
+			
+ 		}
+	}
+}
+
+extension _TestObjectThirteen : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectThirteen"
+
+			if let unwrapped_optionalLowercaseCompletionHandler = optionalLowercaseCompletionHandler { 
+				debug_string += "       - optionalLowercaseCompletionHandler : \(unwrapped_optionalLowercaseCompletionHandler)"
+			}
+
+    		if let unwrapped_optionalTuple = optionalTuple { 
+				debug_string += "       - optionalTuple : \(unwrapped_optionalTuple)"
+			}
+
+    		if let unwrapped_optionalUppercaseCompletionHandler = optionalUppercaseCompletionHandler { 
+				debug_string += "       - optionalUppercaseCompletionHandler : \(unwrapped_optionalUppercaseCompletionHandler)"
+			}
+
+    		if let unwrapped_optionalStruct = optionalStruct { 
+				debug_string += "       - optionalStruct : \(unwrapped_optionalStruct)"
+			}
+
+    		if let unwrapped_optionalEnum = optionalEnum { 
+				debug_string += "       - optionalEnum : \(unwrapped_optionalEnum)"
 			}
 
 			
- 		}
+
+			debug_string += "\n"
+			
+			return debug_string
 	}
 }

@@ -43,3 +43,18 @@ class _{ CLASSNAME }  { BASE_CLASS } {
  		}
 	}
 }
+
+extension _{ CLASSNAME } : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "{ CLASSNAME }"
+
+			{ DEBUG_DESCRIPTION_OPTIONALS }
+			{ DEBUG_DESCRIPTION_NONOPTIONALS }
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

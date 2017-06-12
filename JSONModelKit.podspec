@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "JSONModelKit"
   s.version      = "1.0.0"
-  s.summary      = "JSON/Dictionary Driven Model Generator"
+  s.summary      = "API driven JSON mapper. Generates, and auto-imports, model files into your project based on, JSON or PLIST, mapping files configured against an arbitrary dictionary. 2 Birds, 1 Stone."
   s.homepage     = "https://github.com/AntonTheDev/JSONModelKit"
   s.license      = 'MIT'
   s.author       = { "Anton Doudarev" => "antonthedev@gmail.com" }

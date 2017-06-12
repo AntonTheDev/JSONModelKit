@@ -110,3 +110,101 @@ class _TestObjectNine   {
  		}
 	}
 }
+
+extension _TestObjectNine : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectNine"
+
+			if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
+				if unwrapped_optionalArrayDoubleType.count > 0 {
+					for value in unwrapped_optionalArrayDoubleType {
+						debug_string += "              - [ "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} 
+			} else {
+				debug_string += "[ ]"
+			}
+			
+    		if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
+				if unwrapped_optionalArrayIntType.count > 0 {
+					for value in unwrapped_optionalArrayIntType {
+						debug_string += "              - [ "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} 
+			} else {
+				debug_string += "[ ]"
+			}
+			
+    		if let unwrapped_optionalArrayStringType = optionalArrayStringType { 
+				if unwrapped_optionalArrayStringType.count > 0 {
+					for value in unwrapped_optionalArrayStringType {
+						debug_string += "              - [ "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} 
+			} else {
+				debug_string += "[ ]"
+			}
+			
+    		if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
+				if unwrapped_optionalArrayFloatType.count > 0 {
+					for value in unwrapped_optionalArrayFloatType {
+						debug_string += "              - [ "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} 
+			} else {
+				debug_string += "[ ]"
+			}
+			
+			
+			if non_optionalArrayIntType.count > 0 {
+				for value in non_optionalArrayIntType {
+					debug_string += "              - [ "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ ]"
+			}    		
+			if non_optionalArrayDoubleType.count > 0 {
+				for value in non_optionalArrayDoubleType {
+					debug_string += "              - [ "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ ]"
+			}    		
+			if non_optionalArrayFloatType.count > 0 {
+				for value in non_optionalArrayFloatType {
+					debug_string += "              - [ "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ ]"
+			}    		
+			if non_optionalArrayStringType.count > 0 {
+				for value in non_optionalArrayStringType {
+					debug_string += "              - [ "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ ]"
+			}
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

@@ -128,3 +128,37 @@ class _TestObjectTwelve   {
  		}
 	}
 }
+
+extension _TestObjectTwelve : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectTwelve"
+
+			if let unwrapped_optionalBool = optionalBool { 
+				debug_string += "       - optionalBool : \(unwrapped_optionalBool)"
+			}
+
+    		if let unwrapped_optionalString = optionalString { 
+				debug_string += "       - optionalString : \(unwrapped_optionalString)"
+			}
+
+    		if let unwrapped_optionalInt = optionalInt { 
+				debug_string += "       - optionalInt : \(unwrapped_optionalInt)"
+			}
+
+    		if let unwrapped_optionalDouble = optionalDouble { 
+				debug_string += "       - optionalDouble : \(unwrapped_optionalDouble)"
+			}
+
+    		if let unwrapped_optionalFloat = optionalFloat { 
+				debug_string += "       - optionalFloat : \(unwrapped_optionalFloat)"
+			}
+
+			debug_string += "       - non_optionalBool : \(non_optionalBool)"    		debug_string += "       - non_optionalString : \(non_optionalString)"    		debug_string += "       - non_optionalInt : \(non_optionalInt)"    		debug_string += "       - non_optionalDouble : \(non_optionalDouble)"    		debug_string += "       - non_optionalFloat : \(non_optionalFloat)"
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

@@ -56,3 +56,21 @@ class _TestObjectSix   {
  		}
 	}
 }
+
+extension _TestObjectSix : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectSix"
+
+			if let unwrapped_optionalCompoundString = optionalCompoundString { 
+				debug_string += "       - optionalCompoundString : \(unwrapped_optionalCompoundString)"
+			}
+
+			debug_string += "       - non_optionalCompoundString : \(non_optionalCompoundString)"
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}

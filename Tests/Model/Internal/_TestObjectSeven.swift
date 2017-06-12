@@ -56,3 +56,38 @@ class _TestObjectSeven   {
  		}
 	}
 }
+
+extension _TestObjectSeven : CustomDebugStringConvertible {
+
+	var debugDescription: String {
+
+		var debug_string = "TestObjectSeven"
+
+			if let unwrapped_optionalArrayType = optionalArrayType { 
+				if unwrapped_optionalArrayType.count > 0 {
+					for value in unwrapped_optionalArrayType {
+						debug_string += "              - [ "
+						debug_string += "\(value)"
+						debug_string += " ]"
+					}
+				} 
+			} else {
+				debug_string += "[ ]"
+			}
+			
+			
+			if non_optionalArrayType.count > 0 {
+				for value in non_optionalArrayType {
+					debug_string += "              - [ "
+					debug_string += "\(value)"
+					debug_string += " ]"
+				}
+			} else {
+				debug_string += "[ ]"
+			}
+
+			debug_string += "\n"
+			
+			return debug_string
+	}
+}
