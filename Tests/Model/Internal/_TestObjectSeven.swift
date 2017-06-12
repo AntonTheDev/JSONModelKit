@@ -61,7 +61,7 @@ extension _TestObjectSeven : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectSeven"
+		var debug_string = "[TestObjectSeven]\n"
 
 			if let unwrapped_optionalArrayType = optionalArrayType { 
 				if unwrapped_optionalArrayType.count > 0 {
@@ -87,7 +87,7 @@ extension _TestObjectSeven : CustomDebugStringConvertible {
 			}
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

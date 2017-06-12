@@ -115,7 +115,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectNine"
+		var debug_string = "[TestObjectNine]\n"
 
 			if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
 				if unwrapped_optionalArrayDoubleType.count > 0 {
@@ -204,7 +204,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 			}
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

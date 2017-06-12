@@ -115,7 +115,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectTen"
+		var debug_string = "[TestObjectTen]\n"
 
 			if let unwrapped_optionalDictionaryIntType = optionalDictionaryIntType { 
 				if unwrapped_optionalDictionaryIntType.keys.count > 0 {
@@ -216,7 +216,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 			}
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

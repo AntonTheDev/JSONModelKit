@@ -61,7 +61,7 @@ extension _TestObjectEight : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectEight"
+		var debug_string = "[TestObjectEight]\n"
 
 			if let unwrapped_optionalDictionaryType = optionalDictionaryType { 
 				if unwrapped_optionalDictionaryType.keys.count > 0 {
@@ -90,7 +90,7 @@ extension _TestObjectEight : CustomDebugStringConvertible {
 			}
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

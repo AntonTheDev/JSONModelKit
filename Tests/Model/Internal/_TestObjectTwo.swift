@@ -49,13 +49,13 @@ extension _TestObjectTwo : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectTwo"
+		var debug_string = "[TestObjectTwo]\n"
 
 			
 			
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

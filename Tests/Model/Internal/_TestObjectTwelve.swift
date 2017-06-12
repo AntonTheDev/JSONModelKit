@@ -133,7 +133,7 @@ extension _TestObjectTwelve : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectTwelve"
+		var debug_string = "[TestObjectTwelve]\n"
 
 			if let unwrapped_optionalBool = optionalBool { 
 				debug_string += "\n       - optionalBool : \(unwrapped_optionalBool)"
@@ -158,7 +158,7 @@ extension _TestObjectTwelve : CustomDebugStringConvertible {
 			debug_string += "\n       - non_optionalBool : \(non_optionalBool)"    		debug_string += "\n       - non_optionalString : \(non_optionalString)"    		debug_string += "\n       - non_optionalInt : \(non_optionalInt)"    		debug_string += "\n       - non_optionalDouble : \(non_optionalDouble)"    		debug_string += "\n       - non_optionalFloat : \(non_optionalFloat)"
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

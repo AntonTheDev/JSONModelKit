@@ -213,8 +213,8 @@ class ClassGenerator:
    '''
    def debug_optional_property_definitions(self, propertyMappings):
       valueTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"\\n       - propertyname : \(unwrapped_propertyname)\"\r\n\t\t\t}\r\n"
-      dictionatyTemplate   = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.keys.count > 0 {\n\t\t\t\t\tfor (key, value) in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t\t}\n\t\t\t}"
-      arrayTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\t\tfor value in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"              - [ \"\n\t\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}\n\t\t\t"
+      arrayTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\t\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\t\tfor value in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"\"\n\t\t\t\tdebug_string += \"\\n               \(value.debugDescription.replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}\n\t\t\t"
+      dictionatyTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\t\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\t\tfor (_, value) in unwrapped_propertyname {\n\t\t\t\t\t\tdebug_string += \"\"\n\t\t\t\tdebug_string += \"\\n               \(value.debugDescription.replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}\n\t\t\t"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, True)
@@ -225,13 +225,15 @@ class ClassGenerator:
    '''
    def debug_non_optional_property_definitions(self, propertyMappings):
       valueTemplate        = "debug_string += \"\\n       - propertyname : \(propertyname)\""
-      dictionatyTemplate   = "\r\n\t\t\tif propertyname.keys.count > 0 {\n\t\t\t\tfor (key, value) in propertyname {\n\t\t\t\t\tdebug_string += \"\\n              - [ \"\n\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t}"
-      arrayTemplate        = "\r\n\t\t\tif propertyname.count > 0 {\n\t\t\t\tfor value in propertyname {\n\t\t\t\t\tdebug_string += \"\\n              - [ \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+      dictionatyTemplate   = "debug_string += \"\\n       - propertyname : \(propertyname)\"\r\n\t\t\tif propertyname.keys.count > 0 {\n\t\t\t\tfor (key, value) in propertyname {\n\t\t\t\t\tdebug_string += \"\\n              - [ \"\n\t\t\t\t\tdebug_string += \"\(key)\"\n\t\t\t\t\tdebug_string += \" : \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ : ]\"\n\t\t\t}"
+      arrayTemplate        = "debug_string += \"\\n       - propertyname : \(propertyname)\"\r\n\t\t\tif propertyname.count > 0 {\n\t\t\t\tfor value in propertyname {\n\t\t\t\t\tdebug_string += \"\\n- [ \"\n\t\t\t\t\tdebug_string += \"\(value)\"\n\t\t\t\t\tdebug_string += \" ]\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+      arrayTemplate        = "debug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\t\t\t\tif propertyname.count > 0 {\n\t\t\t\t\tfor value in propertyname {\n\t\t\t\t\t\tdebug_string += \"\"\n\t\t\t\tdebug_string += \"\\n               \(value.debugDescription.replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t\tdebug_string += \"\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+      dictionatyTemplate   = "debug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\t\t\t\tif propertyname.count > 0 {\n\t\t\t\t\tfor (_, value) in propertyname {\n\t\t\t\t\t\tdebug_string += \"\"\n\t\t\t\tdebug_string += \"\\n               \(value.debugDescription.replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t\tdebug_string += \"\"\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdebug_string += \"[ ]\"\n\t\t\t}"
+
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
       filteredMappings = self.filtered_mappings(propertyMappings, False)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r    " )
-
 
 
    def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):

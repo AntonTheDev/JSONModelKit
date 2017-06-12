@@ -91,7 +91,7 @@ extension _TestObjectThirteen : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectThirteen"
+		var debug_string = "[TestObjectThirteen]\n"
 
 			if let unwrapped_optionalLowercaseCompletionHandler = optionalLowercaseCompletionHandler { 
 				debug_string += "\n       - optionalLowercaseCompletionHandler : \(unwrapped_optionalLowercaseCompletionHandler)"
@@ -116,7 +116,7 @@ extension _TestObjectThirteen : CustomDebugStringConvertible {
 			
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }

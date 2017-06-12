@@ -61,7 +61,7 @@ extension _TestObjectFive : CustomDebugStringConvertible {
 
 	var debugDescription: String {
 
-		var debug_string = "TestObjectFive"
+		var debug_string = "[TestObjectFive]\n"
 
 			if let unwrapped_optionalSubType = optionalSubType { 
 				debug_string += "\n       - optionalSubType : \(unwrapped_optionalSubType)"
@@ -70,7 +70,7 @@ extension _TestObjectFive : CustomDebugStringConvertible {
 			debug_string += "\n       - non_optionalSubType : \(non_optionalSubType)"
 
 			debug_string += "\n"
-			
+
 			return debug_string
 	}
 }
