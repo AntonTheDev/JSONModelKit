@@ -69,8 +69,6 @@
 		13C6E3361D386101000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C6E3431D386112000A0B4B /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FD6AF51EE9917B00C586AE /* JMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMLogger.swift; sourceTree = "<group>"; };
-		13FD6B2A1EEAF59E00C586AE /* pbxproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pbxproj; sourceTree = "<group>"; };
-		13FD6B2F1EEAF6AB00C586AE /* openstep_parser */ = {isa = PBXFileReference; lastKnownFileType = folder; path = openstep_parser; sourceTree = "<group>"; };
 		3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelKit.h; sourceTree = "<group>"; };
 		3A2DA03A1EE2513300B68320 /* JSONModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2DA0441EE2523D00B68320 /* JMCompoundValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCompoundValueTransformer.swift; sourceTree = "<group>"; };
@@ -85,16 +83,6 @@
 		3A2DA04E1EE2523D00B68320 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		3A2DA0501EE2523D00B68320 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		3A2DA0521EE2523D00B68320 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		3A2DA0541EE2523D00B68320 /* constants.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = constants.py; sourceTree = "<group>"; };
-		3A2DA0551EE2523D00B68320 /* external_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external_class_template.txt; sourceTree = "<group>"; };
-		3A2DA0561EE2523D00B68320 /* fileimporter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = fileimporter.py; sourceTree = "<group>"; };
-		3A2DA0571EE2523D00B68320 /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
-		3A2DA0581EE2523D00B68320 /* instantiator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = instantiator.py; sourceTree = "<group>"; };
-		3A2DA0591EE2523D00B68320 /* instantiator_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instantiator_template.txt; sourceTree = "<group>"; };
-		3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = internal_class_template.txt; sourceTree = "<group>"; };
-		3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "modelgen-swift.py"; sourceTree = "<group>"; };
-		3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nil_serialization_template.txt; sourceTree = "<group>"; };
-		3A2DA0851EE2523D00B68320 /* validator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = validator.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +159,6 @@
 			children = (
 				13FD6AF41EE9917B00C586AE /* Logger */,
 				3A2DA0431EE2523D00B68320 /* JSONModelKit */,
-				3A2DA0531EE2523D00B68320 /* ModelScript */,
 			);
 			name = Source;
 			path = ../../../Source;
@@ -218,25 +205,6 @@
 				3A2DA0521EE2523D00B68320 /* Validator.swift */,
 			);
 			path = Validator;
-			sourceTree = "<group>";
-		};
-		3A2DA0531EE2523D00B68320 /* ModelScript */ = {
-			isa = PBXGroup;
-			children = (
-				13FD6B2F1EEAF6AB00C586AE /* openstep_parser */,
-				13FD6B2A1EEAF59E00C586AE /* pbxproj */,
-				3A2DA0541EE2523D00B68320 /* constants.py */,
-				3A2DA0551EE2523D00B68320 /* external_class_template.txt */,
-				3A2DA0561EE2523D00B68320 /* fileimporter.py */,
-				3A2DA0571EE2523D00B68320 /* generator.py */,
-				3A2DA0581EE2523D00B68320 /* instantiator.py */,
-				3A2DA0591EE2523D00B68320 /* instantiator_template.txt */,
-				3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */,
-				3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */,
-				3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */,
-				3A2DA0851EE2523D00B68320 /* validator.py */,
-			);
-			path = ModelScript;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
