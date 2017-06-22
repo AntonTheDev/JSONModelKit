@@ -128,8 +128,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
+			    	if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
 			debug_string += "       \n\n       - optionalArrayIntType : \n"
 
 			if unwrapped_optionalArrayIntType.count > 0 {
@@ -140,8 +139,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalArrayStringType = optionalArrayStringType { 
+			    	if let unwrapped_optionalArrayStringType = optionalArrayStringType { 
 			debug_string += "       \n\n       - optionalArrayStringType : \n"
 
 			if unwrapped_optionalArrayStringType.count > 0 {
@@ -152,8 +150,7 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
+			    	if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
 			debug_string += "       \n\n       - optionalArrayFloatType : \n"
 
 			if unwrapped_optionalArrayFloatType.count > 0 {
@@ -202,7 +199,6 @@ extension _TestObjectNine : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-
 		debug_string += "\n"
 
 		return debug_string

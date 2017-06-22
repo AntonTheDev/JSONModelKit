@@ -68,7 +68,6 @@ extension _TestObjectSix : CustomDebugStringConvertible {
 		}
 
 		debug_string += "\n       - non_optionalCompoundString : \(non_optionalCompoundString)"
-
 		debug_string += "\n"
 
 		return debug_string

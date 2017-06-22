@@ -85,7 +85,6 @@ extension _TestObjectSeven : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-
 		debug_string += "\n"
 
 		return debug_string

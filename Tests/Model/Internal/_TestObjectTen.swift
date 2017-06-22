@@ -128,8 +128,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalDictionaryDoubleType = optionalDictionaryDoubleType { 
+			    	if let unwrapped_optionalDictionaryDoubleType = optionalDictionaryDoubleType { 
 			debug_string += "       \n\n       - optionalDictionaryDoubleType : \n"
 
 			if unwrapped_optionalDictionaryDoubleType.count > 0 {
@@ -140,8 +139,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalDictionaryFloatType = optionalDictionaryFloatType { 
+			    	if let unwrapped_optionalDictionaryFloatType = optionalDictionaryFloatType { 
 			debug_string += "       \n\n       - optionalDictionaryFloatType : \n"
 
 			if unwrapped_optionalDictionaryFloatType.count > 0 {
@@ -152,8 +150,7 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-			
-    	if let unwrapped_optionalDictionaryStringType = optionalDictionaryStringType { 
+			    	if let unwrapped_optionalDictionaryStringType = optionalDictionaryStringType { 
 			debug_string += "       \n\n       - optionalDictionaryStringType : \n"
 
 			if unwrapped_optionalDictionaryStringType.count > 0 {
@@ -206,7 +203,6 @@ extension _TestObjectTen : CustomDebugStringConvertible {
 		} else {
 			debug_string += "[ ]"
 		}
-
 		debug_string += "\n"
 
 		return debug_string

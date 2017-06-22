@@ -68,7 +68,6 @@ extension _TestObjectFive : CustomDebugStringConvertible {
 		}
 
 		debug_string += "\n       - non_optionalSubType : \(non_optionalSubType)"
-
 		debug_string += "\n"
 
 		return debug_string

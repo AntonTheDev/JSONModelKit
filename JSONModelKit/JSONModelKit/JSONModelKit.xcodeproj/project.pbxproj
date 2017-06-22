@@ -11,14 +11,6 @@
 		13FD6AF71EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
 		13FD6AF81EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
 		13FD6AF91EE9917B00C586AE /* JMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD6AF51EE9917B00C586AE /* JMLogger.swift */; };
-		13FD6B2B1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
-		13FD6B2C1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
-		13FD6B2D1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
-		13FD6B2E1EEAF59E00C586AE /* pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2A1EEAF59E00C586AE /* pbxproj */; };
-		13FD6B301EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
-		13FD6B311EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
-		13FD6B321EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
-		13FD6B331EEAF6AB00C586AE /* openstep_parser in Resources */ = {isa = PBXBuildFile; fileRef = 13FD6B2F1EEAF6AB00C586AE /* openstep_parser */; };
 		3A2D9CDE1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CDF1EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2D9CE01EE24B1E00B68320 /* JSONModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2D9CDD1EE24B1E00B68320 /* JSONModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,46 +62,6 @@
 		3A2DA0B31EE2523D00B68320 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DA0521EE2523D00B68320 /* Validator.swift */; };
 		3A2DA0B41EE2523D00B68320 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DA0521EE2523D00B68320 /* Validator.swift */; };
 		3A2DA0B51EE2523D00B68320 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DA0521EE2523D00B68320 /* Validator.swift */; };
-		3A2DA0B61EE2523D00B68320 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0541EE2523D00B68320 /* constants.py */; };
-		3A2DA0B71EE2523D00B68320 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0541EE2523D00B68320 /* constants.py */; };
-		3A2DA0B81EE2523D00B68320 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0541EE2523D00B68320 /* constants.py */; };
-		3A2DA0B91EE2523D00B68320 /* constants.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0541EE2523D00B68320 /* constants.py */; };
-		3A2DA0BA1EE2523D00B68320 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0551EE2523D00B68320 /* external_class_template.txt */; };
-		3A2DA0BB1EE2523D00B68320 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0551EE2523D00B68320 /* external_class_template.txt */; };
-		3A2DA0BC1EE2523D00B68320 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0551EE2523D00B68320 /* external_class_template.txt */; };
-		3A2DA0BD1EE2523D00B68320 /* external_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0551EE2523D00B68320 /* external_class_template.txt */; };
-		3A2DA0BE1EE2523D00B68320 /* fileimporter.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0561EE2523D00B68320 /* fileimporter.py */; };
-		3A2DA0BF1EE2523D00B68320 /* fileimporter.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0561EE2523D00B68320 /* fileimporter.py */; };
-		3A2DA0C01EE2523D00B68320 /* fileimporter.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0561EE2523D00B68320 /* fileimporter.py */; };
-		3A2DA0C11EE2523D00B68320 /* fileimporter.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0561EE2523D00B68320 /* fileimporter.py */; };
-		3A2DA0C21EE2523D00B68320 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0571EE2523D00B68320 /* generator.py */; };
-		3A2DA0C31EE2523D00B68320 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0571EE2523D00B68320 /* generator.py */; };
-		3A2DA0C41EE2523D00B68320 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0571EE2523D00B68320 /* generator.py */; };
-		3A2DA0C51EE2523E00B68320 /* generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0571EE2523D00B68320 /* generator.py */; };
-		3A2DA0C61EE2523E00B68320 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0581EE2523D00B68320 /* instantiator.py */; };
-		3A2DA0C71EE2523E00B68320 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0581EE2523D00B68320 /* instantiator.py */; };
-		3A2DA0C81EE2523E00B68320 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0581EE2523D00B68320 /* instantiator.py */; };
-		3A2DA0C91EE2523E00B68320 /* instantiator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0581EE2523D00B68320 /* instantiator.py */; };
-		3A2DA0CA1EE2523E00B68320 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0591EE2523D00B68320 /* instantiator_template.txt */; };
-		3A2DA0CB1EE2523E00B68320 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0591EE2523D00B68320 /* instantiator_template.txt */; };
-		3A2DA0CC1EE2523E00B68320 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0591EE2523D00B68320 /* instantiator_template.txt */; };
-		3A2DA0CD1EE2523E00B68320 /* instantiator_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0591EE2523D00B68320 /* instantiator_template.txt */; };
-		3A2DA0CE1EE2523E00B68320 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */; };
-		3A2DA0CF1EE2523E00B68320 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */; };
-		3A2DA0D01EE2523E00B68320 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */; };
-		3A2DA0D11EE2523E00B68320 /* internal_class_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05A1EE2523D00B68320 /* internal_class_template.txt */; };
-		3A2DA0D21EE2523E00B68320 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */; };
-		3A2DA0D31EE2523E00B68320 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */; };
-		3A2DA0D41EE2523E00B68320 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */; };
-		3A2DA0D51EE2523E00B68320 /* modelgen-swift.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05B1EE2523D00B68320 /* modelgen-swift.py */; };
-		3A2DA0D61EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
-		3A2DA0D71EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
-		3A2DA0D81EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
-		3A2DA0D91EE2523E00B68320 /* nil_serialization_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA05C1EE2523D00B68320 /* nil_serialization_template.txt */; };
-		3A2DA16A1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
-		3A2DA16B1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
-		3A2DA16C1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
-		3A2DA16D1EE2523E00B68320 /* validator.py in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DA0851EE2523D00B68320 /* validator.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -450,18 +402,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2DA0D61EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA0CA1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0C61EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA16A1EE2523E00B68320 /* validator.py in Resources */,
-				3A2DA0BA1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				13FD6B301EEAF6AB00C586AE /* openstep_parser in Resources */,
-				3A2DA0CE1EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA0B61EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA0D21EE2523E00B68320 /* modelgen-swift.py in Resources */,
-				13FD6B2B1EEAF59E00C586AE /* pbxproj in Resources */,
-				3A2DA0C21EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA0BE1EE2523D00B68320 /* fileimporter.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,18 +409,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2DA0D81EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA0CC1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0C81EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA16C1EE2523E00B68320 /* validator.py in Resources */,
-				3A2DA0BC1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				13FD6B321EEAF6AB00C586AE /* openstep_parser in Resources */,
-				3A2DA0D01EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA0B81EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA0D41EE2523E00B68320 /* modelgen-swift.py in Resources */,
-				13FD6B2D1EEAF59E00C586AE /* pbxproj in Resources */,
-				3A2DA0C41EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA0C01EE2523D00B68320 /* fileimporter.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,18 +416,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2DA0D71EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA0CB1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0C71EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA16B1EE2523E00B68320 /* validator.py in Resources */,
-				3A2DA0BB1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				13FD6B311EEAF6AB00C586AE /* openstep_parser in Resources */,
-				3A2DA0CF1EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA0B71EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA0D31EE2523E00B68320 /* modelgen-swift.py in Resources */,
-				13FD6B2C1EEAF59E00C586AE /* pbxproj in Resources */,
-				3A2DA0C31EE2523D00B68320 /* generator.py in Resources */,
-				3A2DA0BF1EE2523D00B68320 /* fileimporter.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,18 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2DA0D91EE2523E00B68320 /* nil_serialization_template.txt in Resources */,
-				3A2DA0CD1EE2523E00B68320 /* instantiator_template.txt in Resources */,
-				3A2DA0C91EE2523E00B68320 /* instantiator.py in Resources */,
-				3A2DA16D1EE2523E00B68320 /* validator.py in Resources */,
-				3A2DA0BD1EE2523D00B68320 /* external_class_template.txt in Resources */,
-				13FD6B331EEAF6AB00C586AE /* openstep_parser in Resources */,
-				3A2DA0D11EE2523E00B68320 /* internal_class_template.txt in Resources */,
-				3A2DA0B91EE2523D00B68320 /* constants.py in Resources */,
-				3A2DA0D51EE2523E00B68320 /* modelgen-swift.py in Resources */,
-				13FD6B2E1EEAF59E00C586AE /* pbxproj in Resources */,
-				3A2DA0C51EE2523E00B68320 /* generator.py in Resources */,
-				3A2DA0C11EE2523D00B68320 /* fileimporter.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

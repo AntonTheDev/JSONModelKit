@@ -53,7 +53,6 @@ extension _TestObjectTwo : CustomDebugStringConvertible {
 
 		
 		
-
 		debug_string += "\n"
 
 		return debug_string
