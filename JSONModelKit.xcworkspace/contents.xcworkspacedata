@@ -67,6 +67,9 @@
          location = "group:ModelScript"
          name = "ModelScript">
          <FileRef
+            location = "group:prepare_release.sh">
+         </FileRef>
+         <FileRef
             location = "group:constants.py">
          </FileRef>
          <FileRef
