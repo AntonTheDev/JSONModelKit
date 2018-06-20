@@ -69,8 +69,8 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 		internal_file_names.append('_'+ classname + '.swift')
 		external_file_names.append(classname + '.swift')
 
-		generate_file(internalClass, internalClassPath, True)
-		generate_file(externalClass, externalClassPath, False)
+		if generate_file(internalClass, internalClassPath, True):
+			generate_file(externalClass, externalClassPath, False)
 
 	if testEnabled == 0:
 		save_files_to_project(fullOutputDirectory, internal_file_names, external_file_names)
@@ -138,10 +138,12 @@ def getPathForFile(fileName):
 
 def generate_file(content, filePath, overwrite):
     print filePath
+	pathExists = os.path.exists(filePath)
 
-    if os.path.exists(filePath) and overwrite == False:
+    if pathExists and overwrite == False:
    		return None
 
+	os.path.exists(filePath)
     if not os.path.exists(os.path.dirname(filePath)):
         os.makedirs(os.path.dirname(filePath))
 
@@ -150,6 +152,7 @@ def generate_file(content, filePath, overwrite):
     fileContent = content
     outputfile.write(fileContent)
     outputfile.close();
+	return pathExists
 
 
 def xcode_version():
