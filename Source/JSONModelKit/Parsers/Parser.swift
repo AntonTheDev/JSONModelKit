@@ -14,16 +14,20 @@ class Parser {
         
         if propertyMapping[JMMapperTransformerKey] != nil {
             return Transformer.transformedValue(from: dictionary, applying : propertyMapping, employing : instantiator)
-        } 
+        }
         
-        if let jsonKey = propertyMapping[JMMapperJSONKey] as? String {
-            if let dataType = propertyMapping[JMMapperTypeKey]  as? String {
-                
+        if let jsonKey = propertyMapping[JMMapperJSONKey] as? String
+        {
+            if let dataType = propertyMapping[JMMapperTypeKey]  as? String
+            {
                 let subType = propertyMapping[JMMapperCollectionSubTypeKey] as? String
                 
-                if let retrievedValue: AnyObject = dictionaryValueForKey(jsonKey, dictionary: dictionary) {
+                if let retrievedValue: AnyObject = dictionaryValueForKey(jsonKey, dictionary: dictionary), !(retrievedValue is NSNull)
+                {
                     return parsedValue(forValue : retrievedValue, dataType, subType, instantiator : instantiator)
-                } else if let retrievedDefaultValue: AnyObject = propertyMapping[JMMapperDefaultKey] {
+                }
+                else if let retrievedDefaultValue: AnyObject = propertyMapping[JMMapperDefaultKey]
+                {
                     
                     if defaultsEnabled {
                         return parsedValue(forValue : retrievedDefaultValue, dataType, subType, instantiator : instantiator)
@@ -38,6 +42,10 @@ class Parser {
     }
     
     final class func parsedValue(forValue value : AnyObject, _ dataType : String, _ subType: String?, instantiator : JMInstantiatorProtocol) -> AnyObject? {
+        
+        if value is NSNull {
+            return nil
+        }
         
         if nativeDataTypes.containsValue(dataType) {
             
@@ -80,10 +88,10 @@ class Parser {
             } else {
                 break
             }
-
+            
             x =  x + 1
         } while (x < keys.count )
-
+        
         return nil
     }
 }
