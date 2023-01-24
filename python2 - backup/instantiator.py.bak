@@ -3,8 +3,9 @@ import plistlib
 import os
 import sys
 import getopt
+import dircache
 import glob
-import subprocess
+import commands
 import json
 
 sys.dont_write_bytecode = True
@@ -112,9 +113,9 @@ class InstantiatorGenerator:
       for mappingPath in self.plistPaths:
          propertyMapping = self.propertyMappingDictionary(mappingPath)
 
-         for propertyKey in list(propertyMapping.keys()):
+         for propertyKey in propertyMapping.keys():
 
-            if MappingKey.JMSDKTransformer in list(propertyMapping[propertyKey].keys()):
+            if MappingKey.JMSDKTransformer in propertyMapping[propertyKey].keys():
                mapperClass = propertyMapping[propertyKey][MappingKey.JMSDKTransformer]
                if mapperClass not in distinctMapperClassDefinitions:
                   distinctMapperClassDefinitions.append(mapperClass)
@@ -135,9 +136,9 @@ class InstantiatorGenerator:
       for mappingPath in self.plistPaths:
          propertyMapping = self.propertyMappingDictionary(mappingPath)
 
-         for propertyKey in list(propertyMapping.keys()):
+         for propertyKey in propertyMapping.keys():
 
-            if MappingKey.JMSDKTransformer in list(propertyMapping[propertyKey].keys()):
+            if MappingKey.JMSDKTransformer in propertyMapping[propertyKey].keys():
                mapperClass = propertyMapping[propertyKey][MappingKey.JMSDKTransformer]
                if mapperClass not in distinctMapperClassDefinitions:
                   distinctMapperClassDefinitions.append(mapperClass)
@@ -160,9 +161,9 @@ class InstantiatorGenerator:
 
          propertyMapping = self.propertyMappingDictionary(mappingPath)
 
-         for propertyKey in list(propertyMapping.keys()):
+         for propertyKey in propertyMapping.keys():
 
-            if MappingKey.JMSDKTransformer in list(propertyMapping[propertyKey].keys()):
+            if MappingKey.JMSDKTransformer in propertyMapping[propertyKey].keys():
                mapperClass = propertyMapping[propertyKey][MappingKey.JMSDKTransformer]
                if mapperClass not in distinctMapperClassDefinitions:
                   distinctMapperClassDefinitions.append(mapperClass)
@@ -179,7 +180,7 @@ class InstantiatorGenerator:
 
    def propertyMappingDictionary(self, mappingPath):
       if self.jsonFormatEnabled == True:
-         print(mappingPath)
+         print mappingPath
          return json.load(open(mappingPath))
       return plistlib.readPlist(mappingPath)
 

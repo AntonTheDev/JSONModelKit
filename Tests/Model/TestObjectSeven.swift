@@ -2,18 +2,15 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectSeven : NSObject  {
 
 	public var non_optionalArrayType : [TestObjectFour]
-
 	public var optionalArrayType : [TestObjectFour]?
 
 	required public  init(non_optionalArrayType  _non_optionalArrayType : [TestObjectFour])  {
 
-
 			non_optionalArrayType = _non_optionalArrayType
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

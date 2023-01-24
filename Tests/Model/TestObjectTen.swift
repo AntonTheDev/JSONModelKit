@@ -2,30 +2,27 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectTen : NSObject  {
 
-	public var non_optionalDictionaryIntType : [String : Int]
+	public var non_optionalDictionaryStringType : [String : String]
     public var non_optionalDictionaryDoubleType : [String : Double]
     public var non_optionalDictionaryFloatType : [String : Float]
-    public var non_optionalDictionaryStringType : [String : String]
-
-	public var optionalDictionaryIntType : [String : Int]?
-    public var optionalDictionaryDoubleType : [String : Double]?
-    public var optionalDictionaryFloatType : [String : Float]?
+    public var non_optionalDictionaryIntType : [String : Int]
+	public var optionalDictionaryFloatType : [String : Float]?
+    public var optionalDictionaryIntType : [String : Int]?
     public var optionalDictionaryStringType : [String : String]?
+    public var optionalDictionaryDoubleType : [String : Double]?
 
-	required public  init(non_optionalDictionaryIntType  _non_optionalDictionaryIntType : [String : Int],
+	required public  init(non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String],
     			  non_optionalDictionaryDoubleType  _non_optionalDictionaryDoubleType : [String : Double],
     			  non_optionalDictionaryFloatType  _non_optionalDictionaryFloatType : [String : Float],
-    			  non_optionalDictionaryStringType  _non_optionalDictionaryStringType : [String : String])  {
+    			  non_optionalDictionaryIntType  _non_optionalDictionaryIntType : [String : Int])  {
 
-
-			non_optionalDictionaryIntType = _non_optionalDictionaryIntType
+			non_optionalDictionaryStringType = _non_optionalDictionaryStringType
     		non_optionalDictionaryDoubleType = _non_optionalDictionaryDoubleType
     		non_optionalDictionaryFloatType = _non_optionalDictionaryFloatType
-    		non_optionalDictionaryStringType = _non_optionalDictionaryStringType
-		super.init()
+    		non_optionalDictionaryIntType = _non_optionalDictionaryIntType
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -38,30 +35,30 @@ import Foundation
 												   employing: JMInstantiator.sharedInstance,
 												   defaultsEnabled : true)
 		{
-			let temp_non_optionalDictionaryIntType : [String : Int] = typeCast(valuesDict["non_optionalDictionaryIntType"])!
+			let temp_non_optionalDictionaryStringType : [String : String] = typeCast(valuesDict["non_optionalDictionaryStringType"])!
     		let temp_non_optionalDictionaryDoubleType : [String : Double] = typeCast(valuesDict["non_optionalDictionaryDoubleType"])!
     		let temp_non_optionalDictionaryFloatType : [String : Float] = typeCast(valuesDict["non_optionalDictionaryFloatType"])!
-    		let temp_non_optionalDictionaryStringType : [String : String] = typeCast(valuesDict["non_optionalDictionaryStringType"])!
+    		let temp_non_optionalDictionaryIntType : [String : Int] = typeCast(valuesDict["non_optionalDictionaryIntType"])!
 
-			self.init(non_optionalDictionaryIntType : temp_non_optionalDictionaryIntType,
+			self.init(non_optionalDictionaryStringType : temp_non_optionalDictionaryStringType,
     			      non_optionalDictionaryDoubleType : temp_non_optionalDictionaryDoubleType,
     			      non_optionalDictionaryFloatType : temp_non_optionalDictionaryFloatType,
-    			      non_optionalDictionaryStringType : temp_non_optionalDictionaryStringType)
+    			      non_optionalDictionaryIntType : temp_non_optionalDictionaryIntType)
 
-			if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
-				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
-			}
-
-    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
-				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
-			}
-
-    		if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
+			if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
 				optionalDictionaryFloatType = typeCast(unwrapped_optionalDictionaryFloatType)! 
+			}
+
+    		if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
+				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
 
     		if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
 				optionalDictionaryStringType = typeCast(unwrapped_optionalDictionaryStringType)! 
+			}
+
+    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
+				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
 			}
 
 		} else {
@@ -79,24 +76,24 @@ import Foundation
 												   employing: JMInstantiator.sharedInstance,
 												   defaultsEnabled : false)
 		{
-			if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
-				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
-			}
-
-    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
-				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
-			}
-
-    		if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
+			if let unwrapped_optionalDictionaryFloatType : Any = valuesDict["optionalDictionaryFloatType"]  { 
 				optionalDictionaryFloatType = typeCast(unwrapped_optionalDictionaryFloatType)! 
+			}
+
+    		if let unwrapped_optionalDictionaryIntType : Any = valuesDict["optionalDictionaryIntType"]  { 
+				optionalDictionaryIntType = typeCast(unwrapped_optionalDictionaryIntType)! 
 			}
 
     		if let unwrapped_optionalDictionaryStringType : Any = valuesDict["optionalDictionaryStringType"]  { 
 				optionalDictionaryStringType = typeCast(unwrapped_optionalDictionaryStringType)! 
 			}
 
-			if let unwrapped_non_optionalDictionaryIntType : Any = valuesDict["non_optionalDictionaryIntType"]  { 
-				non_optionalDictionaryIntType = typeCast(unwrapped_non_optionalDictionaryIntType)! 
+    		if let unwrapped_optionalDictionaryDoubleType : Any = valuesDict["optionalDictionaryDoubleType"]  { 
+				optionalDictionaryDoubleType = typeCast(unwrapped_optionalDictionaryDoubleType)! 
+			}
+
+			if let unwrapped_non_optionalDictionaryStringType : Any = valuesDict["non_optionalDictionaryStringType"]  { 
+				non_optionalDictionaryStringType = typeCast(unwrapped_non_optionalDictionaryStringType)! 
 			}
 
     		if let unwrapped_non_optionalDictionaryDoubleType : Any = valuesDict["non_optionalDictionaryDoubleType"]  { 
@@ -107,8 +104,8 @@ import Foundation
 				non_optionalDictionaryFloatType = typeCast(unwrapped_non_optionalDictionaryFloatType)! 
 			}
 
-    		if let unwrapped_non_optionalDictionaryStringType : Any = valuesDict["non_optionalDictionaryStringType"]  { 
-				non_optionalDictionaryStringType = typeCast(unwrapped_non_optionalDictionaryStringType)! 
+    		if let unwrapped_non_optionalDictionaryIntType : Any = valuesDict["non_optionalDictionaryIntType"]  { 
+				non_optionalDictionaryIntType = typeCast(unwrapped_non_optionalDictionaryIntType)! 
 			}
 
  		}
@@ -121,33 +118,22 @@ extension TestObjectTen {
 
 		var debug_string = "[TestObjectTen]"
 
-		if let unwrapped_optionalDictionaryIntType = optionalDictionaryIntType { 
-			debug_string += "       \n\n       - optionalDictionaryIntType : \n"
-
-			if unwrapped_optionalDictionaryIntType.count > 0 {
-				for (_, value) in unwrapped_optionalDictionaryIntType {
-					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
-				}
-			} 
-		} else {
-			debug_string += "[ ]"
-		}
-			    	if let unwrapped_optionalDictionaryDoubleType = optionalDictionaryDoubleType { 
-			debug_string += "       \n\n       - optionalDictionaryDoubleType : \n"
-
-			if unwrapped_optionalDictionaryDoubleType.count > 0 {
-				for (_, value) in unwrapped_optionalDictionaryDoubleType {
-					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
-				}
-			} 
-		} else {
-			debug_string += "[ ]"
-		}
-			    	if let unwrapped_optionalDictionaryFloatType = optionalDictionaryFloatType { 
+		if let unwrapped_optionalDictionaryFloatType = optionalDictionaryFloatType { 
 			debug_string += "       \n\n       - optionalDictionaryFloatType : \n"
 
 			if unwrapped_optionalDictionaryFloatType.count > 0 {
 				for (_, value) in unwrapped_optionalDictionaryFloatType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
+			    	if let unwrapped_optionalDictionaryIntType = optionalDictionaryIntType { 
+			debug_string += "       \n\n       - optionalDictionaryIntType : \n"
+
+			if unwrapped_optionalDictionaryIntType.count > 0 {
+				for (_, value) in unwrapped_optionalDictionaryIntType {
 					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				}
 			} 
@@ -165,12 +151,23 @@ extension TestObjectTen {
 		} else {
 			debug_string += "[ ]"
 		}
+			    	if let unwrapped_optionalDictionaryDoubleType = optionalDictionaryDoubleType { 
+			debug_string += "       \n\n       - optionalDictionaryDoubleType : \n"
+
+			if unwrapped_optionalDictionaryDoubleType.count > 0 {
+				for (_, value) in unwrapped_optionalDictionaryDoubleType {
+					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
+				}
+			} 
+		} else {
+			debug_string += "[ ]"
+		}
 			
 		
-		debug_string += "       \n\n       - non_optionalDictionaryIntType : \n"
+		debug_string += "       \n\n       - non_optionalDictionaryStringType : \n"
 
-		if non_optionalDictionaryIntType.count > 0 {
-			for (_, value) in non_optionalDictionaryIntType {
+		if non_optionalDictionaryStringType.count > 0 {
+			for (_, value) in non_optionalDictionaryStringType {
 				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				debug_string += ""
 			}
@@ -197,10 +194,10 @@ extension TestObjectTen {
 		} else {
 			debug_string += "[ ]"
 		}    	
-		debug_string += "       \n\n       - non_optionalDictionaryStringType : \n"
+		debug_string += "       \n\n       - non_optionalDictionaryIntType : \n"
 
-		if non_optionalDictionaryStringType.count > 0 {
-			for (_, value) in non_optionalDictionaryStringType {
+		if non_optionalDictionaryIntType.count > 0 {
+			for (_, value) in non_optionalDictionaryIntType {
 				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				debug_string += ""
 			}

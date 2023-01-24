@@ -3,8 +3,9 @@ import plistlib
 import os
 import sys
 import getopt
+import dircache
 import glob
-import subprocess
+import commands
 import json
 
 sys.dont_write_bytecode = True
@@ -64,8 +65,8 @@ class ClassGenerator:
 
       baseClassString = ""
 
-      if MappingKey.ModelConfig in list(jmsdk_propertyMappings.keys()):
-          if MappingKey.ModelImport in list(jmsdk_propertyMappings[MappingKey.ModelConfig].keys()):
+      if MappingKey.ModelConfig in jmsdk_propertyMappings.keys():
+          if MappingKey.ModelImport in jmsdk_propertyMappings[MappingKey.ModelConfig].keys():
                for lib in jmsdk_propertyMappings[MappingKey.ModelConfig][MappingKey.ModelImport]:
                    baseClassString = baseClassString + '\n' + 'import ' + str(lib)
 
@@ -78,8 +79,8 @@ class ClassGenerator:
 
       baseClassString = ""
 
-      if MappingKey.ModelConfig in list(jmsdk_propertyMappings.keys()):
-          if MappingKey.ModelBaseClass in list(jmsdk_propertyMappings[MappingKey.ModelConfig].keys()):
+      if MappingKey.ModelConfig in jmsdk_propertyMappings.keys():
+          if MappingKey.ModelBaseClass in jmsdk_propertyMappings[MappingKey.ModelConfig].keys():
                baseClassString = ": " + str(jmsdk_propertyMappings[MappingKey.ModelConfig][MappingKey.ModelBaseClass])
 
       return baseClassString
@@ -245,7 +246,7 @@ class ClassGenerator:
 
       propertyString = ""
 
-      for propertyKey in list(jmsdk_propertyMappings.keys()):
+      for propertyKey in jmsdk_propertyMappings.keys():
 
          propertyMapping = jmsdk_propertyMappings[propertyKey]
          propertyType = str(propertyMapping[MappingKey.Type])
@@ -256,7 +257,7 @@ class ClassGenerator:
          templateValues["datatype"] = propertyType
          templateValues["attributes "] = ''
 
-         if MappingKey.Attributes in list(propertyMapping.keys()):
+         if MappingKey.Attributes in propertyMapping.keys():
              templateValues["attributes "] = str(propertyMapping[MappingKey.Attributes]) + ' '
 
          templateIndex = 0
@@ -274,7 +275,7 @@ class ClassGenerator:
 
          propertyString += self.dictionaryValueString(templateArray[templateIndex], templateValues)
 
-         if list(jmsdk_propertyMappings.keys()).index(propertyKey) <= len(list(jmsdk_propertyMappings.keys())) - 2:
+         if jmsdk_propertyMappings.keys().index(propertyKey) <= len(jmsdk_propertyMappings.keys()) - 2:
             propertyString += carriageString
          else:
             propertyString += ""
@@ -283,7 +284,7 @@ class ClassGenerator:
 
 
    def is_property_mapping_optional(self, mapping):
-      if MappingKey.NonOptional in list(mapping.keys()) and mapping[MappingKey.NonOptional]:
+      if MappingKey.NonOptional in mapping.keys() and mapping[MappingKey.NonOptional]:
          return False
       else:
          return True
@@ -292,7 +293,7 @@ class ClassGenerator:
    def dictionaryValueString(self, templateString, dictionaryValues):
       renderedString = templateString
 
-      for key in list(dictionaryValues.keys()):
+      for key in dictionaryValues.keys():
          renderedString = str.replace(renderedString, key, str(dictionaryValues[key]))
 
       return renderedString
@@ -308,7 +309,7 @@ class ClassGenerator:
    def filtered_mappings(self, jmsdk_propertyMappings, optional):
       filteredMappings = {}
 
-      for propertyKey in list(jmsdk_propertyMappings.keys()):
+      for propertyKey in jmsdk_propertyMappings.keys():
           propertyMapping = jmsdk_propertyMappings[propertyKey]
 
           if MappingKey.ModelConfig == propertyKey:

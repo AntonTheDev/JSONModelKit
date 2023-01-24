@@ -10,7 +10,9 @@ class MetaConst(type):
     def __setattr__(cls, key, value):
         raise TypeError
 
-class Const(object, metaclass=MetaConst):
+class Const(object):
+    __metaclass__ = MetaConst
+
     def __getattr__(self, name):
         return self[name]
 

@@ -2,18 +2,15 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectSix : NSObject  {
 
 	public var non_optionalCompoundString : String
-
 	public var optionalCompoundString : String?
 
 	required public  init(non_optionalCompoundString  _non_optionalCompoundString : String)  {
 
-
 			non_optionalCompoundString = _non_optionalCompoundString
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

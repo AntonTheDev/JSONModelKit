@@ -2,18 +2,15 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectEight : NSObject  {
 
 	public var non_optionalDictionaryType : [String : TestObjectFour]
-
 	public var optionalDictionaryType : [String : TestObjectFour]?
 
 	required public  init(non_optionalDictionaryType  _non_optionalDictionaryType : [String : TestObjectFour])  {
 
-
 			non_optionalDictionaryType = _non_optionalDictionaryType
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

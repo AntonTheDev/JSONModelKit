@@ -2,30 +2,27 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectNine : NSObject  {
 
-	public var non_optionalArrayIntType : [Int]
-    public var non_optionalArrayDoubleType : [Double]
-    public var non_optionalArrayFloatType : [Float]
+	public var non_optionalArrayDoubleType : [Double]
     public var non_optionalArrayStringType : [String]
-
-	public var optionalArrayDoubleType : [Double]?
-    public var optionalArrayIntType : [Int]?
+    public var non_optionalArrayFloatType : [Float]
+    public var non_optionalArrayIntType : [Int]
+	public var optionalArrayFloatType : [Float]?
+    public var optionalArrayDoubleType : [Double]?
     public var optionalArrayStringType : [String]?
-    public var optionalArrayFloatType : [Float]?
+    public var optionalArrayIntType : [Int]?
 
-	required public  init(non_optionalArrayIntType  _non_optionalArrayIntType : [Int],
-    			  non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],
+	required public  init(non_optionalArrayDoubleType  _non_optionalArrayDoubleType : [Double],
+    			  non_optionalArrayStringType  _non_optionalArrayStringType : [String],
     			  non_optionalArrayFloatType  _non_optionalArrayFloatType : [Float],
-    			  non_optionalArrayStringType  _non_optionalArrayStringType : [String])  {
+    			  non_optionalArrayIntType  _non_optionalArrayIntType : [Int])  {
 
-
-			non_optionalArrayIntType = _non_optionalArrayIntType
-    		non_optionalArrayDoubleType = _non_optionalArrayDoubleType
-    		non_optionalArrayFloatType = _non_optionalArrayFloatType
+			non_optionalArrayDoubleType = _non_optionalArrayDoubleType
     		non_optionalArrayStringType = _non_optionalArrayStringType
-		super.init()
+    		non_optionalArrayFloatType = _non_optionalArrayFloatType
+    		non_optionalArrayIntType = _non_optionalArrayIntType
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {
@@ -38,30 +35,30 @@ import Foundation
 												   employing: JMInstantiator.sharedInstance,
 												   defaultsEnabled : true)
 		{
-			let temp_non_optionalArrayIntType : [Int] = typeCast(valuesDict["non_optionalArrayIntType"])!
-    		let temp_non_optionalArrayDoubleType : [Double] = typeCast(valuesDict["non_optionalArrayDoubleType"])!
-    		let temp_non_optionalArrayFloatType : [Float] = typeCast(valuesDict["non_optionalArrayFloatType"])!
+			let temp_non_optionalArrayDoubleType : [Double] = typeCast(valuesDict["non_optionalArrayDoubleType"])!
     		let temp_non_optionalArrayStringType : [String] = typeCast(valuesDict["non_optionalArrayStringType"])!
+    		let temp_non_optionalArrayFloatType : [Float] = typeCast(valuesDict["non_optionalArrayFloatType"])!
+    		let temp_non_optionalArrayIntType : [Int] = typeCast(valuesDict["non_optionalArrayIntType"])!
 
-			self.init(non_optionalArrayIntType : temp_non_optionalArrayIntType,
-    			      non_optionalArrayDoubleType : temp_non_optionalArrayDoubleType,
+			self.init(non_optionalArrayDoubleType : temp_non_optionalArrayDoubleType,
+    			      non_optionalArrayStringType : temp_non_optionalArrayStringType,
     			      non_optionalArrayFloatType : temp_non_optionalArrayFloatType,
-    			      non_optionalArrayStringType : temp_non_optionalArrayStringType)
+    			      non_optionalArrayIntType : temp_non_optionalArrayIntType)
 
-			if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
-				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
+			if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
+				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
 			}
 
-    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
-				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
+    		if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
+				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
 
     		if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
 				optionalArrayStringType = typeCast(unwrapped_optionalArrayStringType)! 
 			}
 
-    		if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
-				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
+    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
+				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
 			}
 
 		} else {
@@ -79,36 +76,36 @@ import Foundation
 												   employing: JMInstantiator.sharedInstance,
 												   defaultsEnabled : false)
 		{
-			if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
-				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
+			if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
+				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
 			}
 
-    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
-				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
+    		if let unwrapped_optionalArrayDoubleType : Any = valuesDict["optionalArrayDoubleType"]  { 
+				optionalArrayDoubleType = typeCast(unwrapped_optionalArrayDoubleType)! 
 			}
 
     		if let unwrapped_optionalArrayStringType : Any = valuesDict["optionalArrayStringType"]  { 
 				optionalArrayStringType = typeCast(unwrapped_optionalArrayStringType)! 
 			}
 
-    		if let unwrapped_optionalArrayFloatType : Any = valuesDict["optionalArrayFloatType"]  { 
-				optionalArrayFloatType = typeCast(unwrapped_optionalArrayFloatType)! 
+    		if let unwrapped_optionalArrayIntType : Any = valuesDict["optionalArrayIntType"]  { 
+				optionalArrayIntType = typeCast(unwrapped_optionalArrayIntType)! 
 			}
 
-			if let unwrapped_non_optionalArrayIntType : Any = valuesDict["non_optionalArrayIntType"]  { 
-				non_optionalArrayIntType = typeCast(unwrapped_non_optionalArrayIntType)! 
-			}
-
-    		if let unwrapped_non_optionalArrayDoubleType : Any = valuesDict["non_optionalArrayDoubleType"]  { 
+			if let unwrapped_non_optionalArrayDoubleType : Any = valuesDict["non_optionalArrayDoubleType"]  { 
 				non_optionalArrayDoubleType = typeCast(unwrapped_non_optionalArrayDoubleType)! 
+			}
+
+    		if let unwrapped_non_optionalArrayStringType : Any = valuesDict["non_optionalArrayStringType"]  { 
+				non_optionalArrayStringType = typeCast(unwrapped_non_optionalArrayStringType)! 
 			}
 
     		if let unwrapped_non_optionalArrayFloatType : Any = valuesDict["non_optionalArrayFloatType"]  { 
 				non_optionalArrayFloatType = typeCast(unwrapped_non_optionalArrayFloatType)! 
 			}
 
-    		if let unwrapped_non_optionalArrayStringType : Any = valuesDict["non_optionalArrayStringType"]  { 
-				non_optionalArrayStringType = typeCast(unwrapped_non_optionalArrayStringType)! 
+    		if let unwrapped_non_optionalArrayIntType : Any = valuesDict["non_optionalArrayIntType"]  { 
+				non_optionalArrayIntType = typeCast(unwrapped_non_optionalArrayIntType)! 
 			}
 
  		}
@@ -121,22 +118,22 @@ extension TestObjectNine {
 
 		var debug_string = "[TestObjectNine]"
 
-		if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
-			debug_string += "       \n\n       - optionalArrayDoubleType : \n"
+		if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
+			debug_string += "       \n\n       - optionalArrayFloatType : \n"
 
-			if unwrapped_optionalArrayDoubleType.count > 0 {
-				for value in unwrapped_optionalArrayDoubleType {
+			if unwrapped_optionalArrayFloatType.count > 0 {
+				for value in unwrapped_optionalArrayFloatType {
 					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				}
 			} 
 		} else {
 			debug_string += "[ ]"
 		}
-			    	if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
-			debug_string += "       \n\n       - optionalArrayIntType : \n"
+			    	if let unwrapped_optionalArrayDoubleType = optionalArrayDoubleType { 
+			debug_string += "       \n\n       - optionalArrayDoubleType : \n"
 
-			if unwrapped_optionalArrayIntType.count > 0 {
-				for value in unwrapped_optionalArrayIntType {
+			if unwrapped_optionalArrayDoubleType.count > 0 {
+				for value in unwrapped_optionalArrayDoubleType {
 					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				}
 			} 
@@ -154,11 +151,11 @@ extension TestObjectNine {
 		} else {
 			debug_string += "[ ]"
 		}
-			    	if let unwrapped_optionalArrayFloatType = optionalArrayFloatType { 
-			debug_string += "       \n\n       - optionalArrayFloatType : \n"
+			    	if let unwrapped_optionalArrayIntType = optionalArrayIntType { 
+			debug_string += "       \n\n       - optionalArrayIntType : \n"
 
-			if unwrapped_optionalArrayFloatType.count > 0 {
-				for value in unwrapped_optionalArrayFloatType {
+			if unwrapped_optionalArrayIntType.count > 0 {
+				for value in unwrapped_optionalArrayIntType {
 					debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 				}
 			} 
@@ -167,19 +164,19 @@ extension TestObjectNine {
 		}
 			
 		
-		debug_string += "       \n\n       - non_optionalArrayIntType : \n"
+		debug_string += "       \n\n       - non_optionalArrayDoubleType : \n"
 
-		if non_optionalArrayIntType.count > 0 {
-			for value in non_optionalArrayIntType {
+		if non_optionalArrayDoubleType.count > 0 {
+			for value in non_optionalArrayDoubleType {
 				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 			}
 		} else {
 			debug_string += "[ ]"
 		}    	
-		debug_string += "       \n\n       - non_optionalArrayDoubleType : \n"
+		debug_string += "       \n\n       - non_optionalArrayStringType : \n"
 
-		if non_optionalArrayDoubleType.count > 0 {
-			for value in non_optionalArrayDoubleType {
+		if non_optionalArrayStringType.count > 0 {
+			for value in non_optionalArrayStringType {
 				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 			}
 		} else {
@@ -194,10 +191,10 @@ extension TestObjectNine {
 		} else {
 			debug_string += "[ ]"
 		}    	
-		debug_string += "       \n\n       - non_optionalArrayStringType : \n"
+		debug_string += "       \n\n       - non_optionalArrayIntType : \n"
 
-		if non_optionalArrayStringType.count > 0 {
-			for value in non_optionalArrayStringType {
+		if non_optionalArrayIntType.count > 0 {
+			for value in non_optionalArrayIntType {
 				debug_string += "\n               \(String(describing: value).replacingOccurrences(of: "       ", with: "                     "))"
 			}
 		} else {

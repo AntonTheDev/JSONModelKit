@@ -1,1 +1,1 @@
-from openstep_parser import OpenStepDecoder
+from .openstep_parser import OpenStepDecoder

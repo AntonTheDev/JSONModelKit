@@ -2,18 +2,15 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectFive : NSObject  {
 
 	public var non_optionalSubType : TestObjectThree
-
 	public var optionalSubType : TestObjectThree?
 
 	required public  init(non_optionalSubType  _non_optionalSubType : TestObjectThree)  {
 
-
 			non_optionalSubType = _non_optionalSubType
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

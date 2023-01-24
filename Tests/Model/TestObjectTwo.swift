@@ -2,16 +2,13 @@ import Foundation
 
 
 
-
 @objcMembers public class TestObjectTwo : NSObject  {
-
 
 	
 
 	required public override init()  {
 
-
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

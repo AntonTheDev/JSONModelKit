@@ -1,16 +1,13 @@
 import Foundation
-
 { BASE_CLASS_LIBRARY_IMPORT }
 { TEST_IMPORT }
 @objcMembers public class { CLASSNAME } : NSObject { BASE_CLASS } {
 { NONOPTIONALS }
-
 { OPTIONALS }
 
 	required public { OVERRIDE } init({ REQUIRED_INIT_PARAMS })  {
-
 { REQUIRED_INIT_SETTERS }
-		super.init()
+            super.init()
 	}
 
 	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {

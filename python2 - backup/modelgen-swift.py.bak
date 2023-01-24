@@ -2,8 +2,9 @@ import plistlib
 import os
 import sys
 import getopt
+import dircache
 import glob
-import subprocess
+import commands
 import json
 import shutil
 import time
@@ -19,7 +20,7 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 	internal_file_names = []
 	external_file_names = []
 
-	print(fullOutputDirectory)
+	print fullOutputDirectory
 
 	instantiatorPath = fullOutputDirectory + 'Model/JMInstantiator.swift'
 	instantiatorGenerator = InstantiatorGenerator(plistPaths, instantiatorPath, version, testEnabled, jsonFormatEnabled)
@@ -37,7 +38,7 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 		else:
 			jmsdk_propertyMappings = plistlib.readPlist(mappingPath)
 
-		print(fullOutputDirectory)
+		print fullOutputDirectory
 
 		classGenerator = ClassGenerator(mappingPath, fullOutputDirectory, version, testEnabled, jsonFormatEnabled)
 
@@ -58,14 +59,14 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 	fileschanged = False
 	projectName = ''
 	searchDirectory = project_directory + '/../'
-	for filepath in [x for x in os.listdir(searchDirectory) if x.endswith('.xcodeproj')]:
+	for filepath in filter(lambda x: x.endswith('.xcodeproj'), os.listdir(searchDirectory)):
 		projectName = filepath.partition('.')[0]
 
 	project_file_path = project_directory +'../' + projectName + '.xcodeproj'
 	backup_project_path = project_file_path + '-backup'
 
-	print('1 - ' + project_directory)
-	print('2 - ' + project_file_path)
+	print '1 - ' + project_directory
+	print '2 - ' + project_file_path
 
 	if os.path.exists(os.path.dirname(backup_project_path + '/')):
 		shutil.rmtree(backup_project_path + '/')
@@ -88,7 +89,7 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 		if len(found_files) == 0:
 			fileschanged = True
 			internal_path = project_directory + '/Model/' + internal_name
-			print('3 - ' + internal_path)
+			print '3 - ' + internal_path
 			project.add_file(internal_path, parent=internal_group, force=False)
 
 	for external_name in external_file_names:
@@ -97,7 +98,7 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 		if len(found_files) == 0:
 			fileschanged = True
 			external_path = project_directory + '/Model/' + external_name
-			print('4 - ' + external_path)
+			print '4 - ' + external_path
 			project.add_file(external_path, parent=model_group, force=False)
 
 	if fileschanged:
@@ -114,24 +115,24 @@ def getPathForFile(fileName):
 
 
 def generate_file(content, filePath, overwrite):
-	print(filePath)
-	fileExists = os.path.exists(filePath)
-	
-	if fileExists and overwrite == False:
-		return None
-	elif not os.path.exists(os.path.dirname(filePath)):
-   	   os.makedirs(os.path.dirname(filePath))
-	
-	outputfile = open(filePath, "w")
-	fileContent = content
-	outputfile.write(fileContent)
-	outputfile.close()
-	return fileExists
-	   
+    print filePath
+    fileExists = os.path.exists(filePath)
+    if fileExists and overwrite == False:
+   		return None
+
+    if not os.path.exists(os.path.dirname(filePath)):
+        os.makedirs(os.path.dirname(filePath))
+
+    outputfile = open(filePath, "wba")
+
+    fileContent = content
+    outputfile.write(fileContent)
+    outputfile.close();
+    return fileExists
 
 
 def xcode_version():
-	status, xcodeVersionString = subprocess.getstatusoutput("xcodebuild -version")
+	status, xcodeVersionString = commands.getstatusoutput("xcodebuild -version")
 	if xcodeVersionString.find("Xcode 7.")  != -1:
 		return 7.0
 	else:
@@ -150,12 +151,12 @@ def main(argv):
 	try:
 		opts, args = getopt.getopt(argv,"hv:i:o:t:f:m:",["version=","mapdir=","classname=","testing=","format=", "import="])
 	except getopt.GetoptError:
-		print('test.py -i <inputfile> -o <outputfile>')
+		print 'test.py -i <inputfile> -o <outputfile>'
 		sys.exit(2)
 
 	for opt, arg in opts:
 		if opt == '-h':
-			print('test.py -i <inputfile> -o <outputfile>')
+			print 'test.py -i <inputfile> -o <outputfile>'
 			sys.exit()
 		elif opt in ("-v", "--ofile"):
 			currentVersion = arg
@@ -172,24 +173,24 @@ def main(argv):
 
 
 	projectName = ''
-	all_txt_files = [x for x in os.listdir(classdir) if x.endswith('.xcodeproj')]
+	all_txt_files = filter(lambda x: x.endswith('.xcodeproj'), os.listdir(classdir))
 	for file in all_txt_files:
 		projectName = file.partition('.')[0]
 
 	fullOutputDirectory = classdir + '/'
 
 	if not mapdir:
-		print('Empty Dir' + fullOutputDirectory)
+		print 'Empty Dir' + fullOutputDirectory
 		mapdir = fullOutputDirectory + 'Model/Mapping/'
 		if not os.path.exists(os.path.dirname(mapdir)):
 			os.makedirs(os.path.dirname(mapdir))
 
 	if fileformat == "json":
 		mappinglist = glob.glob(mapdir + "*.json")
-		generate_model(mappinglist, fullOutputDirectory, currentVersion, testEnabled, True, autoImport)
+   		generate_model(mappinglist, fullOutputDirectory, currentVersion, testEnabled, True, autoImport)
 	else:
-		mappinglist = glob.glob(mapdir + "*.plist")
-		generate_model(mappinglist, fullOutputDirectory, currentVersion, testEnabled, False, autoImport)
+   		mappinglist = glob.glob(mapdir + "*.plist")
+   		generate_model(mappinglist, fullOutputDirectory, currentVersion, testEnabled, False, autoImport)
 
 if __name__ == "__main__":
    main(sys.argv[1:])
