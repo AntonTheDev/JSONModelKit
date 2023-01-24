@@ -1,15 +1,19 @@
-import Foundation{ BASE_CLASS_LIBRARY_IMPORT }
+import Foundation
+
+{ BASE_CLASS_LIBRARY_IMPORT }
 { TEST_IMPORT }
-class _{ CLASSNAME }  { BASE_CLASS } {
+@objcMembers public class { CLASSNAME } : NSObject { BASE_CLASS } {
 { NONOPTIONALS }
 
 { OPTIONALS }
 
-	required init({ REQUIRED_INIT_PARAMS })  {
+	required public { OVERRIDE } init({ REQUIRED_INIT_PARAMS })  {
+
 { REQUIRED_INIT_SETTERS }
+		super.init()
 	}
 
-	convenience init?(_ dictionary: Dictionary<String, AnyObject>)  {
+	convenience public init?(_ dictionary: Dictionary<String, AnyObject>)  {
 
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
@@ -28,7 +32,7 @@ class _{ CLASSNAME }  { BASE_CLASS } {
 		}
 	}
 
-	func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
+	public func updateWithDictionary(dictionary: Dictionary<String, AnyObject>) {
 
 		let dynamicTypeString = "\(type(of: self))"
 		let className = dynamicTypeString.components(separatedBy: ".").last
@@ -44,9 +48,9 @@ class _{ CLASSNAME }  { BASE_CLASS } {
 	}
 }
 
-extension _{ CLASSNAME } : CustomDebugStringConvertible {
+extension { CLASSNAME } {
 
-	var debugDescription: String {
+	public override var debugDescription: String {
 
 		var debug_string = "[{ CLASSNAME }]"
 

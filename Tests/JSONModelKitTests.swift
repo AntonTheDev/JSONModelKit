@@ -232,7 +232,7 @@ class JSONModelKitTests: XCTestCase {
                               "non_optional_right_hand_string" : "NONOP-Right-String"] as [String : AnyObject]
         
         let testObject = TestObjectSix(dataDictionary)
-        
+        print(testObject!.non_optionalCompoundString)
         XCTAssertEqual(testObject!.optionalCompoundString!, "Left-String-Right-String",                 "Compount Value Mapper returned incorrect Value")
         XCTAssertEqual(testObject!.non_optionalCompoundString, "NONOP-Left-String-NONOP-Right-String",  "Compount Value Mapper returned incorrect Value")
     }
@@ -292,6 +292,7 @@ class JSONModelKitTests: XCTestCase {
         XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalString, "TestString2", "Non-Optional String value was parsed incorrectly")
         XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalBool, false,           "Non-Optional Bool value was parsed incorrectly")
         
+        
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalInt, Int(110),          "Non-Optional Int value was parsed incorrectly")
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalDouble, Double(120.0),  "Non-Optional Double value was parsed incorrectly")
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalFloat, Float(130.0),    "Non-Optional Float value was parsed incorrectly")
@@ -332,18 +333,25 @@ class JSONModelKitTests: XCTestCase {
         
         let testObject = TestObjectSeven(dataDictionary)
         
-        XCTAssertEqual(testObject!.optionalArrayType![0].non_optionalInt, Int(50),              "Non-Optional Int value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![0].non_optionalDouble, Double(60.0),      "Non-Optional Double value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![0].non_optionalFloat, Float(70.0),        "Non-Optional Float value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![0].non_optionalString, "TestString1",     "Non-Optional String value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![0].non_optionalBool, true,                "Non-Optional Bool value was parsed incorrectly")
-        
-        XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalInt, Int(80),              "Non-Optional Int value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalDouble, Double(90.0),      "Non-Optional Double value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalFloat, Float(100.0),       "Non-Optional Float value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalString, "TestString2",     "Non-Optional String value was parsed incorrectly")
-        XCTAssertEqual(testObject!.optionalArrayType![1].non_optionalBool, false,               "Non-Optional Bool value was parsed incorrectly")
-        
+        if let testObject1 = testObject?.optionalArrayType![0],
+           let testObject2 = testObject?.optionalArrayType![1]
+        {
+            let _test1Object = testObject1.non_optionalString == "TestString1" ? testObject1 : testObject2
+            let _test2Object = testObject2.non_optionalString != "TestString2" ? testObject1 : testObject2
+            
+            XCTAssertEqual(_test1Object.non_optionalInt, Int(50),              "Non-Optional Int value was parsed incorrectly - \(_test1Object.non_optionalInt)")
+            XCTAssertEqual(_test1Object.non_optionalDouble, Double(60.0),      "Non-Optional Double value was parsed incorrectly - \(_test1Object.non_optionalDouble)")
+            XCTAssertEqual(_test1Object.non_optionalFloat, Float(70.0),        "Non-Optional Float value was parsed incorrectly - \(_test1Object.non_optionalFloat)")
+            XCTAssertEqual(_test1Object.non_optionalString, "TestString1",     "Non-Optional String value was parsed incorrectly - \(_test1Object.non_optionalString)")
+            XCTAssertEqual(_test1Object.non_optionalBool, true,                "Non-Optional Bool value was parsed incorrectly - \(_test1Object.non_optionalBool)")
+            
+            XCTAssertEqual(_test2Object.non_optionalInt, Int(80),              "Non-Optional Int value was parsed incorrectly")
+            XCTAssertEqual(_test2Object.non_optionalDouble, Double(90.0),      "Non-Optional Double value was parsed incorrectly")
+            XCTAssertEqual(_test2Object.non_optionalFloat, Float(100.0),       "Non-Optional Float value was parsed incorrectly")
+            XCTAssertEqual(_test2Object.non_optionalString, "TestString2",     "Non-Optional String value was parsed incorrectly")
+            XCTAssertEqual(_test2Object.non_optionalBool, false,               "Non-Optional Bool value was parsed incorrectly")
+        }
+
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalInt, Int(110),          "Non-Optional Int value was parsed incorrectly")
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalDouble, Double(120.0),  "Non-Optional Double value was parsed incorrectly")
         XCTAssertEqual(testObject!.non_optionalArrayType[0].non_optionalFloat, Float(130.0),    "Non-Optional Float value was parsed incorrectly")

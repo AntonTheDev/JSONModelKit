@@ -314,55 +314,9 @@
       <Group
          location = "group:Model"
          name = "Model">
-         <Group
-            location = "group:Internal"
-            name = "Internal">
-            <FileRef
-               location = "group:_TestObjectThree.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectFour.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectFive.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectSeven.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectEight.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectNine.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTen.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectEleven.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectOne.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectSix.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectThirteen.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTwelve.swift">
-            </FileRef>
-            <FileRef
-               location = "group:_TestObjectTwo.swift">
-            </FileRef>
-            <FileRef
-               location = "group:JMInstantiator.swift">
-            </FileRef>
-            <FileRef
-               location = "group:JMSerializer.swift">
-            </FileRef>
-         </Group>
+         <FileRef
+            location = "group:JMInstantiator.swift">
+         </FileRef>
          <FileRef
             location = "group:TestObjectEight.swift">
          </FileRef>
@@ -407,16 +361,16 @@
          location = "group:Test Case Objects"
          name = "Test Case Objects">
          <FileRef
-            location = "group:US2ExampleClosureTransformer.swift">
+            location = "group:JMExampleClosureTransformer.swift">
          </FileRef>
          <FileRef
-            location = "group:US2ExampleEnumTransformer.swift">
+            location = "group:JMExampleEnumTransformer.swift">
          </FileRef>
          <FileRef
-            location = "group:US2ExampleStructTransformer.swift">
+            location = "group:JMExampleStructTransformer.swift">
          </FileRef>
          <FileRef
-            location = "group:US2ExampleTupleTransformer.swift">
+            location = "group:JMExampleTupleTransformer.swift">
          </FileRef>
          <FileRef
             location = "group:ValueTypeDefinitions.swift">

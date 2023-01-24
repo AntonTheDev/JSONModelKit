@@ -8,8 +8,6 @@ import glob
 import commands
 import json
 
-from fileimporter import ProjectFileImporter
-
 sys.dont_write_bytecode = True
 
 from constants import Type
@@ -25,25 +23,26 @@ class ClassGenerator:
       self.jsonFormatEnabled = jsonFormatEnabled
 
    def internalGeneratedClass(self):
-      propertyMappings = self.propertyMappingsArray()
+      jmsdk_propertyMappings = self.propertyMappingsArray()
 
       fileString = self.baseTemplate(self.getPathForFile("internal_class_template.txt"))
 
-      fileString = str.replace(fileString, "{ BASE_CLASS_LIBRARY_IMPORT }",         self.base_class_imports(propertyMappings))
-      fileString = str.replace(fileString, "{ BASE_CLASS }",                        self.base_class_extention(propertyMappings))
-      fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(propertyMappings))
-      fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(propertyMappings))
-      fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(propertyMappings))
-      fileString = str.replace(fileString, "{ REQUIRED_INIT_SETTERS }",             self.required_init_properties_setters_string(propertyMappings))
-      fileString = str.replace(fileString, "{ FAILABLE_INIT_TEMP_NONOPTIONALS }",   self.init_temp_non_optionals(propertyMappings))
-      fileString = str.replace(fileString, "{ SELF_NONOPTIONALS_INIT }",            self.non_optional_self_init_parameters(propertyMappings))
-      fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(propertyMappings))
-      fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(propertyMappings))
+      fileString = str.replace(fileString, "{ BASE_CLASS_LIBRARY_IMPORT }",         self.base_class_imports(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ BASE_CLASS }",                        self.base_class_extention(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ OPTIONALS }",                         self.optional_property_definitions(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ OVERRIDE }",                          self.required_init_override_string(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ NONOPTIONALS }",                      self.non_optional_property_definitions(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ REQUIRED_INIT_PARAMS }",              self.required_init_properties_string(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ REQUIRED_INIT_SETTERS }",             self.required_init_properties_setters_string(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ FAILABLE_INIT_TEMP_NONOPTIONALS }",   self.init_temp_non_optionals(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ SELF_NONOPTIONALS_INIT }",            self.non_optional_self_init_parameters(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ OPTIONALS_UNWRAP }",                  self.unwrap_optional_parameters(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ NONOPTIONALS_UNWRAP }",               self.unwrap_non_optional_parameters(jmsdk_propertyMappings))
 
-      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_OPTIONALS }",       self.debug_optional_property_definitions(propertyMappings))
-      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_NONOPTIONALS }",    self.debug_non_optional_property_definitions(propertyMappings))
+      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_OPTIONALS }",       self.debug_optional_property_definitions(jmsdk_propertyMappings))
+      fileString = str.replace(fileString, "{ DEBUG_DESCRIPTION_NONOPTIONALS }",    self.debug_non_optional_property_definitions(jmsdk_propertyMappings))
 
-      nonOptionalArray = self.filtered_mappings(propertyMappings, True)
+      nonOptionalArray = self.filtered_mappings(jmsdk_propertyMappings, True)
 
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
 
@@ -62,13 +61,13 @@ class ClassGenerator:
    '''
    Replaces { BASE_CLASS_LIBRARY_IMPORT } in the template
    '''
-   def base_class_imports(self, propertyMappings):
+   def base_class_imports(self, jmsdk_propertyMappings):
 
       baseClassString = ""
 
-      if MappingKey.ModelConfig in propertyMappings.keys():
-          if MappingKey.ModelImport in propertyMappings[MappingKey.ModelConfig].keys():
-               for lib in propertyMappings[MappingKey.ModelConfig][MappingKey.ModelImport]:
+      if MappingKey.ModelConfig in jmsdk_propertyMappings.keys():
+          if MappingKey.ModelImport in jmsdk_propertyMappings[MappingKey.ModelConfig].keys():
+               for lib in jmsdk_propertyMappings[MappingKey.ModelConfig][MappingKey.ModelImport]:
                    baseClassString = baseClassString + '\n' + 'import ' + str(lib)
 
       return baseClassString
@@ -76,39 +75,39 @@ class ClassGenerator:
    '''
    Replaces { BASE_CLASS } in the template
    '''
-   def base_class_extention(self, propertyMappings):
+   def base_class_extention(self, jmsdk_propertyMappings):
 
       baseClassString = ""
 
-      if MappingKey.ModelConfig in propertyMappings.keys():
-          if MappingKey.ModelBaseClass in propertyMappings[MappingKey.ModelConfig].keys():
-               baseClassString = ": " + str(propertyMappings[MappingKey.ModelConfig][MappingKey.ModelBaseClass])
+      if MappingKey.ModelConfig in jmsdk_propertyMappings.keys():
+          if MappingKey.ModelBaseClass in jmsdk_propertyMappings[MappingKey.ModelConfig].keys():
+               baseClassString = ": " + str(jmsdk_propertyMappings[MappingKey.ModelConfig][MappingKey.ModelBaseClass])
 
       return baseClassString
 
    '''
    Replaces { OPTIONALS } in the template
    '''
-   def optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "attributes var propertyname : datatype?"
-      arrayTemplate        = "attributes var propertyname : [datatype]?"
-      dictionatyTemplate   = "attributes var propertyname : [String : datatype]?"
+   def optional_property_definitions(self, jmsdk_propertyMappings):
+      valueTemplate        = "attributes public var propertyname : datatype?"
+      arrayTemplate        = "attributes public var propertyname : [datatype]?"
+      dictionatyTemplate   = "attributes public var propertyname : [String : datatype]?"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, True)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, True)
       return "\t" + self.generate_template_string(filteredMappings, templateArray, False, "", "\r\n    " )
 
 
    '''
    Replaces { NONOPTIONALS } in the template
    '''
-   def non_optional_property_definitions(self, propertyMappings):
-      valueTemplate        = "attributes var propertyname : datatype"
-      arrayTemplate        = "attributes var propertyname : [datatype]"
-      dictionatyTemplate   = "attributes var propertyname : [String : datatype]"
+   def non_optional_property_definitions(self, jmsdk_propertyMappings):
+      valueTemplate        = "attributes public var propertyname : datatype"
+      arrayTemplate        = "attributes public var propertyname : [datatype]"
+      dictionatyTemplate   = "attributes public var propertyname : [String : datatype]"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
 
       if len(filteredMappings) == 0 :
          return ""
@@ -119,24 +118,31 @@ class ClassGenerator:
    '''
    Replaces { REQUIRED_INIT_PARAMS } in the template
    '''
-   def required_init_properties_string(self, propertyMappings):
+   def required_init_properties_string(self, jmsdk_propertyMappings):
       valueTemplate        = "propertyname  _propertyname : datatype"
       arrayTemplate        = "propertyname  _propertyname : [datatype]"
       dictionatyTemplate   = "propertyname  _propertyname : [String : datatype]"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t  ", ",\r\n    " )
 
+   def required_init_override_string(self, jmsdk_propertyMappings):
+
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
+      if len(filteredMappings) == 0:
+        return "override"
+      else:
+        return ""
 
    '''
    Replaces { REQUIRED_INIT_SETTERS } in the template
    '''
-   def required_init_properties_setters_string(self, propertyMappings):
+   def required_init_properties_setters_string(self, jmsdk_propertyMappings):
       valueTemplate      = "propertyname = _propertyname"
 
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
 
       if len(filteredMappings) == 0 :
          return ""
@@ -147,13 +153,13 @@ class ClassGenerator:
    '''
    Replaces { FAILABLE_INIT_TEMP_NONOPTIONALS } in the template
    '''
-   def init_temp_non_optionals(self, propertyMappings):
+   def init_temp_non_optionals(self, jmsdk_propertyMappings):
       valueTemplate        = "let temp_propertyname : datatype = typeCast(valuesDict[\"propertyname\"])!"
       arrayTemplate        = "let temp_propertyname : [datatype] = typeCast(valuesDict[\"propertyname\"])!"
       dictionatyTemplate   = "let temp_propertyname : [String : datatype] = typeCast(valuesDict[\"propertyname\"])!"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
 
       if len(filteredMappings) == 0 :
          return ""
@@ -164,46 +170,46 @@ class ClassGenerator:
    '''
    Replaces { SELF_NONOPTIONALS_INIT } in the template
    '''
-   def non_optional_self_init_parameters(self, propertyMappings):
+   def non_optional_self_init_parameters(self, jmsdk_propertyMappings):
       valueTemplate     = "propertyname : temp_propertyname"
 
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t\t     ", "\r\n    " )
 
 
    '''
    Replaces { SELF_NONOPTIONALS_INIT } in the template
    '''
-   def non_optional_self_init_parameters(self, propertyMappings):
+   def non_optional_self_init_parameters(self, jmsdk_propertyMappings):
       valueTemplate     = "propertyname : temp_propertyname"
 
       templateArray     = [valueTemplate, valueTemplate, valueTemplate]
-      filteredMappings  = self.filtered_mappings(propertyMappings, False)
+      filteredMappings  = self.filtered_mappings(jmsdk_propertyMappings, False)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t\t      ", ",\r\n    " )
 
 
    '''
    Replaces { OPTIONALS_UNWRAP } in the template
    '''
-   def unwrap_optional_parameters(self, propertyMappings):
+   def unwrap_optional_parameters(self, jmsdk_propertyMappings):
       valueTemplate        = "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
       arrayTemplate        = "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
       dictionatyTemplate   = "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, True)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, True)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
 
 
    '''
    Replaces { NONOPTIONALS_UNWRAP } in the template
    '''
-   def unwrap_non_optional_parameters(self, propertyMappings):
+   def unwrap_non_optional_parameters(self, jmsdk_propertyMappings):
       valueTemplate  = "if let unwrapped_propertyname : Any = valuesDict[\"propertyname\"]  { \r\n\t\t\t\tpropertyname = typeCast(unwrapped_propertyname)! \r\n\t\t\t}\r\n"
 
       templateArray = [valueTemplate, valueTemplate, valueTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
 
       return self.generate_template_string(filteredMappings, templateArray, True, "\t\t", "\r\n    " )
 
@@ -211,38 +217,38 @@ class ClassGenerator:
    '''
    Replaces { DEBUG_DESCRIPTION_OPTIONALS } in the template
    '''
-   def debug_optional_property_definitions(self, propertyMappings):
+   def debug_optional_property_definitions(self, jmsdk_propertyMappings):
       valueTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\tdebug_string += \"\\n       - propertyname : \(unwrapped_propertyname)\"\r\n\t\t}\r\n"
       arrayTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\n\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\tfor value in unwrapped_propertyname {\n\t\t\t\t\tdebug_string += \"\\n               \(String(describing: value).replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t}\n\t\t\t} \n\t\t} else {\n\t\t\tdebug_string += \"[ ]\"\n\t\t}\n\t\t\t"
       dictionatyTemplate        = "if let unwrapped_propertyname = propertyname { \r\n\t\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\n\t\t\tif unwrapped_propertyname.count > 0 {\n\t\t\t\tfor (_, value) in unwrapped_propertyname {\n\t\t\t\t\tdebug_string += \"\\n               \(String(describing: value).replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\t}\n\t\t\t} \n\t\t} else {\n\t\t\tdebug_string += \"[ ]\"\n\t\t}\n\t\t\t"
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, True)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, True)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t", "\r    " )
 
    '''
    Replaces { DEBUG_DESCRIPTION_NONOPTIONALS } in the template
    '''
-   def debug_non_optional_property_definitions(self, propertyMappings):
+   def debug_non_optional_property_definitions(self, jmsdk_propertyMappings):
       valueTemplate        = "debug_string += \"\\n       - propertyname : \(propertyname)\""
       arrayTemplate        = "\n\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\n\t\tif propertyname.count > 0 {\n\t\t\tfor value in propertyname {\n\t\t\t\tdebug_string += \"\\n               \(String(describing: value).replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t}\n\t\t} else {\n\t\t\tdebug_string += \"[ ]\"\n\t\t}"
       dictionatyTemplate   = "\n\t\tdebug_string += \"       \\n\\n       - propertyname : \\n\"\r\n\n\t\tif propertyname.count > 0 {\n\t\t\tfor (_, value) in propertyname {\n\t\t\t\tdebug_string += \"\\n               \(String(describing: value).replacingOccurrences(of: \"       \", with: \"                     \"))\"\n\t\t\t\tdebug_string += \"\"\n\t\t\t}\n\t\t} else {\n\t\t\tdebug_string += \"[ ]\"\n\t\t}"
 
 
       templateArray = [valueTemplate, arrayTemplate, dictionatyTemplate]
-      filteredMappings = self.filtered_mappings(propertyMappings, False)
+      filteredMappings = self.filtered_mappings(jmsdk_propertyMappings, False)
       return self.generate_template_string(filteredMappings, templateArray, True, "\t", "\r    " )
 
 
-   def generate_template_string(self, propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
-      if len(propertyMappings) == 0 :
+   def generate_template_string(self, jmsdk_propertyMappings, templateArray, skipInitialIndentation, indentation, carriageString):
+      if len(jmsdk_propertyMappings) == 0 :
          return ""
 
       propertyString = ""
 
-      for propertyKey in propertyMappings.keys():
+      for propertyKey in jmsdk_propertyMappings.keys():
 
-         propertyMapping = propertyMappings[propertyKey]
+         propertyMapping = jmsdk_propertyMappings[propertyKey]
          propertyType = str(propertyMapping[MappingKey.Type])
          isMappingOptional = self.is_property_mapping_optional(propertyMapping)
 
@@ -269,7 +275,7 @@ class ClassGenerator:
 
          propertyString += self.dictionaryValueString(templateArray[templateIndex], templateValues)
 
-         if propertyMappings.keys().index(propertyKey) <= len(propertyMappings.keys()) - 2:
+         if jmsdk_propertyMappings.keys().index(propertyKey) <= len(jmsdk_propertyMappings.keys()) - 2:
             propertyString += carriageString
          else:
             propertyString += ""
@@ -300,11 +306,11 @@ class ClassGenerator:
          return plistlib.readPlist(self.mappingPath)
 
 
-   def filtered_mappings(self, propertyMappings, optional):
+   def filtered_mappings(self, jmsdk_propertyMappings, optional):
       filteredMappings = {}
 
-      for propertyKey in propertyMappings.keys():
-          propertyMapping = propertyMappings[propertyKey]
+      for propertyKey in jmsdk_propertyMappings.keys():
+          propertyMapping = jmsdk_propertyMappings[propertyKey]
 
           if MappingKey.ModelConfig == propertyKey:
               continue
@@ -319,13 +325,13 @@ class ClassGenerator:
       return str.replace(os.path.abspath(__file__), "generator.py", fileName)
 
    def baseTemplate(self, path):
-      propertyMappings  = self.propertyMappingsArray()
+      jmsdk_propertyMappings  = self.propertyMappingsArray()
 
       fileString = str.replace(open(path, 'r').read(), '\n', '\r\n')
       classname = self.mappingPath[self.mappingPath.rindex('/',0,-1)+1:-1] if self.mappingPath.endswith('/') else self.mappingPath[self.mappingPath.rindex('/')+1:].split('.', 1 )[0]
 
       if self.testEnabled == 0:
-          fileString = str.replace(fileString,  "{ TEST_IMPORT }", "import JSONModelKit\r\n")
+          fileString = str.replace(fileString,  "{ TEST_IMPORT }", "\r\n")
       else:
           fileString = str.replace(fileString,  "{ TEST_IMPORT }", '\n')
 

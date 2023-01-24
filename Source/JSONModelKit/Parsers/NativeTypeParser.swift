@@ -45,9 +45,9 @@ final class NativeTypeParser {
         case .sInt64Type:
             return String(value.int64Value)
         case .float32Type:
-            return String(stringInterpolationSegment: value.floatValue)
+                return String(value.floatValue)
         case .float64Type:
-            return String(stringInterpolationSegment: value.doubleValue)
+                return String(value.doubleValue)
         case .charType:
             return String(value.int8Value)
         case .shortType:
@@ -59,11 +59,11 @@ final class NativeTypeParser {
         case .longLongType:
             return String(value.int64Value)
         case .floatType:
-            return String(stringInterpolationSegment: value.floatValue)
+            return String(value.floatValue)
         case .doubleType:
-            return String(stringInterpolationSegment: value.doubleValue)
+            return String(value.doubleValue)
         default:
-            return String(stringInterpolationSegment: value.doubleValue)
+            return String(value.doubleValue)
         }
     }
 }

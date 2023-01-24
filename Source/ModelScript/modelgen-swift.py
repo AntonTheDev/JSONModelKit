@@ -14,21 +14,6 @@ sys.dont_write_bytecode = True
 from generator 	import ClassGenerator
 from instantiator import InstantiatorGenerator
 from validator 	import Validator
-from fileimporter import ProjectFileImporter
-from pbxproj import XcodeProject
-#from keystroke_generator import KeystrokeGenerator
-
-#from Quartz.CoreGraphics import CGEventCreateKeyboardEvent
-#from Quartz.CoreGraphics import CGEventPost
-
-# Python releases things automatically, using CFRelease will result in a scary error
-#from Quartz.CoreGraphics import CFRelease
-
-#from Quartz.CoreGraphics import kCGHIDEventTap
-
-# From http://stackoverflow.com/questions/281133/controlling-the-mouse-from-python-in-os-x
-# and from https://developer.apple.com/library/mac/documentation/Carbon/Reference/QuartzEventServicesRef/index.html#//apple_ref/c/func/CGEventCreateKeyboardEvent
-
 
 def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFormatEnabled, autoImport):
 
@@ -37,7 +22,7 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 
 	print fullOutputDirectory
 
-	instantiatorPath = fullOutputDirectory + 'Model/Internal/JMInstantiator.swift'
+	instantiatorPath = fullOutputDirectory + 'Model/JMInstantiator.swift'
 	instantiatorGenerator = InstantiatorGenerator(plistPaths, instantiatorPath, version, testEnabled, jsonFormatEnabled)
 
 	generate_file(instantiatorGenerator.internalGeneratedClass(), instantiatorPath, True)
@@ -46,34 +31,27 @@ def generate_model(plistPaths, fullOutputDirectory, version, testEnabled, jsonFo
 	for mappingPath in plistPaths:
 		classname = mappingPath[mappingPath.rindex('/',0,-1)+1:-1] if mappingPath.endswith('/') else mappingPath[mappingPath.rindex('/')+1:].split('.', 1 )[0]
 
-		propertyMappings = []
+		jmsdk_propertyMappings = []
 
 		if jsonFormatEnabled == True:
-			propertyMappings = json.load(open(mappingPath))
+			jmsdk_propertyMappings = json.load(open(mappingPath))
 		else:
-			propertyMappings = plistlib.readPlist(mappingPath)
+			jmsdk_propertyMappings = plistlib.readPlist(mappingPath)
 
 		print fullOutputDirectory
 
 		classGenerator = ClassGenerator(mappingPath, fullOutputDirectory, version, testEnabled, jsonFormatEnabled)
 
-		internalClassPath = fullOutputDirectory + 'Model/Internal/_'+ classname + '.swift'
-		externalClassPath = fullOutputDirectory + 'Model/' + classname + '.swift'
+		internalClassPath = fullOutputDirectory + 'Model/'+ classname + '.swift'
 
-		validator = Validator(classname, propertyMappings)
+		validator = Validator(classname, jmsdk_propertyMappings)
 		validator.validateMapping()
 
 		internalClass = classGenerator.internalGeneratedClass()
-		externalClass= classGenerator.externalGeneratedClass()
 
-		internal_file_names.append('_'+ classname + '.swift')
-		external_file_names.append(classname + '.swift')
+		internal_file_names.append(classname + '.swift')
 
-		if generate_file(internalClass, internalClassPath, True) == False:
-			generate_file(externalClass, externalClassPath, False)
-
-	if testEnabled == 0:
-		save_files_to_project(fullOutputDirectory, internal_file_names, external_file_names)
+		generate_file(internalClass, internalClassPath, True)
 
 
 def save_files_to_project(project_directory, internal_file_names, external_file_names):
@@ -110,7 +88,7 @@ def save_files_to_project(project_directory, internal_file_names, external_file_
 		found_files = project.get_files_by_name(internal_name)
 		if len(found_files) == 0:
 			fileschanged = True
-			internal_path = project_directory + '/Model/Internal/' + internal_name
+			internal_path = project_directory + '/Model/' + internal_name
 			print '3 - ' + internal_path
 			project.add_file(internal_path, parent=internal_group, force=False)
 
@@ -199,10 +177,10 @@ def main(argv):
 	for file in all_txt_files:
 		projectName = file.partition('.')[0]
 
-	fullOutputDirectory = classdir + '/' + projectName + '/'
+	fullOutputDirectory = classdir + '/'
 
 	if not mapdir:
-		print 'Empty Dir'
+		print 'Empty Dir' + fullOutputDirectory
 		mapdir = fullOutputDirectory + 'Model/Mapping/'
 		if not os.path.exists(os.path.dirname(mapdir)):
 			os.makedirs(os.path.dirname(mapdir))

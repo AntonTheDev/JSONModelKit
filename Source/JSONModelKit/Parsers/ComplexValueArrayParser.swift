@@ -21,6 +21,7 @@ final class ComplexValueArrayParser {
                 valueArray.append(complexTypeValue)
             }
         }
+        
         return valueArray
     }
     

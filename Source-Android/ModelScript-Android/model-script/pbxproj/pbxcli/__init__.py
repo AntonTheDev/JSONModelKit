@@ -26,7 +26,7 @@ def resolve_backup(project, backup_file, args):
 
 
 def command_parser(command):
-    def parser(args):
+    def JMParser(args):
         try:
             project = open_project(args)
             backup_file = backup_project(project, args)
@@ -35,4 +35,4 @@ def command_parser(command):
         except Exception as ex:
             print ex.message
             exit(1)
-    return parser
+    return JMParser

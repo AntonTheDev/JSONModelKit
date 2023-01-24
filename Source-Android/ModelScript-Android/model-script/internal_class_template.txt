@@ -1,0 +1,55 @@
+package com.iagd.voyagersdk.models
+import android.os.Parcelable
+import com.iagd.voyagersdk.FormActionType
+import com.iagd.voyagersdk.FormFieldTemplateType
+import com.iagd.voyagersdk.FormMethodType
+import com.iagd.voyagersdk.TradeFieldType
+import com.iagd.voyagersdk.jsonmodelkit.JMJSONKit
+import kotlinx.android.parcel.IgnoredOnParcel
+import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
+import com.iagd.voyagersdk.*
+import com.iagd.voyagersdk.FormPageType
+import java.util.*
+
+@Parcelize
+open class { CLASSNAME }(var dictionary : @RawValue HashMap<String, Any>?) : Parcelable {
+
+{ OPTIONALS }
+{ NONOPTIONALS }
+    @IgnoredOnParcel
+    var backingDictionary : HashMap<String, Any>? = dictionary
+
+    init {
+      mapData()
+    }
+
+    fun mapData()
+    {
+        val stringClass = this::class
+        val simpleName = stringClass.simpleName
+
+        val valuesDict = JMJSONKit.mapDictValues(staticInstantiator{ INSTANTIATOR_NAME }, backingDictionary, simpleName!!, true)
+
+        if (valuesDict != null)
+        {
+            { OPTIONALS_UNWRAP }
+            { NONOPTIONALS_UNWRAP }
+        }
+    }
+
+    fun updateWithDictionary(dictionary: HashMap<String, Any>)
+    {
+      this.dictionary = dictionary
+      this.backingDictionary = dictionary
+      val stringClass = this::class
+      val simpleName = stringClass.simpleName
+
+      val valuesDict = JMJSONKit.mapDictValues(staticInstantiator{ INSTANTIATOR_NAME }, backingDictionary, simpleName!!, true)
+
+      if (valuesDict != null)
+      {
+            { UPDATE_UNWRAP }
+      }
+    }
+}

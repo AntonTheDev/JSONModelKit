@@ -25,7 +25,7 @@ class MappingKey(Const):
     DefaultValue 	    = "default"
     NonOptional    	    = "nonoptional"
     Attributes          = "attributes"
-    Transformer    	    = "transformer"
+    JMSDKTransformer    	    = "transformer"
     SubType      	    = "subtype"
     Groups              = "groups"
     ModelConfig         = "model_config"

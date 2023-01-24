@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct StructExample {
+public struct StructExample {
     var string1: String
     var string2: String
 }
 
-enum EnumExample : Int {
+public enum EnumExample : Int {
     case One = 1, Two, Three, Four, Five
 }

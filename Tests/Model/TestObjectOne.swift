@@ -8,7 +8,7 @@
 
 import Foundation
 
-class _TestObjectOne {
+class TestObjectOne {
     var optionalString : String?
     
     required init(_optionalString: Any?) {

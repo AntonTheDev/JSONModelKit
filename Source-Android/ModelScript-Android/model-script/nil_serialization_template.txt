@@ -1,0 +1,7 @@
+
+
+extension _{ CLASSNAME } {
+    func params(forGroup group : String) -> [String : Any] {
+        return [String : Any]()
+    }
+}

@@ -64,6 +64,8 @@ let collectionTypes                 = [JMDataTypeArray, JMDataTypeDictionary]
 
 final public class JSONModelKit {
     
+   // private let lock = NSLock()
+    
     public class func mapValues(from dictionary : Dictionary<String, AnyObject>, forType classType : String , employing instantiator : JMInstantiatorProtocol, defaultsEnabled : Bool) -> Dictionary<String, Any>? {
         
         if let mappingConfiguration = retrieveMappingConfiguration(classType) {
@@ -88,6 +90,8 @@ final public class JSONModelKit {
     }
     
     class func retrieveMappingConfiguration(_ className : String) -> Dictionary<String, Dictionary<String, AnyObject>>? {
+        
+        
         if let mappingconfiguration = propertyMappings[className] {
             return mappingconfiguration
         } else {
@@ -105,6 +109,8 @@ final public class JSONModelKit {
                 }
             }
         }
+        
+      // lock.lock() ; defer { lock.unlock() }
         
         return propertyMappings[className]
     }

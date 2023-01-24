@@ -1,0 +1,112 @@
+// JMJSONKit Generated Model
+// UPDATE LICENSE HERE
+
+package com.iagd.voyagersdk.models
+
+import com.fasterxml.jackson.core.type.TypeReference
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.iagd.voyagersdk.jsonmodelkit.JMInstantiatorProtocol
+import com.iagd.voyagersdk.jsonmodelkit.JMTransformerProtocol
+import com.iagd.voyagersdk.jsonmodelkit.checkItemsAre
+
+val staticInstantiator{ INSTANTIATOR_NAME } = { INSTANTIATOR_NAME }()
+
+enum class { INSTANTIATOR_NAME }MapperClassEnum {
+{ CASE_ENUM_DEFINITION }
+
+    abstract fun mapping(): String?
+    abstract fun createObject(data: HashMap<String, Any>): Any?
+}
+
+enum class { INSTANTIATOR_NAME }TransformerEnum {
+	{ CASE_TRANSAFORMER_ENUM_DEFINITION }
+
+   abstract fun transformer(): JMTransformerProtocol?
+}
+
+
+class { INSTANTIATOR_NAME } : JMInstantiatorProtocol
+{
+    override fun transformerFromString(classString: String): JMTransformerProtocol?
+    {
+        return transformerEnumForClass(classString)?.transformer()
+    }
+
+    override fun newInstance(classname: String, withValue: HashMap<String, Any>): Any? {
+        return mapperEnumForClass(classname)?.createObject(withValue)
+    }
+
+
+    fun getJsonAsMap(json: String): HashMap<String, Any> {
+        try {
+            val mapper = ObjectMapper()
+            val typeRef = object : TypeReference<Map<String, Any>>() { }
+
+            return mapper.readValue(json, typeRef)
+        } catch (e: Exception) {
+            throw RuntimeException("Couldnt parse json:$json", e)
+        }
+    }
+
+    fun transformerEnumForClass(classname: String): { INSTANTIATOR_NAME }TransformerEnum? {
+        var enumConfig: { INSTANTIATOR_NAME }TransformerEnum? = null
+
+        try {
+            enumConfig = { INSTANTIATOR_NAME }TransformerEnum.valueOf(classname.toUpperCase())
+        } catch (e: IllegalArgumentException) {
+
+        }
+
+        return enumConfig
+    }
+
+
+    	override fun mappingConfiguration(className: String): HashMap<String, Any>? {
+
+
+    		var adjustedClassName = className
+
+    		if (className == "PricedPair") {
+    			adjustedClassName = "_PricedPair"
+    		}
+
+
+    		if (class_propertyMappings[adjustedClassName] != null)
+    		{
+    			val rawKeys = class_propertyMappings[adjustedClassName] as?  HashMap<*, *>
+    			return  rawKeys?.checkItemsAre() ?: return null
+    		}
+    		else
+    		{
+    			val json = mapperEnumForClass(adjustedClassName)?.mapping()
+    			if (json != null) {
+    				class_propertyMappings[adjustedClassName] = getJsonAsMap(json)
+    			}
+    		}
+
+    		val rawKeys = class_propertyMappings[adjustedClassName] as? HashMap<*, *>
+    			return rawKeys as HashMap<String, Any>
+    	}
+
+    	var class_propertyMappings: HashMap<String, Any> = HashMap()
+
+    	fun mapperEnumForClass(className: String):  { INSTANTIATOR_NAME }MapperClassEnum? {
+
+    		var adjustedClassName = className
+
+    		if (className == "PricedPair") {
+    			adjustedClassName = "_PricedPair"
+    		}
+
+    		var enumConfig: { INSTANTIATOR_NAME }MapperClassEnum? = null
+
+    		try {
+    			enumConfig = { INSTANTIATOR_NAME }MapperClassEnum.valueOf(adjustedClassName.toUpperCase())
+    		} catch (e: IllegalArgumentException) {
+
+    		}
+
+    		return enumConfig
+    	}
+
+}

@@ -23,11 +23,11 @@ class Validator:
          if propertyKey == MappingKey.ModelConfig:
              continue
          if MappingKey.Type not in self.mapping[propertyKey].keys():
-            if MappingKey.Transformer not in self.mapping[propertyKey].keys():
-               self.throw_missing_type_error(MappingKey.Transformer, self.mapping[propertyKey])
+            if MappingKey.JMSDKTransformer not in self.mapping[propertyKey].keys():
+               self.throw_missing_type_error(MappingKey.JMSDKTransformer, self.mapping[propertyKey])
 
          if MappingKey.Key not in self.mapping[propertyKey].keys():
-            if MappingKey.Transformer not in self.mapping[propertyKey].keys():
+            if MappingKey.JMSDKTransformer not in self.mapping[propertyKey].keys():
                self.throw_missing_json_key_error(MappingKey.Key, self.mapping[propertyKey])
 
             else:
@@ -53,7 +53,7 @@ class Validator:
       raise Exception('Invalid Configuration')
 
    def print_default_error_header(self, mapping):
-      print "\r\nJMMapper Error: Invalid Configuration (" + self.classname + ".plist)\r\n"
+      print "\r\nJMSDKMapper Error: Invalid Configuration (" + self.classname + ".plist)\r\n"
       print "Mapping : \t\t"
       print mapping
       print "\r\n"
